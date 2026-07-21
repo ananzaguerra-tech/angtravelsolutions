@@ -1,0 +1,156 @@
+Use $build-chatgpt-app with $openai-docs and execute the ANG Travel
+Solutions project as a production build.
+
+REPOSITORY:
+ananzaguerra-tech/angtravelsolutions
+
+GOOGLE DRIVE WORKSPACE:
+ANG_GROUP/ANG_CLOUD_WORKSPACE
+
+NON-NEGOTIABLE PRESERVATION:
+- Preserve the existing ANG Connect at http://localhost:8088.
+- Do not stop or delete its containers, volumes, database, code, routes,
+  dashboard or existing console.
+- The public WordPress site and ANG Connect are parallel products.
+- Do not overwrite production before backup and staging validation.
+
+IMMEDIATE PRIORITY:
+Finish and launch the public website angtravelsolutions.com.br today.
+
+PHASE 1 — INITIALIZE REPOSITORY:
+1. Initialize the empty Git repository.
+2. Create main, staging and development branches.
+3. Add README, architecture, deployment, rollback and audit documentation.
+4. Create .gitignore and environment examples without credentials.
+5. Create GitHub Actions for validation, packaging and staging deployment.
+
+PHASE 2 — AUDIT:
+1. Inventory WordPress themes, normal plugins, MU-plugins, pages, menus,
+   Elementor data, shortcodes, caches, media, database, PHP errors and
+   duplicated ANG versions.
+2. Produce a non-destructive audit report.
+3. Back up the complete WordPress installation and database.
+4. Do not delete anything before the backup is verified.
+
+PHASE 3 — CONSOLIDATION:
+1. Consolidate experimental ANG Force, Fix, Emergency, Deploy, Content,
+   Rebrand, Location and portal plugins into one plugin:
+   ang-enterprise-suite.
+2. Preserve approved content and working functions.
+3. Quarantine duplicated and obsolete plugins instead of deleting them.
+4. Provide rollback and safe-mode controls.
+
+PHASE 4 — PUBLIC SITE:
+Apply the approved premium template:
+- full-screen luxury hero with image/video carousel;
+- dark transparent horizontal header;
+- official ANG Travel Solutions logo;
+- official menu:
+  Home;
+  Quem Somos;
+  Serviços & Outsourcing;
+  Luxury Brazil;
+  Conteúdo Global;
+  Sustentabilidade;
+  Seja Cliente;
+  Blog & Tendências;
+  Fale Conosco;
+  Idioma;
+  Área Restrita;
+- Wooba search area prepared for the contracted official integration;
+- Featured Offers;
+- Private Collections:
+  Ski, Private Jets, Villas Privativas, Grupos, Yachts and Cruzeiros;
+- Privilege Magazine;
+- continuous luxury partners and alliances strip;
+- ANG Group footer only;
+- responsive desktop, tablet and mobile layout.
+
+PHASE 5 — CONTENT:
+Create, structure, revise and publish complete premium content for:
+- Home;
+- Quem Somos;
+- Serviços & Outsourcing;
+- ANG Help Travel 24/7;
+- Luxury Brazil;
+- Conteúdo Global;
+- Sustentabilidade;
+- Seja Cliente;
+- Blog & Tendências;
+- Fale Conosco;
+- Onde Estamos;
+- Área Restrita.
+
+Use all project requirements already registered.
+Do not display the founder's age.
+Preserve the founder's authored texts and institutional ownership.
+
+PHASE 6 — REBRANDING:
+- Preserve the already approved ANG Travel Solutions logo exactly.
+- Rebuild the other ANG Group brands with their own gold insignias.
+- Official structure:
+  ANG Travel;
+  ANG Business Travel;
+  ANG MICE;
+  ANG Celebration;
+  ANG Solutions;
+  ANG Luxury Brazil.
+- Use Montserrat ExtraBold for ANG.
+- Use Montserrat SemiBold for supporting uppercase names.
+- Produce transparent, white and dark-background versions.
+- Do not modify the approved ANG Travel Solutions solar sphere.
+
+PHASE 7 — GLOBAL PRESENCE:
+Create Onde Estamos with appointment-only corporate meeting references:
+- New York;
+- Luxembourg;
+- Shanghai;
+- Lisbon;
+- Sydney;
+- Johannesburg/Sandton;
+- Dubai;
+- Montevideo.
+Keep international telephone fields empty until provided.
+
+PHASE 8 — MASS CONTENT PIPELINE:
+Create folders and import pipelines for:
+- destinations;
+- hotels;
+- suppliers;
+- VIP lounges;
+- restaurants;
+- attractions;
+- blog;
+- featured offers;
+- Private Collections;
+- Privilege Magazine;
+- media and logos.
+Support CSV, JSON, XML, RSS and approved APIs.
+Add duplicate protection, validation, source tracking, rollback and logs.
+
+PHASE 9 — AUTOMATION:
+- n8n orchestrates import, review, scheduling and monitoring.
+- Ollama assists with drafts, classification and metadata.
+- OpenHands/Cline assist with code tasks through Git branches.
+- No autonomous destructive production action.
+- Record every action in audit logs.
+- Human approval is required only for final production promotion.
+
+PHASE 10 — VALIDATION AND LAUNCH:
+1. Validate all routes, buttons, images, videos, menus and forms.
+2. Validate mobile responsiveness and accessibility.
+3. Validate SEO, schema, sitemap, robots and metadata.
+4. Validate performance and broken links.
+5. Generate a staging preview.
+6. Promote to production only after all critical checks pass.
+7. Produce a final launch report and rollback instructions.
+
+WORKING RULES:
+- Do not restart the approved architecture.
+- Do not create many separate plugins.
+- Do not remove existing approved content.
+- Do not invent credentials or external integrations.
+- Never commit secrets.
+- Continue autonomously through safe, reversible tasks.
+- When blocked by credentials, complete everything else and produce one
+  consolidated credential request.
