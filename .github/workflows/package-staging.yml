@@ -1,0 +1,47 @@
+name: Package ANG staging plugin
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [development]
+    paths:
+      - "plugin/ang-enterprise-suite/**"
+      - ".github/workflows/package-staging.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate PHP
+        run: find plugin/ang-enterprise-suite -type f -name '*.php' -print0 | xargs -0 -n1 php -l
+
+      - name: Validate bundled JSON
+        run: find plugin/ang-enterprise-suite -type f -name '*.json' -print0 | xargs -0 -n1 jq empty
+
+      - name: Reject forbidden files
+        run: |
+          ! find plugin/ang-enterprise-suite -type f \( -name '.env' -o -name 'wp-config.php' -o -name '*.sql' -o -name '*.pem' -o -name '*.key' \) | grep -q .
+
+      - name: Build staging ZIP
+        run: |
+          mkdir -p package
+          cd plugin
+          zip -r ../package/ang-enterprise-suite-staging.zip ang-enterprise-suite
+          cd ../package
+          sha256sum ang-enterprise-suite-staging.zip > SHA256SUMS.txt
+
+      - name: Upload validated artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ang-enterprise-suite-staging
+          path: |
+            package/ang-enterprise-suite-staging.zip
+            package/SHA256SUMS.txt
+          if-no-files-found: error
+          retention-days: 14
