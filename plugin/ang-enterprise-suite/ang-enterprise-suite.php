@@ -2,7 +2,7 @@
 /**
  * Plugin Name: ANG Enterprise Suite
  * Description: Safe, auditable ANG Travel Solutions content import and presentation helpers.
- * Version: 0.2.0
+ * Version: 0.3.0
  * Author: ANG Group
  */
 
@@ -15,6 +15,7 @@ final class ANG_Enterprise_Suite {
 
     public static function init(): void {
         add_action('admin_menu', [self::class, 'register_admin_page']);
+        add_action('admin_post_ang_validate_destinations', [self::class, 'handle_validate']);
         add_action('admin_post_ang_import_destinations', [self::class, 'handle_import']);
         add_action('wp_enqueue_scripts', [self::class, 'enqueue_public_styles']);
     }
@@ -40,7 +41,12 @@ final class ANG_Enterprise_Suite {
             <h1>ANG Importador Seguro</h1>
             <p>Importa o lote editorial para páginas hierárquicas País → Cidade, sem apagar conteúdo existente.</p>
             <p><strong>Origem:</strong> <code>content/destinations/batch-001.json</code></p>
-            <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
+            <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" style="display:inline-block;margin-right:8px">
+                <?php wp_nonce_field('ang_validate_destinations'); ?>
+                <input type="hidden" name="action" value="ang_validate_destinations">
+                <?php submit_button('Pré-visualizar e validar', 'secondary', 'submit', false); ?>
+            </form>
+            <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" style="display:inline-block">
                 <?php wp_nonce_field('ang_import_destinations'); ?>
                 <input type="hidden" name="action" value="ang_import_destinations">
                 <?php submit_button('Importar lote para rascunho', 'primary', 'submit', false); ?>
@@ -51,21 +57,84 @@ final class ANG_Enterprise_Suite {
         <?php
     }
 
-    public static function handle_import(): void {
+    public static function handle_validate(): void {
         if (!current_user_can('manage_options')) {
             wp_die('Permissão insuficiente.');
         }
-        check_admin_referer('ang_import_destinations');
+        check_admin_referer('ang_validate_destinations');
 
+        $payload = self::read_payload();
+        $errors = [];
+        $countries = 0;
+        $cities = 0;
+        $seen_countries = [];
+        $seen_paths = [];
+
+        foreach ($payload['destinations'] as $country_index => $country) {
+            $country_name = trim((string) ($country['country'] ?? ''));
+            if ($country_name === '') {
+                $errors[] = 'País sem nome no índice ' . $country_index . '.';
+                continue;
+            }
+
+            $country_slug = sanitize_title($country_name);
+            if (isset($seen_countries[$country_slug])) {
+                $errors[] = 'País duplicado: ' . $country_name . '.';
+            }
+            $seen_countries[$country_slug] = true;
+            $countries++;
+
+            foreach (($country['cities'] ?? []) as $city_index => $city) {
+                $city_name = trim((string) ($city['name'] ?? ''));
+                if ($city_name === '') {
+                    $errors[] = sprintf('Cidade sem nome em %s, índice %d.', $country_name, $city_index);
+                    continue;
+                }
+
+                $path = $country_slug . '/' . sanitize_title($city_name);
+                if (isset($seen_paths[$path])) {
+                    $errors[] = 'Cidade duplicada na mesma hierarquia: ' . $country_name . ' / ' . $city_name . '.';
+                }
+                $seen_paths[$path] = true;
+                $cities++;
+            }
+        }
+
+        update_option(self::OPTION_LOG, [
+            'mode' => 'preview_only',
+            'validated_at' => current_time('mysql'),
+            'schema_version' => (string) ($payload['schema_version'] ?? ''),
+            'countries' => $countries,
+            'cities' => $cities,
+            'errors' => $errors,
+            'writes_performed' => 0,
+        ], false);
+
+        wp_safe_redirect(add_query_arg(['page' => 'ang-importador', 'validated' => 1], admin_url('tools.php')));
+        exit;
+    }
+
+    private static function read_payload(): array {
         $path = plugin_dir_path(__FILE__) . 'data/batch-001.json';
         if (!is_readable($path)) {
             wp_die('Arquivo de conteúdo não encontrado.');
         }
 
         $payload = json_decode((string) file_get_contents($path), true);
-        if (!is_array($payload) || empty($payload['destinations'])) {
+        if (!is_array($payload) || empty($payload['destinations']) || !is_array($payload['destinations'])) {
             wp_die('Arquivo de conteúdo inválido.');
         }
+
+        return $payload;
+    }
+
+    public static function handle_import(): void {
+        if (!current_user_can('manage_options')) {
+            wp_die('Permissão insuficiente.');
+        }
+        check_admin_referer('ang_import_destinations');
+
+        $payload = self::read_payload();
 
         $summary = [
             'started_at' => current_time('mysql'),
@@ -206,7 +275,7 @@ final class ANG_Enterprise_Suite {
             'ang-enterprise-suite',
             plugin_dir_url(__FILE__) . 'assets/public.css',
             [],
-            '0.2.0'
+            '0.3.0'
         );
     }
 }
