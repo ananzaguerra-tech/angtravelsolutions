@@ -2,7 +2,7 @@
 /**
  * Plugin Name: ANG Enterprise Suite
  * Description: Safe, auditable ANG Travel Solutions content import and presentation helpers.
- * Version: 0.1.0
+ * Version: 0.2.0
  * Author: ANG Group
  */
 
@@ -116,7 +116,7 @@ final class ANG_Enterprise_Suite {
     }
 
     private static function upsert_page(string $title, string $slug, int $parent, string $content, array &$summary, string $type): int {
-        $existing = get_page_by_path($slug, OBJECT, 'page');
+        $existing = self::find_page_by_slug_and_parent($slug, $parent);
         $postarr = [
             'post_title' => $title,
             'post_name' => $slug,
@@ -143,6 +143,20 @@ final class ANG_Enterprise_Suite {
         update_post_meta((int) $result, '_ang_content_source', 'batch-001.json');
         update_post_meta((int) $result, '_ang_content_status', 'draft_for_staging');
         return (int) $result;
+    }
+
+    private static function find_page_by_slug_and_parent(string $slug, int $parent): ?WP_Post {
+        $matches = get_posts([
+            'name' => $slug,
+            'post_type' => 'page',
+            'post_status' => 'any',
+            'post_parent' => $parent,
+            'numberposts' => 1,
+            'orderby' => 'ID',
+            'order' => 'ASC',
+        ]);
+
+        return isset($matches[0]) && $matches[0] instanceof WP_Post ? $matches[0] : null;
     }
 
     private static function render_root_content(): string {
@@ -192,7 +206,7 @@ final class ANG_Enterprise_Suite {
             'ang-enterprise-suite',
             plugin_dir_url(__FILE__) . 'assets/public.css',
             [],
-            '0.1.0'
+            '0.2.0'
         );
     }
 }
