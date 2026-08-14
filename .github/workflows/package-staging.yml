@@ -1,12 +1,7 @@
-name: Package ANG staging plugin
+name: Package prototype (DO NOT DEPLOY)
 
 on:
   workflow_dispatch:
-  push:
-    branches: [development]
-    paths:
-      - "plugin/ang-enterprise-suite/**"
-      - ".github/workflows/package-staging.yml"
 
 permissions:
   contents: read
@@ -32,14 +27,14 @@ jobs:
         run: |
           mkdir -p package
           cd plugin
-          zip -r ../package/ang-enterprise-suite-staging.zip ang-enterprise-suite
+          zip -r ../package/ang-enterprise-suite-0.3.0-PROTOTYPE-DO-NOT-DEPLOY.zip ang-enterprise-suite
           cd ../package
           sha256sum ang-enterprise-suite-staging.zip > SHA256SUMS.txt
 
       - name: Upload validated artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ang-enterprise-suite-staging
+          name: ang-enterprise-suite-prototype-do-not-deploy
           path: |
             package/ang-enterprise-suite-staging.zip
             package/SHA256SUMS.txt
