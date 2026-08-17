@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-08-17",
+  "scope": "Curadoria Batch 2 - Brasil",
+  "publication_authorized": false,
+  "destinations": [
+    {
+      "destination": "São Paulo",
+      "country": "Brasil",
+      "post_id": 141628,
+      "external_id": "709010a3c3c1cc1178c39375bf6282e0ab2e1b989f97a999b6daece7e340594e",
+      "post_type": "ang_curated",
+      "wp_status": "draft",
+      "official_source": "https://prefeitura.sp.gov.br/turismo/",
+      "source_authority": "Secretaria Municipal de Turismo - Prefeitura de São Paulo",
+      "required_sections": ["overview executivo","melhor época","clima","mobilidade","aeroportos","bairros e zonas prioritárias","hotelaria","gastronomia","cultura e museus","experiências premium","compras e lifestyle","wellness","MICE/business","sustentabilidade","acessibilidade","segurança prática","insider tips","SEO","schema","mídia rastreável"],
+      "gates": {"identity":"PASS","official_source":"PASS","content":"NEEDS_ENRICHMENT","media_license":"HOLD","seo_schema":"PENDING","staging":"NOT_TESTED"}
+    },
+    {
+      "destination": "Salvador",
+      "country": "Brasil",
+      "post_id": 141674,
+      "external_id": "3e635e4323fa1face3f4abad8adc97b1cdd6322563a65bd5b9dd1a8ff8ce021c",
+      "post_type": "ang_curated",
+      "wp_status": "draft",
+      "official_source": "https://www.salvadordabahia.com/",
+      "source_authority": "Visit Salvador da Bahia / Prefeitura de Salvador / SECULT",
+      "required_sections": ["overview executivo","melhor época","clima","mobilidade","aeroporto","Centro Histórico e Pelourinho","afroturismo","gastronomia","sol e mar","música e religiosidade","hotelaria","experiências premium","eventos","MICE/business","sustentabilidade","acessibilidade","segurança prática","insider tips","SEO","schema","mídia rastreável"],
+      "gates": {"identity":"PASS","official_source":"PASS","content":"NEEDS_ENRICHMENT","media_license":"HOLD","seo_schema":"PENDING","staging":"NOT_TESTED"}
+    },
+    {
+      "destination": "Foz do Iguaçu",
+      "country": "Brasil",
+      "post_id": 141697,
+      "external_id": "6698f354244c82d0ec0c294adab5f05dd5685465c7b6030ef79d06bffeb34566",
+      "post_type": "ang_curated",
+      "wp_status": "draft",
+      "official_source": "https://www.destino.foz.br/",
+      "source_authority": "Secretaria Municipal de Turismo de Foz do Iguaçu",
+      "required_sections": ["overview executivo","melhor época","clima","mobilidade","aeroporto","Cataratas e Parque Nacional","Itaipu","Parque das Aves","Tríplice Fronteira","gastronomia multicultural","hotelaria","experiências premium","natureza e aventura","MICE/business","sustentabilidade","acessibilidade","segurança e fronteira","insider tips","SEO","schema","mídia rastreável"],
+      "gates": {"identity":"PASS","official_source":"PASS","content":"NEEDS_ENRICHMENT","media_license":"HOLD","seo_schema":"PENDING","staging":"NOT_TESTED"}
+    }
+  ],
+  "global_rules": [
+    "No mass publication of 881 records.",
+    "Do not invent mutable facts, prices, schedules, partnerships or addresses.",
+    "Each mutable claim requires a primary/official source and consultation date.",
+    "Each final image requires stable asset, origin and documented usage rights.",
+    "Promotion requires responsive staging render, QA score >= 90 and rollback evidence."
+  ]
+}
