@@ -1,0 +1,45 @@
+name: Recovery staging gate
+
+on:
+  pull_request:
+    branches: [staging]
+  push:
+    branches: [recovery/v13-staging-2026-08-17]
+
+permissions:
+  contents: read
+
+jobs:
+  recovery-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify recovery artifacts
+        run: |
+          test -f docs/V13_RECOVERY_IMPLEMENTATION_2026-08-17.md
+          test -f docs/RECOVERY_STATUS_MATRIX_2026-08-17.md
+          test -f assets/css/v13-staging-fixes.css
+
+      - name: Block production secrets and destructive files
+        run: |
+          test ! -f .env
+          test ! -f wp-config.php
+          test ! -f credentials.json
+          test ! -f auth.json
+
+      - name: Require explicit recovery safeguards
+        run: |
+          grep -qi "rollback" docs/V13_RECOVERY_IMPLEMENTATION_2026-08-17.md
+          grep -qi "staging" docs/V13_RECOVERY_IMPLEMENTATION_2026-08-17.md
+          grep -qi "production" docs/V13_RECOVERY_IMPLEMENTATION_2026-08-17.md
+
+      - name: Prevent accidental curation mass-publish instructions
+        run: |
+          ! grep -RniE "publish[[:space:]]+(all|881)|mass[ -]publish" docs assets || false
+
+      - name: Recovery gate summary
+        run: |
+          echo "Recovery branch validated for staging-only review."
+          echo "No production deployment is performed by this workflow."
