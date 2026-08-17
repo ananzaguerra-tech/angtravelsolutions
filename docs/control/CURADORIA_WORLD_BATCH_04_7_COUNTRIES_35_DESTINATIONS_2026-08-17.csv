@@ -1,0 +1,36 @@
+batch,country,official_source,destination,destination_type,modules_per_destination,content_min_words,attractions_min,hotels_min,restaurants_min,keywords_gate,filters_gate,source_gate,media_gate,seo_schema_gate,staging_gate
+WORLD-04,Denmark,https://www.visitdenmark.com/denmark/destinations,Copenhagen,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Denmark,https://www.visitdenmark.com/denmark/destinations,Aarhus,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Denmark,https://www.visitdenmark.com/denmark/destinations,Odense,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Denmark,https://www.visitdenmark.com/denmark/destinations,Skagen,region,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Denmark,https://www.visitdenmark.com/denmark/destinations,Bornholm,island,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Finland,https://www.visitfinland.com/en/places-to-go/,Helsinki,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Finland,https://www.visitfinland.com/en/places-to-go/,Turku,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Finland,https://www.visitfinland.com/en/places-to-go/,Rovaniemi,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Finland,https://www.visitfinland.com/en/places-to-go/,Levi,region,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Finland,https://www.visitfinland.com/en/places-to-go/,Lakeland,region,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Sweden,https://visitsweden.com/where-to-go/,Stockholm,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Sweden,https://visitsweden.com/where-to-go/,Gothenburg,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Sweden,https://visitsweden.com/where-to-go/,Gotland,island,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Sweden,https://visitsweden.com/where-to-go/,Swedish Lapland,region,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Sweden,https://visitsweden.com/where-to-go/,Malmö,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Belgium/Flanders,https://www.visitflanders.com/en/flemish-destinations,Brussels,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Belgium/Flanders,https://www.visitflanders.com/en/flemish-destinations,Bruges,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Belgium/Flanders,https://www.visitflanders.com/en/flemish-destinations,Ghent,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Belgium/Flanders,https://www.visitflanders.com/en/flemish-destinations,Antwerp,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Belgium/Flanders,https://www.visitflanders.com/en/flemish-destinations,Leuven,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Czechia,https://www.visitczechia.com/en-us/destinations,Prague,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Czechia,https://www.visitczechia.com/en-us/destinations,Brno,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Czechia,https://www.visitczechia.com/en-us/destinations,Karlovy Vary,spa_region,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Czechia,https://www.visitczechia.com/en-us/destinations,South Bohemia,region,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Czechia,https://www.visitczechia.com/en-us/destinations,Moravia,region,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Hungary,https://visithungary.com/en/,Budapest,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Hungary,https://visithungary.com/en/,Lake Balaton,region,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Hungary,https://visithungary.com/en/,Tokaj,region,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Hungary,https://visithungary.com/en/,Pécs,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Hungary,https://visithungary.com/en/,Debrecen,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Slovenia,https://www.slovenia.info/en/places-to-go/cities-and-destinations,Ljubljana,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Slovenia,https://www.slovenia.info/en/places-to-go/cities-and-destinations,Lake Bled,region,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Slovenia,https://www.slovenia.info/en/places-to-go/cities-and-destinations,Maribor–Pohorje,region,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Slovenia,https://www.slovenia.info/en/places-to-go/cities-and-destinations,Piran,city,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
+WORLD-04,Slovenia,https://www.slovenia.info/en/places-to-go/cities-and-destinations,Soča Valley,region,23,4500,12,12,12,PENDING,PENDING,OFFICIAL_SOURCE_CONFIRMED,HOLD_LICENSE_PROOF,PENDING,NOT_TESTED
