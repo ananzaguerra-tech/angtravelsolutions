@@ -17,14 +17,19 @@ Historical package — DO NOT use for current homologation:
 - ANG_Concierge_n8n_WhatsApp_Package_2026.zip
 - SHA-256: 6ff45b06d7489080cd36041211730331d3e9a68aa822397aade3b7b8e0b86742
 
+## Target WhatsApp number — LOCKED
+- Commercial display number: +55 19 4040-4293
+- E.164: 551940404293
+- Rule: bind only the WABA/Phone Number ID that Meta reports for this exact number. Do not attach any other WhatsApp number.
+
 ## Recovered Meta binding fields
 Recovered from an official Meta developer email to the principal:
 - META_APP_ID: 1357644809891558
 - META_BUSINESS_ID: 844432116045484
 
 Still required from the authenticated WhatsApp Business asset:
-- META_WABA_ID: PUBLIC_ID_REQUIRED
-- META_PHONE_NUMBER_ID: PUBLIC_ID_REQUIRED
+- META_WABA_ID: PUBLIC_ID_REQUIRED_FOR_551940404293
+- META_PHONE_NUMBER_ID: PUBLIC_ID_REQUIRED_FOR_551940404293
 
 Secrets — never commit:
 - META_VERIFY_TOKEN: SECRET_VAULT_ONLY
@@ -55,4 +60,10 @@ The consular block is mandatory in AGENT-GENERATED PORTAL QUOTES after passenger
 Concierge does not force the consular checklist into every chat. It retrieves/informs consular, documentation, vaccine and minor-travel requirements contextually when relevant to the conversation, quote follow-up or pre-boarding support.
 
 ## Current unresolved binding data
-WABA ID and Phone Number ID are the remaining public identifiers required to complete the Meta/WhatsApp binding. They must be read from the authenticated WhatsApp Business asset. Secrets remain vault-only.
+WABA ID and Phone Number ID for E.164 551940404293 are the remaining public identifiers required to complete the Meta/WhatsApp binding. They must be read from the authenticated WhatsApp Business asset. Secrets remain vault-only.
+
+## Current execution evidence
+- Gmail search for WABA_ID / PHONE_NUMBER_ID / WhatsApp Business Account / 551940404293 returned no usable Meta asset identifiers.
+- Google Drive search for the same identifiers returned no result.
+- Repository manifest contains no guessed identifiers; only App ID and Meta Business ID are confirmed.
+- End-to-end homologation must remain NOT PASSED until the authenticated Meta asset and n8n session expose the two public IDs and vault-only credentials.
