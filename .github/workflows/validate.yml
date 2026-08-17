@@ -25,6 +25,9 @@ jobs:
       - name: Validate destination schema and hierarchy
         run: python3 scripts/validate-content.py
 
+      - name: Validate pilot staging and media gates
+        run: python3 scripts/validate-pilot-staging.py
+
       - name: Block common secret files
         run: |
           test ! -f .env
