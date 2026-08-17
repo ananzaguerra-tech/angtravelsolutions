@@ -1,18 +1,19 @@
 # WordPress Identity Reconciliation — 2026-08-17
 
-## Fonte
+## Fontes
 - Export: `angtravelsolutions.WordPress.2026-07-24.xml`
+- Dataset mestre: `ANG_V10_02_CURADORIA_CONTEUDO_IMPORTACAO.csv` — 881 registros
 - Controle oficial: `ANG_CONTROLE_IMPORTACAO_AMPLIADA_881_2026-08-14`
 
-## Resultado extraído do export
-- `ang_curated`: 851 registros.
-- Todos os 851 estão em `draft` no export.
-- Todos os 851 possuem `ang_external_id`/`_ang_external_id` preenchido.
-- 844 External IDs distintos.
-- 7 External IDs duplicados, correspondendo a 7 pares de posts adicionais.
-- 851 Post IDs distintos.
+## Resultado final
+- Dataset fonte: 881 registros.
+- 844 registros correspondem canonicamente ao CPT `ang_curated`.
+- 37 registros da categoria `Salas VIP` correspondem ao CPT `ang_lounge`.
+- Cobertura de identidade do dataset: **881/881 contabilizados**.
+- Todos os 881 registros-fonte possuem correspondência por `ang_seo_title` exato + CPT esperado no export de 24/07.
+- O export contém 851 linhas `ang_curated` porque existem 7 pares duplicados adicionais; esses pares permanecem HOLD/quarentena e não aumentam a cobertura do dataset fonte.
 
-## Duplicidades identificadas
+## Duplicidades `ang_curated` em HOLD
 1. Four Seasons | Lisboa — posts 142135 / 142136
 2. Rosewood | Lisboa — posts 142137 / 142138
 3. Belmond | Lisboa — posts 142139 / 142140
@@ -21,15 +22,18 @@
 6. Relais & Châteaux | Lisboa — posts 142145 / 142146
 7. The Leading Hotels of the World | Lisboa — posts 142147 / 142148
 
-## Coerência com auditoria de 13/08
-O estado registrado em 13/08 informa 881/881 processados, 844 `ang_curated` em rascunho e 7 em quarentena. O export de 24/07 contém 851 linhas `ang_curated`, das quais 844 identidades são únicas e 7 são duplicidades extras. Isso é consistente com a hipótese operacional de 844 identidades válidas + 7 instâncias duplicadas/quarentenadas, mas ainda não prova a origem dos 30 registros restantes do dataset de 881.
+## Explicação do gap anteriormente estimado
+O cálculo inicial tratou apenas `ang_curated` e, por isso, inferiu incorretamente uma lacuna restante. A inspeção do dataset mestre mostrou que os 37 registros fora de `ang_curated` são exatamente `Salas VIP`. No export WordPress, todos os 37 aparecem como `ang_lounge`, com Post ID e External ID próprios. Logo não existem 30 registros órfãos nesta reconciliação; o gap de identidade foi fechado.
 
-## Ação segura
-- Não preencher o `Item Register` de 881 por posição arbitrária.
-- Manter os 7 pares duplicados bloqueados até decisão explícita de qual Post ID é canônico.
-- Localizar/recuperar `curadoria-v10.csv` (881 linhas, 18 campos) ou export equivalente do staging atual para fechar os 30 registros restantes.
-- Cruzamento final deve usar `ang_external_id`, nunca título isolado.
-- Nenhuma publicação em produção é autorizada por esta reconciliação.
+## Regra de associação usada
+- Chave editorial de reconciliação: `ang_seo_title` exato do export contra `seo_title` do dataset mestre.
+- Tipo esperado: `ang_lounge` quando a categoria é `Salas VIP`; `ang_curated` nos demais 844 registros.
+- Não usar apenas título simples para escrita/importação.
+- Para qualquer mutação futura, manter `ang_external_id` + Post ID canônico como identidade operacional.
 
 ## Evidência no Drive
-Foi criado `ANG_WP_IDENTITY_MAP_CURADORIA_2026-08-17`, com o mapa extraído do XML. A planilha oficial ganhou a aba `WP Export Identity 24-07` com resumo e duplicidades.
+- `ANG_WP_IDENTITY_MAP_881_FINAL_2026-08-17` — mapa final dos 881 registros, com Post ID, External ID, CPT, status e duplicidades.
+- A planilha oficial `ANG_CONTROLE_IMPORTACAO_AMPLIADA_881_2026-08-14` foi atualizada na aba `WP Export Identity 24-07` para registrar 881/881 contabilizados.
+
+## Estado de publicação
+Esta reconciliação fecha somente o gate de identidade. QA de texto, fontes, mídia/licença, duplicidade, SEO, staging, rollback e aprovação editorial continuam obrigatórios. Nenhuma publicação em massa em produção é autorizada por este documento.
