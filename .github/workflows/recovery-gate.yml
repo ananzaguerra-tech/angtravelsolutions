@@ -33,11 +33,14 @@ jobs:
         run: |
           grep -qi "rollback" docs/V13_RECOVERY_IMPLEMENTATION_2026-08-17.md
           grep -qi "staging" docs/V13_RECOVERY_IMPLEMENTATION_2026-08-17.md
-          grep -qi "production" docs/V13_RECOVERY_IMPLEMENTATION_2026-08-17.md
+          grep -qiE "production|produção" docs/V13_RECOVERY_IMPLEMENTATION_2026-08-17.md
 
       - name: Prevent accidental curation mass-publish instructions
         run: |
-          ! grep -RniE "publish[[:space:]]+(all|881)|mass[ -]publish" docs assets || false
+          if grep -RniE "publish[[:space:]]+(all|881)|mass[ -]publish" docs assets; then
+            echo "Unsafe mass-publish instruction detected."
+            exit 1
+          fi
 
       - name: Recovery gate summary
         run: |
