@@ -1,0 +1,93 @@
+:root {
+  --ang-content-max: 1180px;
+  --ang-wide-max: 1560px;
+  --ang-focus: #f2ca70;
+  --ang-gold-text: #765113;
+  --ang-radius-sm: 12px;
+  --ang-radius-lg: 22px;
+  --ang-shadow-card: 0 18px 50px rgba(7, 16, 24, .10);
+}
+
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 3px solid var(--ang-focus);
+  outline-offset: 3px;
+}
+
+.page-content a {
+  color: var(--ang-gold-text);
+  text-underline-offset: .18em;
+}
+
+.page-content p,
+.page-content li {
+  max-width: 75ch;
+}
+
+.ang-section--media {
+  display: grid;
+  grid-template-columns: minmax(240px, .75fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+
+.ang-section--dark {
+  background: #071018 !important;
+  color: #fff;
+}
+
+.ang-section--offset {
+  margin-left: clamp(0rem, 5vw, 5rem) !important;
+}
+
+.collection-card,
+.offer-card,
+.group-brand-card {
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.collection-card:hover,
+.offer-card:hover,
+.group-brand-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold2);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, .28);
+}
+
+.offer-card img {
+  aspect-ratio: 16 / 10;
+  height: auto;
+  object-fit: cover;
+}
+
+.magazine-covers div {
+  background-image: linear-gradient(0deg, #000d, transparent), var(--cover-image);
+}
+
+@media (max-width: 760px) {
+  .ang-section--media {
+    grid-template-columns: 1fr;
+  }
+
+  .ang-section--offset {
+    margin-left: 0 !important;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
