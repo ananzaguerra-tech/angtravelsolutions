@@ -1,0 +1,51 @@
+batch,country,destination,type,modules,status
+WORLD-03,United Arab Emirates,Dubai,city,23,DISCOVERY_OFFICIAL
+WORLD-03,United Arab Emirates,Abu Dhabi,city,23,DISCOVERY_OFFICIAL
+WORLD-03,United Arab Emirates,Ras Al Khaimah,emirate,23,DISCOVERY_OFFICIAL
+WORLD-03,United Arab Emirates,Sharjah,emirate,23,DISCOVERY_OFFICIAL
+WORLD-03,United Arab Emirates,Fujairah,emirate,23,DISCOVERY_OFFICIAL
+WORLD-03,Maldives,North Male Atoll,atoll,23,DISCOVERY_OFFICIAL
+WORLD-03,Maldives,South Male Atoll,atoll,23,DISCOVERY_OFFICIAL
+WORLD-03,Maldives,Baa Atoll,atoll,23,DISCOVERY_OFFICIAL
+WORLD-03,Maldives,Ari Atoll,atoll,23,DISCOVERY_OFFICIAL
+WORLD-03,Maldives,Laamu Atoll,atoll,23,DISCOVERY_OFFICIAL
+WORLD-03,Greece,Athens,city,23,DISCOVERY_OFFICIAL
+WORLD-03,Greece,Santorini,island,23,DISCOVERY_OFFICIAL
+WORLD-03,Greece,Mykonos,island,23,DISCOVERY_OFFICIAL
+WORLD-03,Greece,Crete,island,23,DISCOVERY_OFFICIAL
+WORLD-03,Greece,Corfu,island,23,DISCOVERY_OFFICIAL
+WORLD-03,Turkey,Istanbul,city,23,DISCOVERY_OFFICIAL
+WORLD-03,Turkey,Cappadocia,region,23,DISCOVERY_OFFICIAL
+WORLD-03,Turkey,Bodrum,city,23,DISCOVERY_OFFICIAL
+WORLD-03,Turkey,Antalya,city,23,DISCOVERY_OFFICIAL
+WORLD-03,Turkey,Izmir,city,23,DISCOVERY_OFFICIAL
+WORLD-03,Indonesia,Bali,island,23,DISCOVERY_OFFICIAL
+WORLD-03,Indonesia,Jakarta,city,23,DISCOVERY_OFFICIAL
+WORLD-03,Indonesia,Lombok,island,23,DISCOVERY_OFFICIAL
+WORLD-03,Indonesia,Komodo,region,23,DISCOVERY_OFFICIAL
+WORLD-03,Indonesia,Yogyakarta,city,23,DISCOVERY_OFFICIAL
+WORLD-03,Vietnam,Hanoi,city,23,DISCOVERY_OFFICIAL
+WORLD-03,Vietnam,Ho Chi Minh City,city,23,DISCOVERY_OFFICIAL
+WORLD-03,Vietnam,Ha Long Bay,region,23,DISCOVERY_OFFICIAL
+WORLD-03,Vietnam,Hoi An,city,23,DISCOVERY_OFFICIAL
+WORLD-03,Vietnam,Da Nang,city,23,DISCOVERY_OFFICIAL
+WORLD-03,Jordan,Amman,city,23,DISCOVERY_OFFICIAL
+WORLD-03,Jordan,Petra,heritage-region,23,DISCOVERY_OFFICIAL
+WORLD-03,Jordan,Wadi Rum,desert-region,23,DISCOVERY_OFFICIAL
+WORLD-03,Jordan,Dead Sea,region,23,DISCOVERY_OFFICIAL
+WORLD-03,Jordan,Aqaba,city,23,DISCOVERY_OFFICIAL
+WORLD-03,Kenya,Nairobi,city,23,DISCOVERY_OFFICIAL
+WORLD-03,Kenya,Maasai Mara,reserve-region,23,DISCOVERY_OFFICIAL
+WORLD-03,Kenya,Amboseli,national-park-region,23,DISCOVERY_OFFICIAL
+WORLD-03,Kenya,Laikipia,region,23,DISCOVERY_OFFICIAL
+WORLD-03,Kenya,Diani Beach,coastal-region,23,DISCOVERY_OFFICIAL
+WORLD-03,Seychelles,Mahe,island,23,DISCOVERY_OFFICIAL
+WORLD-03,Seychelles,Praslin,island,23,DISCOVERY_OFFICIAL
+WORLD-03,Seychelles,La Digue,island,23,DISCOVERY_OFFICIAL
+WORLD-03,Seychelles,Silhouette,island,23,DISCOVERY_OFFICIAL
+WORLD-03,Seychelles,Desroches,island,23,DISCOVERY_OFFICIAL
+WORLD-03,Mauritius,Port Louis,city,23,DISCOVERY_OFFICIAL
+WORLD-03,Mauritius,Le Morne,region,23,DISCOVERY_OFFICIAL
+WORLD-03,Mauritius,Grand Baie,region,23,DISCOVERY_OFFICIAL
+WORLD-03,Mauritius,Bel Ombre,region,23,DISCOVERY_OFFICIAL
+WORLD-03,Mauritius,Trou aux Biches,region,23,DISCOVERY_OFFICIAL
