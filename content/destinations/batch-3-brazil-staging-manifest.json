@@ -1,0 +1,59 @@
+{
+  "batch": "CURADORIA_BATCH_3_BRASIL_2026-08-17",
+  "environment": "staging_only",
+  "publish_production": false,
+  "destinations": [
+    {
+      "title": "Destinos | Florianópolis",
+      "city": "Florianópolis",
+      "country": "Brasil",
+      "post_type": "ang_curated",
+      "post_id": 141720,
+      "external_id": "5e372d4a8eb8e12757748f4347288cd50e270c0e1b96a905d626b9310f36deea",
+      "wp_status": "draft",
+      "identity_gate": "PASS",
+      "source_gate": "PASS",
+      "content_gate": "NEEDS_ENRICHMENT",
+      "media_gate": "HOLD_LICENSE_PROOF",
+      "seo_schema_gate": "PENDING",
+      "staging_gate": "NOT_TESTED"
+    },
+    {
+      "title": "Destinos | Fernando de Noronha",
+      "city": "Fernando de Noronha",
+      "country": "Brasil",
+      "post_type": "ang_curated",
+      "post_id": 141744,
+      "external_id": "041c02fb1493ce2bd64009dad74181bbaf956e1342f8f8f6ce84383111ec42c0",
+      "wp_status": "draft",
+      "identity_gate": "PASS",
+      "source_gate": "PASS",
+      "content_gate": "NEEDS_ENRICHMENT",
+      "media_gate": "HOLD_LICENSE_PROOF",
+      "seo_schema_gate": "PENDING",
+      "staging_gate": "NOT_TESTED"
+    },
+    {
+      "title": "Destinos | Amazônia",
+      "city": "Amazônia",
+      "country": "Brasil",
+      "post_type": "ang_curated",
+      "post_id": 141767,
+      "external_id": "1e672c2363d877c4901808d386f21efa07a57d0f17861cb02a2449dae34fab98",
+      "wp_status": "draft",
+      "identity_gate": "PASS",
+      "source_gate": "PASS",
+      "content_gate": "NEEDS_ENRICHMENT",
+      "media_gate": "HOLD_LICENSE_PROOF",
+      "seo_schema_gate": "PENDING",
+      "staging_gate": "NOT_TESTED"
+    }
+  ],
+  "safeguards": [
+    "Do not publish to production.",
+    "Use official or attributable sources by factual block.",
+    "Do not treat public availability as media usage permission.",
+    "Require responsive staging QA and score >= 90 before promotion.",
+    "Keep maintenance and existing production components untouched."
+  ]
+}
