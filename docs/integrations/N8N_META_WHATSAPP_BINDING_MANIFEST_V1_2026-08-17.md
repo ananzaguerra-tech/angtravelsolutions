@@ -40,6 +40,22 @@ Runtime binding:
 - META_GRAPH_API_VERSION: VALIDATE_AT_BIND_TIME
 - N8N_WEBHOOK_BASE_URL: DERIVE_FROM_EXISTING_INSTANCE
 
+## Meta mobile evidence — 2026-08-17
+Authenticated mobile screenshots supplied by the principal prove the following negative/guardrail facts:
+- WhatsApp Manager displayed `+1 555-651-7727` as `Test Number` with Phone Number ID `1273314619199420`.
+- `1273314619199420` is explicitly REJECTED for ANG production/staging binding because it belongs to the Meta test number, not E.164 `551940404293`.
+- Events Manager displayed dataset/app-style identifiers including `2939936939689516`; these are NOT acceptable substitutes for WABA ID or the Phone Number ID of `551940404293`.
+- A candidate public ID `1018409424352547` was supplied separately, but its field label was not visible; therefore it remains UNCLASSIFIED and must not be bound as WABA ID or Phone Number ID until the authenticated Meta screen shows the exact label.
+
+Hard reject list for automated/manual review:
+- REJECT_PHONE_NUMBER_ID: 1273314619199420
+- REJECT_EVENT_DATASET_OR_APP_ID: 2939936939689516
+- UNCLASSIFIED_META_PUBLIC_ID: 1018409424352547
+
+Acceptance rule:
+- `META_PHONE_NUMBER_ID` is accepted only when the same authenticated WhatsApp Manager screen shows `+55 19 4040-4293` / `551940404293` and the exact label `Phone Number ID` / `Identificação do número de telefone`.
+- `META_WABA_ID` is accepted only when the authenticated WhatsApp Business Account screen shows the exact label `WhatsApp Business Account ID` / equivalent Meta label.
+
 ## Homologation sequence
 1. Confirm existing n8n session and inspect the V2 workflow.
 2. Associate Error Workflow.
@@ -65,5 +81,6 @@ WABA ID and Phone Number ID for E.164 551940404293 are the remaining public iden
 ## Current execution evidence
 - Gmail search for WABA_ID / PHONE_NUMBER_ID / WhatsApp Business Account / 551940404293 returned no usable Meta asset identifiers.
 - Google Drive search for the same identifiers returned no result.
+- Mobile Meta evidence identified a test-number Phone Number ID and Events Manager IDs that must not be used for ANG.
 - Repository manifest contains no guessed identifiers; only App ID and Meta Business ID are confirmed.
-- End-to-end homologation must remain NOT PASSED until the authenticated Meta asset and n8n session expose the two public IDs and vault-only credentials.
+- End-to-end homologation must remain NOT PASSED until the authenticated Meta asset and n8n session expose the two correct public IDs and vault-only credentials.
