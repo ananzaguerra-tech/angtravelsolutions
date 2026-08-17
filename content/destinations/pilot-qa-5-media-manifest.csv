@@ -1,4 +1,4 @@
-destination,wp_post_id,external_id,hero_required,gallery_min,source_library,rights_status,selected_asset,credit_required,alt_text,qa_status
+destination,wp_post_id,external_id,hero_required,gallery_min,source,rights_status,selected_asset,credit_required,alt_text,qa_status
 Rio de Janeiro,141651,dc35bd0a5e7254b74d79cb15fa7155441ac2f4dde5aefb7e948b60c4c61593ae,yes,5,Turismo RJ/Riotur,HOLD_LICENSE_PROOF,,TBD,"Vista do Rio de Janeiro representando a curadoria premium da ANG Travel Solutions",HOLD
 Paris,141905,cb5bb2a498644135176249c3b5279f9f9fe9e6d254083286c861d1602491f39e,yes,5,Paris je t'aime media resources,HOLD_LICENSE_PROOF,,yes,"Vista de Paris representando a curadoria premium da ANG Travel Solutions",HOLD
 Milão,142020,c23a01b6439e5d27d4b57429057c9252d928039dc7ecd03521365245e06fcb3b,yes,5,YesMilano media library,HOLD_AUTH_AND_LICENSE,,TBD,"Vista de Milão representando a curadoria premium da ANG Travel Solutions",HOLD
