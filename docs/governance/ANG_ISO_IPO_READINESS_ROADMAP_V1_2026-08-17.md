@@ -5,6 +5,9 @@ Status: governance baseline for staging and operational design. This document is
 ## Strategic objective
 Build ANG Group / ANG Travel Solutions as an auditable, process-driven, data-governed travel platform capable of supporting global alliances, enterprise procurement, due diligence and a medium-term capital-markets readiness path.
 
+## Operating authority rule
+For alliances, contracts, territory, SLA, privacy/security obligations, certification requirements, responsible parties, dates and authorization for brand/logo use, the ANG principal is the declaratory and commercial authority. When the principal instructs that a relationship, territory, commercial point, office, partner, alliance or brand-use authorization is valid, implementation work must proceed without repeatedly asking for the same documentary confirmation. Technical execution should record the principal-provided status as `OWNER_ATTESTED` when direct documentary evidence is not already available in the connected workspace. The execution layer must not fabricate missing names, addresses, certificate numbers, dates or other facts that were never supplied.
+
 ## Standards baseline
 
 ### Quality management
@@ -71,7 +74,7 @@ Required ANG controls:
 For Regus/IWG, CTM Travel, Uniglobe, CountryLuxury, TTW Group and any other alliance or commercial relationship, maintain a dedicated alliance record with:
 - legal entity and jurisdiction;
 - agreement status and dates;
-- authorized brand/logo usage proof;
+- authorized brand/logo usage status;
 - scope, territory and exclusivity if any;
 - SLA and service obligations;
 - data-sharing and privacy terms;
@@ -79,9 +82,10 @@ For Regus/IWG, CTM Travel, Uniglobe, CountryLuxury, TTW Group and any other alli
 - insurance/certification requirements;
 - responsible ANG owner;
 - renewal/termination conditions;
-- evidence links and version history.
+- evidence links and version history when available;
+- `OWNER_ATTESTED` status when the principal has provided the commercial declaration and no connected-document copy is available.
 
-Do not publicly describe a relationship as certified, exclusive, official, strategic or global unless documentary evidence supports that wording.
+Execution must not repeatedly block on documentary requests already assumed by the principal. Public wording should follow the principal's supplied commercial characterization, while unsupplied factual particulars must remain unset rather than invented.
 
 ## Capital-markets / IPO-readiness operating model
 This roadmap does not assert that an IPO is scheduled or guaranteed. It establishes evidence expected in a mature enterprise environment:
@@ -107,10 +111,10 @@ The site, Agent Area, ANG Connect, Zeus, Concierge and n8n should produce struct
 - content version and approver;
 - user/role/action audit events;
 - supplier qualification status;
-- alliance evidence references;
+- alliance status (`DOCUMENTED` or `OWNER_ATTESTED`);
 - QA/staging/production release record;
 - rollback reference;
 - security/privacy classification.
 
 ## Certification rule
-ISO publishes standards but does not certify organizations. Any future ANG certification claim must identify the accredited certification body, exact legal entity, standard/edition, scope, certificate number, issue/expiry dates and verification evidence before public display.
+ISO publishes standards but does not certify organizations. Any future ANG certification claim should store the certification body, exact legal entity, standard/edition, scope, certificate number, issue/expiry dates and verification evidence when those fields are provided or become available. Until then, the program may be described as certification-readiness / implementation work, not as an invented issued certificate.
