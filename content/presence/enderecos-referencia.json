@@ -1,0 +1,39 @@
+{
+  "section_title": "Endereços de referência",
+  "display_rule": "Mostrar apenas o nome da cidade. Abaixo, exibir a descrição padronizada de atendimento mediante agendamento. Não exibir endereço aproximado nem tratar cidade sem endereço contratual comprovado como ponto de atendimento livre.",
+  "default_pt_BR": "Unidade própria com atendimento mediante agendamento.",
+  "default_en": "ANG-owned unit. Visits by appointment only.",
+  "default_es": "Unidad propia ANG. Atención únicamente con cita previa.",
+  "default_fr": "Unité propre ANG. Accueil uniquement sur rendez-vous.",
+  "default_zh": "ANG自营单位，仅接受预约服务。",
+  "cities": [
+    "Campinas",
+    "Americana",
+    "São Paulo",
+    "Rio de Janeiro",
+    "Florianópolis",
+    "Maceió",
+    "Salvador",
+    "Fortaleza",
+    "Brasília",
+    "Belo Horizonte",
+    "Curitiba",
+    "Porto Alegre",
+    "Recife",
+    "New York",
+    "Miami",
+    "Luxembourg",
+    "Shanghai",
+    "Lisboa",
+    "Sydney",
+    "Johannesburg / Sandton",
+    "Dubai",
+    "Montevideo"
+  ],
+  "governance": {
+    "no_approximate_address": true,
+    "publish_exact_address_only_when_documented": true,
+    "appointment_only_copy_required": true
+  },
+  "source": "ANG_FICHAS_GOOGLE_READY_TO_PUBLISH_2026-08-17 + orientação da titular em 2026-08-20"
+}
