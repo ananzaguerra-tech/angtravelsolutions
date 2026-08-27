@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-08-27",
+  "purpose": "Central execution queue for pending ANG Group Google Business and social publications while authenticated external publishing channels are unavailable in this chat.",
+  "rules": {
+    "publish_claim_requires_real_external_id_or_permalink": true,
+    "do_not_mark_published_without_evidence": true,
+    "no_forbidden_location_copy": true
+  },
+  "google_business": [
+    {
+      "brand": "ANG Travel Solutions",
+      "market": "Campinas, Brazil",
+      "action": "UPDATE_EXISTING",
+      "status": "READY_FOR_AUTHENTICATED_EXTERNAL_PUBLISH",
+      "required_evidence": ["profile_url_or_id", "published_status"]
+    },
+    {
+      "brand": "ANG Travel",
+      "market": "Americana, Brazil",
+      "action": "CLAIM_EXISTING",
+      "place_id": "ChIJn4N7kMqbyJQR-dtltxfRqgE",
+      "status": "READY_FOR_AUTHENTICATED_EXTERNAL_PUBLISH",
+      "required_evidence": ["claimed_profile_url_or_id", "published_status"]
+    },
+    {
+      "brand": "ANG Group other companies/countries",
+      "action": "CREATE_OR_UPDATE_PER_CONFIRMED_ACCOUNT_DATA",
+      "status": "WAITING_FOR_AUTHENTICATED_GOOGLE_BUSINESS_CHANNEL",
+      "required_evidence": ["exact_business_identity", "real_profile_url_or_id", "published_status"]
+    }
+  ],
+  "social": [
+    {
+      "brand": "ANG Travel",
+      "queue_id": "CURADORIA_ANG_AGOSTO_FEED",
+      "status": "BLOCKED_IN_LIVE_N8N_PAYLOAD_FLOW",
+      "blocker": "HOLD_MISSING_IMAGE_URL",
+      "next_action": "Apply ZEUS V5 live payload hotfix then repeat authorized Feed only",
+      "success_evidence": ["PUBLISHED", "publication_id"]
+    },
+    {
+      "brand": "ANG Travel",
+      "format": "story",
+      "status": "WAIT_FEED_PASS"
+    },
+    {
+      "brand": "ANG Travel",
+      "format": "carousel",
+      "status": "WAIT_FEED_PASS"
+    },
+    {
+      "brand": "ANG Travel Solutions / ANG Luxury Brazil / ANG Business Travel / ANG MICE / ANG Celebrations",
+      "status": "READY_FOR_CONTENT_ROUTING_BUT_NOT_EXTERNAL_PUBLISHABLE_FROM_CURRENT_CHAT",
+      "required_evidence": ["target_account", "post_asset", "caption", "publication_id_or_permalink"]
+    }
+  ]
+}
