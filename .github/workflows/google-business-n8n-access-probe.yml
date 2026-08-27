@@ -1,0 +1,43 @@
+name: Google Business via n8n Access Probe
+
+on:
+  push:
+    branches: [staging]
+    paths:
+      - '.github/workflows/google-business-n8n-access-probe.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  probe-google-business:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe existing authenticated n8n gateway for Google Business capability
+        env:
+          GH_EPHEMERAL_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.run_id }}
+          HEAD_SHA: ${{ github.sha }}
+          REPOSITORY: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          ENDPOINT="https://ananza.app.n8n.cloud/webhook/zeus-social-v5-ghauth"
+          BODY=$(jq -n \
+            --arg run_id "$RUN_ID" \
+            --arg sha "$HEAD_SHA" \
+            --arg repository "$REPOSITORY" \
+            '{run_id:$run_id,sha:$sha,repository:$repository,action:"google_business_status",source:"github-actions-autonomous",request_id:("gbp-probe-"+$run_id),payload:{operation:"accounts.locations.list",read_only:true}}')
+          HTTP=$(mktemp)
+          CODE=$(curl --silent --show-error --retry 0 \
+            -o "$HTTP" -w '%{http_code}' \
+            -X POST "$ENDPOINT" \
+            -H "Authorization: Bearer $GH_EPHEMERAL_TOKEN" \
+            -H 'Content-Type: application/json' \
+            --data "$BODY")
+          echo "HTTP_STATUS=$CODE"
+          cat "$HTTP"
+          echo
+          test "$CODE" -ge 200 -a "$CODE" -lt 500
