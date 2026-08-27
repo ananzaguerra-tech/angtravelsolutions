@@ -48,8 +48,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          # The V5 webhook route is not treated as an authentication secret: security is enforced
-          # by the ephemeral GitHub token plus run_id/SHA/repository verification inside n8n.
+          # The V5 webhook route is not used as an authentication secret. Security is enforced by
+          # the ephemeral GitHub token plus run_id/SHA/repository verification inside n8n.
           ENDPOINT="$(printf '%s%s%s' 'https://ananza.app.n8n.cloud' '/webhook/' 'zeus-social-v5-ghauth')"
           P=$(jq '.payload' "$PAYLOAD_FILE")
           RID=$(jq -r '.request_id' "$PAYLOAD_FILE")
@@ -59,7 +59,7 @@ jobs:
             --arg repository "$REPOSITORY" \
             --arg request_id "$RID" \
             --argjson payload "$P" \
-            '{run_id:$run_id,sha:$sha,repository:$repository,action:"instagram_publish",source:"github-actions-autonomous",request_id:$request_id,payload:$payload}')
+            '{run_id:$run_id,sha:$sha,repository:$repository,action:"instagram_publish",source:"github-actions-autonomous",request_id:$request_id,payload:($payload + {payload:$payload}),image_url:$payload.image_url,format:$payload.format,caption:$payload.caption,page_name:$payload.page_name,brand:$payload.brand,queue_id:$payload.queue_id}')
           RESPONSE=$(curl --fail-with-body --silent --show-error --retry 0 \
             -X POST "$ENDPOINT" \
             -H "Authorization: Bearer $GH_EPHEMERAL_TOKEN" \
