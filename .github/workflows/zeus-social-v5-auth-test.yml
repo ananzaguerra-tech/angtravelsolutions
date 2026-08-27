@@ -1,9 +1,5 @@
 name: ZEUS Social V5 Auth Test
 on:
-  push:
-    branches: [staging]
-    paths:
-      - ".github/workflows/zeus-social-v5-auth-test.yml"
   workflow_dispatch:
 permissions:
   actions: read
@@ -18,7 +14,9 @@ jobs:
           RUN_ID: ${{ github.run_id }}
           HEAD_SHA: ${{ github.sha }}
           REPOSITORY: ${{ github.repository }}
+          ZEUS_SOCIAL_WEBHOOK: ${{ secrets.ZEUS_SOCIAL_WEBHOOK }}
         run: |
           set -euo pipefail
-          response="$(curl --fail-with-body --silent --show-error             -X POST "https://ananza.app.n8n.cloud/webhook/zeus-social-v5-ghauth"             -H "Authorization: Bearer ${GH_TOKEN_EPHEMERAL}"             -H "Content-Type: application/json"             --data "$(jq -nc               --arg run_id "${RUN_ID}"               --arg sha "${HEAD_SHA}"               --arg repository "${REPOSITORY}"               '{run_id:$run_id,sha:$sha,repository:$repository,action:"status/auth",payload:{},source:"github-actions"}')")"
+          test -n "${ZEUS_SOCIAL_WEBHOOK}"
+          response="$(curl --fail-with-body --silent --show-error             -X POST "${ZEUS_SOCIAL_WEBHOOK}"             -H "Authorization: Bearer ${GH_TOKEN_EPHEMERAL}"             -H "Content-Type: application/json"             --data "$(jq -nc               --arg run_id "${RUN_ID}"               --arg sha "${HEAD_SHA}"               --arg repository "${REPOSITORY}"               '{run_id:$run_id,sha:$sha,repository:$repository,action:"status/auth",payload:{},source:"github-actions"}')")"
           echo "${response}" | jq -e '.result.status == "AUTH_PASS" and .result.authorized == true'
