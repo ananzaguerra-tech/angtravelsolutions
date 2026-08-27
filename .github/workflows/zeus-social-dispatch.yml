@@ -15,6 +15,8 @@ permissions:
 jobs:
   dispatch:
     runs-on: ubuntu-latest
+    env:
+      ZEUS_SOCIAL_WEBHOOK: ${{ secrets.ZEUS_SOCIAL_WEBHOOK }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,17 +31,20 @@ jobs:
           jq -e '.items | length > 0' "$FILE" >/dev/null
           jq -e '[.items[] | select(.publish_authorized == true and .status == "READY_TO_DISPATCH")] | length > 0' "$FILE" >/dev/null
 
-      - name: Fail closed when Zeus endpoint is unavailable
-        if: ${{ secrets.ZEUS_SOCIAL_WEBHOOK == '' }}
+      - name: Validate Zeus endpoint availability
+        id: endpoint
         shell: bash
         run: |
-          echo "ZEUS_SOCIAL_WEBHOOK is not configured. No external publication attempted."
-          exit 78
+          if [ -z "${ZEUS_SOCIAL_WEBHOOK:-}" ]; then
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "ZEUS_SOCIAL_WEBHOOK is not configured. No external publication attempted."
+          else
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Dispatch authorized queue to Zeus/n8n
-        if: ${{ secrets.ZEUS_SOCIAL_WEBHOOK != '' }}
+        if: ${{ steps.endpoint.outputs.available == 'true' }}
         env:
-          ZEUS_SOCIAL_WEBHOOK: ${{ secrets.ZEUS_SOCIAL_WEBHOOK }}
           QUEUE_FILE: ${{ steps.queue.outputs.file }}
         shell: bash
         run: |
@@ -54,7 +59,10 @@ jobs:
           echo "$RESPONSE" | jq . || printf '%s\n' "$RESPONSE"
 
       - name: Publication evidence requirement
-        if: ${{ secrets.ZEUS_SOCIAL_WEBHOOK != '' }}
         shell: bash
         run: |
-          echo "Zeus/n8n must return/store real platform permalink or post ID per item before any item is marked PUBLISHED."
+          if [ "${{ steps.endpoint.outputs.available }}" = "true" ]; then
+            echo "Dispatch attempted. Zeus/n8n must return/store real platform permalink or post ID per item before any item is marked PUBLISHED."
+          else
+            echo "Dispatch blocked safely because the Zeus endpoint secret is absent. Queue remains READY_TO_DISPATCH."
+          fi
