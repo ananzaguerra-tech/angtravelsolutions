@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-08-27T17:40:00Z",
+  "note": "Short-lived Canva render URLs. Workflow materializes them into durable public GitHub-hosted media immediately; do not use these source URLs as publication evidence.",
+  "assets": [
+    {
+      "design_id": "DAHTerfZ6vo",
+      "kind": "feed",
+      "source_url": "https://media.canva.com/v2/document-image/hash:813979420/height:500/id:DAHTerfZ6vo/type:B/width:400?brand=BAEALTalVSw&csig=AAAAAAAAAAAAAAAAAAAAAPVoBJUwjg5_M0J368QYC301GWPuZJFEm2FTzG_pzP33&disableexport=T&exp=1787856120&fallback=https%3A%2F%2Fs3.amazonaws.com%2Fdocument-export.canva.com%2FfZ6vo%2FDAHTerfZ6vo%2F1%2Fthumbnail%2F0001.png%3FX-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DAKIAQYCGKMUH4GDRW44L%252F20260827%252Fus-east-1%252Fs3%252Faws4_request%26X-Amz-Date%3D20260827T165338Z%26X-Amz-Expires%3D6502%26X-Amz-Signature%3Dac05f9fed79d4de40d2860b02b11309a2a002c11a395bafff93f6deb857f6124%26X-Amz-SignedHeaders%3Dhost%26response-expires%3DThu%252C%252027%2520Aug%25202026%252018%253A42%253A00%2520GMT&osig=AAAAAAAAAAAAAAAAAAAAAAPCH95M4FhQfRHkvtfbrH1m-shrSSpYYGIKNecC8bq1&page=1&signed=brand%2Cdisableexport%2Cfallback%2Cpage%2Cversion&signer=document-rpc&version=2",
+      "output": "public/social/2026-08-27/ang-travel-feed.png"
+    },
+    {
+      "design_id": "DAHS3V1Y9sI",
+      "kind": "story",
+      "source_url": "https://media.canva.com/v2/document-image/hash:-605202668/height:595/id:DAHS3V1Y9sI/type:B/width:335?brand=BAEALTalVSw&csig=AAAAAAAAAAAAAAAAAAAAAJn2-PLzM1rf-AcBckgk1l91LAR8jgVwEKD0oKzAyoei&disableexport=T&exp=1787856211&fallback=https%3A%2F%2Fs3.amazonaws.com%2Fdocument-export.canva.com%2F1Y9sI%2FDAHS3V1Y9sI%2F1%2Fthumbnail%2F0001.png%3FX-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DAKIAQYCGKMUH4GDRW44L%252F20260827%252Fus-east-1%252Fs3%252Faws4_request%26X-Amz-Date%3D20260827T060532Z%26X-Amz-Expires%3D45479%26X-Amz-Signature%3D72cf5b5b9565c843040abd02122c598616944f05790ea8cd1c073f4b37866b7a%26X-Amz-SignedHeaders%3Dhost%26response-expires%3DThu%252C%252027%2520Aug%25202026%252018%253A43%253A31%2520GMT&osig=AAAAAAAAAAAAAAAAAAAAAAqsNnwTPgqcvwr4BsY_yzohhXRh77iYKIvnQHucllLi&page=1&signed=brand%2Cdisableexport%2Cfallback%2Cpage%2Cversion&signer=document-rpc&version=1",
+      "output": "public/social/2026-08-27/ang-travel-story.png"
+    },
+    {
+      "design_id": "DAHS3W8FCGU",
+      "kind": "carousel_1",
+      "source_url": "https://media.canva.com/v2/document-image/hash:-810098828/height:447/id:DAHS3W8FCGU/type:B/width:446?brand=BAEALTalVSw&csig=AAAAAAAAAAAAAAAAAAAAAK0_gwmvrIR3hkwtcqujyqAYHBFAZbol7fLJGwj-F88R&disableexport=T&exp=1787856220&fallback=https%3A%2F%2Fs3.amazonaws.com%2Fdocument-export.canva.com%2F8FCGU%2FDAHS3W8FCGU%2F1%2Fthumbnail%2F0001.png%3FX-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DAKIAQYCGKMUH4GDRW44L%252F20260827%252Fus-east-1%252Fs3%252Faws4_request%26X-Amz-Date%3D20260827T093820Z%26X-Amz-Expires%3D32720%26X-Amz-Signature%3D77311178b8c54f75eb1ebbf7f618c0650f030bf392d52c956f8a365bffefd05e%26X-Amz-SignedHeaders%3Dhost%26response-expires%3DThu%252C%252027%2520Aug%25202026%252018%253A43%253A40%2520GMT&osig=AAAAAAAAAAAAAAAAAAAAAEGmLvaCtorRz1qcZyNg-f7h1XOu0z6xk5O1xdfpbmnJ&page=1&signed=brand%2Cdisableexport%2Cfallback%2Cpage%2Cversion&signer=document-rpc&version=1",
+      "output": "public/social/2026-08-27/ang-travel-carousel-1.png"
+    },
+    {
+      "design_id": "DAHS3W8FCGU",
+      "kind": "carousel_2",
+      "source_url": "https://media.canva.com/v2/document-image/hash:-569892322/height:447/id:DAHS3W8FCGU/type:B/width:446?brand=BAEALTalVSw&csig=AAAAAAAAAAAAAAAAAAAAAPxtJRU7-OCbBAKvnpcw-fF_owL0Wq1ilmSz-Mh--OsC&disableexport=T&exp=1787856220&fallback=https%3A%2F%2Fs3.amazonaws.com%2Fdocument-export.canva.com%2F8FCGU%2FDAHS3W8FCGU%2F1%2Fthumbnail%2F0002.png%3FX-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DAKIAQYCGKMUH4GDRW44L%252F20260827%252Fus-east-1%252Fs3%252Faws4_request%26X-Amz-Date%3D20260827T091218Z%26X-Amz-Expires%3D34282%26X-Amz-Signature%3D8eab4a58577c3e19d22857d28ecf6c672486e390dd29e8196a844c6a46507538%26X-Amz-SignedHeaders%3Dhost%26response-expires%3DThu%252C%252027%2520Aug%25202026%252018%253A43%253A40%2520GMT&osig=AAAAAAAAAAAAAAAAAAAAAICu_hQ3G1m2C-i7CMkBM79AjVSQDNiwQ4xRgdCHw2fK&page=2&signed=brand%2Cdisableexport%2Cfallback%2Cpage%2Cversion&signer=document-rpc&version=1",
+      "output": "public/social/2026-08-27/ang-travel-carousel-2.png"
+    },
+    {
+      "design_id": "DAHS3W8FCGU",
+      "kind": "carousel_3",
+      "source_url": "https://media.canva.com/v2/document-image/hash:-199337429/height:447/id:DAHS3W8FCGU/type:B/width:446?brand=BAEALTalVSw&csig=AAAAAAAAAAAAAAAAAAAAAEHb7kIVHTFSoQRYslhlqq9E9McFj9_u3217V0QA8gVc&disableexport=T&exp=1787856220&fallback=https%3A%2F%2Fs3.amazonaws.com%2Fdocument-export.canva.com%2F8FCGU%2FDAHS3W8FCGU%2F1%2Fthumbnail%2F0003.png%3FX-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DAKIAQYCGKMUH4GDRW44L%252F20260827%252Fus-east-1%252Fs3%252Faws4_request%26X-Amz-Date%3D20260827T100122Z%26X-Amz-Expires%3D31338%26X-Amz-Signature%3D27fb2a205dc01846b4a6a8b3233064b3679b542d16f9d96ce2e5bb79d7671b2a%26X-Amz-SignedHeaders%3Dhost%26response-expires%3DThu%252C%252027%2520Aug%25202026%252018%253A43%253A40%2520GMT&osig=AAAAAAAAAAAAAAAAAAAAAH1T48McUc4DbSEmdlWpp4GgKYFw4uZ8Xz8Fk6DCtlXf&page=3&signed=brand%2Cdisableexport%2Cfallback%2Cpage%2Cversion&signer=document-rpc&version=1",
+      "output": "public/social/2026-08-27/ang-travel-carousel-3.png"
+    }
+  ]
+}
