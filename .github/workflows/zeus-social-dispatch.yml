@@ -17,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ZEUS_SOCIAL_WEBHOOK: ${{ secrets.ZEUS_SOCIAL_WEBHOOK }}
+      N8N_BASE_URL_SECRET: ${{ secrets.N8N_BASE_URL }}
+      ZEUS_EXECUTOR_BASE_URL: ${{ secrets.ZEUS_EXECUTOR_BASE_URL }}
       EXPECTED_ENDPOINT_SHA256: 193446dc8fbdafaeb997fd069da5fad3590a2f3a20c4ae43404a4482b7f6f918
     steps:
       - name: Checkout
@@ -32,24 +34,35 @@ jobs:
           jq -e '.items | length > 0' "$FILE" >/dev/null
           jq -e '[.items[] | select(.publish_authorized == true and .status == "READY_TO_DISPATCH")] | length > 0' "$FILE" >/dev/null
 
-      - name: Validate Zeus endpoint binding
+      - name: Resolve and validate Zeus endpoint binding
         id: endpoint
         shell: bash
         run: |
           set -euo pipefail
-          if [ -z "${ZEUS_SOCIAL_WEBHOOK:-}" ]; then
+          CANDIDATE="${ZEUS_SOCIAL_WEBHOOK:-}"
+          SOURCE="ZEUS_SOCIAL_WEBHOOK"
+          if [ -z "$CANDIDATE" ] && [ -n "${ZEUS_EXECUTOR_BASE_URL:-}" ]; then
+            CANDIDATE="${ZEUS_EXECUTOR_BASE_URL%/}/webhook/zeus-executor-v4"
+            SOURCE="ZEUS_EXECUTOR_BASE_URL"
+          fi
+          if [ -z "$CANDIDATE" ] && [ -n "${N8N_BASE_URL_SECRET:-}" ]; then
+            CANDIDATE="${N8N_BASE_URL_SECRET%/}/webhook/zeus-executor-v4"
+            SOURCE="N8N_BASE_URL"
+          fi
+          if [ -z "$CANDIDATE" ]; then
             echo "available=false" >> "$GITHUB_OUTPUT"
-            echo "ZEUS_SOCIAL_WEBHOOK is not configured. No external publication attempted."
+            echo "No existing Actions secret can resolve the Zeus V4 endpoint. Dispatch remains fail-closed."
             exit 0
           fi
-          ACTUAL=$(printf '%s' "$ZEUS_SOCIAL_WEBHOOK" | sha256sum | awk '{print $1}')
+          ACTUAL=$(printf '%s' "$CANDIDATE" | sha256sum | awk '{print $1}')
           if [ "$ACTUAL" != "$EXPECTED_ENDPOINT_SHA256" ]; then
             echo "available=false" >> "$GITHUB_OUTPUT"
-            echo "ZEUS_SOCIAL_WEBHOOK fingerprint mismatch. Dispatch blocked safely."
+            echo "Resolved endpoint fingerprint mismatch from $SOURCE. Dispatch blocked safely."
             exit 0
           fi
+          echo "RESOLVED_ZEUS_SOCIAL_WEBHOOK=$CANDIDATE" >> "$GITHUB_ENV"
           echo "available=true" >> "$GITHUB_OUTPUT"
-          echo "Zeus executor endpoint fingerprint validated."
+          echo "Zeus executor endpoint fingerprint validated from an existing Actions secret binding ($SOURCE)."
 
       - name: Validate publication payload readiness
         id: payload
@@ -61,12 +74,13 @@ jobs:
           READY=$(jq '[.items[] | select(.publish_authorized == true and .status == "READY_TO_DISPATCH" and (.platforms | index("instagram")) and (.image_url // "") != "" and (.copy // "") != "")] | length' "$QUEUE_FILE")
           if [ "$READY" -eq 0 ]; then
             echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "No Instagram item has both a public image_url and caption. Canva design IDs alone cannot be sent to Meta Graph API."
+            echo "No format-safe Instagram item has both a durable public image_url and caption."
           else
             echo "ready=true" >> "$GITHUB_OUTPUT"
+            echo "ready_count=$READY" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Dispatch authorized Instagram items to Zeus V4
+      - name: Dispatch authorized Instagram feed items to Zeus V4
         if: ${{ steps.endpoint.outputs.available == 'true' && steps.payload.outputs.ready == 'true' }}
         env:
           QUEUE_FILE: ${{ steps.queue.outputs.file }}
@@ -75,8 +89,13 @@ jobs:
           set -euo pipefail
           jq -c '.items[] | select(.publish_authorized == true and .status == "READY_TO_DISPATCH" and (.platforms | index("instagram")) and (.image_url // "") != "" and (.copy // "") != "")' "$QUEUE_FILE" | while read -r ITEM; do
             ID=$(jq -r '.id' <<<"$ITEM")
+            FORMAT=$(jq -r '.format // ""' <<<"$ITEM")
+            if [ "$FORMAT" != "feed_4x5" ]; then
+              echo "Item $ID format $FORMAT is not supported by Zeus V4 feed executor; skipping safely."
+              continue
+            fi
             PAYLOAD=$(jq -n --arg id "$ID" --argjson item "$ITEM" '{action:"instagram_publish",source:"github-actions",request_id:("social-"+$id),payload:{brand:$item.brand,page_name:$item.brand,image_url:$item.image_url,caption:(($item.copy // "") + (if ($item.cta // "") == "" then "" else "\n\n" + $item.cta end)),format:$item.format,queue_id:$item.id}}')
-            RESPONSE=$(curl --fail-with-body --silent --show-error --retry 2 --retry-delay 3 -H 'Content-Type: application/json' -H 'X-ANG-Source: github-actions' --data "$PAYLOAD" "$ZEUS_SOCIAL_WEBHOOK")
+            RESPONSE=$(curl --fail-with-body --silent --show-error --retry 2 --retry-delay 3 -H 'Content-Type: application/json' -H 'X-ANG-Source: github-actions' --data "$PAYLOAD" "$RESOLVED_ZEUS_SOCIAL_WEBHOOK")
             printf '%s\n' "$RESPONSE" | jq . || printf '%s\n' "$RESPONSE"
             printf '%s\n' "$RESPONSE" | jq -e '.result.status == "PUBLISHED" and (.result.publication_id // "") != ""' >/dev/null || {
               echo "Item $ID did not return real PUBLISHED evidence; failing closed."
@@ -88,9 +107,9 @@ jobs:
         shell: bash
         run: |
           if [ "${{ steps.endpoint.outputs.available }}" != "true" ]; then
-            echo "Dispatch blocked safely: endpoint secret absent or fingerprint mismatch."
+            echo "Dispatch blocked safely: no verified endpoint binding was resolved."
           elif [ "${{ steps.payload.outputs.ready }}" != "true" ]; then
-            echo "Dispatch blocked safely: queue lacks public image_url required by the real Zeus V4 Instagram executor."
+            echo "Dispatch blocked safely: no format-safe item with durable public media is ready."
           else
-            echo "Dispatch path executed. Every item must return a real publication_id before being marked PUBLISHED."
+            echo "Dispatch path executed for supported feed items. Every published item must return a real publication_id."
           fi
