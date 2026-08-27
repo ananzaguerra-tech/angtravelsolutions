@@ -71,6 +71,31 @@
       "position": [-280, 0]
     },
     {
+      "parameters": {
+        "conditions": {
+          "options": {"caseSensitive": false, "leftValue": "", "typeValidation": "strict", "version": 2},
+          "conditions": [{"id": "status-auth-cond", "leftValue": "={{$json.action}}", "rightValue": "status/auth", "operator": {"type": "string", "operation": "equals"}}],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "v5-status-if",
+      "name": "Status/Auth?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [-40, -40]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{json:{status:'AUTH_PASS',authorized:true,auth_status:$json.auth_status,request_id:$json.request_id||$execution.id,run_id:$json.run_id,sha:$json.sha,repository:$json.repository,github_run_status:$json.github_run_status}}];"
+      },
+      "id": "v5-status-pass",
+      "name": "Responder AUTH PASS",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [200, 40]
+    },
+    {
       "parameters": {"jsCode": "return [{json:{status:'AUTH_DENIED',request_id:$json.request_id||$execution.id}}];"},
       "id": "v5-deny",
       "name": "Negar execução",
@@ -150,7 +175,9 @@
     "Extrair envelope GitHub": {"main": [[{"node": "GitHub — Verificar Run", "type": "main", "index": 0}]]},
     "GitHub — Verificar Run": {"main": [[{"node": "Autorizar GitHub", "type": "main", "index": 0}]]},
     "Autorizar GitHub": {"main": [[{"node": "Autorizado?", "type": "main", "index": 0}]]},
-    "Autorizado?": {"main": [[{"node": "Meta — Descobrir Páginas", "type": "main", "index": 0}], [{"node": "Negar execução", "type": "main", "index": 0}]]},
+    "Autorizado?": {"main": [[{"node": "Status/Auth?", "type": "main", "index": 0}], [{"node": "Negar execução", "type": "main", "index": 0}]]},
+    "Status/Auth?": {"main": [[{"node": "Responder AUTH PASS", "type": "main", "index": 0}], [{"node": "Meta — Descobrir Páginas", "type": "main", "index": 0}]]},
+    "Responder AUTH PASS": {"main": [[{"node": "Responder V5", "type": "main", "index": 0}]]},
     "Negar execução": {"main": [[{"node": "Responder V5", "type": "main", "index": 0}]]},
     "Meta — Descobrir Páginas": {"main": [[{"node": "Meta — Selecionar Página", "type": "main", "index": 0}]]},
     "Meta — Selecionar Página": {"main": [[{"node": "Meta — Descobrir Instagram Business", "type": "main", "index": 0}]]},
