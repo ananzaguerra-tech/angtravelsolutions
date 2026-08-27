@@ -1,10 +1,11 @@
 {
   "generated_at": "2026-08-27",
   "policy": {
-    "public_map_requires_documented_location": true,
-    "social_location_tag_requires_verified_profile": true,
+    "automatic_map_restriction_enabled": false,
+    "automatic_social_geotag_restriction_enabled": false,
     "no_duplicate_google_business_profiles": true,
-    "no_approximate_address": true
+    "no_approximate_address": true,
+    "selection_mode": "MANUAL_EDITORIAL_CONTROL"
   },
   "locations": [
     {
@@ -17,8 +18,8 @@
       "google_status": "READY_FOR_AUTHENTICATED_UPDATE",
       "claim_strategy": "UPDATE_EXISTING",
       "public_map_eligible": true,
-      "social_location_tag_eligible": false,
-      "blocker": "VERIFIED_PROFILE_URL_OR_PLACE_ID_REQUIRED"
+      "social_location_tag_eligible": true,
+      "selection_rule": "EDITORIAL_OR_CAMPAIGN_DECISION"
     },
     {
       "business_unit": "ANG Travel",
@@ -30,8 +31,9 @@
       "claim_strategy": "CLAIM_EXISTING_NO_DUPLICATE",
       "place_id": "ChIJn4N7kMqbyJQR-dtltxfRqgE",
       "public_map_eligible": true,
-      "social_location_tag_eligible": true
+      "social_location_tag_eligible": true,
+      "selection_rule": "EDITORIAL_OR_CAMPAIGN_DECISION"
     }
   ],
-  "hold_rule": "All other planned/reference cities remain HOLD until exact documentary evidence and correct Google Business identity are confirmed."
+  "note": "Automatic map/geotag gating was removed at the titular's instruction on 2026-08-27. This manifest no longer automatically blocks map or social geotag use. Exact addresses must still not be fabricated, and Google Business duplicates must not be created."
 }
