@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-08-27",
+  "site": "https://angtravelsolutions.com.br",
+  "maintenance": {
+    "required": true,
+    "scope": "public_home_and_public_site",
+    "keep_admin_access": true,
+    "release_condition": "ONLY_AFTER_FULL_P0_QA_BACKUP_ROLLBACK_AND_SMOKE_TEST_PASS"
+  },
+  "location_copy": {
+    "forbidden_expression": "Endereços de referência",
+    "remove_reference_wording": true,
+    "preferred_heading": "Localização",
+    "campinas": {
+      "label": "ANG Travel Solutions — Campinas",
+      "address": "Avenida Doutor José Bonifácio Coutinho Nogueira, 150 — Plaza, Térreo — Jardim Madalena, Campinas — SP, 13091-611",
+      "phone": "+55 19 4040-4293"
+    }
+  },
+  "current_live_home_observed": {
+    "location_heading": "ONDE ESTAMOS",
+    "location_label": "Endereço institucional — Campinas",
+    "address_line_1": "Avenida Doutor José Bonifácio Coutinho Nogueira, 150 — Térreo",
+    "address_line_2": "Jardim Madalena · Campinas/SP · CEP 13091-611"
+  },
+  "required_update": "Replace current location wording and address with the approved Campinas location above; keep the public site in maintenance until integral completion."
+}
