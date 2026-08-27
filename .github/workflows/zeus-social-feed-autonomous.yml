@@ -1,0 +1,71 @@
+name: ZEUS Social Feed Autonomous
+
+on:
+  push:
+    branches: [staging]
+    paths:
+      - '.github/workflows/zeus-social-feed-autonomous.yml'
+      - 'ops/social/payloads/ang-travel-feed-authorized-2026-08-27.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: zeus-social-feed-authorized-2026-08-27
+  cancel-in-progress: false
+
+jobs:
+  publish-authorized-feed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate authorized payload and media
+        id: payload
+        shell: bash
+        run: |
+          set -euo pipefail
+          FILE='ops/social/payloads/ang-travel-feed-authorized-2026-08-27.json'
+          jq -e '.request_id == "social-v5-CURADORIA_ANG_AGOSTO_FEED"' "$FILE" >/dev/null
+          jq -e '.action == "instagram_publish"' "$FILE" >/dev/null
+          jq -e '.payload.queue_id == "CURADORIA_ANG_AGOSTO_FEED"' "$FILE" >/dev/null
+          jq -e '.payload.format == "feed_4x5"' "$FILE" >/dev/null
+          jq -e '.publication_gate.required_status == "PUBLISHED" and .publication_gate.require_publication_id == true and .publication_gate.fail_closed == true' "$FILE" >/dev/null
+          IMAGE=$(jq -r '.payload.image_url' "$FILE")
+          test -n "$IMAGE"
+          curl --fail --location --silent --show-error --head "$IMAGE" >/dev/null
+          echo "file=$FILE" >> "$GITHUB_OUTPUT"
+
+      - name: Publish only authorized ANG Travel feed via V5 authenticated gateway
+        env:
+          GH_EPHEMERAL_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.run_id }}
+          HEAD_SHA: ${{ github.sha }}
+          REPOSITORY: ${{ github.repository }}
+          PAYLOAD_FILE: ${{ steps.payload.outputs.file }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          # The V5 webhook route is not treated as an authentication secret: security is enforced
+          # by the ephemeral GitHub token plus run_id/SHA/repository verification inside n8n.
+          ENDPOINT="$(printf '%s%s%s' 'https://ananza.app.n8n.cloud' '/webhook/' 'zeus-social-v5-ghauth')"
+          P=$(jq '.payload' "$PAYLOAD_FILE")
+          RID=$(jq -r '.request_id' "$PAYLOAD_FILE")
+          BODY=$(jq -n \
+            --arg run_id "$RUN_ID" \
+            --arg sha "$HEAD_SHA" \
+            --arg repository "$REPOSITORY" \
+            --arg request_id "$RID" \
+            --argjson payload "$P" \
+            '{run_id:$run_id,sha:$sha,repository:$repository,action:"instagram_publish",source:"github-actions-autonomous",request_id:$request_id,payload:$payload}')
+          RESPONSE=$(curl --fail-with-body --silent --show-error --retry 0 \
+            -X POST "$ENDPOINT" \
+            -H "Authorization: Bearer $GH_EPHEMERAL_TOKEN" \
+            -H 'Content-Type: application/json' \
+            --data "$BODY")
+          printf '%s\n' "$RESPONSE" | jq .
+          printf '%s\n' "$RESPONSE" | jq -e '.result.status == "PUBLISHED" and (.result.publication_id // "") != ""' >/dev/null
+          PUB=$(printf '%s\n' "$RESPONSE" | jq -r '.result.publication_id')
+          echo "Publication evidence received: ${PUB}"
