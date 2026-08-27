@@ -17,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ZEUS_SOCIAL_WEBHOOK: ${{ secrets.ZEUS_SOCIAL_WEBHOOK }}
+      EXPECTED_ENDPOINT_SHA256: 193446dc8fbdafaeb997fd069da5fad3590a2f3a20c4ae43404a4482b7f6f918
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,38 +32,65 @@ jobs:
           jq -e '.items | length > 0' "$FILE" >/dev/null
           jq -e '[.items[] | select(.publish_authorized == true and .status == "READY_TO_DISPATCH")] | length > 0' "$FILE" >/dev/null
 
-      - name: Validate Zeus endpoint availability
+      - name: Validate Zeus endpoint binding
         id: endpoint
         shell: bash
         run: |
+          set -euo pipefail
           if [ -z "${ZEUS_SOCIAL_WEBHOOK:-}" ]; then
             echo "available=false" >> "$GITHUB_OUTPUT"
             echo "ZEUS_SOCIAL_WEBHOOK is not configured. No external publication attempted."
+            exit 0
+          fi
+          ACTUAL=$(printf '%s' "$ZEUS_SOCIAL_WEBHOOK" | sha256sum | awk '{print $1}')
+          if [ "$ACTUAL" != "$EXPECTED_ENDPOINT_SHA256" ]; then
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "ZEUS_SOCIAL_WEBHOOK fingerprint mismatch. Dispatch blocked safely."
+            exit 0
+          fi
+          echo "available=true" >> "$GITHUB_OUTPUT"
+          echo "Zeus executor endpoint fingerprint validated."
+
+      - name: Validate publication payload readiness
+        id: payload
+        shell: bash
+        env:
+          QUEUE_FILE: ${{ steps.queue.outputs.file }}
+        run: |
+          set -euo pipefail
+          READY=$(jq '[.items[] | select(.publish_authorized == true and .status == "READY_TO_DISPATCH" and (.platforms | index("instagram")) and (.image_url // "") != "" and (.copy // "") != "")] | length' "$QUEUE_FILE")
+          if [ "$READY" -eq 0 ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "No Instagram item has both a public image_url and caption. Canva design IDs alone cannot be sent to Meta Graph API."
           else
-            echo "available=true" >> "$GITHUB_OUTPUT"
+            echo "ready=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Dispatch authorized queue to Zeus/n8n
-        if: ${{ steps.endpoint.outputs.available == 'true' }}
+      - name: Dispatch authorized Instagram items to Zeus V4
+        if: ${{ steps.endpoint.outputs.available == 'true' && steps.payload.outputs.ready == 'true' }}
         env:
           QUEUE_FILE: ${{ steps.queue.outputs.file }}
         shell: bash
         run: |
           set -euo pipefail
-          PAYLOAD=$(jq '{source, policy, items: [.items[] | select(.publish_authorized == true and .status == "READY_TO_DISPATCH")]}' "$QUEUE_FILE")
-          RESPONSE=$(curl --fail-with-body --silent --show-error \
-            --retry 2 --retry-delay 3 \
-            -H 'Content-Type: application/json' \
-            -H 'X-ANG-Source: github-actions' \
-            --data "$PAYLOAD" \
-            "$ZEUS_SOCIAL_WEBHOOK")
-          echo "$RESPONSE" | jq . || printf '%s\n' "$RESPONSE"
+          jq -c '.items[] | select(.publish_authorized == true and .status == "READY_TO_DISPATCH" and (.platforms | index("instagram")) and (.image_url // "") != "" and (.copy // "") != "")' "$QUEUE_FILE" | while read -r ITEM; do
+            ID=$(jq -r '.id' <<<"$ITEM")
+            PAYLOAD=$(jq -n --arg id "$ID" --argjson item "$ITEM" '{action:"instagram_publish",source:"github-actions",request_id:("social-"+$id),payload:{brand:$item.brand,page_name:$item.brand,image_url:$item.image_url,caption:(($item.copy // "") + (if ($item.cta // "") == "" then "" else "\n\n" + $item.cta end)),format:$item.format,queue_id:$item.id}}')
+            RESPONSE=$(curl --fail-with-body --silent --show-error --retry 2 --retry-delay 3 -H 'Content-Type: application/json' -H 'X-ANG-Source: github-actions' --data "$PAYLOAD" "$ZEUS_SOCIAL_WEBHOOK")
+            printf '%s\n' "$RESPONSE" | jq . || printf '%s\n' "$RESPONSE"
+            printf '%s\n' "$RESPONSE" | jq -e '.result.status == "PUBLISHED" and (.result.publication_id // "") != ""' >/dev/null || {
+              echo "Item $ID did not return real PUBLISHED evidence; failing closed."
+              exit 1
+            }
+          done
 
       - name: Publication evidence requirement
         shell: bash
         run: |
-          if [ "${{ steps.endpoint.outputs.available }}" = "true" ]; then
-            echo "Dispatch attempted. Zeus/n8n must return/store real platform permalink or post ID per item before any item is marked PUBLISHED."
+          if [ "${{ steps.endpoint.outputs.available }}" != "true" ]; then
+            echo "Dispatch blocked safely: endpoint secret absent or fingerprint mismatch."
+          elif [ "${{ steps.payload.outputs.ready }}" != "true" ]; then
+            echo "Dispatch blocked safely: queue lacks public image_url required by the real Zeus V4 Instagram executor."
           else
-            echo "Dispatch blocked safely because the Zeus endpoint secret is absent. Queue remains READY_TO_DISPATCH."
+            echo "Dispatch path executed. Every item must return a real publication_id before being marked PUBLISHED."
           fi
