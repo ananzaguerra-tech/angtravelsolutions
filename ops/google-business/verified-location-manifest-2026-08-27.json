@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-08-27",
+  "policy": {
+    "public_map_requires_documented_location": true,
+    "social_location_tag_requires_verified_profile": true,
+    "no_duplicate_google_business_profiles": true,
+    "no_approximate_address": true
+  },
+  "locations": [
+    {
+      "business_unit": "ANG Travel Solutions",
+      "city": "Campinas",
+      "country": "Brazil",
+      "address": "Avenida Doutor José Bonifácio Coutinho Nogueira, 150 — Plaza, Térreo — Jardim Madalena, Campinas — SP, 13091-611",
+      "phone": "+55 19 4040-4293",
+      "website": "https://angtravelsolutions.com.br/",
+      "google_status": "READY_FOR_AUTHENTICATED_UPDATE",
+      "claim_strategy": "UPDATE_EXISTING",
+      "public_map_eligible": true,
+      "social_location_tag_eligible": false,
+      "blocker": "VERIFIED_PROFILE_URL_OR_PLACE_ID_REQUIRED"
+    },
+    {
+      "business_unit": "ANG Travel",
+      "city": "Americana",
+      "country": "Brazil",
+      "address": "Rua Peru, 636, cj. 711 — Wein Office Tower — Americana — SP, 13465-760",
+      "phone": "+55 19 4040-4293",
+      "google_status": "READY_TO_CLAIM_EXISTING",
+      "claim_strategy": "CLAIM_EXISTING_NO_DUPLICATE",
+      "place_id": "ChIJn4N7kMqbyJQR-dtltxfRqgE",
+      "public_map_eligible": true,
+      "social_location_tag_eligible": true
+    }
+  ],
+  "hold_rule": "All other planned/reference cities remain HOLD until exact documentary evidence and correct Google Business identity are confirmed."
+}
