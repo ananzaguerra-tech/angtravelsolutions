@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-27",
+  "policy": {
+    "masters_only_after_qa": true,
+    "do_not_infer_vector_from_raster": true,
+    "preserve_existing_approved_logo_when_master_missing": true
+  },
+  "drive": {
+    "branding_root_id": "17EF_h5-gZMlpMtq6w7lcOJAzc-rSHfpJ",
+    "masters_folder_id": "1NsKAHj2b3wcPsg8EY9dfhzSTR5eCLchD",
+    "recovered_references_folder_id": "1Hh_7ssXYR322L2eMO9uCddq-k2sf7-fr",
+    "hold_folder_id": "1yFILu8fPilnKndBF6mnJ4Y3OULu-xPed"
+  },
+  "brands": [
+    {"brand":"ANG Group","decision":"preserve official sphere/insignia","primary_color":"#b88936","status":"MASTER_FILE_STILL_REQUIRED"},
+    {"brand":"ANG Travel","decision":"preserve current approved logo in full","status":"APPROVED_CURRENT_REFERENCE_MASTER_FILE_STILL_REQUIRED"},
+    {"brand":"ANG Travel Solutions","decision":"preserve current approved option 1 / lilac architecture","status":"APPROVED_CURRENT_REFERENCE_MASTER_FILE_STILL_REQUIRED"},
+    {"brand":"ANG Business Travel","decision":"former ANG Corporate insignia in gold; text #f2c84b","status":"MASTER_FILE_STILL_REQUIRED"},
+    {"brand":"ANG MICE","decision":"own MICE insignia; #b14b1e","status":"MASTER_FILE_STILL_REQUIRED"},
+    {"brand":"ANG Celebrations","decision":"option 3; separate brand; never merge with ANG Travel","status":"APPROVED_DECISION_SOURCE_FILE_HOLD"},
+    {"brand":"ANG Luxury Brazil","decision":"option 30 from 'ANG Luxury Brazil: quatro conceitos premium.png'; second proposal; Brazil with Z","source_sha256":"47d1a5575dea44a97fb8fd736b1a6d44c309a6a85a53382489e4d8a2bb149b22","status":"APPROVED_DECISION_SOURCE_FILE_HOLD"}
+  ]
+}
