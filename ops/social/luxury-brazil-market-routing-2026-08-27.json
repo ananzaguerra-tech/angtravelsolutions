@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-27",
+  "brand": "ANG Luxury Brazil",
+  "rules": {
+    "language_by_target_market": true,
+    "google_location_required_when_geotagging": true,
+    "no_unverified_geotag": true,
+    "brand_master": "option_30",
+    "brazil_spelling": "Brazil"
+  },
+  "states": ["READY_MARKET_COPY","READY_LOCATION","READY_TO_DISPATCH","PUBLISHED"],
+  "evidence_required_for_published": ["publication_id_or_permalink"],
+  "evidence_required_for_location": ["verified_google_business_profile_url_or_place_id"]
+}
