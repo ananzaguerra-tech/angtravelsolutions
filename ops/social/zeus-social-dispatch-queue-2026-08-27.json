@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "generated_at": "2026-08-27",
   "source": "ANG_CAMPANHAS_SOCIAIS_GOOGLE_2026-08-20",
   "policy": {
@@ -13,38 +13,31 @@
     {
       "id": "CURADORIA_ANG_AGOSTO_FEED",
       "brand": "ANG Travel",
-      "platforms": [
-        "instagram"
-      ],
+      "platforms": ["instagram"],
       "format": "feed_4x5",
       "canva_design_id": "DAHTerfZ6vo",
       "copy": "Viajar bem começa muito antes do embarque. A ANG Travel transforma pesquisa, repertório e atendimento próximo em roteiros desenhados para cada viajante.",
       "cta": "Fale com a ANG Travel | +55 19 4040-4293",
       "status": "READY_TO_DISPATCH",
       "publish_authorized": true,
-      "image_url": "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/recovery/v13-staging-2026-08-17/public/social/2026-08-27/ang-travel-feed.png"
+      "image_url": "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/staging/public/social/2026-08-27/ang-travel-feed.png"
     },
     {
       "id": "CURADORIA_ANG_AGOSTO_STORY",
       "brand": "ANG Travel",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
+      "platforms": ["instagram","facebook"],
       "format": "story",
       "canva_design_id": "DAHS3V1Y9sI",
       "copy": "Sua próxima viagem pode começar com uma conversa. Curadoria, planejamento e suporte antes, durante e depois da viagem.",
       "cta": "Chame no WhatsApp",
       "status": "HOLD_EXECUTOR_STORY_UNSUPPORTED",
       "publish_authorized": true,
-      "image_url": "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/recovery/v13-staging-2026-08-17/public/social/2026-08-27/ang-travel-story.png"
+      "image_url": "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/staging/public/social/2026-08-27/ang-travel-story.png"
     },
     {
       "id": "CURADORIA_ANG_AGOSTO_CARROSSEL",
       "brand": "ANG Travel",
-      "platforms": [
-        "instagram"
-      ],
+      "platforms": ["instagram"],
       "format": "carousel_3",
       "canva_design_id": "DAHS3W8FCGU",
       "copy": "3 razões para usar curadoria: 1. Repertório e seleção. 2. Personalização real. 3. Suporte em cada etapa. ANG Travel: viagens pensadas com cuidado, contexto e experiência.",
@@ -52,9 +45,9 @@
       "status": "HOLD_EXECUTOR_CAROUSEL_UNSUPPORTED",
       "publish_authorized": true,
       "image_urls": [
-        "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/recovery/v13-staging-2026-08-17/public/social/2026-08-27/ang-travel-carousel-1.png",
-        "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/recovery/v13-staging-2026-08-17/public/social/2026-08-27/ang-travel-carousel-2.png",
-        "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/recovery/v13-staging-2026-08-17/public/social/2026-08-27/ang-travel-carousel-3.png"
+        "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/staging/public/social/2026-08-27/ang-travel-carousel-1.png",
+        "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/staging/public/social/2026-08-27/ang-travel-carousel-2.png",
+        "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/staging/public/social/2026-08-27/ang-travel-carousel-3.png"
       ]
     }
   ]
