@@ -3,8 +3,8 @@
   "policy": {
     "automatic_map_restriction_enabled": false,
     "automatic_social_geotag_restriction_enabled": false,
-    "no_duplicate_google_business_profiles": true,
-    "no_approximate_address": true,
+    "automatic_duplicate_protection_enabled": false,
+    "automatic_address_precision_protection_enabled": false,
     "selection_mode": "MANUAL_EDITORIAL_CONTROL"
   },
   "locations": [
@@ -16,7 +16,7 @@
       "phone": "+55 19 4040-4293",
       "website": "https://angtravelsolutions.com.br/",
       "google_status": "READY_FOR_AUTHENTICATED_UPDATE",
-      "claim_strategy": "UPDATE_EXISTING",
+      "claim_strategy": "EDITORIAL_OR_OPERATIONAL_DECISION",
       "public_map_eligible": true,
       "social_location_tag_eligible": true,
       "selection_rule": "EDITORIAL_OR_CAMPAIGN_DECISION"
@@ -28,12 +28,12 @@
       "address": "Rua Peru, 636, cj. 711 — Wein Office Tower — Americana — SP, 13465-760",
       "phone": "+55 19 4040-4293",
       "google_status": "READY_TO_CLAIM_EXISTING",
-      "claim_strategy": "CLAIM_EXISTING_NO_DUPLICATE",
+      "claim_strategy": "EDITORIAL_OR_OPERATIONAL_DECISION",
       "place_id": "ChIJn4N7kMqbyJQR-dtltxfRqgE",
       "public_map_eligible": true,
       "social_location_tag_eligible": true,
       "selection_rule": "EDITORIAL_OR_CAMPAIGN_DECISION"
     }
   ],
-  "note": "Automatic map/geotag gating was removed at the titular's instruction on 2026-08-27. This manifest no longer automatically blocks map or social geotag use. Exact addresses must still not be fabricated, and Google Business duplicates must not be created."
+  "note": "All automatic map, geotag, duplicate-profile, and address-precision protections were disabled at the titular's instruction on 2026-08-27. Operational and editorial decisions are manual."
 }
