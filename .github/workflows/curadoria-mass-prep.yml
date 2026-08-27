@@ -1,0 +1,43 @@
+name: Curadoria Mass Preparation
+
+on:
+  push:
+    branches: [staging]
+    paths:
+      - '.github/workflows/curadoria-mass-prep.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  prepare-world-batches:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout recovery source
+        uses: actions/checkout@v4
+        with:
+          ref: recovery/v13-staging-2026-08-17
+
+      - name: Generate mass curation queues
+        shell: pwsh
+        run: |
+          ./scripts/gordon-world-curation-batches.ps1 -BatchSize 25 -OutDir './build/world-curation'
+
+      - name: Validate generated outputs
+        shell: pwsh
+        run: |
+          if (-not (Test-Path './build/world-curation/world-country-discovery-queue.csv')) { throw 'queue missing' }
+          if (-not (Test-Path './build/world-curation/mega-batch-manifest.csv')) { throw 'manifest missing' }
+          if (-not (Test-Path './build/world-curation/manifest.json')) { throw 'metadata missing' }
+          $q = Import-Csv './build/world-curation/world-country-discovery-queue.csv'
+          if ($q.Count -ne 249) { throw "Expected 249 country/territory rows, got $($q.Count)" }
+          Write-Host "CURADORIA_COUNTRY_QUEUE:$($q.Count)"
+
+      - name: Upload mass curation preparation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: curadoria-world-mass-prep-2026-08-27
+          path: build/world-curation/
+          if-no-files-found: error
+          retention-days: 30
