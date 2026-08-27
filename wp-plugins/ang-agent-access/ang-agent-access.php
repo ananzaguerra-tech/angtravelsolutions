@@ -2,7 +2,7 @@
 /**
  * Plugin Name: ANG Agent Access
  * Description: Login seguro e gate de acesso para a Área do Agente ANG Travel Solutions.
- * Version: 0.1.0
+ * Version: 0.2.0
  * Author: ANG Travel Solutions
  */
 
@@ -13,6 +13,8 @@ final class ANG_Agent_Access {
     const CAP  = 'ang_agent_portal';
     const NONCE_ACTION = 'ang_agent_login';
     const NONCE_NAME = 'ang_agent_nonce';
+    const LOGIN_PATH = '/acesso-ang/';
+    const PORTAL_PATH = '/area-do-agente/';
 
     public static function boot() {
         add_action('init', [__CLASS__, 'handle_login'], 1);
@@ -110,7 +112,7 @@ final class ANG_Agent_Access {
 
     private static function redirect_with_error($code) {
         $target = wp_get_referer();
-        if (!$target) { $target = home_url('/login-agente/'); }
+        if (!$target) { $target = self::login_url(); }
         $target = remove_query_arg('ang_login_error', $target);
         wp_safe_redirect(add_query_arg('ang_login_error', sanitize_key($code), $target));
         exit;
@@ -120,7 +122,7 @@ final class ANG_Agent_Access {
         if (is_user_logged_in()) {
             $user = wp_get_current_user();
             if (user_can($user, self::CAP)) {
-                return '<div class="ang-agent-login ang-agent-login--ok"><h2>Área do Agente</h2><p>Seu acesso está ativo.</p><p><a class="ang-agent-btn" href="' . esc_url(self::portal_url()) . '">Entrar no portal</a> <a class="ang-agent-link" href="' . esc_url(wp_logout_url(home_url('/login-agente/'))) . '">Sair</a></p></div>';
+                return '<div class="ang-agent-login ang-agent-login--ok"><h2>Área do Agente</h2><p>Seu acesso está ativo.</p><p><a class="ang-agent-btn" href="' . esc_url(self::portal_url()) . '">Entrar no portal</a> <a class="ang-agent-link" href="' . esc_url(wp_logout_url(self::login_url())) . '">Sair</a></p></div>';
             }
             return '<div class="ang-agent-login ang-agent-login--error"><p>Este usuário não possui permissão para a Área do Agente.</p></div>';
         }
@@ -168,7 +170,7 @@ final class ANG_Agent_Access {
 
     public static function gate_shortcode($atts, $content = '') {
         if (!is_user_logged_in()) {
-            return '<div class="ang-agent-gate"><p>Conteúdo exclusivo da Área do Agente.</p><p><a class="ang-agent-btn" href="' . esc_url(home_url('/login-agente/')) . '">Fazer login</a></p></div>';
+            return '<div class="ang-agent-gate"><p>Conteúdo exclusivo da Área do Agente.</p><p><a class="ang-agent-btn" href="' . esc_url(self::login_url()) . '">Fazer login</a></p></div>';
         }
         $user = wp_get_current_user();
         if (!user_can($user, self::CAP)) {
@@ -185,12 +187,16 @@ final class ANG_Agent_Access {
     }
 
     public static function logout_redirect() {
-        wp_safe_redirect(home_url('/login-agente/'));
+        wp_safe_redirect(self::login_url());
         exit;
     }
 
+    private static function login_url() {
+        return home_url(self::LOGIN_PATH);
+    }
+
     private static function portal_url() {
-        return home_url('/area-do-agente/');
+        return home_url(self::PORTAL_PATH);
     }
 }
 
