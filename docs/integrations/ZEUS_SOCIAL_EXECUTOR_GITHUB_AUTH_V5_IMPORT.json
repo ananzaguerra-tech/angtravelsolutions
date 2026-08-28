@@ -143,7 +143,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const base=$('Meta — Selecionar Página').first().json; const ig=$json.instagram_business_account||{}; const p=base.payload||{}; if(!ig.id) return [{json:{request_id:base.request_id,status:'INSTAGRAM_BUSINESS_ACCOUNT_NOT_FOUND'}}]; return [{json:{request_id:base.request_id,instagram_business_account_id:ig.id,username:ig.username||'',page_access_token:base.page_access_token,format:String(p.format||'feed_4x5'),image_url:p.image_url||'',image_urls:Array.isArray(p.image_urls)?p.image_urls:[],caption:p.caption||''}}];"
+        "jsCode": "const base=$('Meta — Selecionar Página').first().json; const envelope=$('Extrair envelope GitHub').first().json; const ig=$json.instagram_business_account||{}; const p=(base.payload&&typeof base.payload==='object'?base.payload:null)||(envelope.payload&&typeof envelope.payload==='object'?envelope.payload:{}); if(!ig.id) return [{json:{request_id:base.request_id||envelope.request_id,status:'INSTAGRAM_BUSINESS_ACCOUNT_NOT_FOUND'}}]; return [{json:{request_id:base.request_id||envelope.request_id,instagram_business_account_id:ig.id,username:ig.username||'',page_access_token:base.page_access_token,format:String(p.format||'feed_4x5'),image_url:String(p.image_url||''),image_urls:Array.isArray(p.image_urls)?p.image_urls:[],caption:String(p.caption||'')}}];"
       },
       "id": "v5-prep",
       "name": "Instagram — Preparar formato",
