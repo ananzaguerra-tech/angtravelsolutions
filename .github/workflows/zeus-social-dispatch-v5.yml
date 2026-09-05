@@ -1,0 +1,74 @@
+name: Zeus social dispatch V5 GitHub auth
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  dispatch-v5:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Resolve queue
+        id: queue
+        shell: bash
+        run: |
+          set -euo pipefail
+          FILE=$(ls -1 ops/social/zeus-social-dispatch-queue-*.json | sort | tail -n 1)
+          jq -e '.items | length > 0' "$FILE" >/dev/null
+          echo "file=$FILE" >> "$GITHUB_OUTPUT"
+
+      - name: Dispatch authorized items with ephemeral GitHub token
+        env:
+          QUEUE_FILE: ${{ steps.queue.outputs.file }}
+          GH_EPHEMERAL_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.run_id }}
+          SHA: ${{ github.sha }}
+          REPOSITORY: ${{ github.repository }}
+          ENDPOINT: https://ananza.app.n8n.cloud/webhook/zeus-social-v5-ghauth
+        shell: bash
+        run: |
+          set -euo pipefail
+          jq -c '.items[] | select(.publish_authorized == true)' "$QUEUE_FILE" | while read -r ITEM; do
+            ID=$(jq -r '.id' <<<"$ITEM")
+            FORMAT=$(jq -r '.format // ""' <<<"$ITEM")
+            STATUS=$(jq -r '.status // ""' <<<"$ITEM")
+            case "$FORMAT" in
+              feed_4x5)
+                IMAGE=$(jq -r '.image_url // ""' <<<"$ITEM")
+                test -n "$IMAGE" || { echo "$ID missing image_url"; exit 1; }
+                MEDIA_JSON=$(jq -n --arg image "$IMAGE" '{image_url:$image,image_urls:[]}')
+                ;;
+              story)
+                IMAGE=$(jq -r '.image_url // ""' <<<"$ITEM")
+                test -n "$IMAGE" || { echo "$ID missing image_url"; exit 1; }
+                MEDIA_JSON=$(jq -n --arg image "$IMAGE" '{image_url:$image,image_urls:[]}')
+                ;;
+              carousel_3)
+                COUNT=$(jq '.image_urls | length' <<<"$ITEM")
+                [ "$COUNT" -ge 2 ] || { echo "$ID missing carousel media"; exit 1; }
+                MEDIA_JSON=$(jq '{image_url:"",image_urls:.image_urls}' <<<"$ITEM")
+                ;;
+              *) echo "Unsupported format $FORMAT for $ID"; exit 1;;
+            esac
+            CAPTION=$(jq -r '(.copy // "") + (if (.cta // "") == "" then "" else "\n\n" + .cta end)' <<<"$ITEM")
+            BRAND=$(jq -r '.brand' <<<"$ITEM")
+            BODY=$(jq -n \
+              --arg run_id "$RUN_ID" --arg sha "$SHA" --arg repo "$REPOSITORY" \
+              --arg id "$ID" --arg brand "$BRAND" --arg fmt "$FORMAT" --arg caption "$CAPTION" \
+              --argjson media "$MEDIA_JSON" \
+              '{run_id:$run_id,sha:$sha,repository:$repo,action:"instagram_publish",source:"github-actions-v5",request_id:("social-v5-"+$id),payload:{brand:$brand,page_name:$brand,format:$fmt,caption:$caption,image_url:$media.image_url,image_urls:$media.image_urls,queue_id:$id}}')
+            RESPONSE=$(curl --fail-with-body --silent --show-error --retry 1 --retry-delay 2 \
+              -H 'Content-Type: application/json' \
+              -H "Authorization: Bearer $GH_EPHEMERAL_TOKEN" \
+              --data "$BODY" "$ENDPOINT")
+            printf '%s\n' "$RESPONSE" | jq .
+            printf '%s\n' "$RESPONSE" | jq -e '.result.status == "PUBLISHED" and (.result.publication_id // "") != ""' >/dev/null || {
+              echo "$ID did not return real publication evidence; failing closed."
+              exit 1
+            }
+          done

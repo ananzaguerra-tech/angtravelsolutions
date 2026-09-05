@@ -1,0 +1,41 @@
+batch,country,country_code,destination,destination_type,official_source,status,modules_target,editorial_contract
+WORLD-05,Saudi Arabia,SA,Riyadh,city,https://www.visitsaudi.com/en/riyadh,DESTINATION_SEED_READY,23,V2
+WORLD-05,Saudi Arabia,SA,Jeddah,city,https://www.visitsaudi.com/en/jeddah,DESTINATION_SEED_READY,23,V2
+WORLD-05,Saudi Arabia,SA,AlUla,region,https://www.visitsaudi.sa/en/destinations,DESTINATION_SEED_READY,23,V2
+WORLD-05,Saudi Arabia,SA,The Red Sea,region,https://www.visitsaudi.sa/en/destinations,DESTINATION_SEED_READY,23,V2
+WORLD-05,Saudi Arabia,SA,Diriyah,heritage_destination,https://www.visitsaudi.sa/en/destinations,DESTINATION_SEED_READY,23,V2
+WORLD-05,Jordan,JO,Amman,city,https://international.visitjordan.com/where-to-go/,DESTINATION_SEED_READY,23,V2
+WORLD-05,Jordan,JO,Petra,heritage_destination,https://international.visitjordan.com/where-to-go/,DESTINATION_SEED_READY,23,V2
+WORLD-05,Jordan,JO,Wadi Rum,nature_destination,https://international.visitjordan.com/where-to-go/,DESTINATION_SEED_READY,23,V2
+WORLD-05,Jordan,JO,Dead Sea,wellness_destination,https://international.visitjordan.com/where-to-go/,DESTINATION_SEED_READY,23,V2
+WORLD-05,Jordan,JO,Aqaba,coastal_city,https://international.visitjordan.com/where-to-go/,DESTINATION_SEED_READY,23,V2
+WORLD-05,Oman,OM,Muscat,city,https://experienceoman.om/en/destinations/muscat,DESTINATION_SEED_READY,23,V2
+WORLD-05,Oman,OM,Nizwa,heritage_city,https://booking.visitoman.om/,DESTINATION_SEED_READY,23,V2
+WORLD-05,Oman,OM,Salalah,city_region,https://booking.visitoman.om/,DESTINATION_SEED_READY,23,V2
+WORLD-05,Oman,OM,Musandam,region,https://www.fm.gov.om/en/visitors/tourism-information/,DESTINATION_SEED_READY,23,V2
+WORLD-05,Oman,OM,Sharqiyah Sands,desert_destination,https://booking.visitoman.om/,DESTINATION_SEED_READY,23,V2
+WORLD-05,Qatar,QA,Doha,city,https://visitqatar.com/intl-en/things-to-do,DESTINATION_SEED_READY,23,V2
+WORLD-05,Qatar,QA,The Pearl-Qatar,urban_island,https://visitqatar.com/intl-en/things-to-do/iconic-places,DESTINATION_SEED_READY,23,V2
+WORLD-05,Qatar,QA,Lusail,city,https://visitqatar.com/intl-en/plan-your-trip/interactive-map,DESTINATION_SEED_READY,23,V2
+WORLD-05,Qatar,QA,Al Khor and Al Thakira,coastal_nature,https://visitqatar.com/intl-en/things-to-do,DESTINATION_SEED_READY,23,V2
+WORLD-05,Qatar,QA,Khor Al Adaid,desert_coast,https://visitqatar.com/intl-en/things-to-do,DESTINATION_SEED_READY,23,V2
+WORLD-05,Mauritius,MU,Port Louis,city,https://mauritiusnow.com/,DESTINATION_SEED_READY,23,V2
+WORLD-05,Mauritius,MU,Le Morne,coastal_heritage,https://mauritiusnow.com/,DESTINATION_SEED_READY,23,V2
+WORLD-05,Mauritius,MU,Grand Baie,coastal_destination,https://mauritiusnow.com/,DESTINATION_SEED_READY,23,V2
+WORLD-05,Mauritius,MU,Black River Gorges,nature_destination,https://mauritiusnow.com/,DESTINATION_SEED_READY,23,V2
+WORLD-05,Mauritius,MU,Rodrigues,island,https://mauritiusnow.com/,DESTINATION_SEED_READY,23,V2
+WORLD-05,Seychelles,SC,Mahe,island,https://www.seychelles.com/explore-islands/overview,DESTINATION_SEED_READY,23,V2
+WORLD-05,Seychelles,SC,Praslin,island,https://www.seychelles.com/explore-islands/overview,DESTINATION_SEED_READY,23,V2
+WORLD-05,Seychelles,SC,La Digue,island,https://www.seychelles.com/explore-islands/overview,DESTINATION_SEED_READY,23,V2
+WORLD-05,Seychelles,SC,Silhouette,island,https://www.seychelles.com/experience/theislands,DESTINATION_SEED_READY,23,V2
+WORLD-05,Seychelles,SC,Alphonse,island,https://www.seychelles.com/experience/theislands,DESTINATION_SEED_READY,23,V2
+WORLD-05,Vietnam,VN,Hanoi,city,https://vietnam.travel/place-to-go,DESTINATION_SEED_READY,23,V2
+WORLD-05,Vietnam,VN,Hoi An,heritage_city,https://vietnam.travel/place-to-go,DESTINATION_SEED_READY,23,V2
+WORLD-05,Vietnam,VN,Da Nang,city,https://vietnam.travel/place-to-go,DESTINATION_SEED_READY,23,V2
+WORLD-05,Vietnam,VN,Ho Chi Minh City,city,https://vietnam.travel/place-to-go,DESTINATION_SEED_READY,23,V2
+WORLD-05,Vietnam,VN,Phu Quoc,island,https://vietnam.travel/place-to-go,DESTINATION_SEED_READY,23,V2
+WORLD-05,Malaysia,MY,Kuala Lumpur,city,https://ebrochures.malaysia.travel/destination-guide/,DESTINATION_SEED_READY,23,V2
+WORLD-05,Malaysia,MY,Langkawi,island,https://ebrochures.malaysia.travel/destination-guide/,DESTINATION_SEED_READY,23,V2
+WORLD-05,Malaysia,MY,Penang,island_state,https://ebrochures.malaysia.travel/en/islands-and-beaches/contents/,DESTINATION_SEED_READY,23,V2
+WORLD-05,Malaysia,MY,Sabah,region,https://ebrochures.malaysia.travel/destination-guide/,DESTINATION_SEED_READY,23,V2
+WORLD-05,Malaysia,MY,Sarawak,region,https://ebrochures.malaysia.travel/destination-guide/,DESTINATION_SEED_READY,23,V2

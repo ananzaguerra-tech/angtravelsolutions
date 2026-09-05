@@ -1,0 +1,31 @@
+batch,country,destination,destination_type,official_source_url,modules,status,editorial_contract
+WORLD-06,South Korea,Seoul,city,https://www.visitkorea.or.kr/,23,SEED_READY,V2
+WORLD-06,South Korea,Busan,city,https://www.visitkorea.or.kr/,23,SEED_READY,V2
+WORLD-06,South Korea,Jeju Island,island,https://www.visitkorea.or.kr/,23,SEED_READY,V2
+WORLD-06,South Korea,Gyeongju,heritage_city,https://www.visitkorea.or.kr/,23,SEED_READY,V2
+WORLD-06,South Korea,Incheon,city,https://www.visitkorea.or.kr/,23,SEED_READY,V2
+WORLD-06,Philippines,Manila,city,https://www.tourism.gov.ph/destination/,23,SEED_READY,V2
+WORLD-06,Philippines,Boracay,island,https://www.tourism.gov.ph/destination/,23,SEED_READY,V2
+WORLD-06,Philippines,Cebu,island_city_region,https://www.tourism.gov.ph/destination/,23,SEED_READY,V2
+WORLD-06,Philippines,Palawan,province_islands,https://www.tourism.gov.ph/destination/,23,SEED_READY,V2
+WORLD-06,Philippines,Siargao Island,island,https://www.tourism.gov.ph/destination/,23,SEED_READY,V2
+WORLD-06,Sri Lanka,Colombo,city,https://www.srilanka.travel/,23,SEED_READY,V2
+WORLD-06,Sri Lanka,Sigiriya,heritage,https://www.srilanka.travel/,23,SEED_READY,V2
+WORLD-06,Sri Lanka,Ella,hill_country,https://www.srilanka.travel/,23,SEED_READY,V2
+WORLD-06,Sri Lanka,Yala National Park,national_park,https://www.srilanka.travel/,23,SEED_READY,V2
+WORLD-06,Sri Lanka,Mirissa,coastal,https://www.srilanka.travel/,23,SEED_READY,V2
+WORLD-06,Nepal,Kathmandu Valley,city_region,https://ntb.gov.np/en/places-to-go,23,SEED_READY,V2
+WORLD-06,Nepal,Pokhara,city,https://ntb.gov.np/en/places-to-go,23,SEED_READY,V2
+WORLD-06,Nepal,Everest Region,mountain_region,https://ntb.gov.np/en/places-to-go,23,SEED_READY,V2
+WORLD-06,Nepal,Chitwan,national_park_region,https://ntb.gov.np/en/places-to-go,23,SEED_READY,V2
+WORLD-06,Nepal,Lumbini,pilgrimage_heritage,https://ntb.gov.np/en/places-to-go,23,SEED_READY,V2
+WORLD-06,Kenya,Nairobi,city,https://magicalkenya.com/,23,SEED_READY,V2
+WORLD-06,Kenya,Maasai Mara,safari_reserve,https://www.visitkenya.com/,23,SEED_READY,V2
+WORLD-06,Kenya,Amboseli National Park,national_park,https://www.visitkenya.com/,23,SEED_READY,V2
+WORLD-06,Kenya,Kenyan Coast,coastal_region,https://tic.magicalkenya.com/lets-explore/,23,SEED_READY,V2
+WORLD-06,Kenya,Kisumu,city,https://tic.magicalkenya.com/lets-explore/,23,SEED_READY,V2
+WORLD-06,Botswana,Okavango Delta,wetland_safari,https://botswanatourism.co.bw/,23,SEED_READY,V2
+WORLD-06,Botswana,Chobe National Park,national_park,https://botswanatourism.co.bw/,23,SEED_READY,V2
+WORLD-06,Botswana,Tsodilo Hills,heritage,https://botswanatourism.co.bw/,23,SEED_READY,V2
+WORLD-06,Botswana,Nxai Pan National Park,national_park,https://botswanatourism.co.bw/,23,SEED_READY,V2
+WORLD-06,Botswana,Northern Tuli Game Reserve,safari_reserve,https://botswanatourism.co.bw/,23,SEED_READY,V2

@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "status": "draft_for_staging",
+  "editorial_standard": "ANG premium international",
+  "generated_at": "2026-08-17",
+  "publication_authorized": false,
+  "destinations": [
+    {
+      "country": "Brasil",
+      "currency": "Real brasileiro (BRL)",
+      "languages": ["Português"],
+      "voltage": "127/220 V",
+      "best_time": "Varia por região e perfil da viagem; validar sazonalidade por destino antes da publicação.",
+      "cities": [
+        {"name":"Florianópolis","summary":"Ilha com praias, trilhas, gastronomia, lifestyle e forte vocação de natureza e bem-estar.","attractions":["Lagoa da Conceição","Santo Antônio de Lisboa","Jurerê","Praias do Leste","Centro Histórico"],"premium_experiences":["Passeios náuticos","Gastronomia de frutos do mar","Experiências de wellness","Roteiros privados de praias e natureza"],"post_id":141720,"external_id":"5e372d4a8eb8e12757748f4347288cd50e270c0e1b96a905d626b9310f36deea","post_type":"ang_curated","wp_status":"draft","content_gate":"NEEDS_ENRICHMENT","media_gate":"HOLD_LICENSE_PROOF","seo_schema_gate":"PENDING","staging_gate":"NOT_TESTED"},
+        {"name":"Fernando de Noronha","summary":"Arquipélago brasileiro de biodiversidade excepcional, mergulho, praias e experiências de natureza com capacidade controlada.","attractions":["Baía do Sancho","Baía dos Porcos","Praia do Leão","Projeto Tamar","trilhas autorizadas"],"premium_experiences":["Mergulho","Passeio de barco","Experiências de natureza guiadas","Concierge para regras de acesso e logística"],"post_id":141744,"external_id":"041c02fb1493ce2bd64009dad74181bbaf956e1342f8f8f6ce84383111ec42c0","post_type":"ang_curated","wp_status":"draft","content_gate":"NEEDS_ENRICHMENT","media_gate":"HOLD_LICENSE_PROOF","seo_schema_gate":"PENDING","staging_gate":"NOT_TESTED"},
+        {"name":"Amazônia","summary":"Curadoria regional centrada em biodiversidade, rios, floresta, comunidades e turismo responsável, com Manaus como principal porta de entrada do recorte Amazonas.","attractions":["Manaus","Encontro das Águas","Rio Negro","floresta amazônica","reservas e comunidades com operação autorizada"],"premium_experiences":["Lodges de selva","Navegação privativa","Observação de fauna","Experiências culturais e regenerativas com operadores verificados"],"post_id":141767,"external_id":"1e672c2363d877c4901808d386f21efa07a57d0f17861cb02a2449dae34fab98","post_type":"ang_curated","wp_status":"draft","content_gate":"NEEDS_ENRICHMENT","media_gate":"HOLD_LICENSE_PROOF","seo_schema_gate":"PENDING","staging_gate":"NOT_TESTED"}
+      ]
+    }
+  ],
+  "safeguards": ["Do not publish to production.","Use official or attributable sources.","Require documented media rights.","Require responsive staging QA and score >= 90."]
+}
