@@ -8,6 +8,7 @@
 - required_sections_present: 16/16
 - official_sources_declared: 9
 - urls_declared: 10
+- source_recheck_result: MTCC_HTTP_403_NO_RETRY
 - publication_allowed: false
 
 ## Resultado dos gates
@@ -16,7 +17,7 @@
 |---|---|---|
 | Integridade do artefato | PASS | blob SHA e SHA-256 registrados acima |
 | Cobertura estrutural | PASS | 16/16 seções obrigatórias presentes |
-| Fontes oficiais | REVIEW_REQUIRED | 9 fontes declaradas; 8 abriram em verificação direta e MTCC exigiu nova tentativa controlada |
+| Fontes oficiais | REVIEW_REQUIRED | 9 fontes declaradas; 8 abriram diretamente; MTCC foi revalidada uma única vez e respondeu HTTP 403, embora o índice oficial permaneça descobrível |
 | Imigração/documentação | PASS_CURRENT_SOURCE | Tourist Visa atualizado em 2026-09-06 e Traveller Declaration em 2026-08-17, conferidos em 2026-09-07 |
 | SEO/schema | READY_REVIEW | slug, title, meta description, keywords, canonical, hreflang e schema hints presentes; validação de render não executada |
 | Mídia/licença/hash/dedup | HOLD | cinco slots sem ativo aprovado, licença ou hash |
@@ -33,7 +34,7 @@
 5. Visit Maldives — Bleisure — REACHABLE; Malé, Villimalé e Hulhumalé conferidos.
 6. Maldives Meteorological Service — Climate — REACHABLE; referência climática oficial conferida.
 7. Velana International Airport — Transport — REACHABLE; página oficial de transporte conferida.
-8. MTCC — Transport schedules — FETCH_PARTIAL_RETRY_REQUIRED; endpoint apresentou erro de leitura nesta verificação, sem validar horários.
+8. MTCC — Transport schedules — DIRECT_FETCH_403_OFFICIAL_INDEX_DISCOVERABLE; a única revalidação controlada retornou HTTP 403. A busca oficial ainda expõe categorias de horários e o booking MTCC, mas nenhum horário operacional foi promovido como validado.
 9. Malé City Council — Council — REACHABLE; wards administrativos conferidos.
 
 ## Achados editoriais
@@ -46,7 +47,7 @@
 
 ## Próximas verificações obrigatórias
 
-1. Revalidar a fonte MTCC uma única vez, sem retry cego, e registrar resposta/horário.
+1. Não repetir o endpoint MTCC neste ciclo; validar horários apenas por canal oficial acessível ou inspeção humana do portal dinâmico.
 2. Selecionar ativos apenas com licença inequívoca; registrar origem, autor, dimensões, data de acesso e SHA-256.
 3. Executar revisão humana factual/editorial e validar SEO/schema.
 4. Renderizar em staging, testar desktop/mobile e registrar URL/log pós-reload.
