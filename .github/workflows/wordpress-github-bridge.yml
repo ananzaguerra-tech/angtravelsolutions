@@ -1,0 +1,65 @@
+name: WordPress GitHub Bridge
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: verify or sync
+        required: true
+        default: verify
+        type: choice
+        options:
+          - verify
+          - sync
+
+permissions:
+  contents: read
+
+jobs:
+  wordpress:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      WP_BASE_URL: ${{ secrets.WP_BASE_URL }}
+      WP_USERNAME: ${{ secrets.WP_USERNAME }}
+      WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate required secrets
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${WP_BASE_URL:-}" || { echo "WP_BASE_URL missing"; exit 20; }
+          test -n "${WP_USERNAME:-}" || { echo "WP_USERNAME missing"; exit 21; }
+          test -n "${WP_APP_PASSWORD:-}" || { echo "WP_APP_PASSWORD missing"; exit 22; }
+
+      - name: Verify WordPress REST authentication
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="${WP_BASE_URL%/}"
+          code=$(curl --silent --show-error --output /tmp/wp-user.json --write-out "%{http_code}" \
+            --user "$WP_USERNAME:$WP_APP_PASSWORD" \
+            "$base/wp-json/wp/v2/users/me?context=edit")
+          if [ "$code" != "200" ]; then
+            echo "WordPress REST authentication failed: HTTP $code"
+            cat /tmp/wp-user.json || true
+            exit 23
+          fi
+          python3 - <<'PY'
+import json
+p=json.load(open('/tmp/wp-user.json'))
+print('WORDPRESS_AUTH_OK')
+print('user_id=', p.get('id'))
+print('name=', p.get('name'))
+PY
+
+      - name: Sync approved manifest
+        if: ${{ inputs.mode == 'sync' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          chmod +x scripts/wp-rest-sync.sh
+          scripts/wp-rest-sync.sh ops/wordpress/publish-manifest.json

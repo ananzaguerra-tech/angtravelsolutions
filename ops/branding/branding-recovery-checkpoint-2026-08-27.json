@@ -1,0 +1,20 @@
+{
+  "generated_at":"2026-08-27",
+  "source_evidence":{
+    "drive_inventory":"INVENTARIO_VARIANTES_LOGOS_ANG_2026-08-25.csv",
+    "drive_identity_spec":"FICHA_TECNICA_IDENTIDADE_ANG_GROUP_OFICIAL_2026.md",
+    "file_library_catalog":"CATALOGO_VISUAL_LOGOS_ANG_28-07-2026.pdf",
+    "file_library_inventory":"INVENTARIO_LOGOS_ANG_28-07-2026.csv"
+  },
+  "validated":{
+    "ang_luxury_brazil_option_30":true,
+    "ang_luxury_brazil_source_hash":"47d1a5575dea44a97fb8fd736b1a6d44c309a6a85a53382489e4d8a2bb149b22",
+    "ang_celebrations_option_3_decision":true,
+    "do_not_merge_travel_celebrations":true
+  },
+  "holds":{
+    "all_final_svg_png_master_kits":"MASTER_FILE_STILL_REQUIRED",
+    "celebrations_isolated_master":"SOURCE_FILE_QA_REQUIRED",
+    "luxury_brazil_isolated_master":"SOURCE_FILE_QA_REQUIRED"
+  }
+}

@@ -1,0 +1,89 @@
+name: Materialize Canva social media
+
+on:
+  push:
+    branches:
+      - recovery/v13-staging-2026-08-17
+    paths:
+      - 'ops/social/canva-materialize-*.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Resolve latest materialization manifest
+        id: manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          FILE=$(ls -1 ops/social/canva-materialize-*.json | sort | tail -n 1)
+          jq -e '.assets | length > 0' "$FILE" >/dev/null
+          echo "file=$FILE" >> "$GITHUB_OUTPUT"
+
+      - name: Download short-lived Canva renders
+        env:
+          MANIFEST: ${{ steps.manifest.outputs.file }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p public/social/2026-08-27
+          jq -c '.assets[]' "$MANIFEST" | while read -r item; do
+            url=$(jq -r '.source_url' <<<"$item")
+            out=$(jq -r '.output' <<<"$item")
+            test -n "$url" && test -n "$out"
+            mkdir -p "$(dirname "$out")"
+            curl --fail-with-body --location --retry 2 --retry-delay 2 --silent --show-error "$url" -o "$out"
+            test -s "$out"
+            bytes=$(wc -c < "$out")
+            if [ "$bytes" -lt 5000 ]; then
+              echo "Materialized file is unexpectedly small: $out ($bytes bytes)" >&2
+              exit 1
+            fi
+            kind=$(file -b --mime-type "$out")
+            case "$kind" in image/png|image/jpeg|image/webp) ;; *) echo "Unexpected media type $kind for $out" >&2; exit 1;; esac
+            echo "$out $bytes $kind"
+          done
+
+      - name: Update social queue with durable public URLs and format-safe gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          Q=ops/social/zeus-social-dispatch-queue-2026-08-27.json
+          BASE="https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/recovery/v13-staging-2026-08-17/public/social/2026-08-27"
+          tmp=$(mktemp)
+          jq --arg base "$BASE" '
+            .items |= map(
+              if .id == "CURADORIA_ANG_AGOSTO_FEED" then
+                .image_url = ($base + "/ang-travel-feed.png") |
+                .status = "READY_TO_DISPATCH"
+              elif .id == "CURADORIA_ANG_AGOSTO_STORY" then
+                .image_url = ($base + "/ang-travel-story.png") |
+                .status = "HOLD_EXECUTOR_STORY_UNSUPPORTED"
+              elif .id == "CURADORIA_ANG_AGOSTO_CARROSSEL" then
+                .image_urls = [($base + "/ang-travel-carousel-1.png"),($base + "/ang-travel-carousel-2.png"),($base + "/ang-travel-carousel-3.png")] |
+                .status = "HOLD_EXECUTOR_CAROUSEL_UNSUPPORTED"
+              else . end
+            )' "$Q" > "$tmp"
+          mv "$tmp" "$Q"
+
+      - name: Commit durable media and queue evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/social/2026-08-27 ops/social/zeus-social-dispatch-queue-2026-08-27.json
+          if git diff --cached --quiet; then
+            echo 'No materialization changes to commit.'
+            exit 0
+          fi
+          git commit -m 'ops: materialize Canva social assets for Zeus dispatch'
+          git push

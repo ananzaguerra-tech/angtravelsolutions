@@ -1,0 +1,68 @@
+{
+  "schema_version": "2.0",
+  "scope": "all countries / destinations / 23 destination modules",
+  "status": "MANDATORY_STAGING_GATE",
+  "destination_hub": {
+    "min_words": 4500,
+    "min_primary_keywords": 5,
+    "min_secondary_keywords": 15,
+    "min_semantic_entities": 25,
+    "min_attractions": 12,
+    "min_hotels_enterprises": 12,
+    "min_restaurants_gastronomy": 12,
+    "min_premium_experiences": 8,
+    "min_official_primary_sources": 3,
+    "required_sections": [
+      "executive_overview","traveler_profiles","best_time_and_seasonality","climate","entry_documents","currency_and_payments","language_and_etiquette","airports_and_arrival","mobility_and_transfers","neighborhoods_zones_regions","attractions","culture_museums_heritage","hotels_and_enterprises","restaurants_and_gastronomy","premium_experiences","shopping_and_lifestyle","wellness_and_nature","business_travel_and_mice","sustainability","accessibility","practical_safety","insider_tips","official_links","seo_and_schema"
+    ]
+  },
+  "modules": {
+    "count": 23,
+    "aggregate_min_words": 15000,
+    "unique_content_required": true,
+    "duplicate_copy_allowed": false
+  },
+  "filters": {
+    "traveler_profile": ["luxury","honeymoon","family","solo","couples","business","mice","celebrations","wellness","adventure","culture","gastronomy","shopping","ski","beach","nature"],
+    "hotel": ["luxury","boutique","resort","urban","business","family","romantic","wellness","sustainable","ski","beachfront","villa_residence"],
+    "gastronomy": ["fine_dining","michelin","local_cuisine","rooftop","beach_club","vegetarian_vegan","family","romantic","business_lunch","late_night"],
+    "attractions": ["culture","museum","heritage","nature","park","architecture","family","shopping","nightlife","wellness","adventure","religious","viewpoint"],
+    "experience": ["private","vip","exclusive_access","culinary","art","fashion","yacht_boat","aviation","wellness","wildlife","ski","beach","mice"],
+    "practical": ["accessible","kid_friendly","pet_friendly","rainy_day","night","free","reservation_required","seasonal"]
+  },
+  "entity_fields": {
+    "attraction": ["name","category","description","address","official_url","phone_if_public","opening_hours_if_current","reservation_requirement","accessibility","best_for","source","source_checked_at"],
+    "hotel_enterprise": ["name","category","neighborhood_region","description","official_url","address","phone_if_public","amenities","traveler_profile","sustainability_claims_source","source","source_checked_at"],
+    "restaurant": ["name","cuisine","positioning","neighborhood_region","description","official_url","address","phone_if_public","opening_hours_if_current","reservation","dietary_filters","best_for","source","source_checked_at"]
+  },
+  "seo": {
+    "unique_title_required": true,
+    "unique_meta_required": true,
+    "h1_required": true,
+    "canonical_required_before_publish": true,
+    "breadcrumb_required": true,
+    "schema_types": ["TouristDestination","TouristAttraction","Hotel","Restaurant","BreadcrumbList","Organization","WebPage"],
+    "hreflang_required_when_translation_exists": true
+  },
+  "media": {
+    "real_specific_assets_only": true,
+    "hero_required": true,
+    "gallery_min": 5,
+    "source_author_license_required": true,
+    "alt_text_required": true,
+    "hotlink_final_allowed": false,
+    "duplicate_image_avoidance": true
+  },
+  "publication_gate": {
+    "factual_source": "PASS",
+    "content": "PASS",
+    "media_license": "PASS",
+    "seo_schema": "PASS",
+    "responsive_staging": "PASS",
+    "accessibility": "PASS",
+    "qa_score_min": 90,
+    "rollback_evidence": true
+  },
+  "dynamic_fields": ["prices","opening_hours","entry_rules","visa","taxes","fees","weather_alerts","supplier_benefits","commissions","availability","certifications","partnerships"],
+  "dynamic_rule": "Revalidate close to publication/travel and store source + checked_at; never present stale dynamic data as current."
+}

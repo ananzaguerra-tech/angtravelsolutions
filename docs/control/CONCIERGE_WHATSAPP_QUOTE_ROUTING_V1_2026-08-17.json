@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "scope": "all portal quotes and WhatsApp-origin quote requests",
+  "priority_case": {
+    "customer_name_match": ["Jéssica", "Jessica", "jessica"],
+    "source": "whatsapp",
+    "priority": "P0_IMMEDIATE_CONCIERGE",
+    "status": "ROUTE_WHEN_CHANNEL_CONNECTED"
+  },
+  "required_pre_quote_fields": [
+    "passenger_nationality",
+    "destination_country",
+    "destination_city_or_region",
+    "travel_dates",
+    "passenger_count",
+    "minor_passengers",
+    "minor_age",
+    "travelling_with_both_parents_or_guardians",
+    "passport_status",
+    "visa_or_entry_authorization_requirement",
+    "vaccination_or_health_certificate_requirement"
+  ],
+  "mandatory_quote_output_blocks": [
+    "commercial_quote",
+    "consular_entry_requirements_by_nationality",
+    "passport_and_document_validity",
+    "visa_or_electronic_authorization",
+    "vaccines_health_and_certificate_requirements",
+    "minor_travel_documentation_and_authorizations",
+    "customs_currency_and_practical_entry_notes",
+    "official_sources",
+    "checked_at",
+    "dynamic_data_warning"
+  ],
+  "minor_rule": "When any passenger is a minor, Concierge must explicitly validate accompaniment, parent/guardian authorization requirements, passport/ID requirements, airline/carrier requirements where applicable and destination-entry rules before finalizing the quote.",
+  "health_rule": "Vaccination, health certificate and sanitary-entry requirements must be checked against current official sources for the passenger nationality, origin/transit and destination before final quote delivery.",
+  "consular_rule": "For Brazilian passengers, use destination-country official consular/immigration sources plus Brazil MRE/Portal Consular where applicable. For foreign passengers entering Brazil, use Brazil MRE/consular network and Polícia Federal immigration guidance, filtered by nationality.",
+  "routing": {
+    "whatsapp_inbound": "n8n/Meta webhook -> normalize contact -> identify quote intent -> collect mandatory fields -> enrich with consular gate -> Concierge priority queue",
+    "portal_quote": "portal quote -> require nationality -> consular gate -> generate quote -> Concierge/agent review -> send"
+  },
+  "publication_gate": {
+    "nationality_known": true,
+    "consular_block_complete": true,
+    "minor_block_complete_when_applicable": true,
+    "health_block_complete": true,
+    "official_sources_present": true,
+    "checked_at_present": true
+  }
+}

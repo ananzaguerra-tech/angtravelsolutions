@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "status": "draft_for_staging",
+  "editorial_standard": "ANG premium international",
+  "generated_at": "2026-08-17",
+  "publication_authorized": false,
+  "destinations": [
+    {
+      "country": "Brasil",
+      "currency": "Real brasileiro (BRL)",
+      "languages": ["Português"],
+      "voltage": "127/220 V",
+      "best_time": "Varia por região e perfil da viagem; validar sazonalidade por destino antes da publicação.",
+      "cities": [
+        {"name":"São Paulo","summary":"Capital cultural, gastronômica e de negócios, com arte, design, compras e ampla hotelaria.","attractions":["Avenida Paulista","MASP","Parque Ibirapuera","Pinacoteca","Centro Histórico"],"premium_experiences":["Arte e arquitetura com especialista","Alta gastronomia","Personal shopper","Concierge executivo"],"post_id":141628,"external_id":"709010a3c3c1cc1178c39375bf6282e0ab2e1b989f97a999b6daece7e340594e","post_type":"ang_curated","wp_status":"draft","official_source":"https://prefeitura.sp.gov.br/turismo/","content_gate":"ENRICHED_DRAFT","media_gate":"HOLD_LICENSE_PROOF","seo_schema_gate":"READY_FOR_STAGING","staging_gate":"NOT_TESTED"},
+        {"name":"Salvador","summary":"Patrimônio afro-brasileiro, história, música, religiosidade, gastronomia e litoral em uma das capitais culturais do país.","attractions":["Pelourinho","Centro Histórico","Elevador Lacerda","Mercado Modelo","orla de Salvador"],"premium_experiences":["Afroturismo com especialista","Gastronomia baiana","Experiências culturais privadas","Concierge de eventos"],"post_id":141674,"external_id":"3e635e4323fa1face3f4abad8adc97b1cdd6322563a65bd5b9dd1a8ff8ce021c","post_type":"ang_curated","wp_status":"draft","official_source":"https://www.salvadordabahia.com/","content_gate":"ENRICHED_DRAFT","media_gate":"HOLD_LICENSE_PROOF","seo_schema_gate":"READY_FOR_STAGING","staging_gate":"NOT_TESTED"},
+        {"name":"Foz do Iguaçu","summary":"Natureza monumental, energia, biodiversidade e experiência trinacional na fronteira entre Brasil, Argentina e Paraguai.","attractions":["Cataratas do Iguaçu","Parque Nacional do Iguaçu","Itaipu Binacional","Parque das Aves","Tríplice Fronteira"],"premium_experiences":["Experiências privativas nas Cataratas","Bastidores/visitas especiais quando oficialmente disponíveis","Natureza e aventura","Logística trinacional com concierge"],"post_id":141697,"external_id":"6698f354244c82d0ec0c294adab5f05dd5685465c7b6030ef79d06bffeb34566","post_type":"ang_curated","wp_status":"draft","official_source":"https://www.destino.foz.br/","content_gate":"ENRICHED_DRAFT","media_gate":"HOLD_LICENSE_PROOF","seo_schema_gate":"READY_FOR_STAGING","staging_gate":"NOT_TESTED"}
+      ]
+    }
+  ],
+  "global_rules": ["No mass publication of 881 records.","Mutable claims require attributable sources.","Images require documented rights.","Promotion requires responsive staging QA and score >= 90."]
+}
