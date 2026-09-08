@@ -55,3 +55,7 @@ Para cada país: visão geral editorial; dados estruturais; moeda/idioma/fuso/el
 
 ## Próxima ação
 Quebrar estes 10 países nas páginas/cidades do mapa 881/WORLD, produzir módulos aprofundados por destino, gerar payload CSV/JSON de ingestão canônica e avançar para o bloco seguinte de 10 países sem interromper as demais frentes.
+
+## CTAs integrados
+
+Os 10 segmentos receberam CTAs próprios para ANG Travel, ANG Travel Solutions B2B e ANG Business Travel & MICE. O Brasil também recebeu CTA dedicado da ANG Luxury Brazil. Os textos não prometem disponibilidade, benefício, fornecedor ou parceria e permanecem sujeitos a QA editorial.
