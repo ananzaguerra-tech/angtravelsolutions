@@ -64,3 +64,25 @@ O manifesto global define campos obrigatórios, mas os ativos ainda não estão 
 ## Rollback
 
 Reverter o commit que introduz este arquivo. Nenhum conteúdo-fonte, draft, ID canônico, CMS ou canal social foi alterado por esta auditoria.
+
+
+## Ação corretiva — registro de fontes oficiais (2026-09-08)
+
+Foi anexado ao pacote do Drive um registro país → autoridade → URL → estado de acesso, com `checked_at=2026-09-08`.
+
+| País | Autoridade / página | URL | Acesso | Gate factual |
+|---|---|---|---|---|
+| Sri Lanka | Department of Immigration & Emigration — ETA | https://www.eta.gov.lk/slvisa/visainfo/center.jsp?locale=en_US | LIVE | PARTIAL |
+| Seychelles | Immigration and Civil Status — Visiting Seychelles | https://www.ics.gov.sc/visa-and-travel/visiting-seychelles | SEARCH_VERIFIED_OPEN_TIMEOUT | REVIEW_REQUIRED |
+| Maurício | Passport and Immigration Office — Travel Requirements | https://passport.govmu.org/passport/?page_id=587 | LIVE | PARTIAL |
+| Marrocos | Consular Services — Ordinary visas | https://www.consulat.ma/en/ordinary-visas | REQUEST_REJECTED | REVIEW_REQUIRED |
+| Egito | Ministry of Interior — Egypt e-Visa Portal | https://visa2egypt.gov.eg/eVisa/Home | LIVE | PARTIAL |
+| Quênia | Directorate of Immigration Services — eTA | https://etakenya.go.ke/ | LIVE | PARTIAL |
+| Tanzânia | Immigration Services — Visa portal | https://visa.immigration.go.tz/ | OPEN_TIMEOUT | REVIEW_REQUIRED |
+| Namíbia | Ministry of Home Affairs — eServices/Visa on Arrival | https://eservices.mhaiss.gov.na/ | HTTP_502 | REVIEW_REQUIRED |
+| Botswana | Government of Botswana — Visitor's Visa | https://www.gov.bw/visa-applications/visa-application-visitors-visa | LIVE | PARTIAL |
+| Argentina | Dirección Nacional de Migraciones — documentação turística | https://www.argentina.gob.ar/migraciones/documentacion-para-ingresar-al-pais-como-turista | LIVE | PARTIAL |
+
+**Delta:** fontes governamentais identificadas em **10/10 países**; abertura integral em **6/10**; quatro acessos degradados registrados sem retry cego. O bloqueio de rastreabilidade foi removido no nível do bloco, mas todos os países continuam `REVIEW_REQUIRED` até incorporação por segmento e QA factual parametrizado.
+
+Nenhuma mutação CMS, payload 881/WORLD, Canva ou publicação social foi executada.
