@@ -1,0 +1,35 @@
+{
+  "manifest_version": "1.0",
+  "generated_at": "2026-09-08T02:59:00Z",
+  "destination": "Male",
+  "country": "Maldives",
+  "source_matrix_path": "docs/control/CURADORIA_MALE_MODULE_SECTION_CHECKSUM_MATRIX_2026-09-07.csv",
+  "source_matrix_blob_sha": "d77e06ccd1e9fad102801d803379fa3385527bc7",
+  "disposition_path": "docs/control/CURADORIA_MALE_CMS_DISPOSITION_2026-09-08.csv",
+  "disposition_blob_sha": "6e2d4893d5ff95d86fc703ede8390d3999052d43",
+  "totals": {
+    "records": 23,
+    "keep": 9,
+    "remap": 5,
+    "suppress": 8,
+    "split": 1
+  },
+  "upload_status": "UPLOAD_PENDING_CHANNEL",
+  "publication_authorized": false,
+  "cms_mutation_executed": false,
+  "preconditions": [
+    "backup completo dos 23 posts e metadados",
+    "ambiente de staging autenticado",
+    "QA editorial e geográfico",
+    "aprovação de supressões e divisões de taxonomia",
+    "dry-run com preservação de post_id e external_id",
+    "smoke test pós-reload e rollback testável"
+  ],
+  "hard_gates": [
+    "não publicar enquanto o site estiver em manutenção/P0 aberto",
+    "não inferir parceria, membership ou benefício",
+    "não promover propriedade futura como operacional",
+    "não ultrapassar login, MFA, OAuth ou CAPTCHA"
+  ],
+  "rollback": "Restaurar backup pré-upload por post_id; remover somente vínculos, slugs e páginas-filhas criados pelo pacote; preservar drafts e external_ids canônicos."
+}
