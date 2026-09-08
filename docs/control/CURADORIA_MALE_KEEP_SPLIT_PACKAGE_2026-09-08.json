@@ -1,0 +1,298 @@
+{
+  "package_version": "1.0",
+  "generated_at": "2026-09-08T05:00:23Z",
+  "destination": "Male",
+  "country": "Maldives",
+  "package_scope": "KEEP_AND_SPLIT_ONLY",
+  "source_dry_run": {
+    "path": "docs/control/CURADORIA_MALE_CMS_DRY_RUN_2026-09-08.json",
+    "blob_sha": "d3bf7ed6c3e0ef9143b1cc12ca948bd5f8baf243"
+  },
+  "media_sources": {
+    "manifest": {
+      "path": "content/curadoria/maldivas/male/MEDIA_MANIFEST_MALE_V1_2026-09-07.md",
+      "blob_sha": "0fcc61513e8a7678731ea76ea0b8484ff11ca488"
+    },
+    "verification": {
+      "path": "content/curadoria/maldivas/male/MEDIA_ASSET_VERIFICATION_MALE_V1_2026-09-07.md",
+      "blob_sha": "9036de8225636eecbc324e8d9ea6d8aa62dab759"
+    }
+  },
+  "totals": {
+    "modules": 10,
+    "keep": 9,
+    "split": 1,
+    "with_approved_media": 2,
+    "media_gap": 8
+  },
+  "media_policy": "Only the three static assets already marked READY_REVIEW are bound. Sensitive market image and overlaid video remain HOLD and are absent.",
+  "execution": {
+    "mode": "MANIFEST_ONLY",
+    "execute": false,
+    "wordpress_mutation": false,
+    "publication": false,
+    "canva_upload": false
+  },
+  "bindings": [
+    {
+      "source_index": 836,
+      "post_id": 142459,
+      "external_id": "340c0c6739f9e5dcf47a1d21d74158b021f46be19ffcf2a3134d1858f0903442",
+      "current_title": "Destinos | Malé",
+      "planned_title": "Destinos | Malé",
+      "operation": "UPSERT_DRAFT_CONTENT",
+      "target_scope": "Male City",
+      "content_source": {
+        "path": "content/curadoria/maldivas/male/DOSSIER_MALE_PTBR_V1_2026-09-07.md",
+        "blob_sha": "a176774a159a3453fe4bd1c33134864a1d3011d9",
+        "section": "Visão geral; Bairros, distritos e Greater Malé; Sazonalidade e clima; Documentação e consular; Logística e mobilidade; Atrações e patrimônio; Gastronomia; Hotelaria; Experiências sugeridas; Cultura e etiqueta; CTA; SEO; Schema hints",
+        "status": "BOUND_VERIFIED"
+      },
+      "media_slots": [
+        {
+          "slot": "hero",
+          "subject": "aerial view of Malé",
+          "author": "Gzzz",
+          "license": "CC BY-SA 4.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Mal%C3%A9_Maldives_(1).jpg",
+          "sha256": "2e1db2d1dffde5e4d1ff5752b33afac718339820ebadd3222a8458e4ccfebf80",
+          "qa": "READY_REVIEW_CONDITIONED",
+          "usage": "hero/editorial; no extreme enlargement"
+        },
+        {
+          "slot": "heritage",
+          "subject": "Hukuru Miskiy exterior",
+          "author": "Zairon",
+          "license": "CC BY-SA 4.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Male%27_Hukuru_Miskiy_3.jpg",
+          "sha256": "d7680540aed219554dd8a9139a795338070e0ef2d770e8fdee2bf814fa64419c",
+          "qa": "READY_REVIEW_CONDITIONED",
+          "usage": "heritage inline; caption and attribution required"
+        },
+        {
+          "slot": "logistics",
+          "subject": "Villingili ferry terminal",
+          "author": "David Stanley",
+          "license": "CC BY 2.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Villingili_Ferry_Terminal_(32984315295).jpg",
+          "sha256": "286aa5e36ecb871e7c2148a795c9044a5b0d0706f778643b681d6a4c9ad82323",
+          "qa": "READY_REVIEW_INLINE_ONLY",
+          "usage": "inline only; not hero"
+        }
+      ],
+      "media_gap": false,
+      "gate": "READY_QA_TEXT_ONLY",
+      "review_status": "READY_REVIEW_NOT_UPLOAD",
+      "upload_status": "UPLOAD_PENDING_CHANNEL",
+      "execute": false
+    },
+    {
+      "source_index": 837,
+      "post_id": 142460,
+      "external_id": "e6f69a6adcfb869c35cf58c824bba9c6caccb96d46f40dc766519100091b5722",
+      "current_title": "Hotelaria Global | Malé",
+      "planned_title": "Hotelaria Global | Malé",
+      "operation": "UPSERT_DRAFT_CONTENT",
+      "target_scope": "Male City + Hulhulé segmentado",
+      "content_source": {
+        "path": "content/curadoria/maldivas/male/GAP_ENRICHMENT_HOTELS_EXPERIENCES_MALE_V1_2026-09-07.md",
+        "blob_sha": "0c1297947c7527f477a5fbb80ff888daf3633853",
+        "section": "Hotelaria",
+        "status": "BOUND_VERIFIED"
+      },
+      "media_slots": [],
+      "media_gap": true,
+      "gate": "REQUIRES_RATE_AVAILABILITY_QA",
+      "review_status": "READY_REVIEW_NOT_UPLOAD",
+      "upload_status": "UPLOAD_PENDING_CHANNEL",
+      "execute": false
+    },
+    {
+      "source_index": 838,
+      "post_id": 142461,
+      "external_id": "db3f28bca2e4d10e055b17371bd58e238153c318a406f110991215eb065da3ae",
+      "current_title": "Experiências | Malé",
+      "planned_title": "Experiências | Malé",
+      "operation": "UPSERT_DRAFT_CONTENT",
+      "target_scope": "Male City / Greater Malé",
+      "content_source": {
+        "path": "content/curadoria/maldivas/male/GAP_ENRICHMENT_HOTELS_EXPERIENCES_MALE_V1_2026-09-07.md",
+        "blob_sha": "0c1297947c7527f477a5fbb80ff888daf3633853",
+        "section": "Experiências",
+        "status": "BOUND_VERIFIED"
+      },
+      "media_slots": [],
+      "media_gap": true,
+      "gate": "REQUIRES_OPERATOR_VALIDATION",
+      "review_status": "READY_REVIEW_NOT_UPLOAD",
+      "upload_status": "UPLOAD_PENDING_CHANNEL",
+      "execute": false
+    },
+    {
+      "source_index": 839,
+      "post_id": 142462,
+      "external_id": "2c04b6dbb30f6c868429c497c05f6695215745fa975a6ff0adaed3c869185670",
+      "current_title": "Fornecedores | Malé",
+      "planned_title": "Fornecedores | Malé",
+      "operation": "UPSERT_DRAFT_CONTENT",
+      "target_scope": "Male City / Maldives registry",
+      "content_source": {
+        "path": "content/curadoria/maldivas/male/GAP_ENRICHMENT_MICHELIN_SUPPLIERS_MALE_V1_2026-09-07.md",
+        "blob_sha": "4d4588d0335649fbf0018f2434a5b02ce6fa00cb",
+        "section": "Fornecedores",
+        "status": "BOUND_VERIFIED"
+      },
+      "media_slots": [],
+      "media_gap": true,
+      "gate": "REQUIRES_SUPPLIER_COMMERCIAL_QA",
+      "review_status": "READY_REVIEW_NOT_UPLOAD",
+      "upload_status": "UPLOAD_PENDING_CHANNEL",
+      "execute": false
+    },
+    {
+      "source_index": 840,
+      "post_id": 142463,
+      "external_id": "9a8f8bd3ae4fe459b352ce971e2b00b037373eda8ccf3b278e3a6d0debfb150b",
+      "current_title": "Sustentabilidade | Malé",
+      "planned_title": "Sustentabilidade | Malé",
+      "operation": "UPSERT_DRAFT_CONTENT",
+      "target_scope": "Male City",
+      "content_source": {
+        "path": "content/curadoria/maldivas/male/GAP_ENRICHMENT_SUSTAINABILITY_LOUNGES_MALE_V1_2026-09-07.md",
+        "blob_sha": "5cebe34144338708a1a3c46fc3de515d5f2b7ae7",
+        "section": "Sustentabilidade",
+        "status": "BOUND_VERIFIED"
+      },
+      "media_slots": [],
+      "media_gap": true,
+      "gate": "REQUIRES_LOCAL_IMPLEMENTATION_QA",
+      "review_status": "READY_REVIEW_NOT_UPLOAD",
+      "upload_status": "UPLOAD_PENDING_CHANNEL",
+      "execute": false
+    },
+    {
+      "source_index": 852,
+      "post_id": 142475,
+      "external_id": "5d20b58227592fb406b0162bda2bc82a7715ace32203c5ac86cb5b05f0155f53",
+      "current_title": "Rooftops & Beach Clubs | Malé",
+      "planned_title": "Rooftops | Malé",
+      "operation": "RENAME_EXISTING_AND_CREATE_GATED_CHILD",
+      "target_scope": "Male City / Hulhulé separado",
+      "content_source": {
+        "path": "content/curadoria/maldivas/male/GAP_ENRICHMENT_ROOFTOPS_VIP_MALE_V1_2026-09-07.md",
+        "blob_sha": "88d1a7d782f1d91efd1b3745af71bf497b538f5d",
+        "section": "Rooftops & Beach Clubs",
+        "status": "BOUND_VERIFIED"
+      },
+      "media_slots": [],
+      "media_gap": true,
+      "gate": "REQUIRES_VENUE_QA_AND_BEACH_CLUB_GAP",
+      "review_status": "READY_REVIEW_NOT_UPLOAD",
+      "upload_status": "UPLOAD_PENDING_CHANNEL",
+      "execute": false
+    },
+    {
+      "source_index": 853,
+      "post_id": 142476,
+      "external_id": "92df305c8ee98e763b0a32e9121ee1b2326d93972ca4d4ca1920f09f7d0080a2",
+      "current_title": "Compras & Lifestyle | Malé",
+      "planned_title": "Compras & Lifestyle | Malé",
+      "operation": "UPSERT_DRAFT_CONTENT",
+      "target_scope": "Male City",
+      "content_source": {
+        "path": "content/curadoria/maldivas/male/GAP_ENRICHMENT_SHOPPING_WELLNESS_MALE_V1_2026-09-07.md",
+        "blob_sha": "479c70d5beaeaa560d9d1de04d24634a5bd69f6b",
+        "section": "Compras & Lifestyle",
+        "status": "BOUND_VERIFIED"
+      },
+      "media_slots": [],
+      "media_gap": true,
+      "gate": "REQUIRES_DYNAMIC_LOCAL_QA",
+      "review_status": "READY_REVIEW_NOT_UPLOAD",
+      "upload_status": "UPLOAD_PENDING_CHANNEL",
+      "execute": false
+    },
+    {
+      "source_index": 854,
+      "post_id": 142477,
+      "external_id": "fecb9852c88841c909d9f9274b98859cc40cd41ddc4e5caab9620f7804d85e2a",
+      "current_title": "Wellness | Malé",
+      "planned_title": "Wellness | Malé",
+      "operation": "UPSERT_DRAFT_CONTENT",
+      "target_scope": "Male City",
+      "content_source": {
+        "path": "content/curadoria/maldivas/male/GAP_ENRICHMENT_SHOPPING_WELLNESS_MALE_V1_2026-09-07.md",
+        "blob_sha": "479c70d5beaeaa560d9d1de04d24634a5bd69f6b",
+        "section": "Wellness urbano",
+        "status": "BOUND_VERIFIED"
+      },
+      "media_slots": [],
+      "media_gap": true,
+      "gate": "REQUIRES_SERVICE_AND_CLIMATE_QA",
+      "review_status": "READY_REVIEW_NOT_UPLOAD",
+      "upload_status": "UPLOAD_PENDING_CHANNEL",
+      "execute": false
+    },
+    {
+      "source_index": 855,
+      "post_id": 142478,
+      "external_id": "23440028fbdcf884bbc8f295181973ede0522c4b5aa48cd104dae1aa1b98f06e",
+      "current_title": "Experiências VIP | Malé",
+      "planned_title": "Experiências VIP | Malé",
+      "operation": "UPSERT_DRAFT_CONTENT",
+      "target_scope": "Male City / departures under consultation",
+      "content_source": {
+        "path": "content/curadoria/maldivas/male/GAP_ENRICHMENT_ROOFTOPS_VIP_MALE_V1_2026-09-07.md",
+        "blob_sha": "88d1a7d782f1d91efd1b3745af71bf497b538f5d",
+        "section": "Experiências VIP",
+        "status": "BOUND_VERIFIED"
+      },
+      "media_slots": [],
+      "media_gap": true,
+      "gate": "REQUIRES_LICENSED_OPERATOR_AND_PRODUCT_QA",
+      "review_status": "READY_REVIEW_NOT_UPLOAD",
+      "upload_status": "UPLOAD_PENDING_CHANNEL",
+      "execute": false
+    },
+    {
+      "source_index": 856,
+      "post_id": 142479,
+      "external_id": "fe65949dc3ba3e0a1e0389206550159d5dbc4e4cd4e1df4dde383f0eec67f093",
+      "current_title": "Logística & Transporte | Malé",
+      "planned_title": "Logística & Transporte | Malé",
+      "operation": "UPSERT_DRAFT_CONTENT",
+      "target_scope": "Male City / Greater Malé",
+      "content_source": {
+        "path": "content/curadoria/maldivas/male/DOSSIER_MALE_PTBR_V1_2026-09-07.md",
+        "blob_sha": "a176774a159a3453fe4bd1c33134864a1d3011d9",
+        "section": "Logística e mobilidade",
+        "status": "BOUND_VERIFIED"
+      },
+      "media_slots": [
+        {
+          "slot": "logistics",
+          "subject": "Villingili ferry terminal",
+          "author": "David Stanley",
+          "license": "CC BY 2.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Villingili_Ferry_Terminal_(32984315295).jpg",
+          "sha256": "286aa5e36ecb871e7c2148a795c9044a5b0d0706f778643b681d6a4c9ad82323",
+          "qa": "READY_REVIEW_INLINE_ONLY",
+          "usage": "inline only; not hero"
+        }
+      ],
+      "media_gap": false,
+      "gate": "SOURCE_LINK_QA_REVIEW_REQUIRED",
+      "review_status": "READY_REVIEW_NOT_UPLOAD",
+      "upload_status": "UPLOAD_PENDING_CHANNEL",
+      "execute": false
+    }
+  ],
+  "hard_gates": [
+    "content QA per module",
+    "derivative media hash and layout QA",
+    "backup and authenticated staging",
+    "owner approval for split",
+    "P0 PASS before public visibility"
+  ],
+  "rollback": "Delete this manifest and revert its commit. No CMS, media bank, Canva, social or WordPress state was changed."
+}
