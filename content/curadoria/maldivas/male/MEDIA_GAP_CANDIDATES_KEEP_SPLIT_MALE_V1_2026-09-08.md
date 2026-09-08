@@ -16,7 +16,7 @@ Sete módulos receberam pelo menos um candidato com licença explícita na pági
 
 | módulo | ativo | página de origem | autor | licença explícita | dimensões | hash do provedor | decisão |
 |---|---|---|---|---|---|---|---|
-| Hotelaria Global — Malé | Male Waterfront (32822673711).jpg | https://commons.wikimedia.org/wiki/File:Male_Waterfront_(32822673711).jpg | David Stanley | CC BY 2.0 | 1024×768 | PROVIDER_SHA1_PENDING | LICENSE_VERIFIED_CANDIDATE_CONTEXT_ONLY; mostra o waterfront com hotéis, sem validar propriedade específica; CURRENTNESS_QA_REQUIRED |
+| Hotelaria Global — Malé | Male Waterfront (32822673711).jpg | https://commons.wikimedia.org/wiki/File:Male_Waterfront_(32822673711).jpg | David Stanley | CC BY 2.0 | 1024×768 | SHA-1 746a30d11bb4060951c18da905c6820f99e6e777; SHA-256 1c872bd4ebb130e9b54afa116f43242bd50f6e24537726dfa842aa1feb7432f3 | MATERIALIZED_QA_FACTUAL_CONTEXT_PASS; BRAND_FIT_FAIL_PUBLIC_LUXURY; mostra waterfront urbano e fachadas, sem validar propriedade específica; CURRENTNESS_QA_REQUIRED; Drive ID 10YEYJ53yCiN1strwlQXwXb5rJanqm-bl |
 | Experiências — Malé | Parasailing (380754397).jpg | https://commons.wikimedia.org/wiki/File:Parasailing_(380754397).jpg | Badr Naseem | CC BY-SA 2.0 | 1024×1024 | PROVIDER_SHA1_PENDING | LICENSE_VERIFIED_CANDIDATE; CURRENTNESS_QA_REQUIRED; OPERATOR_QA_REQUIRED; não reutilizar no módulo VIP |
 | Fornecedores — Malé | Buiobuione Porto di Malé.jpg | https://commons.wikimedia.org/wiki/File:Buiobuione_Porto_di_Mal%C3%A9.jpg | Buiobuione | CC BY-SA 4.0 | 5120×3413 | 6e53cccded49afff52c171b1c0e1980626b5d3e4 | LICENSE_VERIFIED_CANDIDATE_CONTEXT_ONLY; NO_PARTNERSHIP_INFERENCE |
 | Sustentabilidade — Malé | A view of the breakwall on the Western side of Malé.jpg | https://commons.wikimedia.org/wiki/File:A_view_of_the_breakwall_on_the_Western_side_of_Mal%C3%A9.jpg | Mark Fischer | CC BY-SA 2.0 | 3980×2985 | 05f099fa0aa9bffeb4895b8603104caa47d11a4b | LICENSE_VERIFIED_CANDIDATE_CONTEXT_ONLY; LOCAL_IMPLEMENTATION_QA_REQUIRED |
@@ -71,4 +71,24 @@ A deduplicação integral continua pendente para os candidatos sem SHA-1 recuper
 - editorial_gate: CURRENTNESS_QA_REQUIRED; PRODUCT_AND_OPERATOR_QA_REQUIRED
 - derivative: NOT_GENERATED
 - wordpress: UPLOAD_PENDING_CHANNEL
+- social: NOT_SENT
+
+## Checkpoint de materialização Hotelaria Global
+
+- checked_at: 2026-09-08
+- drive_id: 10YEYJ53yCiN1strwlQXwXb5rJanqm-bl
+- drive_url: https://drive.google.com/file/d/10YEYJ53yCiN1strwlQXwXb5rJanqm-bl/view?usp=drivesdk
+- bytes: 153344
+- mime: image/jpeg
+- dimensions: 1024×768
+- provider_sha1_match: PASS
+- sha1: 746a30d11bb4060951c18da905c6820f99e6e777
+- sha256: 1c872bd4ebb130e9b54afa116f43242bd50f6e24537726dfa842aa1feb7432f3
+- visual_qa: PASS_FACTUAL_CONTEXT
+- visual_notes: waterfront urbano legível, transporte marítimo e fachadas; pessoas pequenas; sinalização comercial visível; sem marca-d’água aparente.
+- brand_fit: FAIL_PUBLIC_ULTRA_LUXURY
+- permitted_use: INTERNAL_EDITORIAL_REFERENCE_ONLY até substituição por ativo contemporâneo e premium
+- currentness_gate: REQUIRED; captura de 2016
+- derivative: NOT_GENERATED
+- wordpress: NOT_APPROVED
 - social: NOT_SENT
