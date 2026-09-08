@@ -23,7 +23,7 @@ Sete módulos receberam pelo menos um candidato com licença explícita na pági
 | Rooftops — Malé | Dusk (408488457).jpg | https://commons.wikimedia.org/wiki/File:Dusk_(408488457).jpg | ╚ DD╔ | CC BY-SA 2.0 | 1280×960 | 78885a18923976f1a54ab85fa279884527e25263 | AMBIENCE_CONTEXT_ONLY; VENUE_QA_REQUIRED; CURRENTNESS_QA_REQUIRED |
 | Shopping & Lifestyle — Malé | Fruit and vagetable markets. Maldives 2005. Photo- AusAID (10696967365).jpg | https://commons.wikimedia.org/wiki/File:Fruit_and_vagetable_markets._Maldives_2005._Photo-_AusAID_(10696967365).jpg | Department of Foreign Affairs and Trade / Australian Aid Photolibrary | CC BY 2.0 | 1944×2592 | 5fb3f4f09eb89a7c8a956c377e79e62a4c7f83f5 | HOLD_CURRENTNESS_AND_GEO_QA; não declarar mercado atual de Malé |
 | Wellness urbano — Malé | Entspannung Malediven (170994141).jpeg | https://commons.wikimedia.org/wiki/File:Entspannung_Malediven_(170994141).jpeg | AUTHOR_METADATA_PENDING | CC BY 3.0 | 2048×1365 | PROVIDER_SHA1_PENDING | HOLD_GEO_SCOPE_AND_AUTHOR_METADATA; imagem genérica de Maldivas, não comprovada como Malé City |
-| Experiências VIP — Malé | Arumaazu (5092280315).jpg | https://commons.wikimedia.org/wiki/File:Arumaazu_(5092280315).jpg | ╚ DD╔ (Hussain Didi) | CC BY-SA 2.0 | 4320×3240 | 743ac5dc924a813464208de9c3ee01ff2cb05f8a | LICENSE_VERIFIED_CANDIDATE; georreferenciado em Malé (4.171115, 73.497505); CURRENTNESS_QA_REQUIRED; PRODUCT_AND_OPERATOR_QA_REQUIRED; não inferir disponibilidade ou parceria |
+| Experiências VIP — Malé | Arumaazu (5092280315).jpg | https://commons.wikimedia.org/wiki/File:Arumaazu_(5092280315).jpg | ╚ DD╔ (Hussain Didi) | CC BY-SA 2.0 | 4320×3240 | SHA-1 743ac5dc924a813464208de9c3ee01ff2cb05f8a; SHA-256 3b1c6c53d726e303990ee6806796b8091466925d79d096e5c9540ce377798bca | MATERIALIZED_QA_VISUAL_PASS_CONTEXT_ONLY; georreferenciado em Malé (4.171115, 73.497505); sem texto sobreposto ou marca-d’água aparente; CURRENTNESS_QA_REQUIRED; PRODUCT_AND_OPERATOR_QA_REQUIRED; não inferir disponibilidade ou parceria; Drive ID 1Ln8JSkoI1gKrnYeHSU_xo-HE_jCFyeKt |
 
 ## Deduplicação
 
@@ -48,8 +48,27 @@ A deduplicação integral continua pendente para os candidatos sem SHA-1 recuper
 
 ## Não executado e rollback
 
-- Binários não baixados. O candidato VIP foi validado apenas em metadados: autoria, licença, dimensões, coordenadas e SHA-1 do provedor.
+- Candidato VIP materializado no Drive: ID 1Ln8JSkoI1gKrnYeHSU_xo-HE_jCFyeKt; SHA-1 confirmado; SHA-256 calculado; QA visual básico PASS. Os demais binários não foram baixados.
 - Nenhum crop ou derivado gerado.
 - Nenhum upload para Canva, WordPress ou social.
 - Nenhuma mutação CMS.
 - Rollback: excluir este manifesto e manter os oito módulos em MEDIA_GAP; o estado publicado permanece inalterado.
+
+## Checkpoint de materialização VIP
+
+- checked_at: 2026-09-08
+- drive_id: 1Ln8JSkoI1gKrnYeHSU_xo-HE_jCFyeKt
+- drive_url: https://drive.google.com/file/d/1Ln8JSkoI1gKrnYeHSU_xo-HE_jCFyeKt/view?usp=drivesdk
+- bytes: 3771161
+- mime: image/jpeg
+- dimensions: 4320×3240
+- provider_sha1_match: PASS
+- sha1: 743ac5dc924a813464208de9c3ee01ff2cb05f8a
+- sha256: 3b1c6c53d726e303990ee6806796b8091466925d79d096e5c9540ce377798bca
+- visual_qa: PASS_CONTEXT_ONLY
+- visual_notes: alta resolução; yacht integral e centralizado; céu/mar com espaço negativo; sem texto sobreposto ou marca-d’água aparente; uma pessoa distante sem identificação útil.
+- brand_fit: PASS_CANDIDATE_ULTRA_LUXURY
+- editorial_gate: CURRENTNESS_QA_REQUIRED; PRODUCT_AND_OPERATOR_QA_REQUIRED
+- derivative: NOT_GENERATED
+- wordpress: UPLOAD_PENDING_CHANNEL
+- social: NOT_SENT
