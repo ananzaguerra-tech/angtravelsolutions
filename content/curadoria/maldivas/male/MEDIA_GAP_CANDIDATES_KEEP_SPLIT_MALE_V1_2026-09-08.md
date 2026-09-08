@@ -10,7 +10,7 @@
 
 ## Resultado do ciclo
 
-Seis módulos receberam pelo menos um candidato com licença explícita na página de origem. Wellness recebeu um candidato em HOLD por falta de autoria recuperada e inadequação geográfica ainda não resolvida. Experiências VIP permanece sem candidato seguro. Nenhum candidato foi promovido a ativo aprovado.
+Sete módulos receberam pelo menos um candidato com licença explícita na página de origem. Wellness recebeu um candidato em HOLD por falta de autoria recuperada e inadequação geográfica ainda não resolvida. Experiências VIP passou a ter candidato georreferenciado em Malé, ainda sujeito a QA de atualidade e de produto. Nenhum candidato foi promovido a ativo aprovado.
 
 ## Candidatos
 
@@ -23,11 +23,11 @@ Seis módulos receberam pelo menos um candidato com licença explícita na pági
 | Rooftops — Malé | Dusk (408488457).jpg | https://commons.wikimedia.org/wiki/File:Dusk_(408488457).jpg | ╚ DD╔ | CC BY-SA 2.0 | 1280×960 | 78885a18923976f1a54ab85fa279884527e25263 | AMBIENCE_CONTEXT_ONLY; VENUE_QA_REQUIRED; CURRENTNESS_QA_REQUIRED |
 | Shopping & Lifestyle — Malé | Fruit and vagetable markets. Maldives 2005. Photo- AusAID (10696967365).jpg | https://commons.wikimedia.org/wiki/File:Fruit_and_vagetable_markets._Maldives_2005._Photo-_AusAID_(10696967365).jpg | Department of Foreign Affairs and Trade / Australian Aid Photolibrary | CC BY 2.0 | 1944×2592 | 5fb3f4f09eb89a7c8a956c377e79e62a4c7f83f5 | HOLD_CURRENTNESS_AND_GEO_QA; não declarar mercado atual de Malé |
 | Wellness urbano — Malé | Entspannung Malediven (170994141).jpeg | https://commons.wikimedia.org/wiki/File:Entspannung_Malediven_(170994141).jpeg | AUTHOR_METADATA_PENDING | CC BY 3.0 | 2048×1365 | PROVIDER_SHA1_PENDING | HOLD_GEO_SCOPE_AND_AUTHOR_METADATA; imagem genérica de Maldivas, não comprovada como Malé City |
-| Experiências VIP — Malé | — | — | — | — | — | — | MEDIA_GAP_NO_SAFE_CANDIDATE |
+| Experiências VIP — Malé | Arumaazu (5092280315).jpg | https://commons.wikimedia.org/wiki/File:Arumaazu_(5092280315).jpg | ╚ DD╔ (Hussain Didi) | CC BY-SA 2.0 | 4320×3240 | 743ac5dc924a813464208de9c3ee01ff2cb05f8a | LICENSE_VERIFIED_CANDIDATE; georreferenciado em Malé (4.171115, 73.497505); CURRENTNESS_QA_REQUIRED; PRODUCT_AND_OPERATOR_QA_REQUIRED; não inferir disponibilidade ou parceria |
 
 ## Deduplicação
 
-Os quatro SHA-1 recuperados são distintos entre si e não coincidem com o banco anterior de Malé:
+Os cinco SHA-1 recuperados são distintos entre si e não coincidem com o banco anterior de Malé:
 - 5f8a71dc60fc5c95e27973b0e5329ce635604ede
 - c8332b1ff54619f2928de166652961b481df218a
 - fe2c3ce228cbac26008f1275886351ca1b413f81
@@ -48,7 +48,7 @@ A deduplicação integral continua pendente para os candidatos sem SHA-1 recuper
 
 ## Não executado e rollback
 
-- Binários não baixados.
+- Binários não baixados. O candidato VIP foi validado apenas em metadados: autoria, licença, dimensões, coordenadas e SHA-1 do provedor.
 - Nenhum crop ou derivado gerado.
 - Nenhum upload para Canva, WordPress ou social.
 - Nenhuma mutação CMS.
