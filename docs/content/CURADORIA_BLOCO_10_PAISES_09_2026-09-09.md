@@ -23,7 +23,7 @@ Moeda: peso dominicano (DOP). Idiomas: espanhol. Fuso: UTC−4. Eletricidade: 11
 Clima tropical. A época mais seca costuma favorecer viagens entre dezembro e abril; temporada ciclônica do Atlântico exige monitoramento operacional, especialmente de junho a novembro. A recomendação final depende de datas, ilha/região, eventos, mar e tolerância climática do passageiro.
 
 ### Documentação e consular
-Regras de passaporte, visto/autorização, formulários, trânsito e permanência devem ser parametrizadas por nacionalidade, residência, rota e finalidade. Para passaporte brasileiro, consultar a fonte oficial imediatamente antes da venda e novamente antes do embarque. checked_at=2026-09-09; status=TURISMO_PASS; CONSULAR_DEGRADED_403.
+Regras de passaporte, visto/autorização, formulários, trânsito e permanência devem ser parametrizadas por nacionalidade, residência, rota e finalidade. Para passaporte brasileiro, consultar a fonte oficial imediatamente antes da venda e novamente antes do embarque. checked_at=2026-09-09; status=TURISMO_PASS; CONSULAR_PASS_VIA_DGM.
 
 ### Saúde, seguro e menores
 Exigir seguro adequado ao roteiro e às atividades; conferir vacinas, medicamentos, assistência, gestação, mobilidade e evacuação com fontes sanitárias oficiais. Menores: validar autorização, certidões, guarda, sobrenomes e exigências da companhia/país de trânsito.
@@ -59,7 +59,7 @@ Links internos propostos: /conteudo-global/ | /servicos-outsourcing/ | /hotelari
 
 ### Fontes oficiais e checked_at
 Turismo: https://www.godominicanrepublic.com/
-Imigração/entrada: https://eticket.migracion.gob.do/
+Imigração/entrada: https://eticket.migracion.gob.do/ | rota institucional alternativa: https://migracion.gob.do/
 checked_at: 2026-09-09. Alcance: turismo e porta consular; requisitos individuais continuam parametrizados e sujeitos a rechecagem.
 
 ### Manifesto de mídia
@@ -251,7 +251,7 @@ Moeda: dólar fijiano (FJD). Idiomas: inglês, fijiano e hindi fijiano. Fuso: UT
 Tropical. Maio a outubro tende a ser mais seco; novembro a abril é mais úmido e inclui maior risco ciclônico. A recomendação final depende de datas, ilha/região, eventos, mar e tolerância climática do passageiro.
 
 ### Documentação e consular
-Regras de passaporte, visto/autorização, formulários, trânsito e permanência devem ser parametrizadas por nacionalidade, residência, rota e finalidade. Para passaporte brasileiro, consultar a fonte oficial imediatamente antes da venda e novamente antes do embarque. checked_at=2026-09-09; status=TURISMO_DEGRADED; CONSULAR_DEGRADED.
+Regras de passaporte, visto/autorização, formulários, trânsito e permanência devem ser parametrizadas por nacionalidade, residência, rota e finalidade. Para passaporte brasileiro, consultar a fonte oficial imediatamente antes da venda e novamente antes do embarque. checked_at=2026-09-09; status=TURISMO_PASS; CONSULAR_PASS.
 
 ### Saúde, seguro e menores
 Exigir seguro adequado ao roteiro e às atividades; conferir vacinas, medicamentos, assistência, gestação, mobilidade e evacuação com fontes sanitárias oficiais. Menores: validar autorização, certidões, guarda, sobrenomes e exigências da companhia/país de trânsito.
@@ -286,8 +286,8 @@ Schema hints: TouristDestination, Country, City, Place, BreadcrumbList, FAQPage 
 Links internos propostos: /conteudo-global/ | /servicos-outsourcing/ | /hotelaria/ | /concierge/ | /fale-conosco/
 
 ### Fontes oficiais e checked_at
-Turismo: https://www.fiji.travel/
-Imigração/entrada: https://www.immigration.gov.fj/
+Turismo: https://www.fiji.travel/things-to-know/travel-requirements/visas
+Imigração/entrada: https://www.immigration.gov.fj/visa-exempted-countries/
 checked_at: 2026-09-09. Alcance: turismo e porta consular; requisitos individuais continuam parametrizados e sujeitos a rechecagem.
 
 ### Manifesto de mídia
@@ -365,7 +365,7 @@ Moeda: peso cubano (CUP); meios de pagamento e câmbio exigem verificação atua
 Tropical. Novembro a abril costuma ser mais seco; calor, chuvas e risco ciclônico aumentam em parte do ano. A recomendação final depende de datas, ilha/região, eventos, mar e tolerância climática do passageiro.
 
 ### Documentação e consular
-Regras de passaporte, visto/autorização, formulários, trânsito e permanência devem ser parametrizadas por nacionalidade, residência, rota e finalidade. Para passaporte brasileiro, consultar a fonte oficial imediatamente antes da venda e novamente antes do embarque. checked_at=2026-09-09; status=TURISMO_PASS; CONSULAR_DEGRADED_TIMEOUT.
+Regras de passaporte, visto/autorização, formulários, trânsito e permanência devem ser parametrizadas por nacionalidade, residência, rota e finalidade. Para passaporte brasileiro, consultar a fonte oficial imediatamente antes da venda e novamente antes do embarque. checked_at=2026-09-09; status=TURISMO_PASS; CONSULAR_PASS_VIA_EVISACUBA.
 
 ### Saúde, seguro e menores
 Exigir seguro adequado ao roteiro e às atividades; conferir vacinas, medicamentos, assistência, gestação, mobilidade e evacuação com fontes sanitárias oficiais. Menores: validar autorização, certidões, guarda, sobrenomes e exigências da companhia/país de trânsito.
@@ -401,7 +401,7 @@ Links internos propostos: /conteudo-global/ | /servicos-outsourcing/ | /hotelari
 
 ### Fontes oficiais e checked_at
 Turismo: https://www.cuba.travel/
-Imigração/entrada: https://evisacuba.cu/
+Imigração/entrada: https://evisacuba.cu/en/inicio | referência consular: https://misiones.cubaminrex.cu/es/articulo/sistema-de-visado-electronico-evisacuba
 checked_at: 2026-09-09. Alcance: turismo e porta consular; requisitos individuais continuam parametrizados e sujeitos a rechecagem.
 
 ### Manifesto de mídia
@@ -479,7 +479,7 @@ Moeda: quetzal (GTQ). Idiomas: espanhol; diversas línguas maias reconhecidas. F
 Altitude cria microclimas. A estação seca em grande parte do país tende a ocorrer de novembro a abril; chuvas podem afetar estradas e trilhas. A recomendação final depende de datas, ilha/região, eventos, mar e tolerância climática do passageiro.
 
 ### Documentação e consular
-Regras de passaporte, visto/autorização, formulários, trânsito e permanência devem ser parametrizadas por nacionalidade, residência, rota e finalidade. Para passaporte brasileiro, consultar a fonte oficial imediatamente antes da venda e novamente antes do embarque. checked_at=2026-09-09; status=TURISMO_DEGRADED; CONSULAR_DEGRADED.
+Regras de passaporte, visto/autorização, formulários, trânsito e permanência devem ser parametrizadas por nacionalidade, residência, rota e finalidade. Para passaporte brasileiro, consultar a fonte oficial imediatamente antes da venda e novamente antes do embarque. checked_at=2026-09-09; status=TURISMO_DEGRADED; CONSULAR_PASS.
 
 ### Saúde, seguro e menores
 Exigir seguro adequado ao roteiro e às atividades; conferir vacinas, medicamentos, assistência, gestação, mobilidade e evacuação com fontes sanitárias oficiais. Menores: validar autorização, certidões, guarda, sobrenomes e exigências da companhia/país de trânsito.
@@ -536,7 +536,7 @@ Moeda: lempira (HNL). Idiomas: espanhol; inglês e línguas locais em áreas esp
 Tropical com variações entre Caribe, interior e Pacífico. Chuvas e ciclones podem alterar acessos; Bay Islands têm dinâmica própria. A recomendação final depende de datas, ilha/região, eventos, mar e tolerância climática do passageiro.
 
 ### Documentação e consular
-Regras de passaporte, visto/autorização, formulários, trânsito e permanência devem ser parametrizadas por nacionalidade, residência, rota e finalidade. Para passaporte brasileiro, consultar a fonte oficial imediatamente antes da venda e novamente antes do embarque. checked_at=2026-09-09; status=TURISMO_PASS; CONSULAR_DEGRADED.
+Regras de passaporte, visto/autorização, formulários, trânsito e permanência devem ser parametrizadas por nacionalidade, residência, rota e finalidade. Para passaporte brasileiro, consultar a fonte oficial imediatamente antes da venda e novamente antes do embarque. checked_at=2026-09-09; status=TURISMO_PASS; CONSULAR_PASS.
 
 ### Saúde, seguro e menores
 Exigir seguro adequado ao roteiro e às atividades; conferir vacinas, medicamentos, assistência, gestação, mobilidade e evacuação com fontes sanitárias oficiais. Menores: validar autorização, certidões, guarda, sobrenomes e exigências da companhia/país de trânsito.
@@ -572,18 +572,18 @@ Links internos propostos: /conteudo-global/ | /servicos-outsourcing/ | /hotelari
 
 ### Fontes oficiais e checked_at
 Turismo: https://honduras.travel/
-Imigração/entrada: https://inm.gob.hn/
+Imigração/entrada: https://inm.gob.hn/visas.html
 checked_at: 2026-09-09. Alcance: turismo e porta consular; requisitos individuais continuam parametrizados e sujeitos a rechecagem.
 
 ### Manifesto de mídia
 MEDIA_PENDING. Buscar fotografia/vídeo real e georreferenciado do destino, com autor, URL de origem, licença comercial, dimensões, data e termo de uso. SHA-256=null até materialização. Deduplicação mundial=PENDING. Sem Canva, crop, publicação ou reutilização de HOLD/PROIBIDO.
 ## QA e controle do bloco
 
-Contagem: exatamente 10 países. Cobertura estrutural: 10 × 16 eixos presentes. CTA: 10/10. SEO/canonical/schema: 10/10. Fontes de turismo acessíveis: 8 PASS e 2 DEGRADED. Fontes consulares acessíveis: 6 PASS e 4 DEGRADED. Mídia materializada/SHA-256: 0/10. Reconciliação destino→slug→post_id→external_id: 0/10.
+Contagem: exatamente 10 países. Cobertura estrutural: 10 × 16 eixos presentes. CTA: 10/10. SEO/canonical/schema: 10/10. Fontes de turismo acessíveis: 9 PASS e 1 DEGRADED. Fontes consulares acessíveis: 10 PASS. Mídia materializada/SHA-256: 0/10. Reconciliação destino→slug→post_id→external_id: 0/10.
 
 NÃO FEITO: publicação CMS/social/GBP; chamada n8n/Meta; alteração de IDs/drafts; materialização de mídia; homologação E2E.
 MOTIVO: fatos dinâmicos, mídia e IDs dependem de gates específicos; não há canal CMS autenticado.
-BLOQUEIOS: fontes degradadas para Fiji, Guatemala e Honduras; e-ticket dominicano 403; eVisa Cuba timeout; mídia e IDs pendentes; CI sem evidência.
+BLOQUEIOS: turismo oficial da Guatemala permanece degradado; mídia e IDs pendentes; CI sem evidência. Rotas consulares alternativas oficiais foram acessadas, mas requisitos continuam parametrizados.
 AÇÃO HUMANA MÍNIMA: nenhuma para continuidade editorial. Publicação social exige aprovação explícita de peça inédita; NYC exige vídeo físico; CMS exige canal autenticado e QA.
 PRÓXIMA AÇÃO: auditar conteúdo factual país a país, revalidar fontes degradadas, materializar mídia licenciada/deduplicada, calcular SHA-256 e reconciliar IDs canônicos.
 ROLLBACK: remover este pacote e reverter seu commit; nenhuma mutação de produção foi executada.
