@@ -16,7 +16,7 @@
 ## Gates
 - Exatamente 10 unidades inéditas: PASS.
 - Estrutura 160/160; CTA e SEO/schema 10/10.
-- Turismo: 6 PASS, 4 DEGRADED.
+- Turismo: 7 PASS, 3 DEGRADED.
 - Entrada: 3 PASS, 7 DEGRADED.
 - Mídia/SHA-256/dedup: 0/10.
 - 881/WORLD: 0/10.
