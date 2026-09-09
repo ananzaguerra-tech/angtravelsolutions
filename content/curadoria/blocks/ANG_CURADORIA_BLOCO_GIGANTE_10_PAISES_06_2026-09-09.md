@@ -1,6 +1,9 @@
+> HOLD_RENUMBER_RECONCILE — 2026-09-09
+> Colisão detectada com o Bloco 06 canônico de 2026-09-08. Canadá, Costa Rica, Panamá, Equador e Bolívia já existem no bloco canônico; República Dominicana, Jamaica, Bahamas, Barbados e Fiji permanecem candidatos a bloco futuro. Não ingerir, publicar nem reconciliar com 881/WORLD até renumeração e composição de um conjunto inédito de exatamente 10 países.
+
 # ANG CURADORIA — BLOCO GIGANTE 10 PAÍSES 06
 
-Status: `READY_QA_TEXT` / `UPLOAD_PENDING_CHANNEL`
+Status: `HOLD_RENUMBER_RECONCILE` / `UPLOAD_PENDING_CHANNEL`
 
 Países: Canadá, Costa Rica, Panamá, Equador, Bolívia, República Dominicana, Jamaica, Bahamas, Barbados e Fiji.
 
