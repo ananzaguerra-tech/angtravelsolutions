@@ -66,7 +66,7 @@ Priorizar Alofi, Avatele, Hakupu, Hikutavake, Limu Pools e Huvalu Forest. Constr
 Moeda: dólar neozelandês. Idiomas: niueano e inglês. Fuso: UTC−11. Energia: 230 V; tomadas I. Confirmar câmbio, telecomunicações, feriados, pagamentos, acessibilidade e padrão elétrico por propriedade.
 
 ### 4. Clima e sazonalidade
-tropical, com estação seca relativa e temporada ciclônica. Monitorar ciclones/tufões, chuva, vento, mar, calor, visibilidade, eventos e política de remarcação. Nenhuma janela sazonal é garantia.
+Tropical, com estação seca relativa e temporada ciclônica. Em 09/09/2026, o Governo de Niue exibia Drought Blue Alert; revalidar o alerta hídrico oficial antes da venda. Monitorar ciclones/tufões, chuva, vento, mar, calor, visibilidade, eventos e política de remarcação. Nenhuma janela sazonal é garantia.
 
 ### 5. Documentação, entrada e consular
 O Governo de Niue disponibiliza cartões de chegada e saída, mas a camada detalhada de visto ficou mínima; manter nacionalidade e trânsito parametrizados. Validar países de conexão, companhia aérea, nacionalidade, residência, trânsito, finalidade, duração e menores antes da emissão.
