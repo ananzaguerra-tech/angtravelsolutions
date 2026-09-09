@@ -237,8 +237,8 @@ Status do país: REVIEW_REQUIRED | CONSULAR_DYNAMIC_QA | MEDIA_PENDING | ID_RECO
 
 QA GLOBAL
 - Contagem exata: 10 países.
-- Fontes turísticas acessíveis: 8 PASS, 1 PASS_MINIMAL e 1 DEGRADED.
-- Fontes consulares: 4 PASS, 5 DEGRADED e 1 PASS_EMPTY_CONTENT.
+- Fontes turísticas acessíveis: 7 PASS, 1 PASS_MINIMAL e 2 DEGRADED.
+- Fontes consulares: 3 PASS, 6 DEGRADED e 1 PASS_EMPTY_CONTENT.
 - Nenhuma publicação CMS, social ou GBP.
 - Nenhuma alteração de 881/WORLD, post_id, external_id ou drafts.
 - Promoção somente após QA factual, fonte acessível, mídia/licença/hash, reconciliação canônica, backup, dry-run e prova pós-carga.
