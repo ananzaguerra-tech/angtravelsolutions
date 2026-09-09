@@ -1,19 +1,27 @@
 {
   "request_id": "social-v5-CURADORIA_ANG_AGOSTO_FEED",
-  "source": "github-staging-authorized-feed",
-  "action": "instagram_publish",
+  "source": "github-staging-quarantined",
+  "action": "blocked_no_publish",
   "payload": {
     "brand": "ANG Travel",
     "page_name": "ANG Travel",
     "format": "feed_4x5",
-    "caption": "Viajar bem começa muito antes do embarque. A ANG Travel transforma pesquisa, repertório e atendimento próximo em roteiros desenhados para cada viajante.\n\nFale com a ANG Travel | +55 19 4040-4293",
-    "image_url": "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/staging/public/social/2026-08-27/ang-travel-feed.png",
+    "caption": "",
+    "image_url": "",
     "image_urls": [],
-    "queue_id": "CURADORIA_ANG_AGOSTO_FEED"
+    "queue_id": "CURADORIA_ANG_AGOSTO_FEED",
+    "quarantine_reason": "HOLD_PROIBIDO_PELA_TITULAR_2026-09-07"
   },
   "publication_gate": {
-    "required_status": "PUBLISHED",
-    "require_publication_id": true,
-    "fail_closed": true
+    "prohibited": true,
+    "required_status": "NEVER_PUBLISH",
+    "require_publication_id": false,
+    "fail_closed": true,
+    "approval_state": "REVOKED"
+  },
+  "audit": {
+    "quarantined_at": "2026-09-08",
+    "supersedes_authorization": true,
+    "note": "Payload antigo CURADORIA_ANG_AGOSTO proibido. Não reutilizar imagem, copy, composição ou IDs."
   }
 }
