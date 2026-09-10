@@ -1,0 +1,59 @@
+name: WordPress REST Auth Probe
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [staging]
+    paths:
+      - '.github/workflows/wordpress-rest-auth-probe.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify-wordpress-rest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      WP_BASE_URL: ${{ secrets.WP_BASE_URL }}
+      WP_USERNAME: ${{ secrets.WP_USERNAME }}
+      WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+    steps:
+      - name: Validate required secrets without exposing values
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${WP_BASE_URL:-}" || { echo "PROBE_RESULT=BLOCKED_MISSING_WP_BASE_URL"; exit 20; }
+          test -n "${WP_USERNAME:-}" || { echo "PROBE_RESULT=BLOCKED_MISSING_WP_USERNAME"; exit 21; }
+          test -n "${WP_APP_PASSWORD:-}" || { echo "PROBE_RESULT=BLOCKED_MISSING_WP_APP_PASSWORD"; exit 22; }
+          echo "SECRETS_PRESENT=true"
+
+      - name: Verify WordPress REST authentication read-only
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="${WP_BASE_URL%/}"
+          code=$(curl --silent --show-error --output /tmp/wp-user.json --write-out "%{http_code}" \
+            --user "$WP_USERNAME:$WP_APP_PASSWORD" \
+            "$base/wp-json/wp/v2/users/me?context=edit")
+          echo "HTTP_STATUS=$code"
+          if [ "$code" != "200" ]; then
+            echo "PROBE_RESULT=WORDPRESS_REST_AUTH_FAILED"
+            python3 - <<'PY'
+import json
+try:
+    p=json.load(open('/tmp/wp-user.json'))
+    print('WP_ERROR_CODE=', p.get('code'))
+    print('WP_ERROR_MESSAGE=', p.get('message'))
+except Exception:
+    print('WP_ERROR_BODY_NON_JSON')
+PY
+            exit 23
+          fi
+          python3 - <<'PY'
+import json
+p=json.load(open('/tmp/wp-user.json'))
+print('PROBE_RESULT=WORDPRESS_AUTH_OK')
+print('WP_USER_ID=', p.get('id'))
+print('WP_USER_NAME=', p.get('name'))
+PY
