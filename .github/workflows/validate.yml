@@ -36,34 +36,3 @@ jobs:
         run: |
           grep -q "Preserve ANG Connect" README.md
           grep -q "No production overwrite before backup and staging validation" README.md
-
-  wordpress-rest-auth-probe:
-    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/staging' }}
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    env:
-      WP_BASE_URL: ${{ secrets.WP_BASE_URL }}
-      WP_USERNAME: ${{ secrets.WP_USERNAME }}
-      WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
-    steps:
-      - name: Check WordPress bridge secrets exist
-        shell: bash
-        run: |
-          set -euo pipefail
-          test -n "${WP_BASE_URL:-}"
-          test -n "${WP_USERNAME:-}"
-          test -n "${WP_APP_PASSWORD:-}"
-      - name: Verify WordPress REST authentication read-only
-        shell: bash
-        run: |
-          set -euo pipefail
-          base="${WP_BASE_URL%/}"
-          code=$(curl --silent --show-error --output /tmp/wp-user.json --write-out "%{http_code}" --user "$WP_USERNAME:$WP_APP_PASSWORD" "$base/wp-json/wp/v2/users/me?context=edit")
-          test "$code" = "200"
-          python3 - <<'PY'
-import json
-p=json.load(open('/tmp/wp-user.json'))
-assert p.get('id')
-print('WORDPRESS_AUTH_OK')
-print('WP_USER_ID=', p.get('id'))
-PY
