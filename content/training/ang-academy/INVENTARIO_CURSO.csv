@@ -1,0 +1,18 @@
+codigo,titulo,carga_horas,tipo,avaliacao,pre_requisito,status
+ANG-ACA-01,Ecossistema do Turismo e Papel do Agente,6,modulo,quiz,nenhum,READY_FOR_PORTAL
+ANG-ACA-02,Legislacao Cadastur Consumidor e LGPD,6,modulo,quiz,ANG-ACA-01,READY_FOR_PORTAL
+ANG-ACA-03,Atendimento Consultivo e Descoberta do Cliente,6,modulo,quiz,ANG-ACA-01,READY_FOR_PORTAL
+ANG-ACA-04,Geografia Turistica Curadoria e Pesquisa de Destinos,8,modulo,quiz,ANG-ACA-03,READY_FOR_PORTAL
+ANG-ACA-05,Aviacao Fundamentos Aeroportos Rotas e PNR,8,modulo,quiz,ANG-ACA-01,READY_FOR_PORTAL
+ANG-ACA-06,Tarifas Regras Bilhetes Reemissao e Reembolso,10,modulo,quiz,ANG-ACA-05,READY_FOR_PORTAL
+ANG-ACA-07,GDS NDC e Distribuicao Aerea,6,modulo,quiz,ANG-ACA-05,READY_FOR_PORTAL
+ANG-ACA-08,BSP BSPlink e Controle Financeiro,6,modulo,quiz,ANG-ACA-06,READY_FOR_PORTAL
+ANG-ACA-09,Hotelaria Receptivo Transfers Carros Trens Cruzeiros e Seguro,8,modulo,quiz,ANG-ACA-03,READY_FOR_PORTAL
+ANG-ACA-10,Documentacao Internacional Timatic e Fontes Oficiais,6,modulo,quiz,ANG-ACA-04,READY_FOR_PORTAL
+ANG-ACA-11,Corporativo Duty of Care e MICE,6,modulo,quiz,ANG-ACA-03,READY_FOR_PORTAL
+ANG-ACA-12,Luxo Concierge e ANG Luxury Brazil,5,modulo,quiz,ANG-ACA-03,READY_FOR_PORTAL
+ANG-ACA-13,ANG Celebrations e Destination Wedding,5,modulo,quiz,ANG-ACA-03,READY_FOR_PORTAL
+ANG-ACA-14,Crises Irregularidades e Pos-venda,6,modulo,quiz,ANG-ACA-06,READY_FOR_PORTAL
+ANG-ACA-15,Vendas Margem Fee e Fidelizacao,5,modulo,quiz,ANG-ACA-03,READY_FOR_PORTAL
+ANG-ACA-16,Sistemas Automacao Seguranca e Qualidade,5,modulo,quiz,ANG-ACA-02,READY_FOR_PORTAL
+ANG-ACA-FINAL,Avaliacao Final e Projeto de Conclusao,4,avaliacao,prova+caso+simulacao,ANG-ACA-01..16,READY_FOR_PORTAL

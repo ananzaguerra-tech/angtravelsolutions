@@ -1,0 +1,78 @@
+{
+  "course": "ANG Academy — Formação de Novos Agentes de Viagens",
+  "passing_score": 70,
+  "critical_topics": ["documentacao", "privacidade", "regras_tarifarias"],
+  "module_quizzes": [
+    {"module":1,"questions":[
+      {"q":"Qual é a principal diferença entre uma consolidadora B2B e uma agência B2C?","options":["A consolidadora vende apenas hotel","A consolidadora atende agências e facilita emissão/operação; a agência atende o passageiro final","Não existe diferença","A agência só vende aéreo"],"answer":1},
+      {"q":"Qual prática é obrigatória em atendimento profissional?","options":["Prometer tarifa sem validar","Registrar briefing, regras e aceite","Apagar histórico","Compartilhar credenciais"],"answer":1}
+    ]},
+    {"module":2,"questions":[
+      {"q":"O Cadastur é obrigatório para qual atividade entre as opções?","options":["Agência de turismo","Qualquer turista","Influenciador de viagem","Passageiro frequente"],"answer":0},
+      {"q":"Passaporte e dados de cartão devem ser tratados como:","options":["Conteúdo público","Dados que exigem proteção e acesso mínimo necessário","Material de marketing","Informação irrelevante"],"answer":1}
+    ]},
+    {"module":3,"questions":[
+      {"q":"Antes de cotar, o agente deve primeiro:","options":["Emitir","Descobrir perfil, datas, orçamento e restrições","Enviar a opção mais cara","Escolher destino sozinho"],"answer":1},
+      {"q":"Uma proposta consultiva deve:","options":["Exibir dezenas de opções sem contexto","Explicar por que cada opção se adequa ao briefing","Omitir regras","Evitar comparação"],"answer":1}
+    ]},
+    {"module":4,"questions":[
+      {"q":"Uma ficha de destino confiável deve registrar:","options":["Somente atrações","Fonte, data de consulta, sazonalidade e logística","Somente fotos","Somente opinião pessoal"],"answer":1},
+      {"q":"Conteúdo de destino deve ser atualizado quando:","options":["Mudam requisitos, horários, atrações ou sazonalidade","Nunca","Somente uma vez por ano","Apenas se o cliente reclamar"],"answer":0}
+    ]},
+    {"module":5,"questions":[
+      {"q":"PNR é usado para:","options":["Identificar e organizar uma reserva de passageiro","Definir cotação cambial","Emitir visto","Registrar hotel exclusivamente"],"answer":0},
+      {"q":"Um status de segmento deve ser verificado porque:","options":["Pode indicar confirmação, lista de espera ou alteração","É decorativo","Substitui o bilhete","Define o passaporte"],"answer":0}
+    ]},
+    {"module":6,"questions":[
+      {"q":"Antes de alterar um bilhete, o agente deve:","options":["Cancelar automaticamente","Ler regra tarifária, disponibilidade e diferença aplicável","Ignorar tarifa","Prometer gratuidade"],"answer":1},
+      {"q":"EMD normalmente registra:","options":["Serviço ou valor auxiliar associado à viagem","Visto consular","Hotel","Seguro obrigatório"],"answer":0}
+    ]},
+    {"module":7,"questions":[
+      {"q":"NDC é:","options":["Um padrão de distribuição aérea baseado em mensagens estruturadas","Um aeroporto","Um tipo de passaporte","Uma moeda"],"answer":0},
+      {"q":"Ao comparar GDS e NDC, o agente deve:","options":["Assumir regras idênticas","Registrar canal, conteúdo e condições específicas","Misturar ofertas","Ignorar ancilares"],"answer":1}
+    ]},
+    {"module":8,"questions":[
+      {"q":"BSP serve principalmente para:","options":["Faturamento e liquidação entre agentes e companhias participantes","Emitir passaporte","Reservar hotel","Criar visto"],"answer":0},
+      {"q":"ADM deve ser tratada como:","options":["Documento financeiro que exige análise e prevenção","Cupom promocional","Reserva de hotel","Seguro"],"answer":0}
+    ]},
+    {"module":9,"questions":[
+      {"q":"Ao comparar hotéis, o agente deve validar:","options":["Somente estrelas","Tipo de quarto, regime, taxas e política de cancelamento","Somente foto","Somente localização"],"answer":1},
+      {"q":"Seguro viagem deve ser apresentado com:","options":["Coberturas, limites, exclusões e condições","Promessa de cobertura total","Nenhuma condição","Somente preço"],"answer":0}
+    ]},
+    {"module":10,"questions":[
+      {"q":"Requisitos de entrada dependem principalmente de:","options":["Nacionalidade, residência, rota, destino e documento","Somente idade","Somente companhia aérea","Somente hotel"],"answer":0},
+      {"q":"Ao orientar sobre visto, o agente deve:","options":["Garantir entrada no país","Consultar fonte oficial/Timatic e registrar data da consulta","Adivinhar","Usar post antigo de rede social"],"answer":1}
+    ]},
+    {"module":11,"questions":[
+      {"q":"Duty of care em viagens corporativas envolve:","options":["Acompanhar riscos e apoiar o viajante","Apenas emitir bilhete","Somente reduzir tarifa","Ignorar emergência"],"answer":0},
+      {"q":"Rooming list é usada principalmente em:","options":["Grupos e eventos","Visto","Seguro","Câmbio"],"answer":0}
+    ]},
+    {"module":12,"questions":[
+      {"q":"Serviço de luxo é melhor definido por:","options":["Preço alto apenas","Personalização, privacidade, logística e antecipação","Quantidade de opções","Excesso de comunicação"],"answer":1},
+      {"q":"Curadoria premium deve:","options":["Reduzir ruído e justificar escolhas","Enviar catálogo inteiro","Ignorar ritmo do cliente","Evitar concierge"],"answer":0}
+    ]},
+    {"module":13,"questions":[
+      {"q":"Destination Wedding é produto de qual marca?","options":["ANG Travel Solutions","ANG Celebrations","ANG Luxury Brazil","ANG Business Travel"],"answer":1},
+      {"q":"Um projeto de Destination Wedding exige:","options":["Cronograma, contratos, hospedagem de convidados e contingência","Somente passagem","Somente flores","Somente hotel"],"answer":0}
+    ]},
+    {"module":14,"questions":[
+      {"q":"Em crise operacional, a primeira ação é:","options":["Triar urgência e preservar evidência","Apagar mensagens","Prometer solução impossível","Ignorar"],"answer":0},
+      {"q":"Em irregularidade aérea, o agente deve:","options":["Verificar status real e alternativas","Inventar previsão","Prometer upgrade","Cancelar sem autorização"],"answer":0}
+    ]},
+    {"module":15,"questions":[
+      {"q":"Fee profissional remunera principalmente:","options":["Serviço e expertise","Imposto","Visto","Bagagem"],"answer":0},
+      {"q":"Indicador de retenção ajuda a medir:","options":["Recompra e relacionamento","Validade do passaporte","Câmbio","Código de aeroporto"],"answer":0}
+    ]},
+    {"module":16,"questions":[
+      {"q":"Credenciais de sistemas devem:","options":["Ser compartilhadas em texto","Ficar em cofre seguro com acesso mínimo","Ser publicadas","Ser copiadas em planilha aberta"],"answer":1},
+      {"q":"Automação responsável deve:","options":["Registrar execução, falhas e pontos de ação humana","Operar sem logs","Ignorar QA","Publicar sem evidência"],"answer":0}
+    ]}
+  ],
+  "final_assessment": {
+    "objective_questions": 50,
+    "case_study": true,
+    "service_simulation": true,
+    "minimum_score": 70,
+    "mandatory_pass": ["documentacao", "privacidade"]
+  }
+}
