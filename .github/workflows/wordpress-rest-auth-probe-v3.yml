@@ -1,0 +1,36 @@
+name: WordPress REST Auth Probe V3
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - staging
+    paths:
+      - '.github/probes/wordpress-auth-trigger-v3.txt'
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify WordPress REST authentication read-only
+        shell: bash
+        env:
+          WP_BASE_URL: ${{ secrets.WP_BASE_URL }}
+          WP_USERNAME: ${{ secrets.WP_USERNAME }}
+          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+        run: |
+          set -euo pipefail
+          [ -n "${WP_BASE_URL:-}" ] || { echo "PROBE_RESULT=BLOCKED_MISSING_WP_BASE_URL"; exit 20; }
+          [ -n "${WP_USERNAME:-}" ] || { echo "PROBE_RESULT=BLOCKED_MISSING_WP_USERNAME"; exit 21; }
+          [ -n "${WP_APP_PASSWORD:-}" ] || { echo "PROBE_RESULT=BLOCKED_MISSING_WP_APP_PASSWORD"; exit 22; }
+          base="${WP_BASE_URL%/}"
+          code=$(curl --silent --show-error --output /tmp/wp-user.json --write-out "%{http_code}" --user "$WP_USERNAME:$WP_APP_PASSWORD" "$base/wp-json/wp/v2/users/me?context=edit")
+          echo "HTTP_STATUS=$code"
+          if [ "$code" = "200" ]; then
+            echo "PROBE_RESULT=WORDPRESS_AUTH_OK"
+            jq -r '"WP_USER_ID=" + ((.id // "unknown")|tostring), "WP_USER_NAME=" + (.name // "unknown")' /tmp/wp-user.json
+            exit 0
+          fi
+          echo "PROBE_RESULT=WORDPRESS_REST_AUTH_FAILED"
+          jq -r '"WP_ERROR_CODE=" + (.code // "unknown"), "WP_ERROR_MESSAGE=" + (.message // "unknown")' /tmp/wp-user.json 2>/dev/null || echo "WP_ERROR_BODY_NON_JSON"
+          exit 23
