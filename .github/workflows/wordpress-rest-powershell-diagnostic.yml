@@ -1,0 +1,45 @@
+name: WordPress REST PowerShell Diagnostic
+
+on:
+  push:
+    branches: [staging]
+    paths:
+      - '.github/probes/wordpress-powershell-trigger.txt'
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      WP_BASE_URL: ${{ secrets.WP_BASE_URL }}
+      WP_USERNAME: ${{ secrets.WP_USERNAME }}
+      WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+    steps:
+      - name: Public REST and auth diagnostic via PowerShell
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $base = if ($env:WP_BASE_URL) { $env:WP_BASE_URL.TrimEnd('/') } else { 'https://angtravelsolutions.com.br' }
+          Write-Output "DIAGNOSTIC_BASE_CONFIGURED=$([bool]$env:WP_BASE_URL)"
+          try {
+            $r = Invoke-WebRequest -Uri "$base/wp-json/" -Method GET -MaximumRedirection 5 -SkipHttpErrorCheck -TimeoutSec 30
+            Write-Output "PUBLIC_WP_JSON_HTTP=$($r.StatusCode)"
+          } catch {
+            Write-Output "PUBLIC_WP_JSON_ERROR=$($_.Exception.GetType().Name)"
+          }
+          if (-not $env:WP_BASE_URL -or -not $env:WP_USERNAME -or -not $env:WP_APP_PASSWORD) {
+            Write-Output "AUTH_PROBE=SKIPPED_MISSING_WORDPRESS_SECRETS"
+            exit 0
+          }
+          $pair = "$($env:WP_USERNAME):$($env:WP_APP_PASSWORD)"
+          $token = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes($pair))
+          $headers = @{ Authorization = "Basic $token" }
+          try {
+            $u = Invoke-WebRequest -Uri "$base/wp-json/wp/v2/users/me?context=edit" -Headers $headers -Method GET -MaximumRedirection 3 -SkipHttpErrorCheck -TimeoutSec 30
+            Write-Output "AUTH_WP_USERS_ME_HTTP=$($u.StatusCode)"
+            if ($u.StatusCode -eq 200) { Write-Output 'AUTH_PROBE=WORDPRESS_AUTH_OK' } else { Write-Output 'AUTH_PROBE=WORDPRESS_AUTH_FAILED' }
+          } catch {
+            Write-Output "AUTH_PROBE_ERROR=$($_.Exception.GetType().Name)"
+            exit 1
+          }
