@@ -1,0 +1,2 @@
+trigger=2026-09-11T16:24:00-03:00
+purpose=read-only-public-rest-and-auth-availability-diagnostic
