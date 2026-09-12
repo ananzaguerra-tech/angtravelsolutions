@@ -1,12 +1,8 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "updated_at": "2026-09-12",
   "policy": "FAIL_CLOSED_OFFICIAL_MASTERS_ONLY",
   "confirmed_masters": {
-    "ANG_TRAVEL_SOLUTIONS": [
-      "LIBRARY:file_000000007008720eab4a20c8859b6fd4",
-      "LIBRARY:file_00000000cadc720e84217315a4be7478"
-    ],
     "ANG_LUXURY_BRAZIL": [
       "DRIVE:1UAdgaulsz1YCFTUmMpkUoEe8D_OzbK7m",
       "CANVA_ASSET:MAHVARIyW2U"
@@ -19,17 +15,23 @@
   },
   "hold_master_recovery": [
     "ANG_GROUP",
+    "ANG_TRAVEL",
     "ANG_TRAVEL_CELEBRATIONS",
+    "ANG_TRAVEL_SOLUTIONS",
     "ANG_BUSINESS_TRAVEL",
     "ANG_MICE",
-    "ANG_BUSINESS_TRAVEL_MICE"
+    "ANG_BUSINESS_TRAVEL_MICE",
+    "ANG_CELEBRATIONS"
   ],
   "explicitly_not_master": [
     "LIBRARY:file_00000000c6d4820ea3d190274b85bb6e",
     "LIBRARY:file_000000007250820e813a95a88d95107c",
     "LIBRARY:file_00000000e098820ea5125fa1289d9537",
     "LIBRARY:file_000000006c8c820e8dd1505a02935d40",
-    "LIBRARY:file_000000003a90820eba69634d1cf7c9da"
+    "LIBRARY:file_000000003a90820eba69634d1cf7c9da",
+    "LIBRARY:file_000000002574820eb61cc3819baed613",
+    "LIBRARY:file_000000007008720eab4a20c8859b6fd4",
+    "LIBRARY:file_00000000cadc720e84217315a4be7478"
   ],
-  "notes": "Exploratory option boards are not masters. Recent screenshots/avatars remain references until matched to the normative identity sheet and isolated original master."
+  "notes": "ANG Luxury Brazil option 30 is the only isolated master currently confirmed. Exploratory option boards are not masters. The two gold ANG Travel Solutions PNGs were removed from confirmed status because the official identity sheet requires the approved lilac architecture and official insignia/composition."
 }
