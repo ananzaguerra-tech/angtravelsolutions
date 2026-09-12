@@ -1,0 +1,35 @@
+{
+  "version": "2026-09-12",
+  "source": "Endereços fornecidos e aprovados pela titular",
+  "usage": "Seção Onde Estamos do site ANG; exibição e direcionamento para mapa",
+  "google_business_policy": "Não criar ficha nem duplicar perfil automaticamente. Elegibilidade e verificação Google são gates separados.",
+  "locations": [
+    {"brand":"ANG Group","scope":"Todas as empresas","code":"SAO","city":"São Paulo","country":"Brasil","address":"636 Avenida Paulista, Bela Vista — São Paulo — SP, Brasil"},
+    {"brand":"ANG Group","scope":"Todas as empresas","code":"RIO","city":"Rio de Janeiro","country":"Brasil","address":"Av. Olegário Maciel, 531 — Barra da Tijuca — Rio de Janeiro — RJ, Brasil"},
+    {"brand":"ANG Group","scope":"Todas as empresas","code":"NYC","city":"New York","country":"Estados Unidos","address":"5 Pennsylvania Plaza, 19th floor, New York, NY 10001, Estados Unidos"},
+    {"brand":"ANG Group","scope":"Todas as empresas","code":"LIS","city":"Lisboa","country":"Portugal","address":"Av. da Liberdade 110, 1269-046 Lisboa, Portugal"},
+    {"brand":"ANG Group","scope":"Todas as empresas","code":"LUX","city":"Luxembourg","country":"Luxemburgo","address":"26 Bd Royal, Level 5, 2449 Ville-Haute Luxembourg, Luxemburgo"},
+    {"brand":"ANG Group","scope":"Todas as empresas","code":"DXB","city":"Dubai","country":"Emirados Árabes Unidos","address":"Al Fattan Business Hub — Level 9, Level 10 — Dubai Marina — Jumeirah Beach Residence — Dubai — Emirados Árabes Unidos"},
+    {"brand":"ANG Group","scope":"Todas as empresas","code":"JNB","city":"Johannesburg","country":"África do Sul","address":"2nd Floor, Nelson Mandela Square, Maude Street West Tower, Sandton, 2146, África do Sul"},
+    {"brand":"ANG Group","scope":"Todas as empresas","code":"SHA","city":"Shanghai","country":"China","address":"China, Shanghai, Huangpu, Huaihai Rd (M), 333号瑞安广场1206 邮政编码: 200021"},
+    {"brand":"ANG Group","scope":"Todas as empresas","code":"BNE","city":"Brisbane","country":"Austrália","address":"Level 1 & 2/193 N Quay, Brisbane City QLD 4000, Austrália"},
+
+    {"brand":"ANG Travel","code":"AMR","city":"Americana","country":"Brasil","address":"Rua Peru, 636, conjunto 711 — Wein Office Tower — Santo Antônio — Americana — SP, 13465-760, Brasil"},
+    {"brand":"ANG Travel","code":"CPQ","city":"Campinas","country":"Brasil","address":"Avenida Doutor José Bonifácio Coutinho Nogueira, 150 — Plaza, Térreo — Jardim Madalena — Campinas — SP, 13091-611, Brasil"},
+
+    {"brand":"ANG Travel Solutions","code":"CPQ","city":"Campinas","country":"Brasil","address":"Avenida Doutor José Bonifácio Coutinho Nogueira, 150 — Plaza, Térreo — Jardim Madalena — Campinas — SP, 13091-611, Brasil"},
+    {"brand":"ANG Travel Solutions","code":"FLN","city":"Florianópolis","country":"Brasil","address":"Rodovia Virgílio Várzea — João Paulo — Florianópolis — SC, 88030-000, Brasil"},
+    {"brand":"ANG Travel Solutions","code":"FOR","city":"Fortaleza","country":"Brasil","address":"Etevaldo Nogueira Business Building — Avenida Dom Luís, 807, 22º andar — Meireles — Fortaleza — CE, 60160-230, Brasil"},
+
+    {"brand":"ANG Luxury Brazil","code":"SAO","city":"São Paulo","country":"Brasil","address":"636 Avenida Paulista, Bela Vista — São Paulo — SP, Brasil"},
+    {"brand":"ANG Luxury Brazil","code":"RIO","city":"Rio de Janeiro","country":"Brasil","address":"Av. Olegário Maciel, 531 — Barra da Tijuca — Rio de Janeiro — RJ, Brasil"},
+    {"brand":"ANG Luxury Brazil","code":"NYC","city":"New York","country":"Estados Unidos","address":"5 Pennsylvania Plaza, 19th floor, New York, NY 10001, Estados Unidos"},
+    {"brand":"ANG Luxury Brazil","code":"LIS","city":"Lisboa","country":"Portugal","address":"Av. da Liberdade 110, 1269-046 Lisboa, Portugal"},
+    {"brand":"ANG Luxury Brazil","code":"LUX","city":"Luxembourg","country":"Luxemburgo","address":"26 Bd Royal, Level 5, 2449 Ville-Haute Luxembourg, Luxemburgo"},
+    {"brand":"ANG Luxury Brazil","code":"DXB","city":"Dubai","country":"Emirados Árabes Unidos","address":"Al Fattan Business Hub — Level 9, Level 10 — Dubai Marina — Jumeirah Beach Residence — Dubai — Emirados Árabes Unidos"},
+    {"brand":"ANG Luxury Brazil","code":"JNB","city":"Johannesburg","country":"África do Sul","address":"2nd Floor, Nelson Mandela Square, Maude Street West Tower, Sandton, 2146, África do Sul"},
+    {"brand":"ANG Luxury Brazil","code":"SHA","city":"Shanghai","country":"China","address":"China, Shanghai, Huangpu, Huaihai Rd (M), 333号瑞安广场1206 邮政编码: 200021"},
+    {"brand":"ANG Luxury Brazil","code":"BNE","city":"Brisbane","country":"Austrália","address":"Level 1 & 2/193 N Quay, Brisbane City QLD 4000, Austrália"},
+    {"brand":"ANG Luxury Brazil","code":"MIA","city":"Miami Beach","country":"Estados Unidos","address":"1688 Meridian Ave Ste 600 and 700, Miami Beach, FL 33139, Estados Unidos"}
+  ]
+}
