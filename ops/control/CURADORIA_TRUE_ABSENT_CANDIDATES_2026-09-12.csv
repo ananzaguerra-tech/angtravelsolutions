@@ -1,0 +1,5 @@
+country,status,publication_gate,content_rule,next_action
+Libya,RESTRICTED_QA,BLOCK,"Editorial heritage only; no commercial promotion while restrictive safety advisories remain","Revalidate official safety and entry sources; define canonical identity only after final dedupe"
+Kiribati,READY_FACT_QA,BLOCK,"Official-source destination facts allowed; nationality-specific entry rules require competent source","Finalize canonical identity, media manifest, SEO/schema and staging QA"
+Nauru,READY_FACT_QA,BLOCK,"Official government facts allowed; logistics and entry must be revalidated at quote/publication time","Finalize canonical identity, media manifest, SEO/schema and staging QA"
+Tuvalu,READY_FACT_QA,BLOCK,"Official tourism facts allowed; air connectivity and entry require fresh official validation","Finalize canonical identity, media manifest, SEO/schema and staging QA"
