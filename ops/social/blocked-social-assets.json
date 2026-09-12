@@ -2,17 +2,30 @@
   "updated_at": "2026-09-12",
   "policy": "FAIL_CLOSED_ZERO_DUPLICITY",
   "payload_ids": [
-    "CURADORIA_ANG_AGOSTO_FEED"
+    "CURADORIA_ANG_AGOSTO_FEED",
+    "CURADORIA_ANG_AGOSTO_STORY",
+    "CURADORIA_ANG_AGOSTO_CARROSSEL"
   ],
   "urls": [
-    "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/staging/public/social/2026-08-27/ang-travel-feed.png"
+    "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/staging/public/social/2026-08-27/ang-travel-feed.png",
+    "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/staging/public/social/2026-08-27/ang-travel-story.png",
+    "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/staging/public/social/2026-08-27/ang-travel-carousel-1.png",
+    "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/staging/public/social/2026-08-27/ang-travel-carousel-2.png",
+    "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/staging/public/social/2026-08-27/ang-travel-carousel-3.png"
   ],
   "sha": [
     "9424b016bb7ede6f49b83e6af0a063dc13a05a9d"
   ],
   "topics": [
     "Lake Vilas",
-    "Laje Vilas"
+    "Laje Vilas",
+    "Copa do Mundo Qatar 2022",
+    "Qatar 2022"
   ],
-  "reason": "Owner directive: zero duplicate image/video/copy/composition/topic. Prohibited August feed and Lake/Laje Vilas must never be reenqueued."
+  "canva_design_ids": [
+    "DAHS3V1Y9sI",
+    "DAHS3W8FCGU"
+  ],
+  "composition_hashes": [],
+  "reason": "Owner directive: zero duplicate image/video/copy/composition/topic. Prohibited August feed, legacy Qatar 2022 campaign and Lake/Laje Vilas must never be reenqueued."
 }
