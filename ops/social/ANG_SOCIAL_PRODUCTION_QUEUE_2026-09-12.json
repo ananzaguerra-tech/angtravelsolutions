@@ -1,0 +1,135 @@
+{
+  "version": "2026-09-12",
+  "policy": {
+    "zero_duplicate_media": true,
+    "zero_duplicate_copy": true,
+    "zero_duplicate_topic": true,
+    "require_brand_master": true,
+    "require_real_media": true,
+    "public_caption_excludes_source_credits": true
+  },
+  "order": [
+    "ANG_GROUP_NEW_YORK",
+    "ANG_GROUP_LISBOA",
+    "ANG_GROUP_LUXEMBOURG",
+    "ANG_LUXURY_BRAZIL_HOTEL_01",
+    "ANG_TRAVEL_SOLUTIONS_B2B",
+    "ANG_TRAVEL_CELEBRATION",
+    "ANG_BUSINESS_MICE",
+    "CURADORIA_GLOBAL",
+    "ESG_REGENERATIVO",
+    "DESTINATION_WEDDING",
+    "BRAZIL_FOR_INTERNATIONAL_TRAVELERS",
+    "PROMO_PRICE_VALIDATED"
+  ],
+  "items": [
+    {
+      "id": "ANG_GROUP_NEW_YORK",
+      "brand": "ANG Group",
+      "language": "en",
+      "topic": "Welcome New York",
+      "copy": "WELCOME, NEW YORK. ANG Group and its companies arrive with a clear purpose: to make a positive difference in the everyday work of travel professionals and in the journeys of travelers seeking something truly remarkable. From intelligent B2B solutions and global curation to private journeys across Brazil, we connect expertise, hospitality and local knowledge to reveal a country of extraordinary landscapes, vibrant culture and unforgettable experiences. Brazil is not simply a destination. It is a world to be discovered.",
+      "brand_master_id": null,
+      "status": "HOLD_MASTER_NOT_RECOVERED"
+    },
+    {
+      "id": "ANG_GROUP_LISBOA",
+      "brand": "ANG Group",
+      "language": "pt-PT",
+      "topic": "Bem-vinda Lisboa",
+      "copy": "BEM-VINDA, LISBOA. O ANG Group e as suas empresas chegam com um propósito claro: fazer uma diferença positiva no quotidiano dos profissionais de viagens e na experiência de cada viajante que procura descobrir o Brasil de uma forma verdadeiramente especial. Da inteligência operacional e curadoria global às viagens privadas e experiências exclusivas, unimos conhecimento, hospitalidade e uma profunda ligação ao destino para revelar um Brasil surpreendente, sofisticado e naturalmente extraordinário.",
+      "brand_master_id": null,
+      "status": "HOLD_MASTER_NOT_RECOVERED"
+    },
+    {
+      "id": "ANG_GROUP_LUXEMBOURG",
+      "brand": "ANG Group",
+      "language": "fr",
+      "topic": "Bienvenue Luxembourg",
+      "copy": "BIENVENUE, LUXEMBOURG. ANG Group et ses entreprises arrivent avec une ambition claire : apporter une contribution positive au quotidien des professionnels du voyage et offrir aux voyageurs une nouvelle manière de découvrir les merveilles du Brésil. Solutions B2B, expertise opérationnelle, curation internationale et voyages privés se rencontrent pour révéler un Brésil exceptionnel — entre nature spectaculaire, hospitalité, culture et expériences profondément authentiques.",
+      "brand_master_id": null,
+      "status": "HOLD_MASTER_NOT_RECOVERED"
+    },
+    {
+      "id": "ANG_LUXURY_BRAZIL_HOTEL_01",
+      "brand": "ANG Luxury Brazil",
+      "language": "en",
+      "topic": "Exceptional stays in Brazil",
+      "copy": "Exceptional stays are not defined by excess. They are defined by a sense of place, privacy, thoughtful service and the freedom to experience Brazil at your own rhythm. ANG Luxury Brazil curates remarkable hotels, private journeys and authentic experiences for travelers looking beyond the expected.",
+      "brand_master_id": "1UAdgaulsz1YCFTUmMpkUoEe8D_OzbK7m",
+      "status": "READY_MEDIA_SELECTION"
+    },
+    {
+      "id": "ANG_TRAVEL_SOLUTIONS_B2B",
+      "brand": "ANG Travel Solutions",
+      "language": "pt-BR",
+      "topic": "Consolidação premium B2B",
+      "copy": "Consolidação premium B2B para agências que precisam ampliar repertório, eficiência e capacidade operacional sem perder a qualidade do atendimento. Curadoria global, outsourcing, hotelaria, grupos e concierge em uma operação pensada para atuar como extensão da agência.",
+      "brand_master_id": "ang-travel-solutions-approved.png",
+      "status": "READY_MEDIA_SELECTION"
+    },
+    {
+      "id": "ANG_TRAVEL_CELEBRATION",
+      "brand": "ANG Travel",
+      "language": "pt-BR",
+      "topic": "Viagens sob medida e celebrações",
+      "copy": "Viagens sob medida, experiências e celebrações com curadoria personalizada e concierge. Cada jornada começa pelo perfil de quem viaja — e ganha forma com escolhas coerentes, atenção aos detalhes e acompanhamento próximo em todas as etapas.",
+      "brand_master_id": "CURRENT_APPROVED_ANG_TRAVEL",
+      "status": "READY_MEDIA_SELECTION"
+    },
+    {
+      "id": "ANG_BUSINESS_MICE",
+      "brand": "ANG Business Travel & MICE",
+      "language": "pt-BR",
+      "topic": "Business travel, meetings, incentives & events",
+      "copy": "Business travel, meetings, incentives & events com gestão consultiva, operação estruturada e experiências corporativas desenhadas para unir controle, fluidez e atenção humana em cada deslocamento e evento.",
+      "brand_master_id": null,
+      "status": "HOLD_MASTER_NOT_RECOVERED"
+    },
+    {
+      "id": "CURADORIA_GLOBAL",
+      "brand": "ANG Travel Solutions",
+      "language": "pt-BR",
+      "topic": "Curadoria Global",
+      "copy": "Curadoria Global organizada por país e cidade para apoiar venda consultiva, repertório e construção de propostas. Destinos, hotelaria, experiências, gastronomia, logística e sazonalidade em uma biblioteca viva para profissionais de viagens.",
+      "brand_master_id": "ang-travel-solutions-approved.png",
+      "status": "READY_MEDIA_SELECTION"
+    },
+    {
+      "id": "ESG_REGENERATIVO",
+      "brand": "ANG Group",
+      "language": "pt-BR",
+      "topic": "Turismo regenerativo",
+      "copy": "Sustentabilidade em viagens exige escolhas responsáveis, informação verificável e atenção ao impacto de cada jornada. O turismo regenerativo começa quando destino, comunidade, operação e viajante são considerados como parte do mesmo ecossistema.",
+      "brand_master_id": null,
+      "status": "HOLD_MASTER_NOT_RECOVERED"
+    },
+    {
+      "id": "DESTINATION_WEDDING",
+      "brand": "ANG Celebrations",
+      "language": "pt-BR",
+      "topic": "Destination Wedding & Elopement",
+      "copy": "Destination Wedding & Elopement: celebrações desenhadas ao redor do casal, com curadoria de destino, hospedagem, experiências e logística para transformar cada etapa da viagem em parte da própria celebração.",
+      "brand_master_id": null,
+      "status": "HOLD_MASTER_COLOR_NOT_RECONFIRMED"
+    },
+    {
+      "id": "BRAZIL_FOR_INTERNATIONAL_TRAVELERS",
+      "brand": "ANG Luxury Brazil",
+      "language": "en",
+      "topic": "Brazil beyond the expected",
+      "copy": "Brazil, beyond the expected. Private journeys, exceptional stays and authentic experiences curated for international travelers who want to discover the country through nature, culture, hospitality and deeply local perspectives.",
+      "brand_master_id": "1UAdgaulsz1YCFTUmMpkUoEe8D_OzbK7m",
+      "status": "READY_MEDIA_SELECTION"
+    },
+    {
+      "id": "PROMO_PRICE_VALIDATED",
+      "brand": "ANG Travel",
+      "language": "pt-BR",
+      "topic": "Promoções com tarifa real",
+      "copy": null,
+      "brand_master_id": "CURRENT_APPROVED_ANG_TRAVEL",
+      "status": "HOLD_PRICE_VALIDATION"
+    }
+  ]
+}
