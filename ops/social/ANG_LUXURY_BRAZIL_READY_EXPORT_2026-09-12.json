@@ -1,0 +1,32 @@
+{
+  "version": "2026-09-12",
+  "brand": "ANG Luxury Brazil",
+  "brand_master_id": "1UAdgaulsz1YCFTUmMpkUoEe8D_OzbK7m",
+  "brand_master_name": "ANG_LUXURY_BRAZIL_MASTER_OPCAO_30_TRANSPARENT.png",
+  "policy": "REAL_MEDIA_OFFICIAL_MASTER_ZERO_DUPLICITY",
+  "publication_order_gate": "HOLD_UNTIL_ANG_GROUP_NEW_YORK_LISBOA_LUXEMBOURG_RESOLVED_OR_EXPLICITLY_REORDERED",
+  "items": [
+    {
+      "id": "LUXURY_BRAZIL_ILE_DE_PIPA_2026_09_12",
+      "canva_design_id": "DAHVAWwDf0k",
+      "title": "ÎLE DE PIPA MGALLERY HOTEL, TIBAU DO SUL - RN",
+      "media_type": "real_video",
+      "logo_gate": "PASS",
+      "media_gate": "PASS_REAL_CANVA_SOURCE",
+      "dedupe_gate": "PASS_NOT_IN_PUBLISHED_HISTORY",
+      "caption_source_credit_public": false,
+      "status": "READY_EXPORT_HOLD_ORDER"
+    },
+    {
+      "id": "LUXURY_BRAZIL_MAKENA_2026_09_12",
+      "canva_design_id": "DAHVAcLbjbc",
+      "title": "Makena Hotel - CE",
+      "media_type": "real_photo",
+      "logo_gate": "PASS",
+      "media_gate": "PASS_REAL_CANVA_SOURCE",
+      "dedupe_gate": "PASS_NOT_IN_PUBLISHED_HISTORY",
+      "caption_source_credit_public": false,
+      "status": "READY_EXPORT_HOLD_ORDER"
+    }
+  ]
+}
