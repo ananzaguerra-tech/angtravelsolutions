@@ -1,0 +1,27 @@
+[
+  {
+    "platform": "instagram",
+    "publication_id": "18384008782231598",
+    "image_url": "https://angtravelsolutions.com.br/wp-content/uploads/2026/06/Private-Jet-Interior-Paris_Air_Show_20192C_Le_Bourget_28SIAE109729-scaled.jpg",
+    "topic": "private aviation",
+    "brand": "ANG Travel",
+    "published_at": "2026-09-12"
+  },
+  {
+    "platform": "instagram",
+    "publication_id": "17976651516103593",
+    "image_url": "https://unsplash.com/photos/DGa0LQ0yDPc/download?force=true",
+    "topic": "quiet luxury",
+    "brand": "ANG Travel",
+    "published_at": "2026-09-12"
+  },
+  {
+    "platform": "instagram",
+    "publication_id": "17901456438589132",
+    "image_url": "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/staging/public/social/2026-08-27/ang-travel-feed.png",
+    "topic": "legacy ANG Travel feed",
+    "brand": "ANG Travel",
+    "published_at": "2026-09-12",
+    "status": "NON_COMPLIANT_REMOVE"
+  }
+]
