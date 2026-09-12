@@ -1,0 +1,18 @@
+{
+  "updated_at": "2026-09-12",
+  "policy": "FAIL_CLOSED_ZERO_DUPLICITY",
+  "payload_ids": [
+    "CURADORIA_ANG_AGOSTO_FEED"
+  ],
+  "urls": [
+    "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/staging/public/social/2026-08-27/ang-travel-feed.png"
+  ],
+  "sha": [
+    "9424b016bb7ede6f49b83e6af0a063dc13a05a9d"
+  ],
+  "topics": [
+    "Lake Vilas",
+    "Laje Vilas"
+  ],
+  "reason": "Owner directive: zero duplicate image/video/copy/composition/topic. Prohibited August feed and Lake/Laje Vilas must never be reenqueued."
+}
