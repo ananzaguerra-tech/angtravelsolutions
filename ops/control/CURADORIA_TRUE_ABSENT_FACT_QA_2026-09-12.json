@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-09-12",
+  "policy": "OFFICIAL_SOURCE_FIRST_FAIL_CLOSED",
+  "items": [
+    {
+      "country": "Kiribati",
+      "status": "FACT_QA_PASS_MEDIA_SEO_PENDING",
+      "publication_gate": "BLOCK",
+      "official_sources": [
+        "https://kiribatitourism.gov.ki/",
+        "https://www.mfa.gov.ki/visa/",
+        "https://www.mfa.gov.ki/wp-content/uploads/2022/08/Immigration-Procedure-final.pdf"
+      ],
+      "validated_scope": ["destination overview", "experience pillars", "visitor visa framework"],
+      "next_gate": "REAL_MEDIA_LICENSE_MANIFEST_AND_SEO_SCHEMA"
+    },
+    {
+      "country": "Nauru",
+      "status": "FACT_QA_PASS_MEDIA_SEO_PENDING",
+      "publication_gate": "BLOCK",
+      "official_sources": [
+        "https://www.nauru.gov.nr/",
+        "https://www.nauru.gov.nr/about-naoero/visiting-naoero.aspx",
+        "https://www.nauru.gov.nr/government-information-office/fact-sheet.aspx"
+      ],
+      "validated_scope": ["destination overview", "currency", "accommodation context", "weather", "transport", "visa enquiry framework"],
+      "next_gate": "REAL_MEDIA_LICENSE_MANIFEST_AND_SEO_SCHEMA"
+    },
+    {
+      "country": "Tuvalu",
+      "status": "FACT_QA_PASS_MEDIA_SEO_PENDING",
+      "publication_gate": "BLOCK",
+      "official_sources": [
+        "https://tourism.gov.tv/",
+        "https://tourism.gov.tv/contact/"
+      ],
+      "validated_scope": ["destination overview", "tourism authority ownership", "marine/atoll positioning", "official contact"],
+      "next_gate": "ENTRY_RULES_OFFICIAL_SOURCE_PLUS_REAL_MEDIA_LICENSE_MANIFEST_AND_SEO_SCHEMA"
+    },
+    {
+      "country": "Libya",
+      "status": "RESTRICTED_QA",
+      "publication_gate": "BLOCK",
+      "official_sources": [],
+      "validated_scope": [],
+      "next_gate": "SECURITY_ENTRY_AND_EDITORIAL_POLICY_REVALIDATION"
+    }
+  ]
+}
