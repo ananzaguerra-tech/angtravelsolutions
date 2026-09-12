@@ -9,8 +9,12 @@
     "no_supplier_disclosure_when_commercially_restricted": true,
     "fail_closed_without_authenticated_channel": true,
     "prohibited_payload_ids": [
-      "CURADORIA_ANG_AGOSTO_FEED"
-    ]
+      "CURADORIA_ANG_AGOSTO_FEED",
+      "CURADORIA_ANG_AGOSTO_STORY",
+      "CURADORIA_ANG_AGOSTO_CARROSSEL"
+    ],
+    "require_master_logo_verified": true,
+    "require_no_duplicate_pass": true
   },
   "items": [
     {
@@ -21,12 +25,13 @@
       ],
       "format": "feed_4x5",
       "canva_design_id": null,
-      "copy": "Viajar bem começa muito antes do embarque. A ANG Travel transforma pesquisa, repertório e atendimento próximo em roteiros desenhados para cada viajante.",
-      "cta": "Fale com a ANG Travel | +55 19 4040-4293",
-      "status": "HOLD_PROIBIDO_PELA_TITULAR_2026-09-07",
+      "copy": "",
+      "cta": "",
+      "status": "HOLD_PROIBIDO_PELA_TITULAR_2026-09-12",
       "publish_authorized": false,
       "image_url": null,
-      "quarantine_reason": "Imagem, copy, composição, IDs e payload antigos proibidos; não reenfileirar no Zeus/n8n."
+      "image_urls": [],
+      "quarantine_reason": "Todo o payload CURADORIA_ANG_AGOSTO, incluindo Feed, Story e Carrossel, está proibido. Não reutilizar mídia, tema, composição, copy, IDs ou visual."
     },
     {
       "id": "CURADORIA_ANG_AGOSTO_STORY",
@@ -36,12 +41,14 @@
         "facebook"
       ],
       "format": "story",
-      "canva_design_id": "DAHS3V1Y9sI",
-      "copy": "Sua próxima viagem pode começar com uma conversa. Curadoria, planejamento e suporte antes, durante e depois da viagem.",
-      "cta": "Chame no WhatsApp",
-      "status": "HOLD_EXECUTOR_STORY_UNSUPPORTED",
-      "publish_authorized": true,
-      "image_url": "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/staging/public/social/2026-08-27/ang-travel-story.png"
+      "canva_design_id": null,
+      "copy": "",
+      "cta": "",
+      "status": "HOLD_PROIBIDO_PELA_TITULAR_2026-09-12",
+      "publish_authorized": false,
+      "image_url": null,
+      "image_urls": [],
+      "quarantine_reason": "Todo o payload CURADORIA_ANG_AGOSTO, incluindo Feed, Story e Carrossel, está proibido. Não reutilizar mídia, tema, composição, copy, IDs ou visual."
     },
     {
       "id": "CURADORIA_ANG_AGOSTO_CARROSSEL",
@@ -50,18 +57,16 @@
         "instagram"
       ],
       "format": "carousel_3",
-      "canva_design_id": "DAHS3W8FCGU",
-      "copy": "3 razões para usar curadoria: 1. Repertório e seleção. 2. Personalização real. 3. Suporte em cada etapa. ANG Travel: viagens pensadas com cuidado, contexto e experiência.",
-      "cta": "Salve e fale com a ANG Travel",
-      "status": "HOLD_EXECUTOR_CAROUSEL_UNSUPPORTED",
-      "publish_authorized": true,
-      "image_urls": [
-        "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/staging/public/social/2026-08-27/ang-travel-carousel-1.png",
-        "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/staging/public/social/2026-08-27/ang-travel-carousel-2.png",
-        "https://raw.githubusercontent.com/ananzaguerra-tech/angtravelsolutions/staging/public/social/2026-08-27/ang-travel-carousel-3.png"
-      ]
+      "canva_design_id": null,
+      "copy": "",
+      "cta": "",
+      "status": "HOLD_PROIBIDO_PELA_TITULAR_2026-09-12",
+      "publish_authorized": false,
+      "image_url": null,
+      "image_urls": [],
+      "quarantine_reason": "Todo o payload CURADORIA_ANG_AGOSTO, incluindo Feed, Story e Carrossel, está proibido. Não reutilizar mídia, tema, composição, copy, IDs ou visual."
     }
   ],
-  "updated_at": "2026-09-08",
-  "audit_note": "Authorization conflict corrected against ANG_CAMPANHAS_SOCIAIS_GOOGLE_2026-08-20."
+  "updated_at": "2026-09-12",
+  "audit_note": "Quarentena ampliada fail-closed: Feed, Story e Carrossel CURADORIA_ANG_AGOSTO revogados; conteúdo e referências ativas removidos da fila executável."
 }
