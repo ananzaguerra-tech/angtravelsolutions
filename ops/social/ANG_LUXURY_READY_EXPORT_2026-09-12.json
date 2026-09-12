@@ -1,0 +1,30 @@
+{
+  "version": "2026-09-12",
+  "brand": "ANG Luxury Brazil",
+  "brand_master_id": "1UAdgaulsz1YCFTUmMpkUoEe8D_OzbK7m",
+  "brand_master_name": "ANG_LUXURY_BRAZIL_MASTER_OPCAO_30_TRANSPARENT.png",
+  "public_caption_sources": false,
+  "items": [
+    {
+      "id": "LUXURY_MAKENA_01",
+      "hotel": "Makena Hotel",
+      "location": "Icaraí de Amontada, CE, Brasil",
+      "canva_design_id": "DAHVAcLbjbc",
+      "format": "1080x1080",
+      "media_policy": "real_existing_canva_media",
+      "status": "READY_EXPORT",
+      "copy": "Brazil reveals itself differently when time slows down. On the coast of Ceará, landscape, privacy and a strong sense of place create the setting for journeys designed around what truly matters. ANG Luxury Brazil — exceptional stays and authentic experiences, privately curated."
+    },
+    {
+      "id": "LUXURY_ILE_DE_PIPA_01",
+      "hotel": "Île de Pipa MGallery",
+      "location": "Tibau do Sul, RN, Brasil",
+      "canva_design_id": "DAHVAWwDf0k",
+      "format": "landscape/video source",
+      "media_policy": "real_existing_canva_video",
+      "status": "READY_EXPORT",
+      "copy": "Along Brazil’s northeastern coast, contemporary hospitality meets tropical rhythm. Île de Pipa is part of a journey where design, nature and time come together naturally. ANG Luxury Brazil — Brazil, beyond the expected."
+    }
+  ],
+  "gate": "Do not publish until exported media URL/file is stable and passes social-dedupe-preflight."
+}
