@@ -15,7 +15,7 @@ jobs:
   probe-google-business:
     runs-on: ubuntu-latest
     steps:
-      - name: Probe existing authenticated n8n gateway for Google Business capability
+      - name: Prove GitHub to n8n gateway authentication only
         env:
           GH_EPHEMERAL_TOKEN: ${{ github.token }}
           RUN_ID: ${{ github.run_id }}
@@ -29,7 +29,7 @@ jobs:
             --arg run_id "$RUN_ID" \
             --arg sha "$HEAD_SHA" \
             --arg repository "$REPOSITORY" \
-            '{run_id:$run_id,sha:$sha,repository:$repository,action:"google_business_status",source:"github-actions-read-only",request_id:("gbp-probe-"+$run_id),payload:{operation:"accounts.locations.list",read_only:true}}')
+            '{run_id:$run_id,sha:$sha,repository:$repository,action:"status/auth",source:"github-actions-read-only",request_id:("auth-probe-"+$run_id),payload:{read_only:true}}')
           HTTP=$(mktemp)
           CODE=$(curl --silent --show-error --retry 0 \
             -o "$HTTP" -w '%{http_code}' \
@@ -40,4 +40,4 @@ jobs:
           echo "HTTP_STATUS=$CODE"
           cat "$HTTP"
           echo
-          test "$CODE" -ge 200 -a "$CODE" -lt 500
+          grep -q 'AUTH_PASS' "$HTTP"
