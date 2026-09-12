@@ -1,0 +1,57 @@
+{
+  "version": "2026-09-12",
+  "policy": "FAIL_CLOSED_OFFICIAL_LIBRARY_MASTERS_ONLY",
+  "brands": {
+    "ANG Group": {
+      "status": "CONFIRMED_REFERENCE_HOLD_FINAL_FILE",
+      "official_rule": "dourado institucional #b88936; preservar esfera/insignia oficial; nao usar pranchas exploratorias 1-8",
+      "library_reference_file_id": "file_00000000c6d4820ea3d190274b85bb6e",
+      "library_reference_name": "Conceitos dourados da ANG GROUP.png",
+      "publish_gate": "BLOCK_UNTIL_ISOLATED_MASTER_CONFIRMED"
+    },
+    "ANG Travel": {
+      "status": "CONFIRMED_REFERENCE_HOLD_FINAL_FILE",
+      "official_rule": "manter logo atual integralmente; nao substituir por insignia exploratoria",
+      "historical_reference_file_id": "file_000000002f0c720e8ff776866ac96ac9",
+      "historical_reference_name": "ANG INSTITUCIONAL 2025.pdf",
+      "publish_gate": "BLOCK_NEW_BRANDED_ART_UNTIL_ISOLATED_CURRENT_MASTER_CONFIRMED"
+    },
+    "ANG Travel Solutions": {
+      "status": "HOLD_WRONG_VARIANT_FOUND",
+      "official_rule": "arquitetura aprovada em lilas; preservar insignia e composicao",
+      "rejected_library_file_id": "file_000000007008720eab4a20c8859b6fd4",
+      "rejected_reason": "arquivo recuperado usa anel dourado e conflita com ficha oficial lilas",
+      "publish_gate": "BLOCK_UNTIL_LILAC_MASTER_CONFIRMED"
+    },
+    "ANG Business Travel": {
+      "status": "CONFIRMED_REFERENCE_HOLD_FINAL_FILE",
+      "official_rule": "insignia da antiga ANG Corporate em dourado; texto #f2c84b",
+      "library_reference_file_id": "file_000000003a90820eba69634d1cf7c9da",
+      "library_reference_name": "Quatro conceitos dourados para ANG Business Travel.png",
+      "publish_gate": "BLOCK_UNTIL_HISTORICAL_MASTER_CONFIRMED"
+    },
+    "ANG MICE": {
+      "status": "CONFIRMED_REFERENCE_HOLD_FINAL_FILE",
+      "official_rule": "insignia propria inspirada na Corporate; cor #b14b1e",
+      "library_reference_file_id": "file_000000006c8c820e8dd1505a02935d40",
+      "library_reference_name": "Quatro conceitos dourados para ANG MICE.png",
+      "publish_gate": "BLOCK_UNTIL_HISTORICAL_MASTER_CONFIRMED"
+    },
+    "ANG Celebrations": {
+      "status": "CHOICE_HISTORY_FOUND_HOLD_FINAL_MASTER",
+      "official_rule": "marca individual e separada; nao fundir automaticamente com ANG Travel",
+      "choice_history": "Celebrations opcao 03",
+      "library_reference_file_id": "file_000000007c0c820e98a1aace0a9783dd",
+      "library_reference_name": "Quatro logos dourados para ANG Celebrations.png",
+      "publish_gate": "BLOCK_UNTIL_FINAL_MASTER_COLOR_FILE_CONFIRMED"
+    },
+    "ANG Luxury Brazil": {
+      "status": "CONFIRMED_MASTER",
+      "official_rule": "opcao 30; gesto dourado fluido em tres tracos; assinatura horizontal; Brazil com Z",
+      "decision_file_id": "file_000000007c4c81f9a4a059eb47c272ef",
+      "source_board_file_id": "file_0000000076c0820e8dab161247e16419",
+      "drive_master_id": "1UAdgaulsz1YCFTUmMpkUoEe8D_OzbK7m",
+      "publish_gate": "ALLOW_AFTER_MEDIA_DEDUPE_COPY_QA"
+    }
+  }
+}
