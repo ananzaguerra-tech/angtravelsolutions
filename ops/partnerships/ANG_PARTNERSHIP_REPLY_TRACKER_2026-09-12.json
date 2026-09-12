@@ -1,0 +1,71 @@
+{
+  "tracker_id": "ANG_PARTNERSHIP_REPLY_TRACKER_2026-09-12",
+  "checked_at": "2026-09-12T20:57:54Z",
+  "privacy": "SANITIZED_NO_EMAIL_ADDRESSES_NO_GMAIL_IDS_NO_MESSAGE_BODIES",
+  "policy": {
+    "publish_only_after_clear_positive_reply": true,
+    "require_explicit_public_comarketing_authorization": true,
+    "require_traceable_media_logo_rights": true,
+    "no_ai_media": true,
+    "fail_closed": true
+  },
+  "summary": {
+    "partners_checked": 4,
+    "threads_found": 4,
+    "outbound_messages": 4,
+    "inbound_replies": 0,
+    "positive_replies": 0,
+    "publication_authorized": 0
+  },
+  "partners": [
+    {
+      "partner": "Accor",
+      "subject": "ANG Group + ANG Luxury Brazil | parceria estratégica Accor / MGallery / HERA",
+      "sent_at": "2026-09-12T20:43:56Z",
+      "thread_message_count": 1,
+      "status": "AWAITING_REPLY",
+      "co_marketing_authorized": false,
+      "media_rights_verified": false,
+      "next_action": "Aguardar resposta; não publicar."
+    },
+    {
+      "partner": "Club Med",
+      "subject": "ANG Group + ANG Luxury Brazil | parceria estratégica e promoção preferencial Club Med",
+      "sent_at": "2026-09-12T20:43:22Z",
+      "thread_message_count": 1,
+      "status": "AWAITING_REPLY",
+      "co_marketing_authorized": false,
+      "media_rights_verified": false,
+      "next_action": "Aguardar resposta; não publicar."
+    },
+    {
+      "partner": "TTW Group / Guilherme Valle",
+      "subject": "ANG x TTW | retomada de parceria + representação SKY no interior",
+      "sent_at": "2026-09-12T20:43:11Z",
+      "thread_message_count": 1,
+      "status": "AWAITING_REPLY",
+      "co_marketing_authorized": false,
+      "media_rights_verified": false,
+      "next_action": "Aguardar resposta; não publicar."
+    },
+    {
+      "partner": "Il Borro / Simone Pampaloni",
+      "subject": "Reconnecting ANG x Il Borro | Brazil hospitality & wine representation",
+      "sent_at": "2026-09-12T20:44:07Z",
+      "thread_message_count": 1,
+      "status": "AWAITING_REPLY",
+      "co_marketing_authorized": false,
+      "media_rights_verified": false,
+      "next_action": "Aguardar resposta; não publicar."
+    }
+  ],
+  "not_done": [
+    "Nenhum artigo institucional preparado ou publicado.",
+    "Nenhum post social preparado ou publicado.",
+    "Nenhum logo ou mídia de parceiro reutilizado.",
+    "Nenhuma condição comercial presumida."
+  ],
+  "blocking_reason": "Não há resposta recebida, autorização de co-marketing, termos comerciais nem mídia/logos autorizados.",
+  "minimum_human_action": "Nenhuma neste momento; aguardar retorno dos parceiros.",
+  "rollback": "Excluir este tracker; nenhuma mensagem, publicação ou ativo externo foi alterado."
+}
