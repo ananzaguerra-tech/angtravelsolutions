@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-09-12T12:01:57-03:00",
+  "purpose": "Rollback source before surgical normalization of legacy restricted-area CTAs and terminology.",
+  "site_url": "https://angtravelsolutions.com.br",
+  "replacements": [
+    {
+      "old": "/area-restrita-ang/",
+      "new": "/area-restrita/",
+      "page_ids": [
+        78000,
+        73535,
+        73181,
+        73182,
+        70393,
+        67942,
+        67943,
+        67944,
+        1815
+      ]
+    },
+    {
+      "old": "Área do Cliente",
+      "new": "Área do Agente",
+      "page_ids": [
+        86740
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "id": 78000,
+      "title": "Curadoria Restrita",
+      "slug": "curadoria-restrita",
+      "status": "publish",
+      "link": "https://angtravelsolutions.com.br/curadoria-restrita/",
+      "modified_before": "2026-06-30T15:11:06",
+      "content_raw_before": "\n<section class=\"ang-p07-hero\"><p>ANG V12 Pacote 07</p><h1>Curadoria Restrita</h1><span>Curadoria Global preservada e ampliada dentro da Área do Agente.</span></section>\n<section class=\"ang-p07-content\">\n  <div class=\"ang-p07-grid\"><article><h3>Destination Intelligence</h3><p>Filtros por país, cidade, hotel, restaurante, experiência, argumento de venda e material comercial.</p></article><article><h3>Conteúdo reutilizável</h3><p>Textos e imagens alimentam propostas, Marketing Studio e funil de vendas.</p></article><article><h3>Proteção estratégica</h3><p>Dados comerciais ficam restritos aos perfis autorizados.</p></article></div>\n  <section class=\"ang-p07-studio\">\n    <h2>Gerador de Arte — prévia operacional</h2>\n    <div class=\"ang-art-card\">\n      <div><strong id=\"ang-art-title\">Luxury Brazil</strong><span id=\"ang-art-subtitle\">Experiências exclusivas no Brasil</span></div>\n      <small>ANG Travel Solutions</small>\n    </div>\n    <p>Esta estrutura cria a base visual e operacional para o gerador de artes. Exportação avançada para PNG/JPG depende de biblioteca JS externa ou serviço dedicado.</p>\n  </section>\n  <section class=\"ang-p07-cta\"><h2>Curadoria preservada na Área Restrita</h2><p>A Curadoria Global permanece dentro da Área do Agente, com filtros, argumentos de venda, textos e imagens para propostas, posts e atendimento.</p><a class=\"ang-btn\" href=\"/area-restrita-ang/\">Acessar Área do Agente</a></section>\n</section>\n"
+    },
+    {
+      "id": 73535,
+      "title": "Serviços Terrestres",
+      "slug": "servicos-terrestres",
+      "status": "publish",
+      "link": "https://angtravelsolutions.com.br/servicos-terrestres/",
+      "modified_before": "2026-06-30T13:46:12",
+      "content_raw_before": "\n<section class=\"ang-e03-hero\"><p>Área do Agente</p><h1>Serviços Terrestres</h1><span>Transfers, receptivos, motoristas, DMCs, passeios, helicópteros e logística local.</span></section>\n<section class=\"ang-e03-content\"><div class=\"ang-e03-grid\"><article><h3>Função</h3><p>Transfers, receptivos, motoristas, DMCs, passeios, helicópteros e logística local.</p></article><article><h3>Integração</h3><p>Módulo preparado para se conectar ao Console de Cotação, Marketing Studio, Biblioteca Premium e Área do Agente.</p></article><article><h3>Permissões</h3><p>Conteúdo protegido por perfil de acesso: Super Admin, Admin interno, Comercial, Operacional, Franqueado, Agência parceira, Treinando e Fornecedor.</p></article><article><h3>Próxima evolução</h3><p>Receberá dados, automações, campos personalizados e integração com sistemas externos conforme credenciais autorizadas.</p></article></div>\n<section class=\"ang-e03-cta\"><h2>Ambiente restrito</h2><p>Este conteúdo deve operar dentro da área logada. Contatos comerciais, condições e observações estratégicas não devem aparecer no site público.</p><a class=\"ang-btn\" href=\"/area-restrita-ang/\">Voltar para Área do Agente</a></section></section>\n"
+    },
+    {
+      "id": 73181,
+      "title": "Hotelaria Premium",
+      "slug": "hotelaria-premium",
+      "status": "publish",
+      "link": "https://angtravelsolutions.com.br/hotelaria-premium/",
+      "modified_before": "2026-06-30T13:33:20",
+      "content_raw_before": "<section class=\"ang-page-hero ang-e02-hero\"><p>Hotel Hub</p><h1>Hotelaria Premium</h1><span>Biblioteca editorial para hotelaria de luxo, boutique, resorts, lodges, coleções internacionais e pousadas de charme.</span></section><section class=\"ang-e02-content\"><article><h2>Estrutura do Hotel Hub</h2><p>A biblioteca de hotelaria organiza marcas, coleções, propriedades e categorias para apoiar a agência parceira na venda consultiva.</p></article><article><h2>Dados públicos e dados restritos</h2><p>No site público aparecem posicionamento e curadoria. Contatos, tarifas, acordos e condições ficam exclusivamente na Área do Agente.</p></article><article><h2>Aplicação comercial</h2><p>Os registros alimentam propostas, roteiros, posts, landing pages, Revista ANG e Console de Cotação.</p></article><section class=\"ang-e02-cta\"><h2>Uso na plataforma</h2><p>Conteúdo conectado a Curadoria Global, Luxury Brazil, Hotel Hub, Console de Cotação, Marketing Studio e Área do Agente.</p><a class=\"ang-btn\" href=\"/area-restrita-ang/\">Acessar Área do Agente</a></section></section>"
+    },
+    {
+      "id": 73182,
+      "title": "Restaurantes Premium",
+      "slug": "restaurantes-premium",
+      "status": "publish",
+      "link": "https://angtravelsolutions.com.br/restaurantes-premium/",
+      "modified_before": "2026-06-30T13:33:20",
+      "content_raw_before": "<section class=\"ang-page-hero ang-e02-hero\"><p>Gastronomia &amp; Lifestyle</p><h1>Restaurantes Premium</h1><span>Base editorial para restaurantes premiados, fine dining, rooftops, beach clubs e experiências gastronômicas.</span></section><section class=\"ang-e02-content\"><article><h2>Gastronomia como argumento de venda</h2><p>Restaurantes e experiências gastronômicas ajudam a construir desejo, narrativa e valor em viagens premium.</p></article><article><h2>Curadoria por destino</h2><p>A estrutura permite relacionar restaurantes a cidades, hotéis, experiências, eventos e roteiros.</p></article><article><h2>Área Restrita</h2><p>Reservas, contatos internos e observações comerciais permanecem protegidos para agentes autorizados.</p></article><section class=\"ang-e02-cta\"><h2>Uso na plataforma</h2><p>Conteúdo conectado a Curadoria Global, Luxury Brazil, Hotel Hub, Console de Cotação, Marketing Studio e Área do Agente.</p><a class=\"ang-btn\" href=\"/area-restrita-ang/\">Acessar Área do Agente</a></section></section>"
+    },
+    {
+      "id": 70393,
+      "title": "Revista ANG",
+      "slug": "revista-ang",
+      "status": "publish",
+      "link": "https://angtravelsolutions.com.br/revista-ang/",
+      "modified_before": "2026-06-30T12:41:30",
+      "content_raw_before": "<section class=\"ang-page-hero ang-v12d-page\"><p>Editorial Premium</p><h1>Revista ANG</h1><span>Revista digital para turismo premium, negócios, luxo, destinos, hotelaria, sustentabilidade, marketing e tecnologia.</span></section><section class=\"ang-v12d-content\"><article><h2>Categorias</h2><p>Luxury, Business Travel, MICE, Celebration, Luxury Brazil, Curadoria Global, Hotelaria, Concierge, Sustentabilidade, Tecnologia, Marketing, Vendas e Gestão.</p></article><article><h2>Função estratégica</h2><p>A Revista ANG fortalece autoridade, SEO, relacionamento com agências, fornecedores e clientes, além de alimentar o Marketing Studio e a Biblioteca Premium.</p></article><section class=\"ang-v12d-cta\"><h2>Conectado à Área do Agente</h2><p>Este conteúdo alimenta propostas, posts, roteiros, PDFs, fornecedores e materiais internos.</p><a class=\"ang-btn\" href=\"/area-restrita-ang/\">Entrar na Área do Agente</a></section></section>"
+    },
+    {
+      "id": 67942,
+      "title": "Business Travel",
+      "slug": "business-travel",
+      "status": "publish",
+      "link": "https://angtravelsolutions.com.br/business-travel/",
+      "modified_before": "2026-06-30T12:40:33",
+      "content_raw_before": "<section class=\"ang-page-hero ang-p3b-hero\">\n<p>Viagens Corporativas</p>\n<h1>Business Travel</h1>\n<span>Gestão de viagens corporativas com atendimento executivo, tecnologia, políticas, relatórios, economia, controle e duty of care.</span>\n</section>\n<section class=\"ang-p3b-content\">\n<div class=\"ang-p3b-block\"><h2>Gestão corporativa com visão estratégica</h2><p>Business Travel exige controle, previsibilidade, atendimento rápido e compreensão do ambiente corporativo. A ANG apoia empresas e agências em viagens de negócios com foco em eficiência, economia, experiência do viajante e conformidade.</p><p>A gestão de viagens corporativas envolve política de viagens, análise de custos, escolha de fornecedores, relatórios, suporte a executivos, gestão de imprevistos, duty of care e comunicação com diferentes áreas da empresa.</p><p>A proposta da ANG é unir atendimento humano, tecnologia, processos e visão consultiva para transformar a viagem corporativa em operação mais segura, inteligente e mensurável.</p></div><div class=\"ang-p3b-block\"><h2>Executivos, diretorias e atendimento VIP</h2><p>Viagens de diretoria, presidência e convidados especiais exigem discrição, velocidade, flexibilidade e atenção aos detalhes. A ANG estrutura esse atendimento com linguagem adequada, prioridade, organização de preferências e suporte durante a jornada.</p><p>O cuidado pode envolver voos, hotéis, transfers, salas VIP, meet and greet, alterações emergenciais, documentação, seguros, reservas especiais, logística para reuniões e acompanhamento de itinerário.</p><p>Esse padrão fortalece a percepção de segurança da empresa e reduz o desgaste dos viajantes.</p></div><div class=\"ang-p3b-block\"><h2>Política, compliance e relatórios</h2><p>Uma política de viagens bem estruturada reduz custos, melhora previsibilidade e evita decisões inconsistentes. A ANG pode apoiar na organização de parâmetros, preferências, classes de serviço, categorias hoteleiras, regras de aprovação e fluxos de atendimento.</p><p>Relatórios permitem acompanhar economia, frequência de viagens, principais destinos, fornecedores utilizados, prazos, conversão, comportamento de compra e oportunidades de melhoria.</p><p>No contexto da ANG Travel Solutions, esses relatórios se conectam ao módulo financeiro, ao dashboard do parceiro e ao histórico de solicitações.</p></div><div class=\"ang-p3b-block\"><h2>Duty of Care</h2><p>Duty of care representa o compromisso com a segurança, localização, suporte e bem-estar do viajante corporativo. Empresas precisam saber onde seus viajantes estão, como apoiá-los em imprevistos e quais fornecedores estão envolvidos.</p><p>A plataforma ANG pode evoluir para reunir histórico, relatórios, alertas operacionais, contatos, itinerários e materiais de suporte.</p></div><section class=\"ang-p3b-cta\"><h2>Próximo passo</h2><p>Conteúdo atualizado e preparado para SEO, propostas comerciais, Área do Agente, Marketing Studio, Creative Hub, Console de Cotação e Biblioteca Premium.</p><a class=\"ang-btn\" href=\"/area-restrita-ang/\">Acessar Área do Agente</a></section></section>"
+    },
+    {
+      "id": 67943,
+      "title": "MICE",
+      "slug": "mice",
+      "status": "publish",
+      "link": "https://angtravelsolutions.com.br/mice/",
+      "modified_before": "2026-06-30T12:40:33",
+      "content_raw_before": "<section class=\"ang-page-hero ang-p3b-hero\">\n<p>Eventos, Incentivos e Celebrações</p>\n<h1>MICE</h1>\n<span>Eventos corporativos, sociais, incentivos, congressos, convenções, destination wedding e elopement com curadoria e operação premium.</span>\n</section>\n<section class=\"ang-p3b-content\">\n<div class=\"ang-p3b-block\"><h2>MICE como experiência estratégica</h2><p>MICE reúne reuniões, incentivos, congressos, convenções, feiras e eventos corporativos. Na ANG Travel Solutions, essa área não é tratada como uma simples logística de viagem, mas como uma plataforma de experiência, relacionamento, posicionamento e resultado.</p><p>Um projeto MICE bem executado nasce da compreensão do objetivo do cliente. Pode ser uma convenção para alinhar cultura, uma viagem de incentivo para reconhecer alta performance, um congresso técnico, uma feira internacional, um lançamento, uma reunião de diretoria ou uma ação de relacionamento.</p><p>A ANG estrutura a jornada considerando destino, hotelaria, transporte, aéreo, transfer, salas, alimentação, conteúdo, hospitalidade, comunicação, fornecedores, orçamento, cronograma, contingência e experiência do participante.</p></div><div class=\"ang-p3b-block\"><h2>Eventos corporativos</h2><p>Eventos corporativos exigem método, precisão e comunicação. Congressos, convenções, reuniões executivas, roadshows, treinamentos, feiras, lançamentos e encontros institucionais precisam funcionar como extensão da marca do cliente.</p><p>A ANG apoia agências e empresas na organização de fornecedores, análise de destinos, logística, acomodação, aéreo, salas, transfers, experiências e materiais de apoio.</p><p>O objetivo é que a agência parceira possa apresentar propostas mais completas, visualmente superiores e operacionalmente mais seguras.</p></div><div class=\"ang-p3b-block\"><h2>Incentivos e grupos</h2><p>Viagens de incentivo precisam emocionar, reconhecer e conectar. Mais do que uma viagem, elas funcionam como mensagem de valorização e pertencimento.</p><p>A curadoria de experiências, a escolha do hotel, o ritmo da programação, a gastronomia, os momentos de surpresa e a comunicação visual definem a percepção de valor.</p><p>A ANG conecta esse conteúdo ao módulo de Grupos, à Curadoria Global, aos fornecedores, à hotelaria e ao futuro Console de Cotação.</p></div><div class=\"ang-p3b-block\"><h2>Eventos sociais, destination wedding e elopement</h2><p>A estrutura MICE também contempla eventos sociais, celebrações, destination wedding, elopement, lua de mel, grupos familiares e viagens de significado.</p><p>Destination wedding exige curadoria estética, logística de convidados, fornecedores locais, hospedagem, pré e pós-evento, experiências de destino e apoio de concierge.</p><p>Elopement exige discrição, sensibilidade, privacidade e narrativa. A ANG posiciona esse segmento como parte da arquitetura de Celebration e Concierge.</p></div><section class=\"ang-p3b-cta\"><h2>Próximo passo</h2><p>Conteúdo atualizado e preparado para SEO, propostas comerciais, Área do Agente, Marketing Studio, Creative Hub, Console de Cotação e Biblioteca Premium.</p><a class=\"ang-btn\" href=\"/area-restrita-ang/\">Acessar Área do Agente</a></section></section>"
+    },
+    {
+      "id": 67944,
+      "title": "Celebration",
+      "slug": "celebration",
+      "status": "publish",
+      "link": "https://angtravelsolutions.com.br/celebration/",
+      "modified_before": "2026-06-30T12:40:22",
+      "content_raw_before": "<section class=\"ang-page-hero\"><p>ANG Travel Solutions</p><h1>Celebration</h1><span>Celebrações, casamentos, lua de mel, aniversários, grupos afetivos e viagens de significado.</span></section><section class=\"ang-editorial ang-article\"><h2>Viagens para celebrar</h2><p>Celebration é o território da ANG dedicado a momentos com significado emocional. Casamentos, luas de mel, aniversários, renovação de votos, viagens em família e experiências comemorativas precisam ser planejadas com cuidado.</p><p>Uma viagem de celebração representa memória, vínculo, estética, expectativa e narrativa pessoal.</p><p>A ANG organiza esse segmento para apoiar agências na construção de propostas que comuniquem emoção sem perder sofisticação.</p><h2>Lua de mel e viagens românticas</h2><p>Lua de mel exige equilíbrio entre privacidade, conforto, beleza, gastronomia, experiências e ritmo.</p><p>A plataforma ANG apoia com sugestões de destinos, hotéis, villas, experiências, restaurantes, upgrades, amenities e roteiros alinhados ao perfil do casal.</p><p>Viagens românticas, pedidos de casamento e renovações de votos podem ser estruturados com apoio de concierge e fornecedores locais.</p><h2>Celebrações familiares e grupos afetivos</h2><p>Este conteúdo foi preparado para consolidar a presença institucional da ANG Travel Solutions como plataforma B2B premium para agências de viagens. A linguagem combina elegância, clareza, autoridade e aplicação comercial.</p><p>A estrutura editorial foi organizada para SEO, conversão e reutilização em diferentes módulos do portal: páginas públicas, área restrita, propostas comerciais, biblioteca de textos, marketing studio e console de cotação.</p><p>A ANG atua com curadoria global, relacionamento, operação, outsourcing, concierge, hotelaria, business travel, MICE, celebrações, sustentabilidade e inteligência comercial para agências parceiras.</p><div class=\"ang-cta-box\"><h2>Próxima etapa da plataforma</h2><p>Este conteúdo alimenta SEO, Marketing Studio, Console de Cotação, Biblioteca Premium e Área do Agente.</p><a class=\"ang-btn\" href=\"/area-restrita-ang/\">Acessar Área do Agente</a></div></section>"
+    },
+    {
+      "id": 1815,
+      "title": "Outsourcing",
+      "slug": "outsourcing",
+      "status": "publish",
+      "link": "https://angtravelsolutions.com.br/outsourcing/",
+      "modified_before": "2026-06-30T12:40:33",
+      "content_raw_before": "<section class=\"ang-page-hero ang-p3b-hero\">\n<p>ANG Travel Services Outsourcing</p>\n<h1>Outsourcing</h1>\n<span>Serviços de terceirização de processos de viagens para agências, com atendimento especializado, personalizado e customizado.</span>\n</section>\n<section class=\"ang-p3b-content\">\n<div class=\"ang-p3b-block\"><h2>Serviços de terceirização de processos de viagens para agências</h2><p>A globalização e a tecnologia dos processos têm impulsionado uma demanda crescente do turismo em seus vários segmentos. Ao passo que a procura global por serviços de viagens e turismo cresce, as empresas especializadas devem estar aptas para atender todas as expectativas dos clientes, com inteligência integrada e versatilidade, para acompanhar essa era ultra dinâmica virtualmente.</p><p>Atendimento especializado, personalizado e customizado são os três pilares para a oferta de recursos e serviços do turismo aos clientes, com eficiência, praticidade, prestatividade e melhor custo-benefício para o financeiro da empresa.</p><p>A ANG Service, visando otimizar os melhores resultados aos seus parceiros, oferece uma gama de facilidades na operação do negócio de turismo.</p></div><div class=\"ang-p3b-block\"><h2>Entrega e eficiência</h2><p>Os serviços de terceirização de processos de viagem ampliam a eficiência do trabalho e permitem que a agência parceira ganhe escala sem perder a qualidade consultiva.</p><p>O custo-benefício é altamente vantajoso em relação à infraestrutura e mão de obra própria. A terceirização também proporciona mais tranquilidade com solução imediata para emergências, dúvidas e dificuldades gerais da operação.</p><p>A estrutura contribui para alto índice de satisfação do cliente, benefícios, economia, possibilidade de aumento de receitas, vendas adicionais e emergenciais, além de ampliação do horário de atendimento sem aumento de ônus empregatício.</p></div><div class=\"ang-p3b-block\"><h2>Por que escolher a ANG Service</h2><p>Fornecedores íntegros, cuja lisura de processos, liquidez financeira e capacidade estrutural corroboram com nossos propósitos, fortalecem a segurança de cada operação.</p><p>Da proposta ao fechamento, a agência conta com profissionais experientes e visão sistêmica. A consistência é assegurada por operações robustas, diversificadas e de alto valor agregado.</p><p>A entrega é conduzida por equipe motivada, apaixonada por servir e cuidadosa com detalhes. A ANG oferece prestação de serviços customizados, proporcionando fluidez e agregando valores positivos para a operação.</p></div><div class=\"ang-p3b-block\"><h2>Aplicação no portal</h2><p>No portal, o Outsourcing se conecta à Área do Agente, ao Console de Cotação, aos fornecedores, à hotelaria, ao buscador Wooba, aos serviços terrestres, ao Zendesk, às filas operacionais e ao dashboard do parceiro.</p><p>Essa página deve servir como base institucional e comercial para apresentação do serviço a agências parceiras, franqueados, fornecedores e clientes estratégicos.</p></div><section class=\"ang-p3b-cta\"><h2>Próximo passo</h2><p>Conteúdo atualizado e preparado para SEO, propostas comerciais, Área do Agente, Marketing Studio, Creative Hub, Console de Cotação e Biblioteca Premium.</p><a class=\"ang-btn\" href=\"/area-restrita-ang/\">Acessar Área do Agente</a></section></section>"
+    },
+    {
+      "id": 86740,
+      "title": "Seja Cliente",
+      "slug": "seja-cliente",
+      "status": "publish",
+      "link": "https://angtravelsolutions.com.br/seja-cliente/",
+      "modified_before": "2026-08-15T16:18:53",
+      "content_raw_before": "<section class=\"ang-editorial-hero\"><p class=\"eyebrow\">PARCERIA B2B</p><h1>Sua agência no centro. Uma estrutura global ao seu redor.</h1><p>A ANG Travel Solutions apoia agências de viagens que valorizam atendimento consultivo, operação responsável e crescimento sustentável. A parceria reúne conteúdo, fornecedores, hotelaria, concierge, grupos, treinamentos e ferramentas em uma jornada organizada.</p></section>\n<nav class=\"ang-page-index\" aria-label=\"Índice da página\"><a href=\"#beneficios\">Benefícios</a><a href=\"#perfis\">Para quem é</a><a href=\"#etapas\">Etapas</a><a href=\"#seguranca\">Segurança</a><a href=\"#comecar\">Começar</a></nav>\n<section id=\"beneficios\"><h2>Benefícios para a agência parceira</h2><ul><li>apoio consultivo em produtos e operações;</li><li>curadoria global por país, cidade e categoria;</li><li>biblioteca de hotéis e fornecedores;</li><li>concierge e suporte para demandas especiais;</li><li>conteúdo, treinamento e materiais comerciais;</li><li>acesso individualizado à Área do Cliente;</li><li>processos registrados e condições transparentes.</li></ul></section>\n<section id=\"perfis\"><h2>Uma solução adaptável a diferentes modelos</h2><p>Atendemos agências em fase de estruturação, empresas consolidadas que desejam ampliar portfólio e operações que precisam de apoio especializado. O escopo é definido conforme volume, segmento, equipe, canais e necessidades reais.</p><p>A ANG Travel Solutions é uma consolidadora e plataforma B2B. Não substitui a identidade da agência e não assume automaticamente o relacionamento com o passageiro final.</p></section>\n<section id=\"etapas\"><h2>Como funciona o credenciamento</h2><ol><li><strong>Cadastro:</strong> informações empresariais e responsáveis.</li><li><strong>Validação:</strong> análise documental, finalidade e perfil de operação.</li><li><strong>Configuração:</strong> usuários, permissões, canais e condições.</li><li><strong>Onboarding:</strong> apresentação dos fluxos, políticas e ferramentas.</li><li><strong>Operação:</strong> início acompanhado e revisão contínua.</li></ol><p>A aprovação depende de documentação, critérios comerciais e capacidade operacional. O envio do cadastro não representa aceitação automática.</p></section>\n<section id=\"seguranca\"><h2>Acesso individual e governança</h2><p>Cada usuário recebe permissões compatíveis com seu perfil. Conteúdos comerciais, contatos de fornecedores, condições e documentos internos não são públicos. Senhas não devem ser enviadas por mensagens ou armazenadas em arquivos de conteúdo.</p></section>\n<section id=\"comecar\"><h2>Vamos conhecer sua agência</h2><p>Compartilhe o perfil da empresa, principais segmentos, mercados atendidos e objetivos. Nossa equipe direcionará a solicitação para a análise adequada.</p>[ang_contact subject=\"Quero ser cliente da ANG Travel Solutions\"]</section>"
+    }
+  ],
+  "rollback": "Restore content_raw_before for the corresponding page ID via WordPress revision or authenticated REST; do not recreate pages."
+}
