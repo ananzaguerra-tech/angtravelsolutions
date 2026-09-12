@@ -1,17 +1,21 @@
 param(
   [Parameter(Mandatory=$true)][string]$QueuePath,
   [string]$HistoryPath = '.\ops\social\published-media-history.json',
-  [string]$BlockedPath = '.\ops\social\blocked-social-assets.json'
+  [string]$BlockedPath = '.\ops\social\blocked-social-assets.json',
+  [string]$BrandAllowlistPath = '.\ops\social\brand-master-allowlist.json'
 )
 $ErrorActionPreference='Stop'
 function Norm([string]$s){ if([string]::IsNullOrWhiteSpace($s)){ return '' }; return (($s.ToLowerInvariant() -replace '\s+',' ').Trim()) }
 function Pick($a,$b){ if($null -ne $a -and -not [string]::IsNullOrWhiteSpace([string]$a)){ return [string]$a }; return [string]$b }
 function AddSeen($set,[string]$value){ $n=Norm $value; if($n){ $set[$n]=$true } }
 function HasSeen($set,[string]$value){ $n=Norm $value; if(-not $n){ return $false }; return $set.ContainsKey($n) }
+function BrandKey([string]$brand){ return ((Norm $brand).ToUpperInvariant() -replace '[^A-Z0-9]+','_').Trim('_') }
 if(!(Test-Path $QueuePath)){ throw ('QUEUE_NOT_FOUND:' + $QueuePath) }
+if(!(Test-Path $BrandAllowlistPath)){ throw ('BRAND_ALLOWLIST_NOT_FOUND:' + $BrandAllowlistPath) }
 $queue = Get-Content -Raw -Encoding UTF8 $QueuePath | ConvertFrom-Json
 $history = if(Test-Path $HistoryPath){ @(Get-Content -Raw -Encoding UTF8 $HistoryPath | ConvertFrom-Json) } else { @() }
 $blocked = if(Test-Path $BlockedPath){ Get-Content -Raw -Encoding UTF8 $BlockedPath | ConvertFrom-Json } else { [pscustomobject]@{} }
+$brandAllow = Get-Content -Raw -Encoding UTF8 $BrandAllowlistPath | ConvertFrom-Json
 $seenMedia=@{}; $seenCopy=@{}; $seenTopics=@{}; $seenDesigns=@{}; $seenComposition=@{}
 foreach($h in $history){
   foreach($u in @($h.image_url)+@($h.image_urls)+@($h.video_url)+@($h.video_urls)+@($h.media_urls)){ AddSeen $seenMedia ([string]$u) }
@@ -22,7 +26,7 @@ $errors = New-Object System.Collections.Generic.List[string]
 $queueMedia=@{}; $queueCopy=@{}; $queueTopic=@{}; $queueDesign=@{}
 foreach($i in @($queue.items)){
   $id=[string]$i.id; $status=[string]$i.status; $copy=Pick $i.copy $i.caption; $topic=Pick $i.topic $i.theme_key
-  $design=[string]$i.canva_design_id; $composition=[string]$i.composition_hash
+  $design=[string]$i.canva_design_id; $composition=[string]$i.composition_hash; $master=[string]$i.brand_master_id; $brand=[string]$i.brand
   if(@($blocked.payload_ids) -contains $id){ $errors.Add(('BLOCKED_PAYLOAD:' + $id)) }
   if($status -match '^(HOLD|REJECT|BLOCK)' -or $i.publish_authorized -eq $false){ $errors.Add(('NOT_PUBLISHABLE_STATUS:' + $id + ':' + $status)) }
   $urls=@($i.image_url)+@($i.image_urls)+@($i.video_url)+@($i.video_urls)+@($i.media_urls) | Where-Object { $_ }
@@ -37,7 +41,17 @@ foreach($i in @($queue.items)){
   if($topic){ $n=Norm $topic; if((@($blocked.topics) -contains $topic) -or (HasSeen $seenTopics $topic) -or $queueTopic.ContainsKey($n)){ $errors.Add(('DUPLICATE_TOPIC:' + $id)) }; $queueTopic[$n]=$id }
   if($design){ $n=Norm $design; if((@($blocked.canva_design_ids) -contains $design) -or (HasSeen $seenDesigns $design) -or $queueDesign.ContainsKey($n)){ $errors.Add(('DUPLICATE_DESIGN:' + $id)) }; $queueDesign[$n]=$id }
   if($composition -and ((@($blocked.composition_hashes) -contains $composition) -or (HasSeen $seenComposition $composition))){ $errors.Add(('DUPLICATE_COMPOSITION:' + $id)) }
-  if(-not $i.brand_master_id){ $errors.Add(('MISSING_BRAND_MASTER:' + $id)) }
+  if(-not $master){
+    $errors.Add(('MISSING_BRAND_MASTER:' + $id))
+  } else {
+    $key=BrandKey $brand
+    $prop=$brandAllow.confirmed_masters.PSObject.Properties[$key]
+    if($null -eq $prop){
+      $errors.Add(('BRAND_MASTER_NOT_CONFIRMED:' + $id + ':' + $key))
+    } elseif(-not (@($prop.Value) -contains $master)){
+      $errors.Add(('BRAND_MASTER_NOT_ALLOWLISTED:' + $id + ':' + $master))
+    }
+  }
 }
 if($errors.Count -gt 0){ $errors | Sort-Object -Unique | ForEach-Object { Write-Output $_ }; exit 42 }
 Write-Output 'SOCIAL_DEDUPE_PREFLIGHT=PASS'
