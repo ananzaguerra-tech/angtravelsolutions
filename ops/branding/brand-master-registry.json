@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-09-12",
+  "policy": "FAIL_CLOSED_MASTER_REGISTRY",
+  "masters": {
+    "ANG_LUXURY_BRAZIL_OPCAO_30": {
+      "brand": "ANG Luxury Brazil",
+      "status": "READY",
+      "source": "official isolated transparent master",
+      "drive_file_id": "1UAdgaulsz1YCFTUmMpkUoEe8D_OzbK7m",
+      "canva_asset_id": "MAHVARIyW2U",
+      "notes": "Approved option 30; preserve without redesign."
+    },
+    "ANG_GROUP_OFFICIAL": {
+      "brand": "ANG Group",
+      "status": "HOLD_MASTER_FILE_ISOLATED",
+      "source": "Library historical identity specification",
+      "notes": "Preserve institutional gold sphere/insignia; concept boards are not masters."
+    },
+    "ANG_TRAVEL_CURRENT": {
+      "brand": "ANG Travel",
+      "status": "HOLD_EXACT_MASTER_RECOVERY",
+      "source": "Library historical identity specification",
+      "notes": "Keep current accepted logo; do not replace with exploratory insignia boards."
+    },
+    "ANG_TRAVEL_SOLUTIONS_CURRENT": {
+      "brand": "ANG Travel Solutions",
+      "status": "HOLD_EXACT_MASTER_RECOVERY",
+      "source": "Library historical identity specification",
+      "notes": "Preserve approved lilac architecture and official sphere/insignia."
+    },
+    "ANG_BUSINESS_MICE_CURRENT": {
+      "brand": "ANG Business Travel & MICE",
+      "status": "HOLD_EXACT_MASTER_RECOVERY",
+      "source": "Library historical identity specification",
+      "notes": "Preserve approved Business/MICE identities; concept boards are not masters."
+    },
+    "ANG_CELEBRATIONS_CURRENT": {
+      "brand": "ANG Celebrations",
+      "status": "HOLD_EXACT_MASTER_RECOVERY",
+      "source": "Library historical identity specification",
+      "notes": "Celebrations is a distinct brand; combined simulations are not masters unless explicitly approved."
+    }
+  }
+}
