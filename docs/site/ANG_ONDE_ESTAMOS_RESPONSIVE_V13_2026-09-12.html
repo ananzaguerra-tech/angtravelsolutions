@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ANG — Onde Estamos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#070707;--navy:#080d3a;--gold:#b88936;--gold2:#e0b85f;--cream:#f7f1e7;--white:#fff;--muted:#b9b8b3}
+    *{box-sizing:border-box}body{margin:0;background:var(--ink);color:var(--cream);font-family:Montserrat,Arial,sans-serif}
+    .ang-locations{min-height:100vh;padding:clamp(36px,6vw,88px) clamp(18px,5vw,72px);background:radial-gradient(circle at 80% 0,#20295d 0,transparent 34%),linear-gradient(145deg,#070707,#080d3a 74%,#13100a)}
+    .eyebrow{margin:0 0 12px;color:var(--gold2);font-size:.77rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+    h1{margin:0;max-width:920px;font:600 clamp(2.3rem,6vw,5.4rem)/.98 'Playfair Display',serif;letter-spacing:-.035em}
+    .intro{max-width:780px;margin:20px 0 34px;color:#ddd9d0;font-size:clamp(.98rem,1.4vw,1.14rem);line-height:1.7}
+    .filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:24px}
+    label{display:grid;gap:7px;color:var(--muted);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+    select{width:100%;border:1px solid rgba(224,184,95,.38);border-radius:12px;background:#0e1230;color:var(--cream);padding:14px;font:600 .9rem Montserrat}
+    .layout{display:grid;grid-template-columns:minmax(300px,.85fr) minmax(380px,1.4fr);gap:20px;align-items:stretch}
+    .list{height:620px;overflow:auto;padding-right:8px;scrollbar-color:var(--gold) #11142a}
+    .card{display:block;width:100%;margin:0 0 10px;padding:17px;border:1px solid rgba(255,255,255,.11);border-radius:14px;background:rgba(255,255,255,.045);color:inherit;text-align:left;cursor:pointer;transition:.2s}
+    .card:hover,.card:focus-visible,.card.active{border-color:var(--gold2);background:rgba(184,137,54,.16);transform:translateY(-1px);outline:none}
+    .card small{display:block;color:var(--gold2);font-weight:700;letter-spacing:.1em;text-transform:uppercase}.card strong{display:block;margin:6px 0;font-size:1.05rem}.card span{color:#d5d2ca;font-size:.82rem;line-height:1.5}
+    .map-shell{min-height:620px;overflow:hidden;border:1px solid rgba(224,184,95,.34);border-radius:18px;background:#11142a;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+    iframe{display:block;width:100%;height:100%;min-height:620px;border:0}.count{margin:0 0 12px;color:var(--muted);font-size:.82rem}
+    .empty{padding:24px;border:1px dashed rgba(224,184,95,.4);border-radius:14px;color:var(--muted)}
+    @media(max-width:850px){.filters{grid-template-columns:1fr}.layout{grid-template-columns:1fr}.list{height:auto;max-height:480px}.map-shell,iframe{min-height:430px}}
+  </style>
+</head>
+<body>
+<main class="ang-locations">
+  <p class="eyebrow">ANG · presença global</p>
+  <h1>Onde estamos</h1>
+  <p class="intro">Selecione uma empresa, país ou cidade para visualizar o endereço e abrir sua localização no mapa.</p>
+  <section class="filters" aria-label="Filtros de localização">
+    <label>Empresa<select id="brand"><option value="">Todas as empresas</option></select></label>
+    <label>País<select id="country"><option value="">Todos os países</option></select></label>
+    <label>Cidade<select id="city"><option value="">Todas as cidades</option></select></label>
+  </section>
+  <p id="count" class="count" aria-live="polite"></p>
+  <section class="layout">
+    <div id="list" class="list" aria-label="Localidades"></div>
+    <div class="map-shell"><iframe id="map" title="Mapa da localidade selecionada" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+  </section>
+</main>
+<script>
+const locations=[
+['ANG Group','SAO','São Paulo','Brasil','636 Avenida Paulista, Bela Vista — São Paulo — SP, Brasil'],['ANG Group','RIO','Rio de Janeiro','Brasil','Av. Olegário Maciel, 531 — Barra da Tijuca — Rio de Janeiro — RJ, Brasil'],['ANG Group','NYC','New York','Estados Unidos','5 Pennsylvania Plaza, 19th floor, New York, NY 10001, Estados Unidos'],['ANG Group','LIS','Lisboa','Portugal','Av. da Liberdade 110, 1269-046 Lisboa, Portugal'],['ANG Group','LUX','Luxembourg','Luxemburgo','26 Bd Royal, Level 5, 2449 Ville-Haute Luxembourg, Luxemburgo'],['ANG Group','DXB','Dubai','Emirados Árabes Unidos','Al Fattan Business Hub — Level 9, Level 10 — Dubai Marina — Jumeirah Beach Residence — Dubai — Emirados Árabes Unidos'],['ANG Group','JNB','Johannesburg','África do Sul','2nd Floor, Nelson Mandela Square, Maude Street West Tower, Sandton, 2146, África do Sul'],['ANG Group','SHA','Shanghai','China','China, Shanghai, Huangpu, Huaihai Rd (M), 333号瑞安广场1206 邮政编码: 200021'],['ANG Group','BNE','Brisbane','Austrália','Level 1 & 2/193 N Quay, Brisbane City QLD 4000, Austrália'],
+['ANG Travel','AMR','Americana','Brasil','Rua Peru, 636, conjunto 711 — Wein Office Tower — Santo Antônio — Americana — SP, 13465-760, Brasil'],['ANG Travel','CPQ','Campinas','Brasil','Avenida Doutor José Bonifácio Coutinho Nogueira, 150 — Plaza, Térreo — Jardim Madalena — Campinas — SP, 13091-611, Brasil'],
+['ANG Travel Solutions','CPQ','Campinas','Brasil','Avenida Doutor José Bonifácio Coutinho Nogueira, 150 — Plaza, Térreo — Jardim Madalena — Campinas — SP, 13091-611, Brasil'],['ANG Travel Solutions','FLN','Florianópolis','Brasil','Rodovia Virgílio Várzea — João Paulo — Florianópolis — SC, 88030-000, Brasil'],['ANG Travel Solutions','FOR','Fortaleza','Brasil','Etevaldo Nogueira Business Building — Avenida Dom Luís, 807, 22º andar — Meireles — Fortaleza — CE, 60160-230, Brasil'],
+['ANG Luxury Brazil','SAO','São Paulo','Brasil','636 Avenida Paulista, Bela Vista — São Paulo — SP, Brasil'],['ANG Luxury Brazil','RIO','Rio de Janeiro','Brasil','Av. Olegário Maciel, 531 — Barra da Tijuca — Rio de Janeiro — RJ, Brasil'],['ANG Luxury Brazil','NYC','New York','Estados Unidos','5 Pennsylvania Plaza, 19th floor, New York, NY 10001, Estados Unidos'],['ANG Luxury Brazil','LIS','Lisboa','Portugal','Av. da Liberdade 110, 1269-046 Lisboa, Portugal'],['ANG Luxury Brazil','LUX','Luxembourg','Luxemburgo','26 Bd Royal, Level 5, 2449 Ville-Haute Luxembourg, Luxemburgo'],['ANG Luxury Brazil','DXB','Dubai','Emirados Árabes Unidos','Al Fattan Business Hub — Level 9, Level 10 — Dubai Marina — Jumeirah Beach Residence — Dubai — Emirados Árabes Unidos'],['ANG Luxury Brazil','JNB','Johannesburg','África do Sul','2nd Floor, Nelson Mandela Square, Maude Street West Tower, Sandton, 2146, África do Sul'],['ANG Luxury Brazil','SHA','Shanghai','China','China, Shanghai, Huangpu, Huaihai Rd (M), 333号瑞安广场1206 邮政编码: 200021'],['ANG Luxury Brazil','BNE','Brisbane','Austrália','Level 1 & 2/193 N Quay, Brisbane City QLD 4000, Austrália'],['ANG Luxury Brazil','MIA','Miami Beach','Estados Unidos','1688 Meridian Ave Ste 600 and 700, Miami Beach, FL 33139, Estados Unidos']
+].map(([brand,code,city,country,address])=>({brand,code,city,country,address}));
+const $=id=>document.getElementById(id),brand=$('brand'),country=$('country'),city=$('city'),list=$('list'),map=$('map'),count=$('count');
+const options=(el,values)=>[...new Set(values)].sort((a,b)=>a.localeCompare(b,'pt-BR')).forEach(v=>el.add(new Option(v,v)));
+options(brand,locations.map(x=>x.brand));options(country,locations.map(x=>x.country));options(city,locations.map(x=>x.city));
+function showMap(item){map.src='https://www.google.com/maps?q='+encodeURIComponent(item.address)+'&output=embed';}
+function render(){const items=locations.filter(x=>(!brand.value||x.brand===brand.value)&&(!country.value||x.country===country.value)&&(!city.value||x.city===city.value));count.textContent=`${items.length} ${items.length===1?'localidade':'localidades'}`;list.replaceChildren();if(!items.length){const e=document.createElement('div');e.className='empty';e.textContent='Nenhuma localidade corresponde aos filtros selecionados.';list.append(e);return;}items.forEach((x,i)=>{const b=document.createElement('button');b.type='button';b.className='card'+(i===0?' active':'');const brandLabel=x.brand==='ANG Group'?'ANG Group · Todas as empresas':x.brand;b.innerHTML=`<small>${brandLabel} · ${x.code}</small><strong>${x.city} · ${x.country}</strong><span>${x.address}</span>`;b.onclick=()=>{document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));b.classList.add('active');showMap(x)};list.append(b)});showMap(items[0])}
+[brand,country,city].forEach(el=>el.addEventListener('change',render));render();
+</script>
+</body>
+</html>
