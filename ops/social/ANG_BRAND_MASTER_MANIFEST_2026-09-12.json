@@ -1,0 +1,59 @@
+{
+  "version": "2026-09-12",
+  "policy": "FAIL_CLOSED_USE_ONLY_OFFICIAL_MASTERS",
+  "sources": {
+    "identity_spec_library_file": "file_000000004a34822f83e63794529a836a",
+    "identity_spec_name": "FICHA_TECNICA_IDENTIDADE_ANG_GROUP_OFICIAL_2026.md"
+  },
+  "brands": [
+    {
+      "brand": "ANG Group",
+      "decision": "Dourado institucional #b88936; preservar esfera/insignia oficial",
+      "brand_master_id": null,
+      "status": "HOLD_MASTER_NOT_RECOVERED",
+      "notes": "Pranchas exploratorias nao sao masters aprovados. Nao redesenhar nem inferir."
+    },
+    {
+      "brand": "ANG Travel",
+      "decision": "Manter logo atual integralmente",
+      "brand_master_id": "CURRENT_APPROVED_ANG_TRAVEL",
+      "status": "APPROVED_REFERENCE_CURRENT_LOGO",
+      "notes": "Usar somente a logo atual ja aplicada nos materiais oficiais; nao substituir por estudos."
+    },
+    {
+      "brand": "ANG Travel Solutions",
+      "decision": "Preservar arquitetura aprovada em lilas e composicao atual",
+      "brand_master_id": "ang-travel-solutions-approved.png",
+      "status": "APPROVED_REFERENCE_CURRENT_HEADER",
+      "notes": "Preservar o arquivo do header ate master historico isolado ser recuperado; nao usar pranchas douradas exploratorias."
+    },
+    {
+      "brand": "ANG Luxury Brazil",
+      "decision": "Opcao 30; gesto dourado fluido em tres tracos; Brazil com Z",
+      "brand_master_id": "1UAdgaulsz1YCFTUmMpkUoEe8D_OzbK7m",
+      "status": "MASTER_CONFIRMED",
+      "notes": "Arquivo oficial: ANG_LUXURY_BRAZIL_MASTER_OPCAO_30_TRANSPARENT.png"
+    },
+    {
+      "brand": "ANG Business Travel",
+      "decision": "Insignia historica ANG Corporate em dourado; texto #f2c84b",
+      "brand_master_id": null,
+      "status": "HOLD_MASTER_NOT_RECOVERED",
+      "notes": "Nao usar pranchas 1-4 como master."
+    },
+    {
+      "brand": "ANG MICE",
+      "decision": "Insignia propria inspirada na Corporate; #b14b1e",
+      "brand_master_id": null,
+      "status": "HOLD_MASTER_NOT_RECOVERED",
+      "notes": "Nao usar prancha exploratoria como master."
+    },
+    {
+      "brand": "ANG Celebrations",
+      "decision": "Marca individual e separada",
+      "brand_master_id": null,
+      "status": "HOLD_MASTER_COLOR_NOT_RECONFIRMED",
+      "notes": "Simulacoes Travel + Celebrations nao sao master oficial."
+    }
+  ]
+}
