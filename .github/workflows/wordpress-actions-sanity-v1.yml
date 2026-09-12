@@ -1,0 +1,17 @@
+name: WordPress Actions Sanity V1
+
+on:
+  push:
+    branches: [staging]
+
+permissions:
+  contents: read
+
+jobs:
+  sanity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prove job instantiation
+        run: |
+          echo "SANITY_RESULT=JOB_STARTED"
+          echo "BRANCH=${GITHUB_REF_NAME}"
