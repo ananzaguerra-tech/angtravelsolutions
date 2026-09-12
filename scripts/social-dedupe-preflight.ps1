@@ -26,6 +26,7 @@ foreach($i in @($queue.items)){
   if(@($blocked.payload_ids) -contains $id){ $errors.Add(('BLOCKED_PAYLOAD:' + $id)) }
   if($status -match '^(HOLD|REJECT|BLOCK)' -or $i.publish_authorized -eq $false){ $errors.Add(('NOT_PUBLISHABLE_STATUS:' + $id + ':' + $status)) }
   $urls=@($i.image_url)+@($i.image_urls)+@($i.video_url)+@($i.video_urls)+@($i.media_urls) | Where-Object { $_ }
+  if(@($urls).Count -eq 0){ $errors.Add(('MISSING_REAL_MEDIA:' + $id)) }
   foreach($u in $urls){
     $s=[string]$u; $n=Norm $s
     $dup = ((@($blocked.urls) -contains $s) -or (HasSeen $seenMedia $s) -or ($n -and $queueMedia.ContainsKey($n)))
