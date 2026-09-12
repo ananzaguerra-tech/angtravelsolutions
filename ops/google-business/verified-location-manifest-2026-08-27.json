@@ -1,11 +1,16 @@
 {
   "generated_at": "2026-08-27",
+  "updated_at": "2026-09-12",
   "policy": {
-    "automatic_map_restriction_enabled": false,
-    "automatic_social_geotag_restriction_enabled": false,
-    "automatic_duplicate_protection_enabled": false,
-    "automatic_address_precision_protection_enabled": false,
-    "selection_mode": "MANUAL_EDITORIAL_CONTROL"
+    "automatic_map_restriction_enabled": true,
+    "automatic_social_geotag_restriction_enabled": true,
+    "automatic_duplicate_protection_enabled": true,
+    "automatic_address_precision_protection_enabled": true,
+    "selection_mode": "MANUAL_EDITORIAL_CONTROL",
+    "mutation_mode": "FAIL_CLOSED",
+    "require_readback_before_mutation": true,
+    "block_create_when_possible_match_exists": true,
+    "require_verified_nap_before_publication": true
   },
   "locations": [
     {
@@ -16,10 +21,16 @@
       "phone": "+55 19 4040-4293",
       "website": "https://angtravelsolutions.com.br/",
       "google_status": "READY_FOR_AUTHENTICATED_UPDATE",
-      "claim_strategy": "EDITORIAL_OR_OPERATIONAL_DECISION",
+      "claim_strategy": "UPDATE_EXISTING_ONLY_AFTER_READBACK",
       "public_map_eligible": true,
       "social_location_tag_eligible": true,
-      "selection_rule": "EDITORIAL_OR_CAMPAIGN_DECISION"
+      "selection_rule": "EDITORIAL_OR_CAMPAIGN_DECISION",
+      "create_new_profile": false,
+      "required_evidence": [
+        "existing_location_id_or_profile_url",
+        "verified_nap_readback",
+        "no_duplicate_confirmation"
+      ]
     },
     {
       "business_unit": "ANG Travel",
@@ -27,13 +38,19 @@
       "country": "Brazil",
       "address": "Rua Peru, 636, cj. 711 — Wein Office Tower — Americana — SP, 13465-760",
       "phone": "+55 19 4040-4293",
-      "google_status": "READY_TO_CLAIM_EXISTING",
-      "claim_strategy": "EDITORIAL_OR_OPERATIONAL_DECISION",
+      "google_status": "VERIFY_EXISTING_OR_CLAIM",
+      "claim_strategy": "VERIFY_EXISTING_BEFORE_CREATE_OR_CLAIM",
       "place_id": "ChIJn4N7kMqbyJQR-dtltxfRqgE",
       "public_map_eligible": true,
       "social_location_tag_eligible": true,
-      "selection_rule": "EDITORIAL_OR_CAMPAIGN_DECISION"
+      "selection_rule": "EDITORIAL_OR_CAMPAIGN_DECISION",
+      "create_new_profile": false,
+      "required_evidence": [
+        "existing_profile_search_or_place_id_readback",
+        "verification_path",
+        "no_duplicate_confirmation"
+      ]
     }
   ],
-  "note": "All automatic map, geotag, duplicate-profile, and address-precision protections were disabled at the titular's instruction on 2026-08-27. Operational and editorial decisions are manual."
+  "note": "Protective controls re-enabled on 2026-09-12 to align with issue #12 and current launch policy: preserve existing profiles, verify before mutation, do not create duplicates, and do not publish unverified address data. Manual editorial control remains, but risky mutations fail closed."
 }
