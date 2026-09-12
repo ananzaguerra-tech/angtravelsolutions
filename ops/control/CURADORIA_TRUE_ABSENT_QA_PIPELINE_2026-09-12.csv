@@ -1,0 +1,5 @@
+country,status,source_gate,media_gate,seo_schema_gate,canonical_gate,publication_gate,next_action
+Libya,RESTRICTED_QA,PASS_BASELINE,BLOCK,BLOCK,PENDING,BLOCK,"Revalidate safety/entry; define canonical identity only after final alias dedupe; no commercial promotion"
+Kiribati,READY_FACT_QA,PASS_BASELINE,BLOCK,BLOCK,PENDING,BLOCK,"Finalize canonical identity; source licensed real media; create SEO/schema package; staging QA"
+Nauru,READY_FACT_QA,PASS_BASELINE,BLOCK,BLOCK,PENDING,BLOCK,"Finalize canonical identity; source licensed real media; create SEO/schema package; staging QA"
+Tuvalu,READY_FACT_QA,PASS_BASELINE,BLOCK,BLOCK,PENDING,BLOCK,"Finalize canonical identity; source licensed real media; create SEO/schema package; staging QA"
