@@ -1,31 +1,24 @@
-name: ZEUS Social V5 Feed Authorized Once
+name: ZEUS Social V5 Feed — Quarantined Legacy Payload
+
 on:
-  push:
-    branches: [staging]
-    paths:
-      - ".github/workflows/zeus-social-v5-feed-once.yml"
+  workflow_dispatch:
+
 permissions:
-  actions: read
   contents: read
+
 jobs:
-  publish-authorized-feed:
-    runs-on: ubuntu-latest
+  quarantine-proof:
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
         with:
           ref: staging
-      - name: Dispatch only CURADORIA_ANG_AGOSTO_FEED
-        env:
-          GH_TOKEN_EPHEMERAL: ${{ github.token }}
-          RUN_ID: ${{ github.run_id }}
-          HEAD_SHA: ${{ github.sha }}
-          REPOSITORY: ${{ github.repository }}
-          ZEUS_SOCIAL_WEBHOOK: ${{ secrets.ZEUS_SOCIAL_WEBHOOK }}
+      - name: Enforce zero-duplication preflight
+        shell: pwsh
         run: |
-          set -euo pipefail
-          payload_file="ops/social/payloads/ang-travel-feed-authorized-2026-08-27.json"
-          test "$(jq -r '.payload.queue_id' "$payload_file")" = "CURADORIA_ANG_AGOSTO_FEED"
-          test "$(jq -r '.payload.format' "$payload_file")" = "feed_4x5"
-          envelope="$(jq -c             --arg run_id "${RUN_ID}"             --arg sha "${HEAD_SHA}"             --arg repository "${REPOSITORY}"             '. + {run_id:$run_id,sha:$sha,repository:$repository}' "$payload_file")"
-          response="$(curl --fail-with-body --silent --show-error             -X POST "${ZEUS_SOCIAL_WEBHOOK}"             -H "Authorization: Bearer ${GH_TOKEN_EPHEMERAL}"             -H "Content-Type: application/json"             --data "${envelope}")"
-          echo "${response}" | jq -e '.result.status == "PUBLISHED" and (.result.publication_id | length > 0)'
+          ./scripts/social-dedupe-preflight.ps1 `
+            -QueuePath '.\ops\social\zeus-social-dispatch-queue-2026-08-27.json'
+      - name: No dispatch path
+        shell: pwsh
+        run: |
+          throw 'Legacy queue unexpectedly passed quarantine; publication remains disabled.'
