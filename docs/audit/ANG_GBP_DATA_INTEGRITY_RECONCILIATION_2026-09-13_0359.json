@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "title": "ANG Google Business Profile — Data Integrity and Identity Reconciliation",
+  "checked_at": "2026-09-13T03:59:14-03:00",
+  "global_status": "PARTIAL_EVIDENCE_AUTOMATION_BLOCKED_FOR_CORRUPT_ROWS",
+  "publication_authorized": false,
+  "source_sheet": {
+    "title": "ANG_FICHAS_GOOGLE_REVISAO_2026-08-27",
+    "url": "https://docs.google.com/spreadsheets/d/1opFi80y1vsM2UOMu3Nd8_e-wa7dRsD7fjzlDU06uk_Y/edit",
+    "updated_at": "2026-09-08T22:27:48.015Z"
+  },
+  "profiles": [
+    {
+      "intended_profile": "ANG TRAVEL SOLUTIONS | Campinas",
+      "evidence": "Google Business Profile performance email for July 2026",
+      "account_id": "13216142187597837770",
+      "profile_fid": "13727268163183794317",
+      "google_places_id": null,
+      "july_views": 48,
+      "conclusion": "EXISTENCE_AND_MANAGEMENT_EVIDENCE",
+      "verification_status": "NOT_PROVEN_BY_EMAIL",
+      "action": "UPDATE_EXISTING_ONLY_AFTER_LIVE_IDENTITY_CONFIRMATION",
+      "create_new_allowed": false
+    },
+    {
+      "intended_profile": "ANG TRAVEL | Americana",
+      "evidence": "Google Business Profile performance email for July 2026 plus sheet public-search record",
+      "account_id": "9303824683971440569",
+      "profile_fid": "120138239870098425",
+      "google_places_id": "ChIJn4N7kMqbyJQR-dtltxfRqgE",
+      "july_views": 57,
+      "conclusion": "EXISTENCE_AND_MANAGEMENT_EVIDENCE",
+      "verification_status": "NOT_PROVEN_BY_EMAIL",
+      "prior_sheet_status": "VERIFY_EXISTING_OR_CLAIM",
+      "reconciliation_status": "CLAIM_STATUS_REVIEW_REQUIRED",
+      "action": "DO_NOT_CREATE_OR_RECLAIM_BEFORE_AUTHENTICATED_PROFILE_CHECK",
+      "create_new_allowed": false
+    },
+    {
+      "intended_profile": "ANG GROUP | New York",
+      "evidence": "Prior operational checkpoint states physical-video gate",
+      "account_id": null,
+      "profile_fid": null,
+      "google_places_id": null,
+      "conclusion": "HUMAN_VIDEO_GATE_PRESERVED",
+      "sheet_integrity": "ROW_MISSING_OR_MIXED_INTO_MIAMI_ROW",
+      "action": "DO_NOT_SUBMIT_OR_RECREATE; repair data mapping first",
+      "create_new_allowed": false
+    }
+  ],
+  "new_support_case": {
+    "case_reference": "8-5190000041368",
+    "received_at": "2026-09-12T16:47:58-07:00",
+    "message_type": "AUTOMATED_ACKNOWLEDGEMENT",
+    "status": "AWAITING_HUMAN_SUPPORT_REPLY",
+    "resolution_proven": false
+  },
+  "sheet_integrity_findings": [
+    {
+      "row_index": 13,
+      "displayed_country": "Estados Unidos",
+      "displayed_city": "Miami",
+      "displayed_profile": "ANG LUXURY BRAZIL | Miami",
+      "defect": "Notes, account/location identifiers and video instructions refer to ANG GROUP | New York.",
+      "status": "BLOCK_ALL_ACTIONS_IDENTITY_COLLISION"
+    },
+    {
+      "row_indexes": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "defect": "Country/city/address and next-action values are displaced across Luxembourg, Shanghai, Lisboa, Brisbane, Johannesburg and Dubai; Dubai also appears twice.",
+      "examples": [
+        "Estados Unidos -> Luxembourg with Luxembourg address",
+        "Luxemburgo -> Shanghai with China address",
+        "China -> Lisboa with Portugal address",
+        "Portugal -> Brisbane with Australia address",
+        "Austrália -> Johannesburg with South Africa address",
+        "África do Sul -> Dubai with UAE address",
+        "Emirados Árabes Unidos -> Dubai with no exact address"
+      ],
+      "status": "BLOCK_AUTOMATION_AND_PUBLICATION"
+    }
+  ],
+  "controls": {
+    "profiles_deleted": 0,
+    "profiles_disabled": 0,
+    "profiles_created": 0,
+    "profiles_updated": 0,
+    "duplicate_creation_attempts": 0,
+    "video_submissions": 0
+  },
+  "required_repairs": [
+    "Rebuild rows 13–20 from authoritative contractual addresses with one country, city and brand per row.",
+    "Create a dedicated New York row and remove New York instructions/IDs from Miami.",
+    "Reconcile profile_fid, Google Places ID and authenticated Location ID without treating them as interchangeable.",
+    "Recheck Americana managed/verification state before any claim flow.",
+    "Wait for a non-automated response in Google support case 8-5190000041368."
+  ],
+  "next_action": "Use authenticated Google Business Profile UI/API to map each visible business name to account_id, profile_fid, Location ID, Places ID, public URL and verification state; update only an exact verified match.",
+  "rollback": "Delete this staging audit and revert its commit; no Google Business Profile state was changed."
+}
