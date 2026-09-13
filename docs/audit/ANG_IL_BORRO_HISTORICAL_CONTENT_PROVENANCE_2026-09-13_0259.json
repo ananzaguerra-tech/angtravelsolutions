@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0",
+  "title": "ANG Il Borro / Destination Wedding — Historical Content Provenance and Reuse Gate",
+  "checked_at": "2026-09-13T02:59:35-03:00",
+  "global_status": "CONCEPT_REUSE_ONLY_NO_PUBLISH",
+  "publication_authorized": false,
+  "sources": [
+    {
+      "date": "2020-03-29",
+      "type": "internal_unsent_draft",
+      "subject_class": "Il Borro editorial concept",
+      "reusable_concept": [
+        "Tuscany celebrations",
+        "medieval-village atmosphere",
+        "wine-country hospitality",
+        "private celebration positioning"
+      ],
+      "quarantined_claims": [
+        "property size",
+        "ownership wording",
+        "Relais & Chateaux status",
+        "villa dating",
+        "spa/restaurant/golf/activity availability",
+        "special rates",
+        "benefits",
+        "validity periods",
+        "legacy contacts"
+      ],
+      "rights_evidence": "NONE",
+      "decision": "CONCEPT_ONLY_FACT_REVALIDATION_REQUIRED"
+    },
+    {
+      "date": "2020-04-17",
+      "type": "internal_unsent_draft",
+      "subject_class": "Il Borro editorial plus unrelated expired promotion",
+      "reusable_concept": [
+        "Il Borro as Tuscany hospitality and celebrations inspiration"
+      ],
+      "quarantined_claims": [
+        "all prices",
+        "installments",
+        "airline/package inclusions",
+        "fees",
+        "2021 validity",
+        "special-rate and benefit claims",
+        "legacy contacts",
+        "partner name claims"
+      ],
+      "rights_evidence": "NONE",
+      "decision": "EXPIRED_COMMERCIAL_CONTENT_PROHIBITED"
+    },
+    {
+      "date": "2020-05-14",
+      "type": "internal_unsent_draft",
+      "subject_class": "Destination Wedding and Elopement overview",
+      "reusable_concept": [
+        "intimate destination celebrations",
+        "Tuscany as a wedding setting",
+        "planning and concierge support"
+      ],
+      "quarantined_claims": [
+        "post-pandemic trend prediction",
+        "2021 calls to action",
+        "special conditions",
+        "unverified partner claims",
+        "legacy brand and contact details"
+      ],
+      "rights_evidence": "NONE",
+      "decision": "CONCEPT_ONLY_COPY_REWRITE_REQUIRED"
+    },
+    {
+      "date": "2021-12-20",
+      "type": "historical_contributed_article_attachment",
+      "subject_class": "International destination wedding article",
+      "reusable_concept": [
+        "destination selection by couple profile",
+        "international ceremony planning",
+        "Tuscany wine-country celebrations"
+      ],
+      "quarantined_claims": [
+        "2021 congress and hygiene claims",
+        "pandemic-era framing",
+        "destination legal assertions",
+        "superlatives and specific venue assertions without current sources"
+      ],
+      "rights_evidence": "AUTHORSHIP_CONTEXT_PRESENT_BUT_PUBLICATION_SCOPE_NOT_ESTABLISHED",
+      "decision": "CONCEPT_ONLY_DO_NOT_COPY_VERBATIM"
+    },
+    {
+      "date": "2021-11-27",
+      "type": "historical_social_copy_attachment",
+      "subject_class": "Generic destination wedding social concept",
+      "reusable_concept": [
+        "authentic celebration at a meaningful destination",
+        "advance planning",
+        "agency coordination"
+      ],
+      "quarantined_claims": [
+        "legacy contacts",
+        "generic promises",
+        "all embedded imagery until license is proven"
+      ],
+      "rights_evidence": "TEXT_AUTHORSHIP_CONTEXT_PRESENT_IMAGE_RIGHTS_NOT_ESTABLISHED",
+      "decision": "CONCEPT_ONLY_NO_MEDIA_REUSE"
+    },
+    {
+      "date": "2026-09-12",
+      "type": "sent_partnership_request",
+      "subject_class": "ANG x Il Borro representation and co-marketing discussion",
+      "reusable_concept": [
+        "Brazil market development",
+        "advisor education",
+        "Tuscany itineraries",
+        "celebrations",
+        "approved brand assets request"
+      ],
+      "quarantined_claims": [],
+      "rights_evidence": "REQUEST_FOR_APPROVED_ASSETS_NOT_AUTHORIZATION",
+      "decision": "AWAITING_REPLY"
+    }
+  ],
+  "drive_media_check": {
+    "folder_title": "Il Borro - Short Videos",
+    "folder_resolved": true,
+    "accessible_child_objects_returned": 0,
+    "interpretation": "No asset metadata or bytes were available in this connection; previous catalog references cannot be upgraded to verified media.",
+    "media_ids_created": 0,
+    "hashes_created": 0,
+    "rights_verified": 0
+  },
+  "allowed_editorial_core": [
+    "Il Borro as a Tuscany setting for tailored celebrations and destination weddings",
+    "A planning-led narrative focused on guest journey, hospitality, local culture and private experiences",
+    "ANG Travel & Celebrations consultation and concierge positioning without commercial promises"
+  ],
+  "prohibited_until_revalidated": [
+    "Any historic price, tariff, installment, package, promotion, benefit or validity period",
+    "Any current hotel classification, ownership, acreage, venue, restaurant, spa, golf or activity statement not verified from current official sources",
+    "Any claim of partnership, representation, preferred benefits or exclusivity",
+    "Any historic image or video without traceable license or written permission",
+    "Any verbatim reuse of contributed text without publication-rights confirmation"
+  ],
+  "release_gates": [
+    "CURRENT_OFFICIAL_FACT_QA_PASS",
+    "WRITTEN_CO_MARKETING_OR_MEDIA_PERMISSION",
+    "REAL_MEDIA_VERIFIED",
+    "MASTER_LOGO_VERIFIED",
+    "NO_DUPLICATE_PASS",
+    "COPY_QA_PASS"
+  ],
+  "action_humana_minima": "Obtain a written reply from Il Borro confirming whether ANG may reuse supplied video, photography and logos on social channels and the ANG blog, including credits, duration, territories and any approval-before-publication condition.",
+  "next_action": "If permission arrives, inventory supplied assets, measure media properties, calculate SHA-256 and visual hashes, and route the existing PT-BR/EN package through copy and brand QA.",
+  "rollback": "Delete this staging report and revert its commit; no Gmail, Drive, CMS, Meta, n8n or Google Business state was modified."
+}
