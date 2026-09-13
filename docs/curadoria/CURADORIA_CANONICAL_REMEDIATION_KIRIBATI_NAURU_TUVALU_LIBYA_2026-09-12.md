@@ -2,7 +2,7 @@
 
 Status global: `READY_QA / NO_PUBLISH`
 Policy: fail-closed. This package does not authorize CMS publication.
-Checked_at: 2026-09-12
+Checked_at: 2026-09-13
 
 ## Objective
 Close the canonical-identity gap for four countries identified by the 2026-09-12 reconciliation as true-absent candidates while preserving the 881/WORLD map, existing IDs, drafts and deduplication rules.
@@ -28,7 +28,7 @@ Official sources checked 2026-09-12:
 - Immigration: https://immigration.mfai.gov.ki/visas-entry/
 - Tourism: https://kiribatitourism.gov.ki/
 - Activities: https://kiribatitourism.gov.ki/things-to-do
-Dynamic entry note: Brazilian nationality appears in the official exemption framework observed in QA, but nationality-specific wording must be revalidated at quote/publication time.
+Dynamic entry note: the official portal confirms a visa-exemption framework and a general maximum stay of 90 days in any 12-month period. Brazil was not independently located in the accessible official output during the 2026-09-13 recheck; nationality-specific eligibility is therefore `NATIONALITY_CONFIRMATION_HOLD` and must be confirmed before quote or publication.
 Editorial modules: overview; islands/regions; climate/best time; arrival/logistics; WWII heritage; fishing; surfing; diving; birdwatching; culture/homestays; sustainability/PIPA; CTA; SEO/schema.
 SEO slug candidate: `/curadoria/kiribati/`
 Schema candidates: `TouristDestination`, `Place`, `FAQPage`, `BreadcrumbList`.
