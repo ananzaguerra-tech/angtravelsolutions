@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "artifact": "ANG_CURATORIA_FOUR_COUNTRY_LIVE_DEDUPE_QUERY_PLAN",
+  "checked_at": "2026-09-13T07:02:25-03:00",
+  "status": "READY_TO_RUN_WHEN_WPVIBE_QUOTA_AVAILABLE",
+  "site": "https://angtravelsolutions.com.br",
+  "wpvibe_quota": {
+    "plan": "Free",
+    "observed_usage": "324/300",
+    "remaining_calls": 0,
+    "provider_estimated_recovery_at": "2026-09-13T10:30:00Z",
+    "recovery_at_brt": "2026-09-13T07:30:00-03:00"
+  },
+  "safety": {
+    "read_only": true,
+    "creates_posts": false,
+    "updates_posts": false,
+    "publishes": false,
+    "public_rest_attempt": "BLOCKED_BY_HTTP_503_MAINTENANCE",
+    "stop_on_429": true
+  },
+  "route": "/wp/v2/ang_curated",
+  "fields": [
+    "id",
+    "slug",
+    "title",
+    "status"
+  ],
+  "candidates": [
+    {
+      "canonical": "Kiribati",
+      "aliases": [
+        "Kiribati",
+        "Republic of Kiribati"
+      ],
+      "iso": [
+        "KI",
+        "KIR"
+      ]
+    },
+    {
+      "canonical": "Nauru",
+      "aliases": [
+        "Nauru",
+        "Republic of Nauru"
+      ],
+      "iso": [
+        "NR",
+        "NRU"
+      ]
+    },
+    {
+      "canonical": "Tuvalu",
+      "aliases": [
+        "Tuvalu"
+      ],
+      "iso": [
+        "TV",
+        "TUV"
+      ]
+    },
+    {
+      "canonical": "Libya",
+      "aliases": [
+        "Libya",
+        "Líbia",
+        "Libia",
+        "State of Libya"
+      ],
+      "iso": [
+        "LY",
+        "LBY"
+      ]
+    }
+  ],
+  "pass_condition": "For every candidate and alias: authenticated REST returns zero title/slug matches, and external_id/meta checks return zero matches. Only then classify as NEW_CANONICAL_CANDIDATE; do not create automatically.",
+  "fail_closed": "Any match, timeout, truncation, rate limit, missing meta visibility, or endpoint error keeps OFFLINE_ZERO_MATCH_PARTIAL/HOLD.",
+  "execution_record": {
+    "executed": "Quota and recovery time checked; Gmail and Drive revalidated; public REST fallback attempted.",
+    "evidence": "WPVibe reported zero remaining calls and recovery around 10:30 UTC/07:30 BRT. Public site returned HTTP 503 under maintenance.",
+    "not_done": "Live dedupe against 844 ang_curated entries.",
+    "motive": "Authenticated quota unavailable; public REST blocked by maintenance.",
+    "blocker": "WPVibe rolling 24-hour quota.",
+    "solution_attempted": "Tried public read-only REST fallback without bypassing maintenance.",
+    "minimum_human_action": "None. Wait for provider quota recovery.",
+    "next_action": "Run four small authenticated REST searches after quota recovery, stop immediately on 429, then query exact external_id aliases.",
+    "rollback": "Delete this staging manifest; no external state changed."
+  }
+}
