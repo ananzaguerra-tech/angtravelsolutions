@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-09-13T07:58:20-03:00",
+  "artifact": "ANG_CURATORIA_FOUR_COUNTRY_LIVE_WP_DEDUPE_RESULT",
+  "overall_status": "LIVE_TITLE_SLUG_ZERO_MATCH_PASS__META_EXTERNAL_ID_HOLD",
+  "wordpress": {
+    "site": "https://angtravelsolutions.com.br",
+    "post_type": "ang_curated",
+    "authenticated_context": "edit",
+    "searches": [
+      {
+        "query": "Kiribati",
+        "result_count": 0
+      },
+      {
+        "query": "Nauru",
+        "result_count": 0
+      },
+      {
+        "query": "Tuvalu",
+        "result_count": 0
+      },
+      {
+        "query": "Libya",
+        "result_count": 0
+      },
+      {
+        "query": "Líbia",
+        "result_count": 0
+      }
+    ],
+    "fields_requested": [
+      "id",
+      "slug",
+      "title",
+      "status",
+      "meta"
+    ],
+    "result": "All five authenticated REST searches returned empty arrays."
+  },
+  "unresolved": {
+    "external_id_and_iso_meta": "NOT_VERIFIED",
+    "reason": "The final read-only SQL/meta search requires manage_options; connected account lacks that capability and returned HTTP 403.",
+    "retry_policy": "Do not retry the same WP-CLI call. Continue with permitted REST operations or obtain capability through the site administrator."
+  },
+  "classification": {
+    "Kiribati": "LIVE_TITLE_SLUG_ZERO_MATCH_PASS / EXTERNAL_ID_HOLD / NATIONALITY_CONFIRMATION_HOLD",
+    "Nauru": "LIVE_TITLE_SLUG_ZERO_MATCH_PASS / EXTERNAL_ID_HOLD",
+    "Tuvalu": "LIVE_TITLE_SLUG_ZERO_MATCH_PASS / EXTERNAL_ID_HOLD / ENTRY_FACT_HOLD",
+    "Libya": "LIVE_TITLE_SLUG_ZERO_MATCH_PASS / EXTERNAL_ID_HOLD / RESTRICTED_QA / PUBLICATION_BLOCK"
+  },
+  "controls": {
+    "new_canonical_candidate": false,
+    "post_created": false,
+    "post_updated": false,
+    "published": false,
+    "maintenance_preserved": true
+  },
+  "checkpoint": {
+    "executed": "Five authenticated WordPress REST searches completed after quota recovery.",
+    "evidence": "Every query returned [].",
+    "not_done": "Direct external_id/ISO meta comparison.",
+    "motive": "Connected user lacks manage_options for read-only SQL/meta search.",
+    "blocker": "WordPress capability manage_options or a permitted REST endpoint exposing searchable canonical external IDs.",
+    "solution_attempted": "Single consolidated read-only SQL query attempted; stopped on 403 without retry.",
+    "minimum_human_action": "Grant the existing connected WordPress user only the capability needed for the required read-only diagnostic, or expose a read-only REST search for canonical external IDs. Do not share passwords.",
+    "next_action": "Inspect registered REST/meta schema on a later quota window and query visible external_id fields without SQL. Do not create any country record before meta zero-match.",
+    "rollback": "Delete this staging report; no WordPress state changed."
+  }
+}
