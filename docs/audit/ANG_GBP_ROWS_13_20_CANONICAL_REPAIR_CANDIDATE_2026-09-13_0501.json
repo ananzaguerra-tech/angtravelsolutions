@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "artifact": "ANG_GBP_ROWS_13_20_CANONICAL_REPAIR_CANDIDATE",
+  "checked_at": "2026-09-13T05:01:51-03:00",
+  "status": "STAGING_ONLY_NO_GBP_MUTATION",
+  "source": {
+    "spreadsheet_id": "1opFi80y1vsM2UOMu3Nd8_e-wa7dRsD7fjzlDU06uk_Y",
+    "url": "https://docs.google.com/spreadsheets/d/1opFi80y1vsM2UOMu3Nd8_e-wa7dRsD7fjzlDU06uk_Y/edit",
+    "finding": "Rows 13-20 contain identity/row-shift collisions. This artifact is a non-destructive repair candidate; it does not authorize edits, creation, claims, verification, or publication."
+  },
+  "invariants": [
+    "Never disable, delete, or duplicate a Google Business Profile.",
+    "Never transfer Account/Location/FID/code values between Miami and New York.",
+    "A contractual address alone does not prove Google Business Profile eligibility.",
+    "Write only after authenticated identity, exact contractual address, eligibility, verification state, and duplicate search are independently confirmed.",
+    "Preserve existing verified/open profiles and homologated addresses.",
+    "No logo or media may be used unless the official master and rights are verified."
+  ],
+  "proposed_records": [
+    {
+      "source_row": 13,
+      "country": "United States",
+      "city": "Miami Beach",
+      "profile_name": "ANG LUXURY BRAZIL | Miami",
+      "contractual_address": "1688 Meridian Ave Ste 600 and 700, Miami Beach, FL 33139, United States",
+      "account_id": null,
+      "location_or_fid": null,
+      "profile_code": null,
+      "status": "HOLD_IDENTITY_ELIGIBILITY_AND_DUPLICATE_QA",
+      "reason": "The source row contains New York verification instructions and identifiers. Those values are quarantined and must not be used for Miami."
+    },
+    {
+      "source_row": "13-contaminated-fields",
+      "country": "United States",
+      "city": "New York",
+      "profile_name": "ANG GROUP | New York",
+      "contractual_address": "5 Pennsylvania Plaza, 19th floor, New York, NY 10001, United States",
+      "candidate_identifiers_from_corrupt_row": {
+        "account_id": "8821479059093418319",
+        "location_or_fid": "13485148069713328926",
+        "profile_code": "00396672923358867781"
+      },
+      "identifiers_status": "UNCONFIRMED_REQUIRES_AUTHENTICATED_MATCH",
+      "status": "HOLD_VIDEO_GATE_AND_IDENTITY_RECONFIRM",
+      "reason": "The sheet text says Google offered physical video verification for New York, but the identifiers were stored on the Miami row. Reconfirm all identifiers in the authenticated profile before any action."
+    },
+    {
+      "source_row": 14,
+      "country": "Luxembourg",
+      "city": "Luxembourg",
+      "profile_name": "ANG GROUP | Luxembourg",
+      "contractual_address": "26 Bd Royal Level 5, 2449 Ville-Haute Luxembourg, Luxembourg",
+      "account_id": null,
+      "location_or_fid": null,
+      "status": "HOLD_ELIGIBILITY_AND_DUPLICATE_QA"
+    },
+    {
+      "source_row": 15,
+      "country": "China",
+      "city": "Shanghai",
+      "profile_name": "ANG GROUP | Shanghai",
+      "contractual_address": "333 Huaihai Road (M), Rui An Plaza 1206, Huangpu, Shanghai 200021, China",
+      "account_id": null,
+      "location_or_fid": null,
+      "status": "HOLD_ELIGIBILITY_AND_DUPLICATE_QA",
+      "note": "Preserve the original contractual-language form in supporting documents; normalized Latin text is not authority to edit the profile."
+    },
+    {
+      "source_row": 16,
+      "country": "Portugal",
+      "city": "Lisbon",
+      "profile_name": "ANG GROUP | Lisboa",
+      "contractual_address": "Av. da Liberdade 110, 1269-046 Lisboa, Portugal",
+      "account_id": null,
+      "location_or_fid": null,
+      "status": "HOLD_ELIGIBILITY_AND_DUPLICATE_QA"
+    },
+    {
+      "source_row": 17,
+      "country": "Australia",
+      "city": "Brisbane",
+      "profile_name": "ANG GROUP | Brisbane",
+      "contractual_address": "Level 1 & 2, 193 North Quay, Brisbane City QLD 4000, Australia",
+      "account_id": null,
+      "location_or_fid": null,
+      "status": "HOLD_ELIGIBILITY_AND_DUPLICATE_QA"
+    },
+    {
+      "source_row": 18,
+      "country": "South Africa",
+      "city": "Johannesburg / Sandton",
+      "profile_name": "ANG GROUP | Johannesburg / Sandton",
+      "contractual_address": "2nd Floor, West Tower, Nelson Mandela Square, Maude Street, Sandton 2146, South Africa",
+      "account_id": null,
+      "location_or_fid": null,
+      "status": "HOLD_ELIGIBILITY_AND_DUPLICATE_QA"
+    },
+    {
+      "source_row": 19,
+      "country": "United Arab Emirates",
+      "city": "Dubai",
+      "profile_name": "ANG GROUP | Dubai",
+      "contractual_address": "Al Fattan Business Hub, Levels 9 and 10, Dubai Marina, Jumeirah Beach Residence, Dubai, United Arab Emirates",
+      "account_id": null,
+      "location_or_fid": null,
+      "status": "HOLD_ELIGIBILITY_AND_DUPLICATE_QA"
+    },
+    {
+      "source_row": 20,
+      "country": "United Arab Emirates",
+      "city": "Dubai",
+      "profile_name": "ANG GROUP | Dubai",
+      "contractual_address": null,
+      "account_id": null,
+      "location_or_fid": null,
+      "status": "QUARANTINE_DUPLICATE_ROW_DO_NOT_DELETE",
+      "reason": "Duplicate Dubai candidate without exact address. Preserve for audit; do not merge or delete automatically."
+    }
+  ],
+  "execution": {
+    "executed": "Fresh Gmail partnership/support checks; exact spreadsheet read by file ID; canonical repair candidate generated.",
+    "evidence": "Four partnership threads remain sent-only. Google case 8-5190000041368 remains automated acknowledgement only. Source sheet was read directly and confirms the row collisions.",
+    "not_done": "No spreadsheet write, GBP mutation, profile creation/claim, verification, social post, CMS change, Meta/n8n call, or publication.",
+    "motive": "No authenticated per-location verification/eligibility evidence and source rows are internally inconsistent.",
+    "blocker": "Authenticated Google Business location inventory plus exact identity/eligibility confirmation; Library write connector unavailable in this connection.",
+    "solution_attempted": "Separated each intended city into a clean staging record and quarantined contaminated identifiers and duplicate Dubai row.",
+    "minimum_human_action": "For New York only, complete Google's requested continuous physical verification video if the authenticated profile still requests it; do not share credentials or private documents.",
+    "next_action": "After authenticated inventory is available, compare profile name, address, Account ID, Location/FID and verification status one location at a time. Update only verified/open profiles that pass duplicate and eligibility checks.",
+    "rollback": "Delete this staging artifact; no external system state changed."
+  }
+}
