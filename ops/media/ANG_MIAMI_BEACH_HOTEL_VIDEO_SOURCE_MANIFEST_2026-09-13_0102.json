@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "title": "ANG Miami Beach Hotel Video Source Manifest",
+  "checked_at": "2026-09-13T01:02:00-03:00",
+  "global_status": "SOURCE_DISCOVERY_COMPLETE_NO_PUBLISH",
+  "publication_authorized": false,
+  "editorial_outputs": {
+    "pt_br": {
+      "brand": "ANG Travel & Celebrations",
+      "format": "vertical_reel_short",
+      "typography": "Montserrat Light/Medium",
+      "status": "HOLD"
+    },
+    "en": {
+      "brand": "ANG Travel & Celebrations",
+      "format": "vertical_reel_short",
+      "typography": "Montserrat Light/Medium",
+      "status": "HOLD"
+    }
+  },
+  "absolute_controls": {
+    "ai_media_allowed": false,
+    "static_photos_allowed": false,
+    "generic_substitution_allowed": false,
+    "media_must_be_real_official_licensed": true,
+    "official_public_source_is_reuse_license": false,
+    "drive_video_matches": 0
+  },
+  "hotels": [
+    {
+      "hotel": "The Miami Beach EDITION",
+      "source_url": "https://www.marriott.com/en-us/hotels/miaeb-the-miami-beach-edition/overview/",
+      "owner_channel": "Marriott / The Miami Beach EDITION",
+      "source_type": "official_property_page_with_360_tour",
+      "official_source_status": "VERIFIED_PAGE_NO_INDIVIDUAL_VIDEO",
+      "permission_license": "NOT_ESTABLISHED",
+      "duration_quality": "not_applicable_or_unresolved",
+      "editorial_differentiator": "Oceanfront resort experience and EDITION hospitality",
+      "status": "HOLD_EXACT_VIDEO_AND_RIGHTS"
+    },
+    {
+      "hotel": "Eden Roc Miami Beach",
+      "source_url": "https://www.youtube.com/@edenrocmiamibeach2299",
+      "owner_channel": "Eden Roc Miami Beach",
+      "source_type": "official_youtube_channel",
+      "official_source_status": "VERIFIED_CHANNEL",
+      "permission_license": "NOT_ESTABLISHED",
+      "duration_quality": "individual_asset_not_selected",
+      "editorial_differentiator": "Historic oceanfront Miami Beach resort",
+      "status": "HOLD_REUSE_RIGHTS"
+    },
+    {
+      "hotel": "Nobu Hotel Miami Beach",
+      "source_url": "https://www.nobuhotels.com/",
+      "owner_channel": "Nobu Hotels",
+      "source_type": "official_brand_page",
+      "official_source_status": "MIAMI_SPECIFIC_VIDEO_NOT_LOCATED",
+      "permission_license": "NOT_ESTABLISHED",
+      "duration_quality": "not_available",
+      "editorial_differentiator": "Japanese-inspired hospitality and culinary identity",
+      "status": "HOLD_MEDIA_NOT_FOUND"
+    },
+    {
+      "hotel": "The Ritz-Carlton, South Beach",
+      "source_url": "https://www.ritzcarlton.com/en/hotels/miasb-the-ritz-carlton-south-beach/photos/",
+      "owner_channel": "The Ritz-Carlton / Marriott",
+      "source_type": "official_gallery_with_video",
+      "official_source_status": "VERIFIED_PAGE_VIDEO_PRESENT",
+      "permission_license": "NOT_ESTABLISHED",
+      "duration_quality": "stream_and_duration_unresolved",
+      "editorial_differentiator": "Art Deco setting and oceanfront South Beach positioning",
+      "status": "HOLD_REUSE_RIGHTS"
+    },
+    {
+      "hotel": "Loews Miami Beach Hotel",
+      "source_url": "https://www.loewshotels.com/",
+      "owner_channel": "Loews Hotels",
+      "source_type": "official_site_video_entry",
+      "official_source_status": "VERIFIED_PAGE_VIDEO_PRESENT",
+      "permission_license": "NOT_ESTABLISHED",
+      "duration_quality": "individual_url_and_duration_unresolved",
+      "editorial_differentiator": "South Beach resort experience",
+      "status": "HOLD_REUSE_RIGHTS"
+    },
+    {
+      "hotel": "Faena Hotel Miami Beach",
+      "source_url": "https://www.faena.com/",
+      "owner_channel": "Faena",
+      "source_type": "official_brand_site_video_entry",
+      "official_source_status": "VERIFIED_OFFICIAL_VIDEO_EVIDENCE_EXACT_HOTEL_ASSET_PENDING",
+      "permission_license": "NOT_ESTABLISHED",
+      "duration_quality": "individual_miami_asset_and_duration_unresolved",
+      "editorial_differentiator": "Art, culture and performance-led hospitality",
+      "status": "HOLD_EXACT_VIDEO_AND_RIGHTS"
+    },
+    {
+      "hotel": "W South Beach",
+      "source_url": null,
+      "owner_channel": null,
+      "source_type": "none_verified",
+      "official_source_status": "OFFICIAL_HOTEL_VIDEO_NOT_LOCATED",
+      "permission_license": "NOT_ESTABLISHED",
+      "duration_quality": "not_available",
+      "editorial_differentiator": "Contemporary South Beach design and energy",
+      "status": "HOLD_MEDIA_NOT_FOUND"
+    },
+    {
+      "hotel": "The Setai, Miami Beach",
+      "source_url": "https://www.lhw.com/",
+      "owner_channel": "The Leading Hotels of the World / The Setai",
+      "source_type": "authorized_distribution_property_page",
+      "official_source_status": "VERIFIED_DISTRIBUTOR_VIDEO_PAGE",
+      "permission_license": "NOT_ESTABLISHED",
+      "duration_quality": "property 1:06; Jaya 1:03; Sunday Jazz Brunch 0:34",
+      "editorial_differentiator": "Art Deco heritage with Asian-inspired design and Jaya dining",
+      "status": "HOLD_REUSE_RIGHTS"
+    },
+    {
+      "hotel": "1 Hotel South Beach",
+      "source_url": "https://www.1hotels.com/",
+      "owner_channel": "1 Hotels",
+      "source_type": "official_site_vertical_mp4_entry",
+      "official_source_status": "VERIFIED_OFFICIAL_ASSET_EVIDENCE",
+      "permission_license": "NOT_ESTABLISHED",
+      "duration_quality": "15 seconds; vertical; exact stream URL unresolved",
+      "editorial_differentiator": "Sustainability-led luxury and nature-inspired design",
+      "status": "HOLD_REUSE_RIGHTS"
+    },
+    {
+      "hotel": "The Villa Casa Casuarina",
+      "source_url": null,
+      "owner_channel": null,
+      "source_type": "none_verified",
+      "official_source_status": "OFFICIAL_HOTEL_VIDEO_NOT_LOCATED",
+      "permission_license": "NOT_ESTABLISHED",
+      "duration_quality": "not_available",
+      "editorial_differentiator": "Historic mansion and intimate boutique setting",
+      "status": "HOLD_MEDIA_NOT_FOUND"
+    },
+    {
+      "hotel": "The Savoy Hotel & Beach Club",
+      "source_url": null,
+      "owner_channel": null,
+      "source_type": "none_verified",
+      "official_source_status": "OFFICIAL_HOTEL_VIDEO_NOT_LOCATED",
+      "permission_license": "NOT_ESTABLISHED",
+      "duration_quality": "not_available",
+      "editorial_differentiator": "Art Deco beachfront hotel and private beach club",
+      "status": "HOLD_MEDIA_NOT_FOUND"
+    },
+    {
+      "hotel": "Fontainebleau Miami Beach",
+      "source_url": "https://www.youtube.com/fontainebleaumb",
+      "owner_channel": "Fontainebleau Miami Beach",
+      "source_type": "official_youtube_channel",
+      "official_source_status": "VERIFIED_CHANNEL",
+      "permission_license": "NOT_ESTABLISHED",
+      "duration_quality": "individual_asset_not_selected",
+      "editorial_differentiator": "Iconic Miami Beach architecture and Golden Era legacy",
+      "status": "HOLD_REUSE_RIGHTS"
+    }
+  ],
+  "qa_summary": {
+    "hotels_total": 12,
+    "official_or_partner_video_evidence": 7,
+    "without_individualized_hotel_video": 5,
+    "reuse_authorized": 0,
+    "ready_review": 0,
+    "published": 0
+  },
+  "blocking_requirements": [
+    "Exact downloadable or supplied hotel-specific video asset",
+    "Written reuse/co-marketing authorization or traceable commercial license",
+    "Duration, resolution, codec and orientation verification",
+    "media_id, source, license_or_permission, brand_master_id, theme_key and visual_hash",
+    "REAL_MEDIA_VERIFIED + MASTER_LOGO_VERIFIED + NO_DUPLICATE_PASS + COPY_QA_PASS"
+  ],
+  "next_action": "Request hotel/partner press kits and explicit social/blog reuse permission; then hash, deduplicate and assemble PT-BR/EN cuts.",
+  "rollback": "Delete this staging manifest and revert its commit; no CMS, Meta, n8n, Google Business or media state was changed."
+}
