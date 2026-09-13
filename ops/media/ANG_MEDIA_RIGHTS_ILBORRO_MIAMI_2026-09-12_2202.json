@@ -1,0 +1,109 @@
+{
+  "manifest_id": "ANG_MEDIA_RIGHTS_ILBORRO_MIAMI_2026-09-12T22:02:57-03:00",
+  "status": "NO_PUBLISH",
+  "checked_at": "2026-09-12T22:02:57-03:00",
+  "policy": {
+    "ai_media": "PROHIBITED",
+    "static_images_for_miami_video": "PROHIBITED",
+    "generic_substitution": "PROHIBITED",
+    "publication_requires": [
+      "REAL_MEDIA_VERIFIED",
+      "REUSE_RIGHTS_VERIFIED",
+      "MASTER_LOGO_VERIFIED",
+      "NO_DUPLICATE_PASS",
+      "COPY_QA_PASS"
+    ]
+  },
+  "il_borro": {
+    "editorial_status": "READY_REVIEW_RIGHTS_PENDING",
+    "official_fact_sources": [
+      {
+        "url": "https://www.ilborro.it/eventi/",
+        "owner": "Il Borro",
+        "checked_at": "2026-09-12T22:02:57-03:00",
+        "supports": ["weddings", "private events", "event spaces", "onsite accommodation", "planning support"]
+      },
+      {
+        "url": "https://www.ilborro.it/ospitalita/il-borro-relais-chateaux/",
+        "owner": "Il Borro",
+        "checked_at": "2026-09-12T22:02:57-03:00",
+        "supports": ["medieval village suites", "Aie suites and rooms", "historic villa", "country villas"]
+      },
+      {
+        "url": "https://www.ilborro.it/",
+        "owner": "Il Borro",
+        "checked_at": "2026-09-12T22:02:57-03:00",
+        "supports": ["Tuscany estate", "hospitality", "experiences", "farm-to-table", "organic estate"]
+      }
+    ],
+    "drive_media": [
+      {
+        "media_id": "1H1TnajWrbsulWYxcPJEXEnf8UrbIcGFK",
+        "name": "Il Borro - Borgo Medievale.mp4",
+        "mime_type": "video/mp4",
+        "size_bytes": 62766601,
+        "owner_or_origin": "historical shared Drive folder; original owner not verified",
+        "source_url": "https://drive.google.com/file/d/1H1TnajWrbsulWYxcPJEXEnf8UrbIcGFK/view",
+        "license_or_permission": "PENDING_WRITTEN_REUSE_AUTHORIZATION",
+        "technical_qa": "PENDING_DURATION_RESOLUTION_CODEC",
+        "visual_hash": null,
+        "status": "HOLD_RIGHTS_AND_TECH_QA"
+      },
+      {
+        "media_id": "1uKEziBzy_wG4PMKRQKQbIq5Kanxszw3u",
+        "name": "Dreaming of…Il Borro.mp4",
+        "mime_type": "video/mp4",
+        "size_bytes": 58406933,
+        "owner_or_origin": "historical shared Drive folder; original owner not verified",
+        "source_url": "https://drive.google.com/file/d/1uKEziBzy_wG4PMKRQKQbIq5Kanxszw3u/view",
+        "license_or_permission": "PENDING_WRITTEN_REUSE_AUTHORIZATION",
+        "technical_qa": "PENDING_DURATION_RESOLUTION_CODEC",
+        "visual_hash": null,
+        "status": "HOLD_RIGHTS_AND_TECH_QA"
+      }
+    ],
+    "historical_content_rule": "Concept only. All 2020/2021 prices, promotions, validity dates and partnership claims excluded."
+  },
+  "miami_beach_vertical_video": {
+    "drive_search": {
+      "query": "Miami Beach AND mimeType contains video/",
+      "result_count": 0,
+      "checked_at": "2026-09-12T22:02:57-03:00"
+    },
+    "hotels": [
+      "The Miami Beach EDITION",
+      "Eden Roc Miami Beach",
+      "Nobu Hotel Miami Beach",
+      "The Ritz-Carlton South Beach",
+      "Loews Miami Beach Hotel",
+      "Faena Hotel Miami Beach",
+      "W South Beach",
+      "The Setai Miami Beach",
+      "1 Hotel South Beach",
+      "The Villa Casa Casuarina",
+      "The Savoy Hotel & Beach Club",
+      "Fontainebleau Miami Beach"
+    ],
+    "per_hotel_default": {
+      "source_url": null,
+      "owner_channel": null,
+      "license_or_permission": "NOT_ESTABLISHED",
+      "duration_quality": "NOT_AVAILABLE",
+      "editorial_differentiator": "PENDING_SOURCE_REVIEW",
+      "status": "HOLD_MEDIA_NOT_FOUND"
+    },
+    "output_status": {
+      "pt_br_ang_travel_and_celebrations": "HOLD",
+      "en_international": "HOLD",
+      "supporting_blog_article": "HOLD_RIGHTS"
+    }
+  },
+  "partnership_inbox": {
+    "checked_at": "2026-09-12T22:02:57-03:00",
+    "partners": ["Accor", "Club Med", "TTW Group", "Il Borro"],
+    "inbound_reply_count": 0,
+    "co_marketing_authorizations": 0,
+    "status": "AWAITING_REPLY"
+  },
+  "rollback": "Delete this staging manifest only; no external publication, CMS, Meta, n8n or Google Business state was changed."
+}
