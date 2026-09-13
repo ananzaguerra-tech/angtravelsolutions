@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "title": "ANG Curadoria Offline Canonical Dedupe — Four Remediation Countries",
+  "checked_at": "2026-09-13T02:01:56-03:00",
+  "status": "OFFLINE_ZERO_MATCH_PARTIAL_LIVE_WORDPRESS_PENDING",
+  "publication_authorized": false,
+  "scope": {
+    "candidates": [
+      "Kiribati",
+      "Nauru",
+      "Tuvalu",
+      "Libya"
+    ],
+    "authoritative_universe_expected": 881,
+    "wordpress_canonical_summary": {
+      "ang_curated": 844,
+      "ang_lounge": 37,
+      "source_checkpoint": "issue #13 comment 5646346277",
+      "note": "Counts are prior live evidence; the full 844-row ang_curated inventory is not persisted in the inspected audit artifact."
+    }
+  },
+  "searches": {
+    "github_default_branch": [
+      {
+        "candidate": "Kiribati",
+        "terms": [
+          "Kiribati",
+          "Republic of Kiribati",
+          "KIR",
+          "KI"
+        ],
+        "matches": 0
+      },
+      {
+        "candidate": "Nauru",
+        "terms": [
+          "Nauru",
+          "Republic of Nauru",
+          "NRU",
+          "NR"
+        ],
+        "matches": 0
+      },
+      {
+        "candidate": "Tuvalu",
+        "terms": [
+          "Tuvalu",
+          "Ellice Islands",
+          "TUV",
+          "TV"
+        ],
+        "matches": 0
+      },
+      {
+        "candidate": "Libya",
+        "terms": [
+          "Libya",
+          "Líbia",
+          "Libia",
+          "State of Libya",
+          "Jamahiriya",
+          "LBY",
+          "LY"
+        ],
+        "matches": 0
+      }
+    ],
+    "google_drive": {
+      "query": "Kiribati Nauru Tuvalu Líbia Libya",
+      "matches": 0
+    },
+    "lounge_inventory": {
+      "source": "docs/audit/ANG_LOUNGE_CANONICAL_RECONCILIATION_2026-09-12.json",
+      "canonical_rows_checked": 37,
+      "legacy_rows_checked": 42,
+      "candidate_or_alias_matches": 0
+    }
+  },
+  "decisions": [
+    {
+      "candidate": "Kiribati",
+      "offline_result": "ZERO_MATCH_PARTIAL",
+      "canonical_status": "LIVE_WP_DEDUPE_PENDING",
+      "factual_status": "NATIONALITY_CONFIRMATION_HOLD"
+    },
+    {
+      "candidate": "Nauru",
+      "offline_result": "ZERO_MATCH_PARTIAL",
+      "canonical_status": "LIVE_WP_DEDUPE_PENDING",
+      "factual_status": "DYNAMIC_ENTRY_REVALIDATION_REQUIRED"
+    },
+    {
+      "candidate": "Tuvalu",
+      "offline_result": "ZERO_MATCH_PARTIAL",
+      "canonical_status": "LIVE_WP_DEDUPE_PENDING",
+      "factual_status": "ENTRY_FACT_HOLD"
+    },
+    {
+      "candidate": "Libya",
+      "offline_result": "ZERO_MATCH_PARTIAL",
+      "canonical_status": "LIVE_WP_DEDUPE_PENDING",
+      "factual_status": "RESTRICTED_QA_PUBLICATION_BLOCK"
+    }
+  ],
+  "why_not_pass": [
+    "GitHub code search covers the default branch, not a complete proof of every staging/history record.",
+    "The saved lounge inventory is complete for 79 lounge records but is not the 844-row ang_curated inventory.",
+    "Authenticated WordPress re-query is temporarily unavailable due to the daily access limit."
+  ],
+  "next_action": "After authenticated access resumes, query ang_curated and ang_lounge for normalized title, slug, external_id and aliases; only a four-way zero-match may advance each candidate to NEW_CANONICAL_CANDIDATE.",
+  "no_mutation": [
+    "WordPress",
+    "Google Business",
+    "Meta",
+    "n8n",
+    "social",
+    "CMS"
+  ],
+  "rollback": "Delete this report and revert its commit; no external state changed."
+}
