@@ -1,15 +1,16 @@
 # CURADORIA — TRUE ABSENT FACT QA — 2026-09-12
 
 Policy: fail-closed. No publication until canonical identity + official facts + real/licensed media + SEO/schema + dedupe + staging QA pass.
-Checked at: 2026-09-12
+Checked at: 2026-10-29 (Kiribati nationality statement corrected; other dynamic facts require fresh revalidation)
 
-## Kiribati — READY_FACT_QA / PUBLICATION BLOCK
+## Kiribati — NATIONALITY_CONFIRMATION_HOLD / PUBLICATION BLOCK
 Official immigration: https://immigration.mfai.gov.ki/visas-entry/
 Official tourism: https://kiribatitourism.gov.ki/
 Official activities: https://kiribatitourism.gov.ki/things-to-do
-Verified facts: passport must be valid at least 6 months beyond intended departure; confirmed return/onward ticket; sufficient funds. Visa Exemption Order 2023 effective 2023-09-01; exempt-national visitor stay up to 90 days in any 12-month period. Brazil appears on the official exemption list, but nationality-specific wording must be revalidated at publication/quote time.
+Verified general facts: passport validity, return/onward travel and sufficient-funds requirements must be checked on the competent official portal at quote time. The official material confirms a general visa-exemption framework and a maximum visitor stay of up to 90 days in a 12-month period for eligible exempt nationals.
+Nationality status for Brazilian passport holders: HOLD. A later project verification did not locate “Brazil” nominally in the accessible official list. Do not state that Brazilian nationals are exempt until a competent official source identifies Brazil explicitly or the competent authority confirms the rule in writing.
 Editorial pillars: Kiritimati fishing, WWII heritage in Gilbert Islands, PIPA, birdwatching, surfing, culture/homestays, diving.
-Next: canonical record + real media manifest + SEO/schema + staging QA.
+Next: obtain nationality-specific confirmation + canonical record + real media manifest + SEO/schema + staging QA.
 
 ## Nauru — READY_FACT_QA / PUBLICATION BLOCK
 Official immigration: https://justice.gov.nr/immigration-division/
