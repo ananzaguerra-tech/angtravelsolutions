@@ -92,7 +92,41 @@
         0
       ],
       "parameters": {
-        "jsCode": "const x=$json,p=x.payload||{}; const canonical='353450855530042', forbidden='1214700205067389'; const channels=Array.isArray(p.channels)?p.channels.map(v=>String(v).toLowerCase().trim()).filter(Boolean):[]; const required=['media_id','source','author_or_owner','license_or_permission','brand_master_id','theme_key','visual_hash','sha256','idempotency_key','idempotency_record_id']; let hold=''; if(!x.authorized) hold='AUTH_DENIED'; else if(x.action!=='facebook_publish_v1') hold='UNSUPPORTED_ACTION'; else if(String(p.payload_id||'')==='CURADORIA_ANG_AGOSTO') hold='FORBIDDEN_LEGACY_PAYLOAD'; else if(channels.length!==1||channels[0]!=='facebook') hold='UNSUPPORTED_OR_AMBIGUOUS_PUBLICATION_CHANNEL'; else if(String(p.facebook_page_id||'')===forbidden) hold='HOLD_FORBIDDEN_FACEBOOK_PAGE'; else if(String(p.facebook_page_id||'')!==canonical) hold='HOLD_NON_CANONICAL_FACEBOOK_PAGE'; else if(String(p.format||'')==='video'||String(p.format||'')==='reel') hold='HOLD_FACEBOOK_VIDEO_NOT_IMPLEMENTED'; else if(String(p.format||'')!=='facebook_photo') hold='HOLD_UNSUPPORTED_FACEBOOK_FORMAT'; else if(required.some(k=>!String(p[k]??'').trim())) hold='MISSING_REQUIRED_PROVENANCE'; else if(!/^[a-f0-9]{64}$/i.test(String(p.sha256||''))) hold='INVALID_SHA256'; else if(!/^https:\\/\\/[^\\s]+$/i.test(String(p.image_url||''))) hold='MEDIA_MATERIAL_MISSING_OR_UNSUPPORTED'; else if(p.REAL_MEDIA_VERIFIED!==true||p.MASTER_LOGO_VERIFIED!==true||p.NO_DUPLICATE_PASS!==true||p.COPY_QA_PASS!==true) hold='MEDIA_OR_COPY_GATE_NOT_PASSED'; else if(p.idempotency_persistence_verified!==true) hold='IDEMPOTENCY_PERSISTENCE_NOT_VERIFIED'; else if(String(p.idempotency_state||'')!=='UNUSED') hold='IDEMPOTENCY_KEY_ALREADY_USED_OR_UNKNOWN'; else if(p.durable_ledger_ready!==true) hold='DURABLE_IDEMPOTENCY_LEDGER_NOT_IMPLEMENTED'; else if(p.post_success_atomic_write_ready!==true) hold='POST_SUCCESS_ATOMIC_LEDGER_WRITE_NOT_PROVEN'; else if(p.meta_auth_readback_verified!==true) hold='META_ORGANIC_AUTH_READBACK_MISSING'; return [{json:{...x,payload:p,facebook_page_id:canonical,channel:'facebook',media_material_https_verified:!hold,sha256_format_verified:/^[a-f0-9]{64}$/i.test(String(p.sha256||'')),channel_scope_supported:channels.length===1&&channels[0]==='facebook',route_authorized:!hold,status:hold||'FACEBOOK_PREFLIGHT_PASS'}}];"
+        "jsCode": "const x=$json,p=x.payload||{}; const canonical='353450855530042', forbidden='1214700205067389'; const channels=Array.isArray(p.channels)?p.channels.map(v=>String(v).toLowerCase().trim()).filter(Boolean):[]; const required=['media_id','source','author_or_owner','license_or_permission','brand_master_id','theme_key','visual_hash','sha256','idempotency_key','idempotency_record_id']; let hold=''; if(!x.authorized) hold='AUTH_DENIED'; else if(x.action!=='facebook_publish_v1') hold='UNSUPPORTED_ACTION'; else if(String(p.payload_id||'')==='CURADORIA_ANG_AGOSTO') hold='FORBIDDEN_LEGACY_PAYLOAD'; else if(channels.length!==1||channels[0]!=='facebook') hold='UNSUPPORTED_OR_AMBIGUOUS_PUBLICATION_CHANNEL'; else if(String(p.facebook_page_id||'')===forbidden) hold='HOLD_FORBIDDEN_FACEBOOK_PAGE'; else if(String(p.facebook_page_id||'')!==canonical) hold='HOLD_NON_CANONICAL_FACEBOOK_PAGE'; else if(String(p.format||'')==='video'||String(p.format||'')==='reel') hold='HOLD_FACEBOOK_VIDEO_NOT_IMPLEMENTED'; else if(String(p.format||'')!=='facebook_photo') hold='HOLD_UNSUPPORTED_FACEBOOK_FORMAT'; else if(required.some(k=>!String(p[k]??'').trim())) hold='MISSING_REQUIRED_PROVENANCE'; else if(!/^[a-f0-9]{64}$/i.test(String(p.sha256||''))) hold='INVALID_SHA256'; else if(!/^https:\\/\\/[^\\s]+$/i.test(String(p.image_url||''))) hold='MEDIA_MATERIAL_MISSING_OR_UNSUPPORTED'; else if(p.REAL_MEDIA_VERIFIED!==true||p.MASTER_LOGO_VERIFIED!==true||p.NO_DUPLICATE_PASS!==true||p.COPY_QA_PASS!==true) hold='MEDIA_OR_COPY_GATE_NOT_PASSED'; else if(p.idempotency_persistence_verified!==true) hold='IDEMPOTENCY_PERSISTENCE_NOT_VERIFIED'; else if(String(p.idempotency_state||'')!=='UNUSED') hold='IDEMPOTENCY_KEY_ALREADY_USED_OR_UNKNOWN'; else hold='HOLD_SERVER_SIDE_LEDGER_AND_AUTH_NOT_WIRED'; return [{json:{...x,payload:p,facebook_page_id:canonical,channel:'facebook',media_material_https_verified:!hold,sha256_format_verified:/^[a-f0-9]{64}$/i.test(String(p.sha256||'')),channel_scope_supported:channels.length===1&&channels[0]==='facebook',route_authorized:!hold,status:hold||'FACEBOOK_PREFLIGHT_PASS'}}];"
+      }
+    },
+    {
+      "id": "fbv1-route-if",
+      "name": "Rota Facebook autorizada?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -160,
+        0
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "fb-route-cond",
+              "leftValue": "={{$json.route_authorized}}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
       }
     },
     {
@@ -213,7 +247,7 @@
       "main": [
         [
           {
-            "node": "Meta — Descobrir Páginas",
+            "node": "Rota Facebook autorizada?",
             "type": "main",
             "index": 0
           }
@@ -252,13 +286,31 @@
           }
         ]
       ]
+    },
+    "Rota Facebook autorizada?": {
+      "main": [
+        [
+          {
+            "node": "Meta — Descobrir Páginas",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Responder Facebook V1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "settings": {
     "executionOrder": "v1"
   },
   "meta": {
-    "note": "STAGING_IMPORT_CANDIDATE_INACTIVE / NO_PUBLISH. Dedicated Facebook photo publisher for canonical ANG TRAVEL Page only. It remains fail-closed until durable ledger, atomic post-success ledger write and authenticated Meta readback are independently proven. Video/reels are explicitly unsupported and HOLD.",
+    "note": "STAGING_IMPORT_CANDIDATE_INACTIVE / NO_PUBLISH. Dedicated Facebook photo publisher for canonical ANG TRAVEL Page only. A physical IF branch prevents every denied payload from reaching Meta. Client payload fields cannot attest ledger, atomic write or Meta authentication; the route is hard-blocked with HOLD_SERVER_SIDE_LEDGER_AND_AUTH_NOT_WIRED until server-side nodes and credentials are implemented and independently proven. Video/reels remain HOLD.",
     "active": false,
     "canonical_facebook_page_id": "353450855530042",
     "forbidden_facebook_page_id": "1214700205067389",
@@ -276,11 +328,16 @@
       "CURADORIA_ANG_AGOSTO"
     ],
     "required_preconditions": [
-      "durable_ledger_ready=true",
-      "post_success_atomic_write_ready=true",
-      "meta_auth_readback_verified=true"
+      "SERVER_SIDE_DURABLE_LEDGER_NODE_REQUIRED",
+      "SERVER_SIDE_ATOMIC_POST_SUCCESS_WRITE_REQUIRED",
+      "SERVER_SIDE_META_AUTH_READBACK_REQUIRED"
     ],
     "post_publication_readback_required": true,
-    "post_success_atomic_ledger_write_required": true
+    "post_success_atomic_ledger_write_required": true,
+    "client_readiness_flags_ignored": [
+      "durable_ledger_ready",
+      "post_success_atomic_write_ready",
+      "meta_auth_readback_verified"
+    ]
   }
 }
