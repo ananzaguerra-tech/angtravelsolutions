@@ -80,3 +80,9 @@ A code search of the default branch on 2026-10-29 found zero occurrences of eith
 ## Rollback
 
 Delete or revert only this policy file and its referencing checkpoint. This policy introduces no Facebook, Instagram, Google Business or n8n mutation.
+
+## Dedicated canonical Facebook staging candidate — C308
+
+A separate inactive candidate, `ZEUS_FACEBOOK_CANONICAL_PUBLISHER_V1_FAIL_CLOSED_IMPORT.json`, now models Facebook publishing exclusively to Page ID `353450855530042`. It accepts only `channels=['facebook']` and `format=facebook_photo`; video and reels return `HOLD_FACEBOOK_VIDEO_NOT_IMPLEMENTED`. The forbidden Page ID `1214700205067389`, legacy payload `CURADORIA_ANG_AGOSTO`, text-only input, missing provenance and unverified HTTPS media are rejected before Meta.
+
+This candidate is `STAGING_IMPORT_CANDIDATE_INACTIVE / NO_PUBLISH`. Even with all media gates present, it requires independently proven `durable_ledger_ready=true`, `post_success_atomic_write_ready=true` and `meta_auth_readback_verified=true`; those proofs do not yet exist. After a hypothetical photo creation, exact `post_id`, HTTPS `permalink_url`, execution ID and readback are required, and the status remains `HOLD_ATOMIC_LEDGER_WRITE_REQUIRED` until the durable ledger write is proven. No Facebook import or execution is authorized by this repository artifact.
