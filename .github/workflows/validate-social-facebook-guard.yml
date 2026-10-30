@@ -5,6 +5,8 @@ on:
     paths:
       - "docs/integrations/ZEUS_SOCIAL_EXECUTOR_GITHUB_AUTH_V5_*.json"
       - "docs/integrations/ZEUS_FACEBOOK_CANONICAL_PUBLISHER_V1_FAIL_CLOSED_IMPORT.json"
+      - "docs/integrations/ANG_SOCIAL_IDEMPOTENCY_LEDGER_POSTGRES_V1.sql"
+      - "scripts/validate_social_idempotency_ledger.py"
       - "ops/social/ANG_FACEBOOK_DESTINATION_GOVERNANCE_2026-10-29.md"
       - "scripts/validate_social_facebook_guard.py"
       - ".github/workflows/validate-social-facebook-guard.yml"
@@ -13,6 +15,8 @@ on:
     paths:
       - "docs/integrations/ZEUS_SOCIAL_EXECUTOR_GITHUB_AUTH_V5_*.json"
       - "docs/integrations/ZEUS_FACEBOOK_CANONICAL_PUBLISHER_V1_FAIL_CLOSED_IMPORT.json"
+      - "docs/integrations/ANG_SOCIAL_IDEMPOTENCY_LEDGER_POSTGRES_V1.sql"
+      - "scripts/validate_social_idempotency_ledger.py"
       - "ops/social/ANG_FACEBOOK_DESTINATION_GOVERNANCE_2026-10-29.md"
       - "scripts/validate_social_facebook_guard.py"
       - ".github/workflows/validate-social-facebook-guard.yml"
@@ -30,3 +34,7 @@ jobs:
           python-version: "3.12"
       - name: Validate canonical destination and fail-closed gates
         run: python scripts/validate_social_facebook_guard.py
+      - name: Validate idempotency ledger contract offline
+        run: |
+          python scripts/validate_social_idempotency_ledger.py --self-test
+          python scripts/validate_social_idempotency_ledger.py
