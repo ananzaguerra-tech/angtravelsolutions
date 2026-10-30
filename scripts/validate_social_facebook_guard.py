@@ -14,6 +14,7 @@ FORBIDDEN = "1214700205067389"
 
 FAIL_CLOSED = Path("docs/integrations/ZEUS_SOCIAL_EXECUTOR_GITHUB_AUTH_V5_FAIL_CLOSED_IMPORT.json")
 LEGACY = Path("docs/integrations/ZEUS_SOCIAL_EXECUTOR_GITHUB_AUTH_V5_IMPORT.json")
+FACEBOOK = Path("docs/integrations/ZEUS_FACEBOOK_CANONICAL_PUBLISHER_V1_FAIL_CLOSED_IMPORT.json")
 GOVERNANCE = Path("ops/social/ANG_FACEBOOK_DESTINATION_GOVERNANCE_2026-10-29.md")
 
 
@@ -29,6 +30,7 @@ def validate(root: Path) -> list[str]:
     try:
         guarded = json.loads((root / FAIL_CLOSED).read_text(encoding="utf-8"))
         legacy = json.loads((root / LEGACY).read_text(encoding="utf-8"))
+        facebook = json.loads((root / FACEBOOK).read_text(encoding="utf-8"))
         policy = (root / GOVERNANCE).read_text(encoding="utf-8")
     except (OSError, json.JSONDecodeError) as exc:
         return [f"LOAD_ERROR:{exc}"]
@@ -37,8 +39,22 @@ def validate(root: Path) -> list[str]:
     gate = node_code(guarded, "v5-action-guard")
     publish = node_code(guarded, "v5-publish")
     legacy_select = node_code(legacy, "v5-selectpage")
+    facebook_gate = node_code(facebook, "fbv1-action-guard")
+    facebook_select = node_code(facebook, "fbv1-selectpage")
+    facebook_publish = node_code(facebook, "fbv1-publish")
 
     checks = {
+        "facebook_active_false": facebook.get("active") is False and facebook.get("meta", {}).get("active") is False,
+        "facebook_canonical_only": CANONICAL in facebook_gate and CANONICAL in facebook_select and FORBIDDEN in facebook_gate and FORBIDDEN in facebook_select,
+        "facebook_channel_scope": all(key in facebook_gate for key in ("channels", "facebook", "UNSUPPORTED_OR_AMBIGUOUS_PUBLICATION_CHANNEL")),
+        "facebook_photo_only_video_hold": all(key in facebook_gate for key in ("facebook_photo", "HOLD_FACEBOOK_VIDEO_NOT_IMPLEMENTED", "HOLD_UNSUPPORTED_FACEBOOK_FORMAT")),
+        "facebook_media_provenance_gates": all(key in facebook_gate for key in ("media_id", "source", "author_or_owner", "license_or_permission", "brand_master_id", "theme_key", "visual_hash", "sha256", "REAL_MEDIA_VERIFIED", "MASTER_LOGO_VERIFIED", "NO_DUPLICATE_PASS", "COPY_QA_PASS")),
+        "facebook_idempotency_holds": all(key in facebook_gate for key in ("idempotency_key", "idempotency_record_id", "idempotency_persistence_verified", "idempotency_state", "UNUSED", "DURABLE_IDEMPOTENCY_LEDGER_NOT_IMPLEMENTED", "POST_SUCCESS_ATOMIC_LEDGER_WRITE_NOT_PROVEN")),
+        "facebook_auth_hold": "META_ORGANIC_AUTH_READBACK_MISSING" in facebook_gate,
+        "facebook_forbidden_payload": "CURADORIA_ANG_AGOSTO" in facebook_gate,
+        "facebook_no_first_page_fallback": "pages[0]" not in facebook_select,
+        "facebook_readback_receipt": all(key in facebook_publish for key in ("post_id", "publication_id", "permalink_url", "permalink", "execution_id", "readback_verified", "HOLD_POST_PUBLICATION_READBACK_FAILED")),
+        "facebook_atomic_write_not_claimed": all(key in facebook_publish for key in ("HOLD_ATOMIC_LEDGER_WRITE_REQUIRED", "post_success_atomic_ledger_write_verified:false")),
         "guarded_active_false": guarded.get("active") is False and guarded.get("meta", {}).get("active") is False,
         "guarded_canonical_id": CANONICAL in select and CANONICAL in gate,
         "guarded_forbidden_id": FORBIDDEN in select and FORBIDDEN in gate,
@@ -88,7 +104,7 @@ def validate(root: Path) -> list[str]:
 def self_test() -> int:
     with tempfile.TemporaryDirectory() as tmp:
         root = Path(tmp)
-        for path in (FAIL_CLOSED, LEGACY, GOVERNANCE):
+        for path in (FAIL_CLOSED, LEGACY, FACEBOOK, GOVERNANCE):
             (root / path).parent.mkdir(parents=True, exist_ok=True)
         guarded = {
             "active": False,
@@ -104,6 +120,14 @@ def self_test() -> int:
             "active": False,
             "nodes": [{"id": "v5-selectpage", "parameters": {"jsCode": "HOLD_SUPERSEDED_EXECUTOR_NEVER_IMPORT"}}],
         }
+        facebook = {
+            "name": "FACEBOOK CANONICAL INACTIVE", "active": False, "meta": {"active": False},
+            "nodes": [
+                {"id": "fbv1-action-guard", "parameters": {"jsCode": f"channels facebook UNSUPPORTED_OR_AMBIGUOUS_PUBLICATION_CHANNEL facebook_photo HOLD_FACEBOOK_VIDEO_NOT_IMPLEMENTED HOLD_UNSUPPORTED_FACEBOOK_FORMAT media_id source author_or_owner license_or_permission brand_master_id theme_key visual_hash sha256 REAL_MEDIA_VERIFIED MASTER_LOGO_VERIFIED NO_DUPLICATE_PASS COPY_QA_PASS idempotency_key idempotency_record_id idempotency_persistence_verified idempotency_state UNUSED DURABLE_IDEMPOTENCY_LEDGER_NOT_IMPLEMENTED POST_SUCCESS_ATOMIC_LEDGER_WRITE_NOT_PROVEN META_ORGANIC_AUTH_READBACK_MISSING CURADORIA_ANG_AGOSTO {CANONICAL} {FORBIDDEN}"}},
+                {"id": "fbv1-selectpage", "parameters": {"jsCode": f"{CANONICAL} {FORBIDDEN}"}},
+                {"id": "fbv1-publish", "parameters": {"jsCode": "post_id publication_id permalink_url permalink execution_id readback_verified HOLD_POST_PUBLICATION_READBACK_FAILED HOLD_ATOMIC_LEDGER_WRITE_REQUIRED post_success_atomic_ledger_write_verified:false"}},
+            ],
+        }
         policy = (
             f"{CANONICAL} {FORBIDDEN} NEVER PUBLISH Text-only posts are forbidden Instagram-only publisher UNSUPPORTED_OR_AMBIGUOUS_PUBLICATION_CHANNEL HOLD_FACEBOOK_PUBLISHER_NOT_IMPLEMENTED publication_id permalink execution ID post-publication readback "
             "media_id author_or_owner license_or_permission brand_master_id sha256 visual_hash idempotency_key idempotency_record_id idempotency_persistence_verified idempotency_state REAL_MEDIA_VERIFIED "
@@ -111,6 +135,7 @@ def self_test() -> int:
         )
         (root / FAIL_CLOSED).write_text(json.dumps(guarded), encoding="utf-8")
         (root / LEGACY).write_text(json.dumps(legacy), encoding="utf-8")
+        (root / FACEBOOK).write_text(json.dumps(facebook), encoding="utf-8")
         (root / GOVERNANCE).write_text(policy, encoding="utf-8")
         if validate(root):
             print("SELF_TEST_FAIL")
