@@ -1,0 +1,29 @@
+name: Validate social Facebook destination guard
+
+on:
+  pull_request:
+    paths:
+      - "docs/integrations/ZEUS_SOCIAL_EXECUTOR_GITHUB_AUTH_V5_*.json"
+      - "ops/social/ANG_FACEBOOK_DESTINATION_GOVERNANCE_2026-10-29.md"
+      - "scripts/validate_social_facebook_guard.py"
+      - ".github/workflows/validate-social-facebook-guard.yml"
+  push:
+    branches: [staging]
+    paths:
+      - "docs/integrations/ZEUS_SOCIAL_EXECUTOR_GITHUB_AUTH_V5_*.json"
+      - "ops/social/ANG_FACEBOOK_DESTINATION_GOVERNANCE_2026-10-29.md"
+      - "scripts/validate_social_facebook_guard.py"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate canonical destination and fail-closed gates
+        run: python scripts/validate_social_facebook_guard.py
