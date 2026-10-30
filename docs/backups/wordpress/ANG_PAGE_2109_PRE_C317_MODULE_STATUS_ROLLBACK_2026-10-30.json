@@ -1,0 +1,265 @@
+{
+  "id": 2109,
+  "date": "2026-05-14T02:53:28",
+  "date_gmt": "2026-05-14T02:53:28",
+  "guid": {
+    "rendered": "https://angtravelsolutions.com.br/area-restrita/",
+    "raw": "https://angtravelsolutions.com.br/area-restrita/"
+  },
+  "modified": "2026-10-30T19:03:43",
+  "modified_gmt": "2026-10-30T22:03:43",
+  "password": "",
+  "slug": "area-restrita",
+  "status": "publish",
+  "type": "page",
+  "link": "https://angtravelsolutions.com.br/area-restrita/",
+  "title": {
+    "raw": "Área Restrita",
+    "rendered": "Área Restrita"
+  },
+  "content": {
+    "raw": "<style>\n.ang-secure-dashboard{--gold:#b88936;--gold2:#e0b85f;--ink:#070707;--cream:#f7f1e7;--navy:#080d3a;--line:rgba(224,184,95,.24);background:linear-gradient(145deg,#070707 0%,#080d3a 62%,#111 100%);color:var(--cream);min-height:100vh;padding:clamp(28px,4vw,60px)}\n.ang-secure-dashboard *{box-sizing:border-box}.ang-secure-dashboard a{text-decoration:none}.ang-secure-shell{max-width:1480px;margin:auto}.ang-secure-top{display:grid;grid-template-columns:1.4fr .6fr;gap:22px;align-items:end;padding:clamp(28px,5vw,72px) 0 34px;border-bottom:1px solid var(--line)}.ang-secure-eyebrow{font:700 .75rem/1 Montserrat,Arial,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--gold2);margin:0 0 14px}.ang-secure-top h1{margin:0;font:600 clamp(2.6rem,6vw,6rem)/.95 'Playfair Display',Georgia,serif;letter-spacing:-.04em;color:#fff;max-width:10ch}.ang-secure-top p{max-width:72ch;color:#d8d5ce;font:400 1rem/1.8 Montserrat,Arial,sans-serif}.ang-secure-userbox{border:1px solid var(--line);padding:22px;background:rgba(255,255,255,.04);backdrop-filter:blur(10px)}.ang-secure-userbox strong{display:block;color:#fff;font:700 .82rem Montserrat,Arial,sans-serif;letter-spacing:.11em;text-transform:uppercase}.ang-secure-userbox span{display:block;margin-top:8px;color:#b8b5ae;font:400 .88rem/1.55 Montserrat,Arial,sans-serif}.ang-secure-nav{display:flex;gap:10px;overflow:auto;padding:18px 0 8px}.ang-secure-nav a{white-space:nowrap;border:1px solid rgba(255,255,255,.12);padding:10px 14px;color:#fff;font:600 .78rem Montserrat,Arial,sans-serif}.ang-secure-nav a:hover{border-color:var(--gold2);color:var(--gold2)}.ang-secure-section{padding:42px 0 8px}.ang-secure-section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:18px}.ang-secure-section h2{margin:0;color:#fff;font:600 clamp(1.8rem,3vw,3.1rem)/1.05 'Playfair Display',Georgia,serif}.ang-secure-section-head p{max-width:62ch;margin:0;color:#aaa69f;font:400 .9rem/1.6 Montserrat,Arial,sans-serif}.ang-secure-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.ang-secure-card{position:relative;min-height:176px;padding:22px;border:1px solid rgba(255,255,255,.11);background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));transition:.25s ease}.ang-secure-card:hover{transform:translateY(-3px);border-color:var(--gold2);background:rgba(184,137,54,.08)}.ang-secure-card .num{display:block;color:var(--gold2);font:700 .7rem Montserrat,Arial,sans-serif;letter-spacing:.17em}.ang-secure-card h3{margin:14px 0 8px;color:#fff;font:600 1.05rem/1.25 Montserrat,Arial,sans-serif}.ang-secure-card p{margin:0;color:#b9b6af;font:400 .82rem/1.55 Montserrat,Arial,sans-serif}.ang-secure-card .status{position:absolute;right:14px;top:14px;border:1px solid rgba(255,255,255,.13);padding:5px 8px;color:#d6d2ca;font:700 .6rem Montserrat,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}.ang-secure-card.is-live .status{border-color:rgba(224,184,95,.5);color:var(--gold2)}.ang-secure-card.is-hold{opacity:.72}.ang-secure-card.is-hold:hover{transform:none;border-color:rgba(255,255,255,.11)}.ang-secure-wide{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.ang-secure-callout{padding:26px;border:1px solid var(--line);background:#0d1233}.ang-secure-callout h3{margin:0 0 10px;color:#fff;font:600 1.35rem 'Playfair Display',Georgia,serif}.ang-secure-callout p{margin:0 0 16px;color:#c9c6bf;font:400 .88rem/1.65 Montserrat,Arial,sans-serif}.ang-secure-btn{display:inline-block;padding:11px 15px;background:linear-gradient(90deg,var(--gold),var(--gold2));color:#111;font:800 .72rem Montserrat,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase}.ang-secure-btn.ghost{background:transparent;color:#fff;border:1px solid var(--line)}.ang-secure-foot{margin-top:50px;padding:24px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#8f8b84;font:400 .78rem/1.5 Montserrat,Arial,sans-serif}@media(max-width:1100px){.ang-secure-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.ang-secure-top{grid-template-columns:1fr}}@media(max-width:780px){.ang-secure-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ang-secure-wide{grid-template-columns:1fr}.ang-secure-section-head{display:block}.ang-secure-section-head p{margin-top:8px}}@media(max-width:520px){.ang-secure-dashboard{padding:22px 14px}.ang-secure-grid{grid-template-columns:1fr}.ang-secure-card{min-height:150px}.ang-secure-top h1{font-size:2.6rem}.ang-secure-nav{padding-bottom:14px}}\n</style><div class=\"ang-secure-dashboard\"><div class=\"ang-secure-shell\"><section class=\"ang-secure-top\"><div><p class=\"ang-secure-eyebrow\">ANG TRAVEL SOLUTIONS · ÁREA RESTRITA</p><h1>Seu console de operação, inteligência e relacionamento.</h1><p>Ambiente exclusivo para agências, franqueados, parceiros e equipe ANG. A navegação reúne os módulos definidos para operação B2B, curadoria, capacitação, cotação, fornecedores, benefícios, atendimento e gestão.</p></div><aside class=\"ang-secure-userbox\"><strong>Acesso protegido por perfil</strong><span>O conteúdo disponível depende do perfil e das permissões atribuídas. Módulos em homologação permanecem visíveis no mapa do portal, mas sem ação pública até o respectivo gate funcional.</span></aside></section><nav class=\"ang-secure-nav\" aria-label=\"Navegação da Área Restrita\"><a href=\"#operacao\">Operação</a><a href=\"#inteligencia\">Inteligência</a><a href=\"#negocio\">Negócio</a><a href=\"#conteudo\">Conteúdo</a><a href=\"#conta\">Conta & Gestão</a></nav><section id=\"operacao\" class=\"ang-secure-section\"><div class=\"ang-secure-section-head\"><div><p class=\"ang-secure-eyebrow\">01 · OPERAÇÃO</p><h2>Sistemas, atendimento e execução.</h2></div><p>Acesso centralizado aos sistemas operacionais, ferramentas de atendimento, emissão, filas e integrações do ecossistema ANG.</p></div><div class=\"ang-secure-grid\"><a class=\"ang-secure-card is-hold\"><span class=\"num\">01</span><span class=\"status\">Homologação</span><h3>Onboarding</h3><p>Cadastro, checklist inicial, perfil, documentos operacionais e ativação de acessos.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">02</span><span class=\"status\">Homologação</span><h3>Sistemas & Ferramentas</h3><p>Hub de acessos, manuais, políticas e orientações de uso dos sistemas ANG.</p></a><a class=\"ang-secure-card is-live\" href=\"/wooba-white-label/\"><span class=\"num\">03</span><span class=\"status\">Disponível</span><h3>Wooba</h3><p>Busca, operação e referência para aéreo e serviços integrados.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">04</span><span class=\"status\">Homologação</span><h3>Infotravel / Orinter</h3><p>Operação de terrestre, circuitos, hotelaria e serviços parceiros.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">05</span><span class=\"status\">Homologação</span><h3>Sabre</h3><p>Ambiente GDS, pesquisa, reserva, emissão e apoio operacional.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">06</span><span class=\"status\">Homologação</span><h3>CRM & Atendimento</h3><p>Leads, protocolos, histórico, tarefas, relacionamento e atendimento consultivo.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">07</span><span class=\"status\">Homologação</span><h3>Emissores</h3><p>Fluxos de emissão, regras operacionais, exceções e contingência.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">08</span><span class=\"status\">Homologação</span><h3>Filas de Respostas</h3><p>Fila operacional, SLA, prioridade, pendências e acompanhamento de solicitações.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">09</span><span class=\"status\">E2E pendente</span><h3>Concierge</h3><p>Atendimento integrado, triagem, protocolos, WhatsApp e escalonamento humano.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">10</span><span class=\"status\">E2E pendente</span><h3>Consular</h3><p>Requisitos de viagem, vistos, documentação e inteligência consular por destino.</p></a></div></section><section id=\"inteligencia\" class=\"ang-secure-section\"><div class=\"ang-secure-section-head\"><div><p class=\"ang-secure-eyebrow\">02 · INTELIGÊNCIA</p><h2>Curadoria, hotelaria e fornecedores.</h2></div><p>Conteúdo protegido para transformar pesquisa dispersa em repertório comercial e operacional.</p></div><div class=\"ang-secure-grid\"><a class=\"ang-secure-card is-hold\"><span class=\"num\">11</span><span class=\"status\">Homologação</span><h3>Hotelaria Restrita</h3><p>Base premium de hotéis, referências, campos operacionais e inteligência comercial.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">12</span><span class=\"status\">Homologação</span><h3>Fornecedores</h3><p>Diretório operacional e referências de parceiros por categoria e destino.</p></a><a class=\"ang-secure-card is-live\" href=\"/biblioteca-premium/\"><span class=\"num\">13</span><span class=\"status\">Disponível</span><h3>Biblioteca Premium</h3><p>Materiais, documentos, apresentações, guias e recursos protegidos.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">14</span><span class=\"status\">Homologação</span><h3>Serviços Terrestres</h3><p>Transfers, receptivo, experiências, logística e serviços por destino.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">15</span><span class=\"status\">Homologação</span><h3>Salas VIP</h3><p>Referências aeroportuárias, lounges e experiência pré-embarque.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">16</span><span class=\"status\">Homologação</span><h3>Buscador White Label</h3><p>Busca integrada e interface de consulta para o ecossistema B2B.</p></a><a class=\"ang-secure-card is-live\" href=\"/curadoria-global/\"><span class=\"num\">31</span><span class=\"status\">Disponível</span><h3>Curadoria Global</h3><p>Explorador País → Cidade → atrações, gastronomia, hotelaria, experiências, logística e Curadoria ANG.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">32</span><span class=\"status\">Homologação</span><h3>Certificações</h3><p>Trilhas concluídas, critérios de aprovação, certificados e histórico por usuário/agência.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">33</span><span class=\"status\">Homologação</span><h3>Novidades</h3><p>Atualizações de fornecedores, produtos, campanhas, sistemas e comunicados operacionais.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">34</span><span class=\"status\">E2E pendente</span><h3>Reservas & Emissão</h3><p>Voos, hotéis, locação, seguro, serviços turísticos, reserva, emissão, cancelamento, PNR/e-ticket e ancillaries.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">35</span><span class=\"status\">E2E pendente</span><h3>Clientes & Agências</h3><p>Seja cliente, cadastro de agência, contatos, solicitações e histórico segregado por perfil.</p></a></div></section><section id=\"negocio\" class=\"ang-secure-section\"><div class=\"ang-secure-section-head\"><div><p class=\"ang-secure-eyebrow\">03 · NEGÓCIO</p><h2>Cotação, condições, benefícios e gestão.</h2></div><p>Ferramentas comerciais e gerenciais para apoiar vendas, proposta, relacionamento e acompanhamento financeiro.</p></div><div class=\"ang-secure-grid\"><a class=\"ang-secure-card is-hold\"><span class=\"num\">17</span><span class=\"status\">E2E pendente</span><h3>Quote Engine</h3><p>Cotação, cálculo, preview, link seguro, impressão/PDF e trilha de auditoria.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">18</span><span class=\"status\">Homologação</span><h3>Proposal Studio</h3><p>Estrutura de propostas, apresentação comercial e materiais de apoio.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">19</span><span class=\"status\">Homologação</span><h3>Relatórios</h3><p>Visão operacional, comercial e gerencial com indicadores e acompanhamento.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">20</span><span class=\"status\">Homologação</span><h3>Financeiro</h3><p>Referências financeiras, acompanhamento, documentos e controles.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">21</span><span class=\"status\">Homologação</span><h3>Minhas Condições</h3><p>Condições comerciais e informações específicas do perfil autenticado.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">22</span><span class=\"status\">Homologação</span><h3>Promoções</h3><p>Ofertas, campanhas e oportunidades comerciais de fornecedores.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">23</span><span class=\"status\">Homologação</span><h3>ANG Benefits / Regus</h3><p>Benefícios corporativos, facilidades, espaços de trabalho e vantagens elegíveis.</p></a></div></section><section id=\"conteudo\" class=\"ang-secure-section\"><div class=\"ang-secure-section-head\"><div><p class=\"ang-secure-eyebrow\">04 · CONTEÚDO & CAPACITAÇÃO</p><h2>Academy, treinamentos e revista.</h2></div><p>Capacitação contínua, repertório comercial, conteúdos editoriais e atualização profissional.</p></div><div class=\"ang-secure-grid\"><a class=\"ang-secure-card is-live\" href=\"/ang-connect-academy/\"><span class=\"num\">24</span><span class=\"status\">Disponível</span><h3>ANG Academy</h3><p>Trilhas, treinamentos, materiais e desenvolvimento profissional.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">25</span><span class=\"status\">Homologação</span><h3>Treinamentos</h3><p>Conteúdo de capacitação, curadoria e atualização operacional.</p></a><a class=\"ang-secure-card is-live\" href=\"/revista-ang/\"><span class=\"num\">26</span><span class=\"status\">Disponível</span><h3>Revista ANG</h3><p>Conteúdo editorial, tendências, destinos, hotelaria e inteligência de mercado.</p></a><a class=\"ang-secure-card is-live\" href=\"/intranet-ang/\"><span class=\"num\">27</span><span class=\"status\">Disponível</span><h3>Intranet ANG</h3><p>Comunicação interna, referências institucionais e materiais de apoio.</p></a></div></section><section id=\"conta\" class=\"ang-secure-section\"><div class=\"ang-secure-section-head\"><div><p class=\"ang-secure-eyebrow\">05 · CONTA & CONTROLE</p><h2>Perfil, segurança e suporte.</h2></div><p>Gestão do perfil autenticado, permissões, preferências e canais de suporte do ecossistema ANG.</p></div><div class=\"ang-secure-grid\"><a class=\"ang-secure-card is-hold\"><span class=\"num\">28</span><span class=\"status\">Homologação</span><h3>Meu Perfil</h3><p>Dados do usuário, agência, preferências, contatos e configurações permitidas.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">29</span><span class=\"status\">Homologação</span><h3>Permissões & RBAC</h3><p>Acesso por perfil: super admin, admin, agência parceira, franqueado, comercial, operacional, treinamento e parceiros autorizados.</p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">30</span><span class=\"status\">Homologação</span><h3>Suporte</h3><p>Contato, protocolo e direcionamento para a equipe responsável.</p></a></div><div class=\"ang-secure-wide\"><div class=\"ang-secure-callout\"><h3>Atalhos de operação</h3><p>Acesse rapidamente módulos já publicados e validados como páginas do portal.</p><a class=\"ang-secure-btn\" href=\"/area-do-agente/\">Abrir Área do Agente</a></div><div class=\"ang-secure-callout\"><h3>Segurança e privacidade</h3><p>Não compartilhe senhas, códigos MFA, dados completos de cartão ou documentos sensíveis em campos não autorizados. O acesso é pessoal e auditável.</p><a class=\"ang-secure-btn ghost\" href=\"/privacidade/\">Ver privacidade</a></div></div></section><footer class=\"ang-secure-foot\"><span>ANG Travel Solutions · Consolidação Premium B2B</span><span>Ambiente restrito · acesso condicionado ao perfil e às permissões vigentes.</span></footer></div></div>",
+    "rendered": "<style>\n.ang-secure-dashboard{--gold:#b88936;--gold2:#e0b85f;--ink:#070707;--cream:#f7f1e7;--navy:#080d3a;--line:rgba(224,184,95,.24);background:linear-gradient(145deg,#070707 0%,#080d3a 62%,#111 100%);color:var(--cream);min-height:100vh;padding:clamp(28px,4vw,60px)}\n.ang-secure-dashboard *{box-sizing:border-box}.ang-secure-dashboard a{text-decoration:none}.ang-secure-shell{max-width:1480px;margin:auto}.ang-secure-top{display:grid;grid-template-columns:1.4fr .6fr;gap:22px;align-items:end;padding:clamp(28px,5vw,72px) 0 34px;border-bottom:1px solid var(--line)}.ang-secure-eyebrow{font:700 .75rem/1 Montserrat,Arial,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--gold2);margin:0 0 14px}.ang-secure-top h1{margin:0;font:600 clamp(2.6rem,6vw,6rem)/.95 'Playfair Display',Georgia,serif;letter-spacing:-.04em;color:#fff;max-width:10ch}.ang-secure-top p{max-width:72ch;color:#d8d5ce;font:400 1rem/1.8 Montserrat,Arial,sans-serif}.ang-secure-userbox{border:1px solid var(--line);padding:22px;background:rgba(255,255,255,.04);backdrop-filter:blur(10px)}.ang-secure-userbox strong{display:block;color:#fff;font:700 .82rem Montserrat,Arial,sans-serif;letter-spacing:.11em;text-transform:uppercase}.ang-secure-userbox span{display:block;margin-top:8px;color:#b8b5ae;font:400 .88rem/1.55 Montserrat,Arial,sans-serif}.ang-secure-nav{display:flex;gap:10px;overflow:auto;padding:18px 0 8px}.ang-secure-nav a{white-space:nowrap;border:1px solid rgba(255,255,255,.12);padding:10px 14px;color:#fff;font:600 .78rem Montserrat,Arial,sans-serif}.ang-secure-nav a:hover{border-color:var(--gold2);color:var(--gold2)}.ang-secure-section{padding:42px 0 8px}.ang-secure-section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:18px}.ang-secure-section h2{margin:0;color:#fff;font:600 clamp(1.8rem,3vw,3.1rem)/1.05 'Playfair Display',Georgia,serif}.ang-secure-section-head p{max-width:62ch;margin:0;color:#aaa69f;font:400 .9rem/1.6 Montserrat,Arial,sans-serif}.ang-secure-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.ang-secure-card{position:relative;min-height:176px;padding:22px;border:1px solid rgba(255,255,255,.11);background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));transition:.25s ease}.ang-secure-card:hover{transform:translateY(-3px);border-color:var(--gold2);background:rgba(184,137,54,.08)}.ang-secure-card .num{display:block;color:var(--gold2);font:700 .7rem Montserrat,Arial,sans-serif;letter-spacing:.17em}.ang-secure-card h3{margin:14px 0 8px;color:#fff;font:600 1.05rem/1.25 Montserrat,Arial,sans-serif}.ang-secure-card p{margin:0;color:#b9b6af;font:400 .82rem/1.55 Montserrat,Arial,sans-serif}.ang-secure-card .status{position:absolute;right:14px;top:14px;border:1px solid rgba(255,255,255,.13);padding:5px 8px;color:#d6d2ca;font:700 .6rem Montserrat,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}.ang-secure-card.is-live .status{border-color:rgba(224,184,95,.5);color:var(--gold2)}.ang-secure-card.is-hold{opacity:.72}.ang-secure-card.is-hold:hover{transform:none;border-color:rgba(255,255,255,.11)}.ang-secure-wide{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.ang-secure-callout{padding:26px;border:1px solid var(--line);background:#0d1233}.ang-secure-callout h3{margin:0 0 10px;color:#fff;font:600 1.35rem 'Playfair Display',Georgia,serif}.ang-secure-callout p{margin:0 0 16px;color:#c9c6bf;font:400 .88rem/1.65 Montserrat,Arial,sans-serif}.ang-secure-btn{display:inline-block;padding:11px 15px;background:linear-gradient(90deg,var(--gold),var(--gold2));color:#111;font:800 .72rem Montserrat,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase}.ang-secure-btn.ghost{background:transparent;color:#fff;border:1px solid var(--line)}.ang-secure-foot{margin-top:50px;padding:24px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#8f8b84;font:400 .78rem/1.5 Montserrat,Arial,sans-serif}@media(max-width:1100px){.ang-secure-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.ang-secure-top{grid-template-columns:1fr}}@media(max-width:780px){.ang-secure-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ang-secure-wide{grid-template-columns:1fr}.ang-secure-section-head{display:block}.ang-secure-section-head p{margin-top:8px}}@media(max-width:520px){.ang-secure-dashboard{padding:22px 14px}.ang-secure-grid{grid-template-columns:1fr}.ang-secure-card{min-height:150px}.ang-secure-top h1{font-size:2.6rem}.ang-secure-nav{padding-bottom:14px}}\n</style>\n<div class=\"ang-secure-dashboard\">\n<div class=\"ang-secure-shell\">\n<section class=\"ang-secure-top\">\n<div>\n<p class=\"ang-secure-eyebrow\">ANG TRAVEL SOLUTIONS · ÁREA RESTRITA</p>\n<h1>Seu console de operação, inteligência e relacionamento.</h1>\n<p>Ambiente exclusivo para agências, franqueados, parceiros e equipe ANG. A navegação reúne os módulos definidos para operação B2B, curadoria, capacitação, cotação, fornecedores, benefícios, atendimento e gestão.</p>\n</div>\n<aside class=\"ang-secure-userbox\"><strong>Acesso protegido por perfil</strong><span>O conteúdo disponível depende do perfil e das permissões atribuídas. Módulos em homologação permanecem visíveis no mapa do portal, mas sem ação pública até o respectivo gate funcional.</span></aside>\n</section>\n<nav class=\"ang-secure-nav\" aria-label=\"Navegação da Área Restrita\"><a href=\"#operacao\">Operação</a><a href=\"#inteligencia\">Inteligência</a><a href=\"#negocio\">Negócio</a><a href=\"#conteudo\">Conteúdo</a><a href=\"#conta\">Conta &#038; Gestão</a></nav>\n<section id=\"operacao\" class=\"ang-secure-section\">\n<div class=\"ang-secure-section-head\">\n<div>\n<p class=\"ang-secure-eyebrow\">01 · OPERAÇÃO</p>\n<h2>Sistemas, atendimento e execução.</h2>\n</div>\n<p>Acesso centralizado aos sistemas operacionais, ferramentas de atendimento, emissão, filas e integrações do ecossistema ANG.</p>\n</div>\n<div class=\"ang-secure-grid\"><a class=\"ang-secure-card is-hold\"><span class=\"num\">01</span><span class=\"status\">Homologação</span></p>\n<h3>Onboarding</h3>\n<p>Cadastro, checklist inicial, perfil, documentos operacionais e ativação de acessos.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">02</span><span class=\"status\">Homologação</span></p>\n<h3>Sistemas &#038; Ferramentas</h3>\n<p>Hub de acessos, manuais, políticas e orientações de uso dos sistemas ANG.</p>\n<p></a><a class=\"ang-secure-card is-live\" href=\"/wooba-white-label/\"><span class=\"num\">03</span><span class=\"status\">Disponível</span></p>\n<h3>Wooba</h3>\n<p>Busca, operação e referência para aéreo e serviços integrados.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">04</span><span class=\"status\">Homologação</span></p>\n<h3>Infotravel / Orinter</h3>\n<p>Operação de terrestre, circuitos, hotelaria e serviços parceiros.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">05</span><span class=\"status\">Homologação</span></p>\n<h3>Sabre</h3>\n<p>Ambiente GDS, pesquisa, reserva, emissão e apoio operacional.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">06</span><span class=\"status\">Homologação</span></p>\n<h3>CRM &#038; Atendimento</h3>\n<p>Leads, protocolos, histórico, tarefas, relacionamento e atendimento consultivo.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">07</span><span class=\"status\">Homologação</span></p>\n<h3>Emissores</h3>\n<p>Fluxos de emissão, regras operacionais, exceções e contingência.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">08</span><span class=\"status\">Homologação</span></p>\n<h3>Filas de Respostas</h3>\n<p>Fila operacional, SLA, prioridade, pendências e acompanhamento de solicitações.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">09</span><span class=\"status\">E2E pendente</span></p>\n<h3>Concierge</h3>\n<p>Atendimento integrado, triagem, protocolos, WhatsApp e escalonamento humano.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">10</span><span class=\"status\">E2E pendente</span></p>\n<h3>Consular</h3>\n<p>Requisitos de viagem, vistos, documentação e inteligência consular por destino.</p>\n<p></a></div>\n</section>\n<section id=\"inteligencia\" class=\"ang-secure-section\">\n<div class=\"ang-secure-section-head\">\n<div>\n<p class=\"ang-secure-eyebrow\">02 · INTELIGÊNCIA</p>\n<h2>Curadoria, hotelaria e fornecedores.</h2>\n</div>\n<p>Conteúdo protegido para transformar pesquisa dispersa em repertório comercial e operacional.</p>\n</div>\n<div class=\"ang-secure-grid\"><a class=\"ang-secure-card is-hold\"><span class=\"num\">11</span><span class=\"status\">Homologação</span></p>\n<h3>Hotelaria Restrita</h3>\n<p>Base premium de hotéis, referências, campos operacionais e inteligência comercial.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">12</span><span class=\"status\">Homologação</span></p>\n<h3>Fornecedores</h3>\n<p>Diretório operacional e referências de parceiros por categoria e destino.</p>\n<p></a><a class=\"ang-secure-card is-live\" href=\"/biblioteca-premium/\"><span class=\"num\">13</span><span class=\"status\">Disponível</span></p>\n<h3>Biblioteca Premium</h3>\n<p>Materiais, documentos, apresentações, guias e recursos protegidos.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">14</span><span class=\"status\">Homologação</span></p>\n<h3>Serviços Terrestres</h3>\n<p>Transfers, receptivo, experiências, logística e serviços por destino.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">15</span><span class=\"status\">Homologação</span></p>\n<h3>Salas VIP</h3>\n<p>Referências aeroportuárias, lounges e experiência pré-embarque.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">16</span><span class=\"status\">Homologação</span></p>\n<h3>Buscador White Label</h3>\n<p>Busca integrada e interface de consulta para o ecossistema B2B.</p>\n<p></a><a class=\"ang-secure-card is-live\" href=\"/curadoria-global/\"><span class=\"num\">31</span><span class=\"status\">Disponível</span></p>\n<h3>Curadoria Global</h3>\n<p>Explorador País → Cidade → atrações, gastronomia, hotelaria, experiências, logística e Curadoria ANG.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">32</span><span class=\"status\">Homologação</span></p>\n<h3>Certificações</h3>\n<p>Trilhas concluídas, critérios de aprovação, certificados e histórico por usuário/agência.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">33</span><span class=\"status\">Homologação</span></p>\n<h3>Novidades</h3>\n<p>Atualizações de fornecedores, produtos, campanhas, sistemas e comunicados operacionais.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">34</span><span class=\"status\">E2E pendente</span></p>\n<h3>Reservas &#038; Emissão</h3>\n<p>Voos, hotéis, locação, seguro, serviços turísticos, reserva, emissão, cancelamento, PNR/e-ticket e ancillaries.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">35</span><span class=\"status\">E2E pendente</span></p>\n<h3>Clientes &#038; Agências</h3>\n<p>Seja cliente, cadastro de agência, contatos, solicitações e histórico segregado por perfil.</p>\n<p></a></div>\n</section>\n<section id=\"negocio\" class=\"ang-secure-section\">\n<div class=\"ang-secure-section-head\">\n<div>\n<p class=\"ang-secure-eyebrow\">03 · NEGÓCIO</p>\n<h2>Cotação, condições, benefícios e gestão.</h2>\n</div>\n<p>Ferramentas comerciais e gerenciais para apoiar vendas, proposta, relacionamento e acompanhamento financeiro.</p>\n</div>\n<div class=\"ang-secure-grid\"><a class=\"ang-secure-card is-hold\"><span class=\"num\">17</span><span class=\"status\">E2E pendente</span></p>\n<h3>Quote Engine</h3>\n<p>Cotação, cálculo, preview, link seguro, impressão/PDF e trilha de auditoria.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">18</span><span class=\"status\">Homologação</span></p>\n<h3>Proposal Studio</h3>\n<p>Estrutura de propostas, apresentação comercial e materiais de apoio.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">19</span><span class=\"status\">Homologação</span></p>\n<h3>Relatórios</h3>\n<p>Visão operacional, comercial e gerencial com indicadores e acompanhamento.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">20</span><span class=\"status\">Homologação</span></p>\n<h3>Financeiro</h3>\n<p>Referências financeiras, acompanhamento, documentos e controles.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">21</span><span class=\"status\">Homologação</span></p>\n<h3>Minhas Condições</h3>\n<p>Condições comerciais e informações específicas do perfil autenticado.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">22</span><span class=\"status\">Homologação</span></p>\n<h3>Promoções</h3>\n<p>Ofertas, campanhas e oportunidades comerciais de fornecedores.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">23</span><span class=\"status\">Homologação</span></p>\n<h3>ANG Benefits / Regus</h3>\n<p>Benefícios corporativos, facilidades, espaços de trabalho e vantagens elegíveis.</p>\n<p></a></div>\n</section>\n<section id=\"conteudo\" class=\"ang-secure-section\">\n<div class=\"ang-secure-section-head\">\n<div>\n<p class=\"ang-secure-eyebrow\">04 · CONTEÚDO &#038; CAPACITAÇÃO</p>\n<h2>Academy, treinamentos e revista.</h2>\n</div>\n<p>Capacitação contínua, repertório comercial, conteúdos editoriais e atualização profissional.</p>\n</div>\n<div class=\"ang-secure-grid\"><a class=\"ang-secure-card is-live\" href=\"/ang-connect-academy/\"><span class=\"num\">24</span><span class=\"status\">Disponível</span></p>\n<h3>ANG Academy</h3>\n<p>Trilhas, treinamentos, materiais e desenvolvimento profissional.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">25</span><span class=\"status\">Homologação</span></p>\n<h3>Treinamentos</h3>\n<p>Conteúdo de capacitação, curadoria e atualização operacional.</p>\n<p></a><a class=\"ang-secure-card is-live\" href=\"/revista-ang/\"><span class=\"num\">26</span><span class=\"status\">Disponível</span></p>\n<h3>Revista ANG</h3>\n<p>Conteúdo editorial, tendências, destinos, hotelaria e inteligência de mercado.</p>\n<p></a><a class=\"ang-secure-card is-live\" href=\"/intranet-ang/\"><span class=\"num\">27</span><span class=\"status\">Disponível</span></p>\n<h3>Intranet ANG</h3>\n<p>Comunicação interna, referências institucionais e materiais de apoio.</p>\n<p></a></div>\n</section>\n<section id=\"conta\" class=\"ang-secure-section\">\n<div class=\"ang-secure-section-head\">\n<div>\n<p class=\"ang-secure-eyebrow\">05 · CONTA &#038; CONTROLE</p>\n<h2>Perfil, segurança e suporte.</h2>\n</div>\n<p>Gestão do perfil autenticado, permissões, preferências e canais de suporte do ecossistema ANG.</p>\n</div>\n<div class=\"ang-secure-grid\"><a class=\"ang-secure-card is-hold\"><span class=\"num\">28</span><span class=\"status\">Homologação</span></p>\n<h3>Meu Perfil</h3>\n<p>Dados do usuário, agência, preferências, contatos e configurações permitidas.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">29</span><span class=\"status\">Homologação</span></p>\n<h3>Permissões &#038; RBAC</h3>\n<p>Acesso por perfil: super admin, admin, agência parceira, franqueado, comercial, operacional, treinamento e parceiros autorizados.</p>\n<p></a><a class=\"ang-secure-card is-hold\"><span class=\"num\">30</span><span class=\"status\">Homologação</span></p>\n<h3>Suporte</h3>\n<p>Contato, protocolo e direcionamento para a equipe responsável.</p>\n<p></a></div>\n<div class=\"ang-secure-wide\">\n<div class=\"ang-secure-callout\">\n<h3>Atalhos de operação</h3>\n<p>Acesse rapidamente módulos já publicados e validados como páginas do portal.</p>\n<p><a class=\"ang-secure-btn\" href=\"/area-do-agente/\">Abrir Área do Agente</a></div>\n<div class=\"ang-secure-callout\">\n<h3>Segurança e privacidade</h3>\n<p>Não compartilhe senhas, códigos MFA, dados completos de cartão ou documentos sensíveis em campos não autorizados. O acesso é pessoal e auditável.</p>\n<p><a class=\"ang-secure-btn ghost\" href=\"/privacidade/\">Ver privacidade</a></div>\n</div>\n</section>\n<footer class=\"ang-secure-foot\"><span>ANG Travel Solutions · Consolidação Premium B2B</span><span>Ambiente restrito · acesso condicionado ao perfil e às permissões vigentes.</span></footer>\n</div>\n</div>\n",
+    "protected": false,
+    "block_version": 0
+  },
+  "excerpt": {
+    "raw": "",
+    "rendered": "<p>ANG TRAVEL SOLUTIONS · ÁREA RESTRITA Seu console de operação, inteligência e relacionamento. Ambiente exclusivo para agências, franqueados, parceiros e equipe ANG. A navegação reúne os módulos definidos para operação B2B, curadoria, capacitação, cotação, fornecedores, benefícios, atendimento e gestão. Acesso protegido por perfilO conteúdo disponível depende do perfil e das permissões atribuídas. Módulos em homologação [&hellip;]</p>\n",
+    "protected": false
+  },
+  "author": 2,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+    "ang_source_url": "",
+    "ang_source_name": "",
+    "ang_source_updated_at": "",
+    "ang_external_id": "",
+    "ang_address": "",
+    "ang_phone": "",
+    "ang_email": "",
+    "ang_website": "",
+    "ang_opening_hours": "",
+    "ang_currency": "",
+    "ang_language": "",
+    "ang_voltage": "",
+    "ang_best_season": "",
+    "ang_certifications": "",
+    "ang_section": "",
+    "ang_seo_title": "",
+    "ang_meta_description": "",
+    "ang_tags": "",
+    "ang_image_url": "",
+    "ang_video_url": "",
+    "ang_cta_label": "",
+    "ang_cta_link": "",
+    "ang_access_role": "",
+    "ang_progress_required": "",
+    "ang_quiz_required": "",
+    "ang_content_status": "",
+    "footnotes": ""
+  },
+  "permalink_template": "https://angtravelsolutions.com.br/%pagename%/",
+  "generated_slug": "area-restrita",
+  "class_list": [
+    "post-2109",
+    "page",
+    "type-page",
+    "status-publish",
+    "hentry"
+  ],
+  "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.4 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Área Restrita - ANG TRAVEL SOLUTIONS</title>\n<!-- Aviso apenas para o administrador: esta página não mostra uma metadescrição porque não possui nenhuma. Ou escreva uma para esta página especificamente ou vá ao menu [Yoast SEO - Configurações] e configure um modelo. -->\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://angtravelsolutions.com.br/area-restrita/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Área Restrita - ANG TRAVEL SOLUTIONS\" />\n<meta property=\"og:description\" content=\"ANG TRAVEL SOLUTIONS · ÁREA RESTRITA Seu console de operação, inteligência e relacionamento. Ambiente exclusivo para agências, franqueados, parceiros e equipe ANG. A navegação reúne os módulos definidos para operação B2B, curadoria, capacitação, cotação, fornecedores, benefícios, atendimento e gestão. Acesso protegido por perfilO conteúdo disponível depende do perfil e das permissões atribuídas. Módulos em homologação [&hellip;]\" />\n<meta property=\"og:url\" content=\"https://angtravelsolutions.com.br/area-restrita/\" />\n<meta property=\"og:site_name\" content=\"ANG TRAVEL SOLUTIONS\" />\n<meta property=\"article:modified_time\" content=\"2026-10-30T22:03:43+00:00\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:label1\" content=\"Est. tempo de leitura\" />\n\t<meta name=\"twitter:data1\" content=\"4 minutos\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/area-restrita\\/\",\"url\":\"https:\\/\\/angtravelsolutions.com.br\\/area-restrita\\/\",\"name\":\"Área Restrita - ANG TRAVEL SOLUTIONS\",\"isPartOf\":{\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/#website\"},\"datePublished\":\"2026-05-14T02:53:28+00:00\",\"dateModified\":\"2026-10-30T22:03:43+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/area-restrita\\/#breadcrumb\"},\"inLanguage\":\"pt-BR\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/angtravelsolutions.com.br\\/area-restrita\\/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/area-restrita\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/angtravelsolutions.com.br\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Área Restrita\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/#website\",\"url\":\"https:\\/\\/angtravelsolutions.com.br\\/\",\"name\":\"ANG TRAVEL SOLUTIONS\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/angtravelsolutions.com.br\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/#organization\",\"name\":\"ANG TRAVEL SOLUTIONS\",\"url\":\"https:\\/\\/angtravelsolutions.com.br\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"pt-BR\",\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/angtravelsolutions.com.br\\/wp-content\\/uploads\\/2026\\/05\\/ChatBox_image.jpg\",\"contentUrl\":\"https:\\/\\/angtravelsolutions.com.br\\/wp-content\\/uploads\\/2026\\/05\\/ChatBox_image.jpg\",\"width\":1024,\"height\":1024,\"caption\":\"ANG TRAVEL SOLUTIONS\"},\"image\":{\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/#\\/schema\\/logo\\/image\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+  "yoast_head_json": {
+    "title": "Área Restrita - ANG TRAVEL SOLUTIONS",
+    "robots": {
+      "index": "index",
+      "follow": "follow",
+      "max-snippet": "max-snippet:-1",
+      "max-image-preview": "max-image-preview:large",
+      "max-video-preview": "max-video-preview:-1"
+    },
+    "canonical": "https://angtravelsolutions.com.br/area-restrita/",
+    "og_locale": "pt_BR",
+    "og_type": "article",
+    "og_title": "Área Restrita - ANG TRAVEL SOLUTIONS",
+    "og_description": "ANG TRAVEL SOLUTIONS · ÁREA RESTRITA Seu console de operação, inteligência e relacionamento. Ambiente exclusivo para agências, franqueados, parceiros e equipe ANG. A navegação reúne os módulos definidos para operação B2B, curadoria, capacitação, cotação, fornecedores, benefícios, atendimento e gestão. Acesso protegido por perfilO conteúdo disponível depende do perfil e das permissões atribuídas. Módulos em homologação [&hellip;]",
+    "og_url": "https://angtravelsolutions.com.br/area-restrita/",
+    "og_site_name": "ANG TRAVEL SOLUTIONS",
+    "article_modified_time": "2026-10-30T22:03:43+00:00",
+    "twitter_card": "summary_large_image",
+    "twitter_misc": {
+      "Est. tempo de leitura": "4 minutos"
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://angtravelsolutions.com.br/area-restrita/",
+          "url": "https://angtravelsolutions.com.br/area-restrita/",
+          "name": "Área Restrita - ANG TRAVEL SOLUTIONS",
+          "isPartOf": {
+            "@id": "https://angtravelsolutions.com.br/#website"
+          },
+          "datePublished": "2026-05-14T02:53:28+00:00",
+          "dateModified": "2026-10-30T22:03:43+00:00",
+          "breadcrumb": {
+            "@id": "https://angtravelsolutions.com.br/area-restrita/#breadcrumb"
+          },
+          "inLanguage": "pt-BR",
+          "potentialAction": [
+            {
+              "@type": "ReadAction",
+              "target": [
+                "https://angtravelsolutions.com.br/area-restrita/"
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://angtravelsolutions.com.br/area-restrita/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://angtravelsolutions.com.br/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Área Restrita"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://angtravelsolutions.com.br/#website",
+          "url": "https://angtravelsolutions.com.br/",
+          "name": "ANG TRAVEL SOLUTIONS",
+          "description": "",
+          "publisher": {
+            "@id": "https://angtravelsolutions.com.br/#organization"
+          },
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://angtravelsolutions.com.br/?s={search_term_string}"
+              },
+              "query-input": {
+                "@type": "PropertyValueSpecification",
+                "valueRequired": true,
+                "valueName": "search_term_string"
+              }
+            }
+          ],
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://angtravelsolutions.com.br/#organization",
+          "name": "ANG TRAVEL SOLUTIONS",
+          "url": "https://angtravelsolutions.com.br/",
+          "logo": {
+            "@type": "ImageObject",
+            "inLanguage": "pt-BR",
+            "@id": "https://angtravelsolutions.com.br/#/schema/logo/image/",
+            "url": "https://angtravelsolutions.com.br/wp-content/uploads/2026/05/ChatBox_image.jpg",
+            "contentUrl": "https://angtravelsolutions.com.br/wp-content/uploads/2026/05/ChatBox_image.jpg",
+            "width": 1024,
+            "height": 1024,
+            "caption": "ANG TRAVEL SOLUTIONS"
+          },
+          "image": {
+            "@id": "https://angtravelsolutions.com.br/#/schema/logo/image/"
+          }
+        }
+      ]
+    }
+  },
+  "_links": {
+    "self": [
+      {
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/pages/2109",
+        "targetHints": {
+          "allow": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH",
+            "DELETE"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/pages"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/types/page"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/users/2"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/comments?post=2109"
+      }
+    ],
+    "version-history": [
+      {
+        "count": 22,
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/pages/2109/revisions"
+      }
+    ],
+    "predecessor-version": [
+      {
+        "id": 153642,
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/pages/2109/revisions/153642"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/media?parent=2109"
+      }
+    ],
+    "wp:action-publish": [
+      {
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/pages/2109"
+      }
+    ],
+    "wp:action-unfiltered-html": [
+      {
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/pages/2109"
+      }
+    ],
+    "wp:action-assign-author": [
+      {
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/pages/2109"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
