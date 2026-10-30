@@ -39,6 +39,10 @@ Facebook, Instagram and Google publishing MUST be blocked unless all fields belo
 - `theme_key`
 - `sha256`
 - `visual_hash`
+- `idempotency_key`
+- `idempotency_record_id`
+- `idempotency_persistence_verified=true`
+- `idempotency_state=UNUSED`
 - `REAL_MEDIA_VERIFIED=true`
 - `MASTER_LOGO_VERIFIED=true`
 - `NO_DUPLICATE_PASS=true`
@@ -55,9 +59,12 @@ Any social executor or payload MUST:
 2. reject any Facebook Page ID other than `353450855530042`;
 3. reject empty media, text-only payloads and unverified URLs;
 4. reject legacy payload `CURADORIA_ANG_AGOSTO`;
-5. require an idempotency key;
+5. require an idempotency key plus a durable ledger record proving `idempotency_state=UNUSED` and `idempotency_persistence_verified=true`; absent, used or unknown keys MUST HOLD before any Meta request;
 6. return and persist `publication_id`, permalink and execution ID after success;
-7. perform post-publication readback before marking `PUBLISHED`.
+7. perform post-publication readback before marking `PUBLISHED`;
+8. atomically update the durable idempotency ledger with publication ID, permalink and execution ID after success.
+
+The inactive staging import enforces the preflight proof contract but does not implement or claim the durable ledger. Until an authenticated upstream ledger exists and the post-success write is verified, status remains `NO_PUBLISH`.
 
 Unknown or mismatched destinations must return `HOLD_UNSUPPORTED_OR_FORBIDDEN_DESTINATION`.
 
