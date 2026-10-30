@@ -33,7 +33,7 @@ Editorial modules: overview; islands/regions; climate/best time; arrival/logisti
 SEO slug candidate: `/curadoria/kiribati/`
 Schema candidates: `TouristDestination`, `Place`, `FAQPage`, `BreadcrumbList`.
 Media: `MISSING_VERIFIED_MEDIA_MANIFEST`.
-Canonical action: reconcile one Naoero identity against 881/WORLD, WordPress, Nauru/Republic of Nauru/NRU aliases and opaque external IDs. Create nothing until zero-match is proven.
+Canonical action: create the Kiribati identity only after duplicate search against 881/WORLD, WordPress, historical aliases and opaque external IDs; create nothing until zero-match is proven.
 
 ## 2. Naoero (formerly Nauru)
 Canonical country key candidate: `naoero`
@@ -54,7 +54,7 @@ Editorial modules: overview; districts; climate; arrival/logistics; Anibare Bay;
 SEO slug candidate: `/curadoria/naoero/` (do not create in CMS until alias dedupe and external-id derivation pass)
 Schema candidates: `TouristDestination`, `Place`, `FAQPage`, `BreadcrumbList`.
 Media: `MISSING_VERIFIED_MEDIA_MANIFEST`.
-Canonical action: create identity only after duplicate search against 881/WORLD and historical aliases.
+Canonical action: reconcile one Naoero identity against 881/WORLD, WordPress, Nauru/Republic of Nauru/NRU aliases and opaque external IDs. Create nothing until zero-match is proven.
 
 ## 3. Tuvalu
 Canonical country key candidate: `tuvalu`
