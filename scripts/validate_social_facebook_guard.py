@@ -43,6 +43,8 @@ def validate(root: Path) -> list[str]:
         "guarded_forbidden_id": FORBIDDEN in select and FORBIDDEN in gate,
         "guarded_requires_payload_page_id": "facebook_page_id" in gate,
         "guarded_forbidden_legacy_payload": "CURADORIA_ANG_AGOSTO" in gate,
+        "guarded_media_author_required": "author_or_owner" in gate,
+        "guarded_media_sha256_required": "sha256" in gate,
         "guarded_no_first_page_fallback": "pages[0]" not in select,
         "legacy_active_false": legacy.get("active") is False,
         "legacy_quarantined": "QUARANTINED" in str(legacy.get("name", "")) and "NEVER IMPORT" in str(legacy.get("name", "")),
@@ -52,7 +54,7 @@ def validate(root: Path) -> list[str]:
         "policy_forbidden_id": FORBIDDEN in policy and "NEVER PUBLISH" in policy,
         "policy_text_only_block": "Text-only posts are forbidden" in policy,
         "policy_media_gates": all(key in policy for key in (
-            "media_id", "license_or_permission", "brand_master_id", "visual_hash",
+            "media_id", "author_or_owner", "license_or_permission", "brand_master_id", "sha256", "visual_hash",
             "REAL_MEDIA_VERIFIED", "MASTER_LOGO_VERIFIED", "NO_DUPLICATE_PASS", "COPY_QA_PASS",
         )),
     }
@@ -70,7 +72,7 @@ def self_test() -> int:
             "meta": {"active": False},
             "nodes": [
                 {"id": "v5-selectpage", "parameters": {"jsCode": f"canonical='{CANONICAL}'; forbidden='{FORBIDDEN}';"}},
-                {"id": "v5-action-guard", "parameters": {"jsCode": f"facebook_page_id {CANONICAL} {FORBIDDEN} CURADORIA_ANG_AGOSTO"}},
+                {"id": "v5-action-guard", "parameters": {"jsCode": f"facebook_page_id {CANONICAL} {FORBIDDEN} CURADORIA_ANG_AGOSTO author_or_owner sha256"}},
             ],
         }
         legacy = {
@@ -80,7 +82,7 @@ def self_test() -> int:
         }
         policy = (
             f"{CANONICAL} {FORBIDDEN} NEVER PUBLISH Text-only posts are forbidden "
-            "media_id license_or_permission brand_master_id visual_hash REAL_MEDIA_VERIFIED "
+            "media_id author_or_owner license_or_permission brand_master_id sha256 visual_hash REAL_MEDIA_VERIFIED "
             "MASTER_LOGO_VERIFIED NO_DUPLICATE_PASS COPY_QA_PASS"
         )
         (root / FAIL_CLOSED).write_text(json.dumps(guarded), encoding="utf-8")
