@@ -42,6 +42,9 @@ def validate(root: Path) -> list[str]:
     facebook_gate = node_code(facebook, "fbv1-action-guard")
     facebook_select = node_code(facebook, "fbv1-selectpage")
     facebook_publish = node_code(facebook, "fbv1-publish")
+    facebook_connections = facebook.get("connections", {})
+    facebook_guard_main = facebook_connections.get("Fail Closed — Validar Facebook", {}).get("main", [])
+    facebook_route_main = facebook_connections.get("Rota Facebook autorizada?", {}).get("main", [])
 
     checks = {
         "facebook_active_false": facebook.get("active") is False and facebook.get("meta", {}).get("active") is False,
@@ -52,6 +55,9 @@ def validate(root: Path) -> list[str]:
         "facebook_idempotency_holds": all(key in facebook_gate for key in ("idempotency_key", "idempotency_record_id", "idempotency_persistence_verified", "idempotency_state", "UNUSED", "DURABLE_IDEMPOTENCY_LEDGER_NOT_IMPLEMENTED", "POST_SUCCESS_ATOMIC_LEDGER_WRITE_NOT_PROVEN")),
         "facebook_auth_hold": "META_ORGANIC_AUTH_READBACK_MISSING" in facebook_gate,
         "facebook_forbidden_payload": "CURADORIA_ANG_AGOSTO" in facebook_gate,
+        "facebook_server_side_hard_block": "HOLD_SERVER_SIDE_LEDGER_AND_AUTH_NOT_WIRED" in facebook_gate and all(key not in facebook_gate for key in ("p.durable_ledger_ready", "p.post_success_atomic_write_ready", "p.meta_auth_readback_verified")),
+        "facebook_guard_routes_to_if": bool(facebook_guard_main and facebook_guard_main[0] and facebook_guard_main[0][0].get("node") == "Rota Facebook autorizada?"),
+        "facebook_if_true_meta_false_response": bool(len(facebook_route_main) == 2 and facebook_route_main[0] and facebook_route_main[1] and facebook_route_main[0][0].get("node") == "Meta — Descobrir Páginas" and facebook_route_main[1][0].get("node") == "Responder Facebook V1"),
         "facebook_no_first_page_fallback": "pages[0]" not in facebook_select,
         "facebook_readback_receipt": all(key in facebook_publish for key in ("post_id", "publication_id", "permalink_url", "permalink", "execution_id", "readback_verified", "HOLD_POST_PUBLICATION_READBACK_FAILED")),
         "facebook_atomic_write_not_claimed": all(key in facebook_publish for key in ("HOLD_ATOMIC_LEDGER_WRITE_REQUIRED", "post_success_atomic_ledger_write_verified:false")),
@@ -123,10 +129,14 @@ def self_test() -> int:
         facebook = {
             "name": "FACEBOOK CANONICAL INACTIVE", "active": False, "meta": {"active": False},
             "nodes": [
-                {"id": "fbv1-action-guard", "parameters": {"jsCode": f"channels facebook UNSUPPORTED_OR_AMBIGUOUS_PUBLICATION_CHANNEL facebook_photo HOLD_FACEBOOK_VIDEO_NOT_IMPLEMENTED HOLD_UNSUPPORTED_FACEBOOK_FORMAT media_id source author_or_owner license_or_permission brand_master_id theme_key visual_hash sha256 REAL_MEDIA_VERIFIED MASTER_LOGO_VERIFIED NO_DUPLICATE_PASS COPY_QA_PASS idempotency_key idempotency_record_id idempotency_persistence_verified idempotency_state UNUSED DURABLE_IDEMPOTENCY_LEDGER_NOT_IMPLEMENTED POST_SUCCESS_ATOMIC_LEDGER_WRITE_NOT_PROVEN META_ORGANIC_AUTH_READBACK_MISSING CURADORIA_ANG_AGOSTO {CANONICAL} {FORBIDDEN}"}},
+                {"id": "fbv1-action-guard", "parameters": {"jsCode": f"channels facebook UNSUPPORTED_OR_AMBIGUOUS_PUBLICATION_CHANNEL facebook_photo HOLD_FACEBOOK_VIDEO_NOT_IMPLEMENTED HOLD_UNSUPPORTED_FACEBOOK_FORMAT media_id source author_or_owner license_or_permission brand_master_id theme_key visual_hash sha256 REAL_MEDIA_VERIFIED MASTER_LOGO_VERIFIED NO_DUPLICATE_PASS COPY_QA_PASS idempotency_key idempotency_record_id idempotency_persistence_verified idempotency_state UNUSED DURABLE_IDEMPOTENCY_LEDGER_NOT_IMPLEMENTED POST_SUCCESS_ATOMIC_LEDGER_WRITE_NOT_PROVEN META_ORGANIC_AUTH_READBACK_MISSING CURADORIA_ANG_AGOSTO HOLD_SERVER_SIDE_LEDGER_AND_AUTH_NOT_WIRED {CANONICAL} {FORBIDDEN}"}},
                 {"id": "fbv1-selectpage", "parameters": {"jsCode": f"{CANONICAL} {FORBIDDEN}"}},
                 {"id": "fbv1-publish", "parameters": {"jsCode": "post_id publication_id permalink_url permalink execution_id readback_verified HOLD_POST_PUBLICATION_READBACK_FAILED HOLD_ATOMIC_LEDGER_WRITE_REQUIRED post_success_atomic_ledger_write_verified:false"}},
             ],
+            "connections": {
+                "Fail Closed — Validar Facebook": {"main": [[{"node": "Rota Facebook autorizada?"}]]},
+                "Rota Facebook autorizada?": {"main": [[{"node": "Meta — Descobrir Páginas"}], [{"node": "Responder Facebook V1"}]]},
+            },
         }
         policy = (
             f"{CANONICAL} {FORBIDDEN} NEVER PUBLISH Text-only posts are forbidden Instagram-only publisher UNSUPPORTED_OR_AMBIGUOUS_PUBLICATION_CHANNEL HOLD_FACEBOOK_PUBLISHER_NOT_IMPLEMENTED publication_id permalink execution ID post-publication readback "
