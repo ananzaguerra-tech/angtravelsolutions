@@ -104,3 +104,21 @@ The migration is explicitly `REFERENCE_ONLY / NOT_APPLIED / NO_CREDENTIALS`. It 
 A deterministic in-memory model now exercises eight negative and concurrency canaries: duplicate key, active visual/destination duplicate, two simultaneous reservations with exactly one winner, incomplete receipt, wrong reservation execution, terminal `PUBLISHED`, terminal `FAILED`, and unknown key. The CI executes these canaries without database, credentials, n8n or Meta access.
 
 These tests prove only the intended state-machine behavior of the offline model. They do not execute the PostgreSQL migration and do not prove database isolation, function privileges, runtime persistence, crash recovery or n8n integration. The migration remains `REFERENCE_ONLY / NOT_APPLIED / NO_CREDENTIALS`, and all social publishers remain inactive.
+
+
+## Staging deployment and privilege plan — C312
+
+A fail-closed deployment plan now specifies the preconditions for applying the PostgreSQL
+reference ledger in a dedicated staging environment, including backup/restore proof,
+version and isolation readback, separate owner/runtime roles, TLS, least privilege, ten
+runtime canaries, crash-recovery evidence and a non-destructive rollback decision tree.
+
+The plan intentionally contains no credentials and no automated DROP/DELETE/TRUNCATE path.
+It also records that Windsor exposes direct Instagram and Facebook Organic write actions,
+while its n8n account 173 exposes no executable action. Connector presence therefore does
+not prove n8n workflow access, Meta OAuth or durable ledger wiring.
+
+The migration remains `REFERENCE_ONLY / NOT_APPLIED / NO_CREDENTIALS`; both social
+publishers remain inactive. Human action is limited to provisioning or approving a
+dedicated staging PostgreSQL instance and entering the segregated runtime credential only
+through the official n8n credential vault.
