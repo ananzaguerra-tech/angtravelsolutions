@@ -47,6 +47,11 @@ def validate(root: Path) -> list[str]:
         "guarded_media_sha256_required": "sha256" in gate,
         "guarded_media_material_https": all(key in gate for key in ("image_url", "image_urls", "MEDIA_MATERIAL_MISSING_OR_UNSUPPORTED", "media_material_https_verified")),
         "guarded_sha256_format": all(key in gate for key in ("INVALID_SHA256", "sha256_format_verified")),
+        "guarded_idempotency_preflight": all(key in gate for key in (
+            "idempotency_key", "idempotency_record_id", "idempotency_persistence_verified",
+            "idempotency_state", "UNUSED", "IDEMPOTENCY_PERSISTENCE_NOT_VERIFIED",
+            "IDEMPOTENCY_KEY_ALREADY_USED_OR_UNKNOWN",
+        )),
         "guarded_no_first_page_fallback": "pages[0]" not in select,
         "legacy_active_false": legacy.get("active") is False,
         "legacy_quarantined": "QUARANTINED" in str(legacy.get("name", "")) and "NEVER IMPORT" in str(legacy.get("name", "")),
@@ -57,6 +62,7 @@ def validate(root: Path) -> list[str]:
         "policy_text_only_block": "Text-only posts are forbidden" in policy,
         "policy_media_gates": all(key in policy for key in (
             "media_id", "author_or_owner", "license_or_permission", "brand_master_id", "sha256", "visual_hash",
+            "idempotency_key", "idempotency_record_id", "idempotency_persistence_verified", "idempotency_state",
             "REAL_MEDIA_VERIFIED", "MASTER_LOGO_VERIFIED", "NO_DUPLICATE_PASS", "COPY_QA_PASS",
         )),
     }
@@ -74,7 +80,7 @@ def self_test() -> int:
             "meta": {"active": False},
             "nodes": [
                 {"id": "v5-selectpage", "parameters": {"jsCode": f"canonical='{CANONICAL}'; forbidden='{FORBIDDEN}';"}},
-                {"id": "v5-action-guard", "parameters": {"jsCode": f"facebook_page_id {CANONICAL} {FORBIDDEN} CURADORIA_ANG_AGOSTO author_or_owner sha256 image_url image_urls MEDIA_MATERIAL_MISSING_OR_UNSUPPORTED media_material_https_verified INVALID_SHA256 sha256_format_verified"}},
+                {"id": "v5-action-guard", "parameters": {"jsCode": f"facebook_page_id {CANONICAL} {FORBIDDEN} CURADORIA_ANG_AGOSTO author_or_owner sha256 image_url image_urls MEDIA_MATERIAL_MISSING_OR_UNSUPPORTED media_material_https_verified INVALID_SHA256 sha256_format_verified idempotency_key idempotency_record_id idempotency_persistence_verified idempotency_state UNUSED IDEMPOTENCY_PERSISTENCE_NOT_VERIFIED IDEMPOTENCY_KEY_ALREADY_USED_OR_UNKNOWN"}},
             ],
         }
         legacy = {
@@ -84,7 +90,7 @@ def self_test() -> int:
         }
         policy = (
             f"{CANONICAL} {FORBIDDEN} NEVER PUBLISH Text-only posts are forbidden "
-            "media_id author_or_owner license_or_permission brand_master_id sha256 visual_hash REAL_MEDIA_VERIFIED "
+            "media_id author_or_owner license_or_permission brand_master_id sha256 visual_hash idempotency_key idempotency_record_id idempotency_persistence_verified idempotency_state REAL_MEDIA_VERIFIED "
             "MASTER_LOGO_VERIFIED NO_DUPLICATE_PASS COPY_QA_PASS"
         )
         (root / FAIL_CLOSED).write_text(json.dumps(guarded), encoding="utf-8")
