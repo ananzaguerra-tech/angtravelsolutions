@@ -286,7 +286,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const action=String($json.action||'').trim().toLowerCase(); const p=$json.payload||{}; const canonical='353450855530042'; const forbidden='1214700205067389'; const forbiddenPayload='CURADORIA_ANG_AGOSTO'; const payloadId=String(p.payload_id||'').trim().toUpperCase(); const required=['payload_id','idempotency_key','media_id','source','author_or_owner','license_or_permission','brand_master_id','theme_key','sha256','visual_hash','facebook_page_id']; const missing=required.filter(k=>!String(p[k]||'').trim()); const fmt=String(p.format||'feed_4x5').trim().toLowerCase(); const imageUrl=String(p.image_url||'').trim(); const imageUrls=Array.isArray(p.image_urls)?p.image_urls.map(u=>String(u||'').trim()).filter(Boolean):[]; const httpsUrl=u=>/^https:\\/\\/[^\\s]+$/i.test(u); const mediaMaterialOk=fmt==='carousel_3'?(imageUrls.length>=2&&imageUrls.every(httpsUrl)):((fmt==='feed_4x5'||fmt==='story')&&httpsUrl(imageUrl)); const sha256Ok=/^[a-f0-9]{64}$/i.test(String(p.sha256||'').trim()); const gates={publish_authorized:p.publish_authorized===true,prohibited:p.prohibited!==true,real_media_verified:p.real_media_verified===true,master_logo_verified:p.master_logo_verified===true,no_duplicate_pass:p.no_duplicate_pass===true,copy_qa_pass:p.copy_qa_pass===true,media_material_https_verified:mediaMaterialOk,sha256_format_verified:sha256Ok,canonical_facebook_page:String(p.facebook_page_id||'')===canonical,forbidden_facebook_page_rejected:String(p.facebook_page_id||'')!==forbidden}; const errors=[]; if(action!=='social_publish_v5') errors.push('UNSUPPORTED_ACTION'); if(payloadId===forbiddenPayload) errors.push('FORBIDDEN_LEGACY_PAYLOAD'); if(missing.length) errors.push('MISSING:'+missing.join(',')); if(!mediaMaterialOk) errors.push('MEDIA_MATERIAL_MISSING_OR_UNSUPPORTED'); if(!sha256Ok) errors.push('INVALID_SHA256'); for(const [k,v] of Object.entries(gates)) if(!v) errors.push('GATE:'+k); const allowed=errors.length===0; return [{json:{...$json,route:allowed?'social':'blocked',status:allowed?'ACTION_ALLOWED':'HOLD_UNSUPPORTED_OR_UNVERIFIED_ACTION',gate_errors:errors,facebook_destination:canonical}}];"
+        "jsCode": "const action=String($json.action||'').trim().toLowerCase(); const p=$json.payload||{}; const canonical='353450855530042'; const forbidden='1214700205067389'; const forbiddenPayload='CURADORIA_ANG_AGOSTO'; const payloadId=String(p.payload_id||'').trim().toUpperCase(); const required=['payload_id','idempotency_key','idempotency_record_id','media_id','source','author_or_owner','license_or_permission','brand_master_id','theme_key','sha256','visual_hash','facebook_page_id']; const missing=required.filter(k=>!String(p[k]||'').trim()); const fmt=String(p.format||'feed_4x5').trim().toLowerCase(); const imageUrl=String(p.image_url||'').trim(); const imageUrls=Array.isArray(p.image_urls)?p.image_urls.map(u=>String(u||'').trim()).filter(Boolean):[]; const httpsUrl=u=>/^https:\\/\\/[^\\s]+$/i.test(u); const mediaMaterialOk=fmt==='carousel_3'?(imageUrls.length>=2&&imageUrls.every(httpsUrl)):((fmt==='feed_4x5'||fmt==='story')&&httpsUrl(imageUrl)); const sha256Ok=/^[a-f0-9]{64}$/i.test(String(p.sha256||'').trim()); const idempotencyState=String(p.idempotency_state||'').trim().toUpperCase(); const gates={idempotency_persistence_verified:p.idempotency_persistence_verified===true,idempotency_unused_proven:idempotencyState==='UNUSED',publish_authorized:p.publish_authorized===true,prohibited:p.prohibited!==true,real_media_verified:p.real_media_verified===true,master_logo_verified:p.master_logo_verified===true,no_duplicate_pass:p.no_duplicate_pass===true,copy_qa_pass:p.copy_qa_pass===true,media_material_https_verified:mediaMaterialOk,sha256_format_verified:sha256Ok,canonical_facebook_page:String(p.facebook_page_id||'')===canonical,forbidden_facebook_page_rejected:String(p.facebook_page_id||'')!==forbidden}; const errors=[]; if(action!=='social_publish_v5') errors.push('UNSUPPORTED_ACTION'); if(payloadId===forbiddenPayload) errors.push('FORBIDDEN_LEGACY_PAYLOAD'); if(missing.length) errors.push('MISSING:'+missing.join(',')); if(!mediaMaterialOk) errors.push('MEDIA_MATERIAL_MISSING_OR_UNSUPPORTED'); if(!sha256Ok) errors.push('INVALID_SHA256'); if(p.idempotency_persistence_verified!==true) errors.push('IDEMPOTENCY_PERSISTENCE_NOT_VERIFIED'); if(idempotencyState!=='UNUSED') errors.push('IDEMPOTENCY_KEY_ALREADY_USED_OR_UNKNOWN'); for(const [k,v] of Object.entries(gates)) if(!v) errors.push('GATE:'+k); const allowed=errors.length===0; return [{json:{...$json,route:allowed?'social':'blocked',status:allowed?'ACTION_ALLOWED':'HOLD_UNSUPPORTED_OR_UNVERIFIED_ACTION',gate_errors:errors,facebook_destination:canonical}}];"
       },
       "id": "v5-action-guard",
       "name": "Fail Closed — Validar ação social",
@@ -524,7 +524,7 @@
   },
   "active": false,
   "meta": {
-    "note": "STAGING_IMPORT_CANDIDATE_INACTIVE. Social-only gateway. Unknown/non-social actions, including google_business_status and Concierge actions, return HOLD before any Meta call. Requires a new social_publish_v5 payload with complete provenance (media_id, source, author_or_owner, license_or_permission, sha256, visual_hash), a supported HTTPS image payload, valid 64-hex SHA-256, all evidence gates true and canonical Facebook Page ID. Explicitly rejects payload_id CURADORIA_ANG_AGOSTO.",
+    "note": "STAGING_IMPORT_CANDIDATE_INACTIVE. Social-only gateway. Unknown/non-social actions, including google_business_status and Concierge actions, return HOLD before any Meta call. Requires a new social_publish_v5 payload with complete provenance, supported HTTPS image payload, valid 64-hex SHA-256, canonical Facebook Page ID and durable idempotency preflight evidence (idempotency_record_id, idempotency_persistence_verified=true, idempotency_state=UNUSED). Explicitly rejects payload_id CURADORIA_ANG_AGOSTO.",
     "supersedes_import_candidate": "ZEUS_SOCIAL_EXECUTOR_GITHUB_AUTH_V5_IMPORT.json",
     "forbidden_actions": [
       "google_business_status",
@@ -536,6 +536,15 @@
     "active": false,
     "forbidden_payload_ids": [
       "CURADORIA_ANG_AGOSTO"
-    ]
+    ],
+    "idempotency_contract": {
+      "required_fields": [
+        "idempotency_key",
+        "idempotency_record_id"
+      ],
+      "required_state": "UNUSED",
+      "persistence_evidence_required": true,
+      "note": "Fail closed until an upstream durable ledger proves the key unused. This inactive import does not itself implement or claim the durable ledger."
+    }
   }
 }
