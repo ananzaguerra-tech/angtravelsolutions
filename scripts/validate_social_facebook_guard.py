@@ -45,6 +45,8 @@ def validate(root: Path) -> list[str]:
         "guarded_forbidden_legacy_payload": "CURADORIA_ANG_AGOSTO" in gate,
         "guarded_media_author_required": "author_or_owner" in gate,
         "guarded_media_sha256_required": "sha256" in gate,
+        "guarded_media_material_https": all(key in gate for key in ("image_url", "image_urls", "MEDIA_MATERIAL_MISSING_OR_UNSUPPORTED", "media_material_https_verified")),
+        "guarded_sha256_format": all(key in gate for key in ("INVALID_SHA256", "sha256_format_verified")),
         "guarded_no_first_page_fallback": "pages[0]" not in select,
         "legacy_active_false": legacy.get("active") is False,
         "legacy_quarantined": "QUARANTINED" in str(legacy.get("name", "")) and "NEVER IMPORT" in str(legacy.get("name", "")),
@@ -72,7 +74,7 @@ def self_test() -> int:
             "meta": {"active": False},
             "nodes": [
                 {"id": "v5-selectpage", "parameters": {"jsCode": f"canonical='{CANONICAL}'; forbidden='{FORBIDDEN}';"}},
-                {"id": "v5-action-guard", "parameters": {"jsCode": f"facebook_page_id {CANONICAL} {FORBIDDEN} CURADORIA_ANG_AGOSTO author_or_owner sha256"}},
+                {"id": "v5-action-guard", "parameters": {"jsCode": f"facebook_page_id {CANONICAL} {FORBIDDEN} CURADORIA_ANG_AGOSTO author_or_owner sha256 image_url image_urls MEDIA_MATERIAL_MISSING_OR_UNSUPPORTED media_material_https_verified INVALID_SHA256 sha256_format_verified"}},
             ],
         }
         legacy = {
