@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.1",
+  "status": "draft_for_staging",
+  "editorial_standard": "ANG premium international — fail-closed; no CMS IDs; no publication",
+  "checked_at": "2026-10-30",
+  "publication_authorized": false,
+  "destinations": [
+    {
+      "country": "Kiribati",
+      "currency": "Dólar australiano (AUD)",
+      "languages": ["Inglês", "Gilbertês (te taetae ni Kiribati)"],
+      "voltage": "240 V; confirmar padrão de tomada antes da cotação",
+      "best_time": "Definir por ilha e experiência após revalidação climática e logística no momento da cotação",
+      "canonical": {
+        "candidate_key": "kiribati",
+        "slug_candidate": "/curadoria/kiribati/",
+        "aliases": ["Republic of Kiribati", "KIR"],
+        "identity_status": "NEW_CANONICAL_CANDIDATE_PENDING_FINAL_EXTERNAL_ID_DEDUPE",
+        "cms_post_id": null,
+        "external_id": null
+      },
+      "seo": {
+        "title_candidate": "Kiribati: ilhas, cultura e natureza no Pacífico | ANG",
+        "meta_description_candidate": "Conheça Kiribati por meio de curadoria responsável, com contexto sobre ilhas, cultura, natureza e logística sujeita a validação atual.",
+        "robots": "noindex,nofollow",
+        "schema_types": ["TouristDestination", "Place", "FAQPage", "BreadcrumbList"]
+      },
+      "publication_gate": "BLOCK",
+      "dynamic_holds": ["BRAZILIAN_NATIONALITY_ENTRY_CONFIRMATION_REQUIRED", "CURRENT_LOGISTICS_REVALIDATION_REQUIRED"],
+      "cities": [
+        {
+          "name": "South Tarawa",
+          "summary": "Centro urbano e cultural de Kiribati, distribuído por ilhotas conectadas no atol de Tarawa.",
+          "attractions": ["Patrimônio e memória da Segunda Guerra Mundial", "Lagoa de Tarawa", "Mercados e vida cultural local"],
+          "premium_experiences": ["Curadoria cultural de baixo impacto com operador autorizado", "Roteiro histórico sujeito a disponibilidade local"]
+        },
+        {
+          "name": "Kiritimati",
+          "summary": "Grande atol coralino do arquipélago Line Islands, conhecido por natureza, aves e atividades marítimas.",
+          "attractions": ["Paisagens de atol e lagoas", "Observação de aves", "Ambientes marinhos"],
+          "premium_experiences": ["Pesca esportiva com operador licenciado", "Observação de natureza com guia local"]
+        }
+      ],
+      "sources": [
+        "https://immigration.mfai.gov.ki/visas-entry/",
+        "https://kiribatitourism.gov.ki/",
+        "https://kiribatitourism.gov.ki/things-to-do"
+      ],
+      "media": {"status": "MISSING_VERIFIED_MEDIA_MANIFEST", "ai_media_allowed": false},
+      "qa_status": "SEO_SCHEMA_STAGING_CANDIDATE / NO_PUBLISH"
+    },
+    {
+      "country": "Naoero",
+      "currency": "Dólar australiano (AUD)",
+      "languages": ["Naoeroano", "Inglês"],
+      "voltage": "240 V; confirmar padrão de tomada antes da cotação",
+      "best_time": "Revalidar clima, voos, entrada e disponibilidade operacional no momento da cotação",
+      "canonical": {
+        "candidate_key": "naoero",
+        "slug_candidate": "/curadoria/naoero/",
+        "aliases": ["Nauru", "Republic of Nauru", "NRU"],
+        "identity_status": "NEW_CANONICAL_CANDIDATE_PENDING_FINAL_EXTERNAL_ID_DEDUPE",
+        "cms_post_id": null,
+        "external_id": null,
+        "alias_rule": "Uma única identidade; não criar registro paralelo para Nauru"
+      },
+      "seo": {
+        "title_candidate": "Naoero: cultura, história e paisagens do Pacífico | ANG",
+        "meta_description_candidate": "Contexto editorial sobre Naoero, suas paisagens, história e cultura, com logística e regras de entrada sempre revalidadas.",
+        "robots": "noindex,nofollow",
+        "schema_types": ["TouristDestination", "Place", "FAQPage", "BreadcrumbList"]
+      },
+      "publication_gate": "BLOCK",
+      "dynamic_holds": ["BRAZILIAN_NATIONALITY_ENTRY_CONFIRMATION_REQUIRED", "CURRENT_FLIGHT_AND_VISA_REVALIDATION_REQUIRED"],
+      "cities": [
+        {
+          "name": "Yaren",
+          "summary": "Distrito governamental e ponto de referência para compreender a organização contemporânea de Naoero.",
+          "attractions": ["Parliament House", "Contexto histórico e institucional", "Circuito costeiro sujeito a operação local"],
+          "premium_experiences": ["Roteiro histórico com guia autorizado", "Transfer e logística privativa sujeitos a confirmação"]
+        },
+        {
+          "name": "Anibare",
+          "summary": "Distrito costeiro associado à Baía de Anibare e às paisagens marinhas do lado leste da ilha.",
+          "attractions": ["Anibare Bay", "Paisagem costeira", "Patrimônio natural local"],
+          "premium_experiences": ["Roteiro costeiro privativo sujeito a segurança marítima", "Curadoria fotográfica com autorização local"]
+        }
+      ],
+      "sources": [
+        "https://ronlaw.gov.nr/docs/any/naoero",
+        "https://www.nauru.gov.nr/about-naoero/visiting-naoero.aspx",
+        "https://justice.gov.nr/immigration-division/",
+        "https://naurutourism.com.nr/explore-nauru/"
+      ],
+      "media": {"status": "MISSING_VERIFIED_MEDIA_MANIFEST", "ai_media_allowed": false},
+      "qa_status": "SEO_SCHEMA_STAGING_CANDIDATE / NO_PUBLISH"
+    },
+    {
+      "country": "Tuvalu",
+      "currency": "Dólar australiano (AUD)",
+      "languages": ["Tuvaluano", "Inglês"],
+      "voltage": "220–240 V; confirmar padrão de tomada antes da cotação",
+      "best_time": "Revalidar clima, conectividade aérea e transporte entre ilhas no momento da cotação",
+      "canonical": {
+        "candidate_key": "tuvalu",
+        "slug_candidate": "/curadoria/tuvalu/",
+        "aliases": ["Ellice Islands", "TUV"],
+        "identity_status": "NEW_CANONICAL_CANDIDATE_PENDING_FINAL_EXTERNAL_ID_DEDUPE",
+        "cms_post_id": null,
+        "external_id": null
+      },
+      "seo": {
+        "title_candidate": "Tuvalu: atóis, lagoas e cultura do Pacífico | ANG",
+        "meta_description_candidate": "Descubra o contexto de Tuvalu, seus atóis, lagoas e cultura, com entrada e conectividade mantidas em validação oficial.",
+        "robots": "noindex,nofollow",
+        "schema_types": ["TouristDestination", "Place", "FAQPage", "BreadcrumbList"]
+      },
+      "publication_gate": "BLOCK",
+      "dynamic_holds": ["ENTRY_FACT_HOLD", "CURRENT_AIR_CONNECTIVITY_REVALIDATION_REQUIRED"],
+      "cities": [
+        {
+          "name": "Funafuti",
+          "summary": "Atol-capital de Tuvalu, com ilhas estreitas, lagoa, vida comunitária e ambientes marinhos sensíveis.",
+          "attractions": ["Lagoa de Funafuti", "Funafuti Conservation Area", "Cultura e vida comunitária"],
+          "premium_experiences": ["Visita de baixo impacto com guia autorizado", "Experiência marinha sujeita a clima, conservação e operação local"]
+        }
+      ],
+      "sources": ["https://tourism.gov.tv/", "https://tourism.gov.tv/contact/"],
+      "media": {"status": "MISSING_VERIFIED_MEDIA_MANIFEST", "ai_media_allowed": false},
+      "qa_status": "SEO_SCHEMA_STAGING_CANDIDATE / NO_PUBLISH"
+    },
+    {
+      "country": "Líbia",
+      "currency": "Dinar líbio (LYD)",
+      "languages": ["Árabe"],
+      "voltage": "230 V; confirmar padrão de tomada antes de qualquer uso operacional",
+      "best_time": "Não aplicável comercialmente enquanto o bloqueio de segurança e operacionalidade permanecer ativo",
+      "canonical": {
+        "candidate_key": "libya",
+        "slug_candidate": "/curadoria/libia/",
+        "aliases": ["Libya", "Libia", "State of Libya", "Jamahiriya", "LBY"],
+        "identity_status": "RESTRICTED_CANONICAL_CANDIDATE_PENDING_FINAL_EXTERNAL_ID_DEDUPE",
+        "cms_post_id": null,
+        "external_id": null
+      },
+      "seo": {
+        "title_candidate": "Líbia: patrimônio e contexto histórico | ANG",
+        "meta_description_candidate": "Pesquisa editorial sobre patrimônio e contexto histórico da Líbia. Conteúdo não comercial, sem recomendação de viagem enquanto houver restrições.",
+        "robots": "noindex,nofollow",
+        "schema_types": ["Place", "BreadcrumbList"]
+      },
+      "publication_gate": "BLOCK_RESTRICTED_QA",
+      "dynamic_holds": ["SAFETY_REVALIDATION_REQUIRED", "ENTRY_REVALIDATION_REQUIRED", "OPERATIONAL_ACCESS_NOT_PROVEN"],
+      "cities": [
+        {
+          "name": "Trípoli",
+          "summary": "Capital da Líbia tratada apenas em pesquisa histórica e cultural, sem incentivo ou oferta comercial de viagem.",
+          "attractions": ["Patrimônio histórico sujeito a verificação competente", "Contexto urbano e cultural", "Museus e acervos somente após confirmação de acesso"],
+          "premium_experiences": ["Nenhuma experiência comercial autorizada; pesquisa editorial em staging"]
+        },
+        {
+          "name": "Leptis Magna",
+          "summary": "Sítio arqueológico tratado exclusivamente como referência patrimonial, sujeito a segurança e acesso oficialmente confirmados.",
+          "attractions": ["Patrimônio arqueológico", "Pesquisa histórica", "Contexto mediterrânico antigo"],
+          "premium_experiences": ["Nenhuma experiência comercial autorizada; conteúdo patrimonial em staging"]
+        }
+      ],
+      "sources": ["https://tourism.gov.ly/", "https://foreign.gov.ly/"],
+      "media": {"status": "MISSING_VERIFIED_MEDIA_MANIFEST", "ai_media_allowed": false},
+      "qa_status": "RESTRICTED_QA / NO_PUBLISH"
+    }
+  ]
+}
