@@ -92,3 +92,9 @@ This candidate is `STAGING_IMPORT_CANDIDATE_INACTIVE / NO_PUBLISH`. Even with al
 The C308 candidate was corrected so a denied payload cannot flow into the Meta page-discovery request. `Fail Closed — Validar Facebook` now connects only to the physical `Rota Facebook autorizada?` IF node: the true branch is the sole route to Meta and the false branch goes directly to the webhook response.
 
 Client payload fields `durable_ledger_ready`, `post_success_atomic_write_ready` and `meta_auth_readback_verified` are not trusted as evidence and cannot unlock the route. The inactive candidate now always returns `HOLD_SERVER_SIDE_LEDGER_AND_AUTH_NOT_WIRED` after all client-supplied gates pass, until durable ledger, atomic write and Meta-authentication checks exist as server-side nodes with independent evidence. Therefore C309 still authorizes no import, Meta call or publication.
+
+## Durable idempotency ledger reference — C310
+
+A PostgreSQL reference migration now defines a server-side ledger state machine: `UNUSED→RESERVED→PUBLISHED/FAILED`. Registration rejects duplicate idempotency or active visual/destination keys; reservation is a single atomic conditional update from `UNUSED`; publication requires an active reservation plus exact publication ID, HTTPS permalink, execution ID and verified readback. `PUBLISHED` and `FAILED` are terminal because no reset/reuse function exists.
+
+The migration is explicitly `REFERENCE_ONLY / NOT_APPLIED / NO_CREDENTIALS`. It has not been executed against any database and is not wired into n8n. Its offline validator proves only repository structure and negative regression behavior, not database compatibility, transaction isolation, credentials, deployment or runtime persistence. Consequently the Facebook and Instagram candidates remain inactive and `HOLD_SERVER_SIDE_LEDGER_AND_AUTH_NOT_WIRED`.
