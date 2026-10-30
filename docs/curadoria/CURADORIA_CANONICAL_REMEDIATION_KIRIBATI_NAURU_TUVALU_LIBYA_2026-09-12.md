@@ -2,7 +2,7 @@
 
 Status global: `READY_QA / NO_PUBLISH`
 Policy: fail-closed. This package does not authorize CMS publication.
-Checked_at: 2026-09-13
+Checked_at: 2026-10-29 (Naoero identity and visitor-fee facts; other dynamic facts remain subject to section-specific revalidation)
 
 ## Objective
 Close the canonical-identity gap for four countries identified by the 2026-09-12 reconciliation as true-absent candidates while preserving the 881/WORLD map, existing IDs, drafts and deduplication rules.
@@ -33,21 +33,25 @@ Editorial modules: overview; islands/regions; climate/best time; arrival/logisti
 SEO slug candidate: `/curadoria/kiribati/`
 Schema candidates: `TouristDestination`, `Place`, `FAQPage`, `BreadcrumbList`.
 Media: `MISSING_VERIFIED_MEDIA_MANIFEST`.
-Canonical action: create identity only after duplicate search against 881/WORLD and historical aliases.
+Canonical action: reconcile one Naoero identity against 881/WORLD, WordPress, Nauru/Republic of Nauru/NRU aliases and opaque external IDs. Create nothing until zero-match is proven.
 
-## 2. Nauru
-Canonical country key candidate: `nauru`
+## 2. Naoero (formerly Nauru)
+Canonical country key candidate: `naoero`
+Canonical aliases for dedupe/interoperability only: `Nauru`, `Republic of Nauru`, `NRU`; never create a second country identity.
 Primary destination seeds: Yaren; Anibare Bay; Buada Lagoon; Topside; Naoero Museum.
 Editorial status: `READY_FACT_QA / PUBLICATION_BLOCK`.
-Official sources checked 2026-09-12:
+Identity and entry sources checked 2026-10-29:
+- Constitutional identity / RONLAW: https://ronlaw.gov.nr/docs/any/naoero
+- Government visitor guidance: https://www.nauru.gov.nr/about-naoero/visiting-naoero.aspx
 - Immigration: https://justice.gov.nr/immigration-division/
 - Visitor visa form: https://justice.gov.nr/wp-content/uploads/2023/12/Application-Form-Visitor-Visa.pdf
 - Government information: https://www.nauru.gov.nr/government-information-office/
 - Tourism: https://naurutourism.com.nr/explore-nauru/
 - Tours: https://naurutourism.com.nr/tour-packages/
-Dynamic entry note: published visitor-visa rules and fees are dynamic and must be revalidated at quote/publication time; no nationality exemption is inferred.
+Identity note: RONLAW records Constitution (Amendment) (No 2) Act 2026 No 21, effective 12 May 2026, replacing “Nauru” with “Naoero”.
+Dynamic entry note: the current official table publishes Visitor Visa fees of AUD 50/150/250 for up to 1/2/3 months. These class/fee facts do not prove Brazilian-national eligibility, exemption, processing time or approval. Revalidate with Naoero Immigration at quote time; nationality-specific entry remains HOLD.
 Editorial modules: overview; districts; climate; arrival/logistics; Anibare Bay; WWII trails; Topside; Buada Lagoon; museum; fishing/boat charters; culture/crafts; CTA; SEO/schema.
-SEO slug candidate: `/curadoria/nauru/`
+SEO slug candidate: `/curadoria/naoero/` (do not create in CMS until alias dedupe and external-id derivation pass)
 Schema candidates: `TouristDestination`, `Place`, `FAQPage`, `BreadcrumbList`.
 Media: `MISSING_VERIFIED_MEDIA_MANIFEST`.
 Canonical action: create identity only after duplicate search against 881/WORLD and historical aliases.
@@ -84,7 +88,7 @@ Canonical action: identity may be staged only after dedupe; publication remains 
 
 ## Canonical reconciliation procedure
 For each country before assigning any new CMS/Post/external ID:
-1. Normalize country name, ISO aliases, Portuguese/English variants and historical aliases.
+1. Normalize current country name, ISO aliases, Portuguese/English variants and historical aliases; specifically treat Naoero/Nauru/Republic of Nauru/NRU as one identity candidate.
 2. Search 881/WORLD exact and hierarchical mappings.
 3. Search WordPress `ang_curated` and `ang_lounge` by slug/title/external_id.
 4. If any plausible match exists, classify `MERGE_REVIEW`; do not create a new identity.
