@@ -13,6 +13,7 @@ on:
       - "docs/integrations/ZEUS_SOCIAL_EXECUTOR_GITHUB_AUTH_V5_*.json"
       - "ops/social/ANG_FACEBOOK_DESTINATION_GOVERNANCE_2026-10-29.md"
       - "scripts/validate_social_facebook_guard.py"
+      - ".github/workflows/validate-social-facebook-guard.yml"
 
 permissions:
   contents: read
