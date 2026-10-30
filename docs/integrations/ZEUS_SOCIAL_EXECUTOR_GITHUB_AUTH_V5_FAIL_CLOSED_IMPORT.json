@@ -1,5 +1,5 @@
 {
-  "name": "ZEUS — SOCIAL EXECUTOR GITHUB AUTH — V5 FAIL CLOSED",
+  "name": "ZEUS — SOCIAL EXECUTOR GITHUB AUTH — V5 FAIL CLOSED — CANONICAL FB PAGE",
   "nodes": [
     {
       "parameters": {
@@ -202,7 +202,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const e = $('Extrair envelope GitHub').first().json; const p = e.payload || {}; const pages = $json.data || []; const wanted = String(p.page_name || p.brand || '').trim().toLowerCase(); const norm = x => String(x || '').trim().toLowerCase(); const page = pages.find(x => norm(x.name) === wanted) || pages.find(x => norm(x.name).includes(wanted)) || pages[0]; if (!page) return [{json:{request_id:e.request_id,status:'META_PAGE_NOT_FOUND',payload:p}}]; return [{json:{request_id:e.request_id,payload:p,page_id:page.id,page_name:page.name,page_access_token:page.access_token}}];"
+        "jsCode": "const e=$('Extrair envelope GitHub').first().json; const p=e.payload||{}; const pages=$json.data||[]; const canonical='353450855530042'; const forbidden='1214700205067389'; const requested=String(p.facebook_page_id||'').trim(); if(requested!==canonical) throw new Error(requested===forbidden?'HOLD_FORBIDDEN_FACEBOOK_PAGE':'HOLD_NON_CANONICAL_FACEBOOK_PAGE'); const page=pages.find(x=>String(x.id||'')===canonical); if(!page) throw new Error('META_CANONICAL_PAGE_NOT_FOUND'); if(String(page.id)===forbidden) throw new Error('HOLD_FORBIDDEN_FACEBOOK_PAGE'); return [{json:{request_id:e.request_id,payload:p,page_id:page.id,page_name:page.name,page_access_token:page.access_token,facebook_destination_verified:true}}];"
       },
       "id": "v5-selectpage",
       "name": "Meta — Selecionar Página",
@@ -286,7 +286,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const action=String($json.action||'').trim().toLowerCase(); const p=$json.payload||{}; const required=['payload_id','idempotency_key','media_id','source','license_or_permission','brand_master_id','theme_key','visual_hash']; const missing=required.filter(k=>!String(p[k]||'').trim()); const gates={publish_authorized:p.publish_authorized===true,prohibited:p.prohibited!==true,real_media_verified:p.real_media_verified===true,master_logo_verified:p.master_logo_verified===true,no_duplicate_pass:p.no_duplicate_pass===true,copy_qa_pass:p.copy_qa_pass===true}; const errors=[]; if(action!=='social_publish_v5') errors.push('UNSUPPORTED_ACTION'); if(missing.length) errors.push('MISSING:'+missing.join(',')); for(const [k,v] of Object.entries(gates)) if(!v) errors.push('GATE:'+k); const allowed=errors.length===0; return [{json:{...$json,route:allowed?'social':'blocked',status:allowed?'ACTION_ALLOWED':'HOLD_UNSUPPORTED_OR_UNVERIFIED_ACTION',gate_errors:errors}}];"
+        "jsCode": "const action=String($json.action||'').trim().toLowerCase(); const p=$json.payload||{}; const canonical='353450855530042'; const forbidden='1214700205067389'; const required=['payload_id','idempotency_key','media_id','source','license_or_permission','brand_master_id','theme_key','visual_hash','facebook_page_id']; const missing=required.filter(k=>!String(p[k]||'').trim()); const gates={publish_authorized:p.publish_authorized===true,prohibited:p.prohibited!==true,real_media_verified:p.real_media_verified===true,master_logo_verified:p.master_logo_verified===true,no_duplicate_pass:p.no_duplicate_pass===true,copy_qa_pass:p.copy_qa_pass===true,canonical_facebook_page:String(p.facebook_page_id||'')===canonical,forbidden_facebook_page_rejected:String(p.facebook_page_id||'')!==forbidden}; const errors=[]; if(action!=='social_publish_v5') errors.push('UNSUPPORTED_ACTION'); if(missing.length) errors.push('MISSING:'+missing.join(',')); for(const [k,v] of Object.entries(gates)) if(!v) errors.push('GATE:'+k); const allowed=errors.length===0; return [{json:{...$json,route:allowed?'social':'blocked',status:allowed?'ACTION_ALLOWED':'HOLD_UNSUPPORTED_OR_UNVERIFIED_ACTION',gate_errors:errors,facebook_destination:canonical}}];"
       },
       "id": "v5-action-guard",
       "name": "Fail Closed — Validar ação social",
