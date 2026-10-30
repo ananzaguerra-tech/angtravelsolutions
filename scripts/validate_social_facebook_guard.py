@@ -35,6 +35,7 @@ def validate(root: Path) -> list[str]:
 
     select = node_code(guarded, "v5-selectpage")
     gate = node_code(guarded, "v5-action-guard")
+    publish = node_code(guarded, "v5-publish")
     legacy_select = node_code(legacy, "v5-selectpage")
 
     checks = {
@@ -52,6 +53,13 @@ def validate(root: Path) -> list[str]:
             "idempotency_state", "UNUSED", "IDEMPOTENCY_PERSISTENCE_NOT_VERIFIED",
             "IDEMPOTENCY_KEY_ALREADY_USED_OR_UNKNOWN",
         )),
+        "guarded_channel_scope": all(key in gate for key in (
+            "channels", "instagram", "channel_scope_supported", "UNSUPPORTED_OR_AMBIGUOUS_PUBLICATION_CHANNEL",
+        )),
+        "guarded_post_publish_readback": all(key in publish for key in (
+            "readback", "permalink", "publication_id", "execution_id",
+            "readback_verified", "HOLD_POST_PUBLICATION_READBACK_FAILED",
+        )),
         "guarded_no_first_page_fallback": "pages[0]" not in select,
         "legacy_active_false": legacy.get("active") is False,
         "legacy_quarantined": "QUARANTINED" in str(legacy.get("name", "")) and "NEVER IMPORT" in str(legacy.get("name", "")),
@@ -60,6 +68,13 @@ def validate(root: Path) -> list[str]:
         "policy_canonical_id": CANONICAL in policy,
         "policy_forbidden_id": FORBIDDEN in policy and "NEVER PUBLISH" in policy,
         "policy_text_only_block": "Text-only posts are forbidden" in policy,
+        "policy_channel_scope": all(key in policy for key in (
+            "Instagram-only publisher", "UNSUPPORTED_OR_AMBIGUOUS_PUBLICATION_CHANNEL",
+            "HOLD_FACEBOOK_PUBLISHER_NOT_IMPLEMENTED",
+        )),
+        "policy_readback_receipts": all(key in policy for key in (
+            "publication_id", "permalink", "execution ID", "post-publication readback",
+        )),
         "policy_media_gates": all(key in policy for key in (
             "media_id", "author_or_owner", "license_or_permission", "brand_master_id", "sha256", "visual_hash",
             "idempotency_key", "idempotency_record_id", "idempotency_persistence_verified", "idempotency_state",
@@ -80,7 +95,8 @@ def self_test() -> int:
             "meta": {"active": False},
             "nodes": [
                 {"id": "v5-selectpage", "parameters": {"jsCode": f"canonical='{CANONICAL}'; forbidden='{FORBIDDEN}';"}},
-                {"id": "v5-action-guard", "parameters": {"jsCode": f"facebook_page_id {CANONICAL} {FORBIDDEN} CURADORIA_ANG_AGOSTO author_or_owner sha256 image_url image_urls MEDIA_MATERIAL_MISSING_OR_UNSUPPORTED media_material_https_verified INVALID_SHA256 sha256_format_verified idempotency_key idempotency_record_id idempotency_persistence_verified idempotency_state UNUSED IDEMPOTENCY_PERSISTENCE_NOT_VERIFIED IDEMPOTENCY_KEY_ALREADY_USED_OR_UNKNOWN"}},
+                {"id": "v5-action-guard", "parameters": {"jsCode": f"channels instagram channel_scope_supported UNSUPPORTED_OR_AMBIGUOUS_PUBLICATION_CHANNEL facebook_page_id {CANONICAL} {FORBIDDEN} CURADORIA_ANG_AGOSTO author_or_owner sha256 image_url image_urls MEDIA_MATERIAL_MISSING_OR_UNSUPPORTED media_material_https_verified INVALID_SHA256 sha256_format_verified idempotency_key idempotency_record_id idempotency_persistence_verified idempotency_state UNUSED IDEMPOTENCY_PERSISTENCE_NOT_VERIFIED IDEMPOTENCY_KEY_ALREADY_USED_OR_UNKNOWN"}},
+                {"id": "v5-publish", "parameters": {"jsCode": "readback permalink publication_id execution_id readback_verified HOLD_POST_PUBLICATION_READBACK_FAILED"}},
             ],
         }
         legacy = {
@@ -89,7 +105,7 @@ def self_test() -> int:
             "nodes": [{"id": "v5-selectpage", "parameters": {"jsCode": "HOLD_SUPERSEDED_EXECUTOR_NEVER_IMPORT"}}],
         }
         policy = (
-            f"{CANONICAL} {FORBIDDEN} NEVER PUBLISH Text-only posts are forbidden "
+            f"{CANONICAL} {FORBIDDEN} NEVER PUBLISH Text-only posts are forbidden Instagram-only publisher UNSUPPORTED_OR_AMBIGUOUS_PUBLICATION_CHANNEL HOLD_FACEBOOK_PUBLISHER_NOT_IMPLEMENTED publication_id permalink execution ID post-publication readback "
             "media_id author_or_owner license_or_permission brand_master_id sha256 visual_hash idempotency_key idempotency_record_id idempotency_persistence_verified idempotency_state REAL_MEDIA_VERIFIED "
             "MASTER_LOGO_VERIFIED NO_DUPLICATE_PASS COPY_QA_PASS"
         )
