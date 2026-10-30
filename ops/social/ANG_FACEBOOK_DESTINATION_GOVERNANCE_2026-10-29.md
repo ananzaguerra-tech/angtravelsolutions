@@ -60,11 +60,16 @@ Any social executor or payload MUST:
 3. reject empty media, text-only payloads and unverified URLs;
 4. reject legacy payload `CURADORIA_ANG_AGOSTO`;
 5. require an idempotency key plus a durable ledger record proving `idempotency_state=UNUSED` and `idempotency_persistence_verified=true`; absent, used or unknown keys MUST HOLD before any Meta request;
-6. return and persist `publication_id`, permalink and execution ID after success;
-7. perform post-publication readback before marking `PUBLISHED`;
-8. atomically update the durable idempotency ledger with publication ID, permalink and execution ID after success.
+6. declare the requested channel explicitly and reject unsupported or ambiguous channel scope before any Meta request;
+7. return and persist `publication_id`, permalink and execution ID after success;
+8. perform post-publication readback of the exact ID and HTTPS permalink before marking `PUBLISHED`;
+9. atomically update the durable idempotency ledger with publication ID, permalink and execution ID after success.
 
-The inactive staging import enforces the preflight proof contract but does not implement or claim the durable ledger. Until an authenticated upstream ledger exists and the post-success write is verified, status remains `NO_PUBLISH`.
+The inactive staging import enforces the preflight proof contract but does not implement or claim the durable ledger.
+
+## Channel scope integrity
+
+The current staging import is an **Instagram-only publisher**. It uses Page ID `353450855530042` solely to verify and discover the linked Instagram Business account. This does **not** prove or perform a Facebook publication. Any request containing `facebook` or an ambiguous/empty channel scope must return `UNSUPPORTED_OR_AMBIGUOUS_PUBLICATION_CHANNEL` before any Meta request. Facebook publishing remains `HOLD_FACEBOOK_PUBLISHER_NOT_IMPLEMENTED` until a dedicated canonical-page path applies the same media, provenance, idempotency and post-publication readback controls. Until an authenticated upstream ledger exists and the post-success write is verified, status remains `NO_PUBLISH`.
 
 Unknown or mismatched destinations must return `HOLD_UNSUPPORTED_OR_FORBIDDEN_DESTINATION`.
 
