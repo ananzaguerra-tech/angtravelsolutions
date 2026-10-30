@@ -98,3 +98,9 @@ Client payload fields `durable_ledger_ready`, `post_success_atomic_write_ready` 
 A PostgreSQL reference migration now defines a server-side ledger state machine: `UNUSED→RESERVED→PUBLISHED/FAILED`. Registration rejects duplicate idempotency or active visual/destination keys; reservation is a single atomic conditional update from `UNUSED`; publication requires an active reservation plus exact publication ID, HTTPS permalink, execution ID and verified readback. `PUBLISHED` and `FAILED` are terminal because no reset/reuse function exists.
 
 The migration is explicitly `REFERENCE_ONLY / NOT_APPLIED / NO_CREDENTIALS`. It has not been executed against any database and is not wired into n8n. Its offline validator proves only repository structure and negative regression behavior, not database compatibility, transaction isolation, credentials, deployment or runtime persistence. Consequently the Facebook and Instagram candidates remain inactive and `HOLD_SERVER_SIDE_LEDGER_AND_AUTH_NOT_WIRED`.
+
+## Offline ledger state-machine canaries — C311
+
+A deterministic in-memory model now exercises eight negative and concurrency canaries: duplicate key, active visual/destination duplicate, two simultaneous reservations with exactly one winner, incomplete receipt, wrong reservation execution, terminal `PUBLISHED`, terminal `FAILED`, and unknown key. The CI executes these canaries without database, credentials, n8n or Meta access.
+
+These tests prove only the intended state-machine behavior of the offline model. They do not execute the PostgreSQL migration and do not prove database isolation, function privileges, runtime persistence, crash recovery or n8n integration. The migration remains `REFERENCE_ONLY / NOT_APPLIED / NO_CREDENTIALS`, and all social publishers remain inactive.
