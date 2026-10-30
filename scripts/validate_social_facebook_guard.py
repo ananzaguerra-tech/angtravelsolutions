@@ -42,6 +42,7 @@ def validate(root: Path) -> list[str]:
         "guarded_canonical_id": CANONICAL in select and CANONICAL in gate,
         "guarded_forbidden_id": FORBIDDEN in select and FORBIDDEN in gate,
         "guarded_requires_payload_page_id": "facebook_page_id" in gate,
+        "guarded_forbidden_legacy_payload": "CURADORIA_ANG_AGOSTO" in gate,
         "guarded_no_first_page_fallback": "pages[0]" not in select,
         "legacy_active_false": legacy.get("active") is False,
         "legacy_quarantined": "QUARANTINED" in str(legacy.get("name", "")) and "NEVER IMPORT" in str(legacy.get("name", "")),
@@ -69,7 +70,7 @@ def self_test() -> int:
             "meta": {"active": False},
             "nodes": [
                 {"id": "v5-selectpage", "parameters": {"jsCode": f"canonical='{CANONICAL}'; forbidden='{FORBIDDEN}';"}},
-                {"id": "v5-action-guard", "parameters": {"jsCode": f"facebook_page_id {CANONICAL} {FORBIDDEN}"}},
+                {"id": "v5-action-guard", "parameters": {"jsCode": f"facebook_page_id {CANONICAL} {FORBIDDEN} CURADORIA_ANG_AGOSTO"}},
             ],
         }
         legacy = {
