@@ -86,3 +86,9 @@ Delete or revert only this policy file and its referencing checkpoint. This poli
 A separate inactive candidate, `ZEUS_FACEBOOK_CANONICAL_PUBLISHER_V1_FAIL_CLOSED_IMPORT.json`, now models Facebook publishing exclusively to Page ID `353450855530042`. It accepts only `channels=['facebook']` and `format=facebook_photo`; video and reels return `HOLD_FACEBOOK_VIDEO_NOT_IMPLEMENTED`. The forbidden Page ID `1214700205067389`, legacy payload `CURADORIA_ANG_AGOSTO`, text-only input, missing provenance and unverified HTTPS media are rejected before Meta.
 
 This candidate is `STAGING_IMPORT_CANDIDATE_INACTIVE / NO_PUBLISH`. Even with all media gates present, it requires independently proven `durable_ledger_ready=true`, `post_success_atomic_write_ready=true` and `meta_auth_readback_verified=true`; those proofs do not yet exist. After a hypothetical photo creation, exact `post_id`, HTTPS `permalink_url`, execution ID and readback are required, and the status remains `HOLD_ATOMIC_LEDGER_WRITE_REQUIRED` until the durable ledger write is proven. No Facebook import or execution is authorized by this repository artifact.
+
+## Server-side routing hardening — C309
+
+The C308 candidate was corrected so a denied payload cannot flow into the Meta page-discovery request. `Fail Closed — Validar Facebook` now connects only to the physical `Rota Facebook autorizada?` IF node: the true branch is the sole route to Meta and the false branch goes directly to the webhook response.
+
+Client payload fields `durable_ledger_ready`, `post_success_atomic_write_ready` and `meta_auth_readback_verified` are not trusted as evidence and cannot unlock the route. The inactive candidate now always returns `HOLD_SERVER_SIDE_LEDGER_AND_AUTH_NOT_WIRED` after all client-supplied gates pass, until durable ledger, atomic write and Meta-authentication checks exist as server-side nodes with independent evidence. Therefore C309 still authorizes no import, Meta call or publication.
