@@ -1,0 +1,286 @@
+{
+  "name": "ZEUS — FACEBOOK CANONICAL PUBLISHER — V1 FAIL CLOSED — INACTIVE",
+  "active": false,
+  "nodes": [
+    {
+      "id": "fbv1-webhook",
+      "name": "Facebook V1 Gateway",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -1200,
+        0
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "zeus-facebook-v1-canonical",
+        "responseMode": "responseNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "fbv1-envelope",
+      "name": "Extrair envelope GitHub",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -980,
+        0
+      ],
+      "parameters": {
+        "jsCode": "const h=$json.headers||{}; const b=$json.body||$json; const raw=String(h.authorization||h.Authorization||''); const token=raw.replace(/^Bearer\\s+/i,'').trim(); return [{json:{token,run_id:String(b.run_id||''),sha:String(b.sha||''),repository:String(b.repository||''),action:String(b.action||'').trim().toLowerCase(),payload:b.payload||{},request_id:b.request_id||$execution.id,source:b.source||'github-actions'}}];"
+      }
+    },
+    {
+      "id": "fbv1-ghverify",
+      "name": "GitHub — Verificar Run",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -760,
+        0
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "={{ 'https://api.github.com/repos/ananzaguerra-tech/angtravelsolutions/actions/runs/' + $json.run_id }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "={{ 'Bearer ' + $json.token }}"
+            },
+            {
+              "name": "Accept",
+              "value": "application/vnd.github+json"
+            },
+            {
+              "name": "X-GitHub-Api-Version",
+              "value": "2022-11-28"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "neverError": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "fbv1-auth",
+      "name": "Autorizar GitHub",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -540,
+        0
+      ],
+      "parameters": {
+        "jsCode": "const e=$('Extrair envelope GitHub').first().json; const r=$json||{}; const ok=!!e.token&&!!e.run_id&&!!e.sha&&e.repository==='ananzaguerra-tech/angtravelsolutions'&&String(r.id||'')===e.run_id&&String(r.head_sha||'')===e.sha&&String(r.repository?.full_name||'')===e.repository; return [{json:{...e,authorized:ok,auth_status:ok?'PASS':'DENY',token:undefined}}];"
+      }
+    },
+    {
+      "id": "fbv1-action-guard",
+      "name": "Fail Closed — Validar Facebook",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -300,
+        0
+      ],
+      "parameters": {
+        "jsCode": "const x=$json,p=x.payload||{}; const canonical='353450855530042', forbidden='1214700205067389'; const channels=Array.isArray(p.channels)?p.channels.map(v=>String(v).toLowerCase().trim()).filter(Boolean):[]; const required=['media_id','source','author_or_owner','license_or_permission','brand_master_id','theme_key','visual_hash','sha256','idempotency_key','idempotency_record_id']; let hold=''; if(!x.authorized) hold='AUTH_DENIED'; else if(x.action!=='facebook_publish_v1') hold='UNSUPPORTED_ACTION'; else if(String(p.payload_id||'')==='CURADORIA_ANG_AGOSTO') hold='FORBIDDEN_LEGACY_PAYLOAD'; else if(channels.length!==1||channels[0]!=='facebook') hold='UNSUPPORTED_OR_AMBIGUOUS_PUBLICATION_CHANNEL'; else if(String(p.facebook_page_id||'')===forbidden) hold='HOLD_FORBIDDEN_FACEBOOK_PAGE'; else if(String(p.facebook_page_id||'')!==canonical) hold='HOLD_NON_CANONICAL_FACEBOOK_PAGE'; else if(String(p.format||'')==='video'||String(p.format||'')==='reel') hold='HOLD_FACEBOOK_VIDEO_NOT_IMPLEMENTED'; else if(String(p.format||'')!=='facebook_photo') hold='HOLD_UNSUPPORTED_FACEBOOK_FORMAT'; else if(required.some(k=>!String(p[k]??'').trim())) hold='MISSING_REQUIRED_PROVENANCE'; else if(!/^[a-f0-9]{64}$/i.test(String(p.sha256||''))) hold='INVALID_SHA256'; else if(!/^https:\\/\\/[^\\s]+$/i.test(String(p.image_url||''))) hold='MEDIA_MATERIAL_MISSING_OR_UNSUPPORTED'; else if(p.REAL_MEDIA_VERIFIED!==true||p.MASTER_LOGO_VERIFIED!==true||p.NO_DUPLICATE_PASS!==true||p.COPY_QA_PASS!==true) hold='MEDIA_OR_COPY_GATE_NOT_PASSED'; else if(p.idempotency_persistence_verified!==true) hold='IDEMPOTENCY_PERSISTENCE_NOT_VERIFIED'; else if(String(p.idempotency_state||'')!=='UNUSED') hold='IDEMPOTENCY_KEY_ALREADY_USED_OR_UNKNOWN'; else if(p.durable_ledger_ready!==true) hold='DURABLE_IDEMPOTENCY_LEDGER_NOT_IMPLEMENTED'; else if(p.post_success_atomic_write_ready!==true) hold='POST_SUCCESS_ATOMIC_LEDGER_WRITE_NOT_PROVEN'; else if(p.meta_auth_readback_verified!==true) hold='META_ORGANIC_AUTH_READBACK_MISSING'; return [{json:{...x,payload:p,facebook_page_id:canonical,channel:'facebook',media_material_https_verified:!hold,sha256_format_verified:/^[a-f0-9]{64}$/i.test(String(p.sha256||'')),channel_scope_supported:channels.length===1&&channels[0]==='facebook',route_authorized:!hold,status:hold||'FACEBOOK_PREFLIGHT_PASS'}}];"
+      }
+    },
+    {
+      "id": "fbv1-pages",
+      "name": "Meta — Descobrir Páginas",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -40,
+        0
+      ],
+      "credentials": {
+        "httpHeaderAuth": "meta_whatsapp_auth"
+      },
+      "parameters": {
+        "method": "GET",
+        "url": "https://graph.facebook.com/v23.0/me/accounts?fields=id,name,access_token",
+        "authentication": "headerAuth",
+        "options": {
+          "response": {
+            "response": {
+              "neverError": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "fbv1-selectpage",
+      "name": "Meta — Selecionar Página Canônica",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        200,
+        0
+      ],
+      "parameters": {
+        "jsCode": "const g=$('Fail Closed — Validar Facebook').first().json; if(!g.route_authorized) return [{json:g}]; const pages=$json.data||[], canonical='353450855530042', forbidden='1214700205067389'; const page=pages.find(x=>String(x.id||'')===canonical); if(!page) throw new Error('META_CANONICAL_PAGE_NOT_FOUND'); if(String(page.id||'')===forbidden) throw new Error('HOLD_FORBIDDEN_FACEBOOK_PAGE'); return [{json:{...g,page_id:page.id,page_name:page.name,page_access_token:page.access_token,facebook_destination_verified:true}}];"
+      }
+    },
+    {
+      "id": "fbv1-publish",
+      "name": "Facebook — Publicar foto e comprovar",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        0
+      ],
+      "parameters": {
+        "jsCode": "const x=$json,p=x.payload||{}; if(!x.route_authorized) return [{json:x}]; const graph='https://graph.facebook.com/v23.0/'; async function call(url,options){const res=await fetch(url,options); const raw=await res.text(); let data={}; try{data=raw?JSON.parse(raw):{};}catch{data={raw};} if(!res.ok){const e=data.error||{}; throw new Error('HTTP '+res.status+' META '+String(e.code||'')+' '+String(e.message||raw||'request failed'));} return data;} const body=new URLSearchParams({url:String(p.image_url),caption:String(p.caption||''),published:'true',access_token:String(x.page_access_token)}); const created=await call(graph+x.page_id+'/photos',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body}); const publicationId=String(created.post_id||''); if(!publicationId) return [{json:{request_id:x.request_id,area:'FACEBOOK',channel:'facebook',status:'HOLD_POST_PUBLICATION_ID_MISSING',publication_id:'',permalink:'',execution_id:$execution.id,readback_verified:false}}]; let rb={}; try{rb=await call(graph+encodeURIComponent(publicationId)+'?fields=id,permalink_url,created_time,message,attachments&access_token='+encodeURIComponent(x.page_access_token),{method:'GET'});}catch(e){return [{json:{request_id:x.request_id,area:'FACEBOOK',channel:'facebook',status:'HOLD_POST_PUBLICATION_READBACK_FAILED',publication_id:publicationId,permalink:'',execution_id:$execution.id,readback_verified:false,error:String(e.message||e)}}];} const permalink=String(rb.permalink_url||''); const ok=String(rb.id||'')===publicationId&&/^https:\\/\\/[^\\s]+$/i.test(permalink); return [{json:{request_id:x.request_id,area:'FACEBOOK',channel:'facebook',status:ok?'HOLD_ATOMIC_LEDGER_WRITE_REQUIRED':'HOLD_POST_PUBLICATION_READBACK_FAILED',publication_id:publicationId,permalink,execution_id:$execution.id,readback_verified:ok,post_success_atomic_ledger_write_verified:false}}];"
+      }
+    },
+    {
+      "id": "fbv1-respond",
+      "name": "Responder Facebook V1",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        680,
+        0
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{$json}}",
+        "options": {
+          "responseCode": 200
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Facebook V1 Gateway": {
+      "main": [
+        [
+          {
+            "node": "Extrair envelope GitHub",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extrair envelope GitHub": {
+      "main": [
+        [
+          {
+            "node": "GitHub — Verificar Run",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GitHub — Verificar Run": {
+      "main": [
+        [
+          {
+            "node": "Autorizar GitHub",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Autorizar GitHub": {
+      "main": [
+        [
+          {
+            "node": "Fail Closed — Validar Facebook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fail Closed — Validar Facebook": {
+      "main": [
+        [
+          {
+            "node": "Meta — Descobrir Páginas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Meta — Descobrir Páginas": {
+      "main": [
+        [
+          {
+            "node": "Meta — Selecionar Página Canônica",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Meta — Selecionar Página Canônica": {
+      "main": [
+        [
+          {
+            "node": "Facebook — Publicar foto e comprovar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Facebook — Publicar foto e comprovar": {
+      "main": [
+        [
+          {
+            "node": "Responder Facebook V1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "note": "STAGING_IMPORT_CANDIDATE_INACTIVE / NO_PUBLISH. Dedicated Facebook photo publisher for canonical ANG TRAVEL Page only. It remains fail-closed until durable ledger, atomic post-success ledger write and authenticated Meta readback are independently proven. Video/reels are explicitly unsupported and HOLD.",
+    "active": false,
+    "canonical_facebook_page_id": "353450855530042",
+    "forbidden_facebook_page_id": "1214700205067389",
+    "supported_publication_channels": [
+      "facebook"
+    ],
+    "supported_formats": [
+      "facebook_photo"
+    ],
+    "unsupported_formats": [
+      "video",
+      "reel"
+    ],
+    "forbidden_payload_ids": [
+      "CURADORIA_ANG_AGOSTO"
+    ],
+    "required_preconditions": [
+      "durable_ledger_ready=true",
+      "post_success_atomic_write_ready=true",
+      "meta_auth_readback_verified=true"
+    ],
+    "post_publication_readback_required": true,
+    "post_success_atomic_ledger_write_required": true
+  }
+}
