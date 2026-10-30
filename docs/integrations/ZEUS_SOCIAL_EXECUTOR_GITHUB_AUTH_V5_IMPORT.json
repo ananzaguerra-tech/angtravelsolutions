@@ -1,5 +1,5 @@
 {
-  "name": "ZEUS — SOCIAL EXECUTOR GITHUB AUTH — V5",
+  "name": "QUARANTINED — NEVER IMPORT — ZEUS SOCIAL V5 LEGACY",
   "nodes": [
     {
       "parameters": {
@@ -12,7 +12,10 @@
       "name": "ZEUS Social V5 Gateway",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2,
-      "position": [-1200, 0],
+      "position": [
+        -1200,
+        0
+      ],
       "webhookId": "zeus-social-v5-ghauth"
     },
     {
@@ -23,7 +26,10 @@
       "name": "Extrair envelope GitHub",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [-980, 0]
+      "position": [
+        -980,
+        0
+      ]
     },
     {
       "parameters": {
@@ -32,18 +38,36 @@
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
-            {"name": "Authorization", "value": "={{ 'Bearer ' + $json.token }}"},
-            {"name": "Accept", "value": "application/vnd.github+json"},
-            {"name": "X-GitHub-Api-Version", "value": "2022-11-28"}
+            {
+              "name": "Authorization",
+              "value": "={{ 'Bearer ' + $json.token }}"
+            },
+            {
+              "name": "Accept",
+              "value": "application/vnd.github+json"
+            },
+            {
+              "name": "X-GitHub-Api-Version",
+              "value": "2022-11-28"
+            }
           ]
         },
-        "options": {"response": {"response": {"neverError": true}}}
+        "options": {
+          "response": {
+            "response": {
+              "neverError": true
+            }
+          }
+        }
       },
       "id": "v5-ghverify",
       "name": "GitHub — Verificar Run",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [-740, 0]
+      "position": [
+        -740,
+        0
+      ]
     },
     {
       "parameters": {
@@ -53,13 +77,32 @@
       "name": "Autorizar GitHub",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [-500, 0]
+      "position": [
+        -500,
+        0
+      ]
     },
     {
       "parameters": {
         "conditions": {
-          "options": {"caseSensitive": true, "leftValue": "", "typeValidation": "strict", "version": 2},
-          "conditions": [{"id": "auth-cond", "leftValue": "={{$json.authorized}}", "rightValue": true, "operator": {"type": "boolean", "operation": "true", "singleValue": true}}],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "auth-cond",
+              "leftValue": "={{$json.authorized}}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
           "combinator": "and"
         },
         "options": {}
@@ -68,13 +111,31 @@
       "name": "Autorizado?",
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
-      "position": [-280, 0]
+      "position": [
+        -280,
+        0
+      ]
     },
     {
       "parameters": {
         "conditions": {
-          "options": {"caseSensitive": false, "leftValue": "", "typeValidation": "strict", "version": 2},
-          "conditions": [{"id": "status-auth-cond", "leftValue": "={{$json.action}}", "rightValue": "status/auth", "operator": {"type": "string", "operation": "equals"}}],
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "status-auth-cond",
+              "leftValue": "={{$json.action}}",
+              "rightValue": "status/auth",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
           "combinator": "and"
         },
         "options": {}
@@ -83,7 +144,10 @@
       "name": "Status/Auth?",
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
-      "position": [-40, -40]
+      "position": [
+        -40,
+        -40
+      ]
     },
     {
       "parameters": {
@@ -93,53 +157,91 @@
       "name": "Responder AUTH PASS",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [200, 40]
+      "position": [
+        200,
+        40
+      ]
     },
     {
-      "parameters": {"jsCode": "return [{json:{status:'AUTH_DENIED',request_id:$json.request_id||$execution.id}}];"},
+      "parameters": {
+        "jsCode": "return [{json:{status:'AUTH_DENIED',request_id:$json.request_id||$execution.id}}];"
+      },
       "id": "v5-deny",
       "name": "Negar execução",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [-40, 180]
+      "position": [
+        -40,
+        180
+      ]
     },
     {
       "parameters": {
         "method": "GET",
         "url": "https://graph.facebook.com/v23.0/me/accounts?fields=id,name,access_token",
         "authentication": "headerAuth",
-        "options": {"response": {"response": {"neverError": true}}}
+        "options": {
+          "response": {
+            "response": {
+              "neverError": true
+            }
+          }
+        }
       },
       "id": "v5-pages",
       "name": "Meta — Descobrir Páginas",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [-40, -180],
-      "credentials": {"httpHeaderAuth": "meta_whatsapp_auth"}
+      "position": [
+        -40,
+        -180
+      ],
+      "credentials": {
+        "httpHeaderAuth": "meta_whatsapp_auth"
+      }
     },
     {
       "parameters": {
-        "jsCode": "const e = $('Extrair envelope GitHub').first().json; const p = e.payload || {}; const pages = $json.data || []; const wanted = String(p.page_name || p.brand || '').trim().toLowerCase(); const norm = x => String(x || '').trim().toLowerCase(); const page = pages.find(x => norm(x.name) === wanted) || pages.find(x => norm(x.name).includes(wanted)) || pages[0]; if (!page) return [{json:{request_id:e.request_id,status:'META_PAGE_NOT_FOUND',payload:p}}]; return [{json:{request_id:e.request_id,payload:p,page_id:page.id,page_name:page.name,page_access_token:page.access_token}}];"
+        "jsCode": "throw new Error('HOLD_SUPERSEDED_EXECUTOR_NEVER_IMPORT');"
       },
       "id": "v5-selectpage",
       "name": "Meta — Selecionar Página",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [200, -180]
+      "position": [
+        200,
+        -180
+      ]
     },
     {
       "parameters": {
         "method": "GET",
         "url": "={{ 'https://graph.facebook.com/v23.0/' + $json.page_id + '?fields=instagram_business_account{id,username}' }}",
         "sendQuery": true,
-        "queryParameters": {"parameters": [{"name": "access_token", "value": "={{$json.page_access_token}}"}]},
-        "options": {"response": {"response": {"neverError": true}}}
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "access_token",
+              "value": "={{$json.page_access_token}}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "neverError": true
+            }
+          }
+        }
       },
       "id": "v5-ig",
       "name": "Meta — Descobrir Instagram Business",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [440, -180]
+      "position": [
+        440,
+        -180
+      ]
     },
     {
       "parameters": {
@@ -149,7 +251,10 @@
       "name": "Instagram — Preparar formato",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [680, -180]
+      "position": [
+        680,
+        -180
+      ]
     },
     {
       "parameters": {
@@ -159,33 +264,191 @@
       "name": "Instagram — Publicar feed story carousel",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [920, -180]
+      "position": [
+        920,
+        -180
+      ]
     },
     {
-      "parameters": {"respondWith": "json", "responseBody": "={{ {ok:($json.status==='PUBLISHED'),request_id:$json.request_id||$execution.id,result:$json} }}", "options": {}},
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ {ok:($json.status==='PUBLISHED'),request_id:$json.request_id||$execution.id,result:$json} }}",
+        "options": {}
+      },
       "id": "v5-respond",
       "name": "Responder V5",
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.4,
-      "position": [1180, 0]
+      "position": [
+        1180,
+        0
+      ]
     }
   ],
   "connections": {
-    "ZEUS Social V5 Gateway": {"main": [[{"node": "Extrair envelope GitHub", "type": "main", "index": 0}]]},
-    "Extrair envelope GitHub": {"main": [[{"node": "GitHub — Verificar Run", "type": "main", "index": 0}]]},
-    "GitHub — Verificar Run": {"main": [[{"node": "Autorizar GitHub", "type": "main", "index": 0}]]},
-    "Autorizar GitHub": {"main": [[{"node": "Autorizado?", "type": "main", "index": 0}]]},
-    "Autorizado?": {"main": [[{"node": "Status/Auth?", "type": "main", "index": 0}], [{"node": "Negar execução", "type": "main", "index": 0}]]},
-    "Status/Auth?": {"main": [[{"node": "Responder AUTH PASS", "type": "main", "index": 0}], [{"node": "Meta — Descobrir Páginas", "type": "main", "index": 0}]]},
-    "Responder AUTH PASS": {"main": [[{"node": "Responder V5", "type": "main", "index": 0}]]},
-    "Negar execução": {"main": [[{"node": "Responder V5", "type": "main", "index": 0}]]},
-    "Meta — Descobrir Páginas": {"main": [[{"node": "Meta — Selecionar Página", "type": "main", "index": 0}]]},
-    "Meta — Selecionar Página": {"main": [[{"node": "Meta — Descobrir Instagram Business", "type": "main", "index": 0}]]},
-    "Meta — Descobrir Instagram Business": {"main": [[{"node": "Instagram — Preparar formato", "type": "main", "index": 0}]]},
-    "Instagram — Preparar formato": {"main": [[{"node": "Instagram — Publicar feed story carousel", "type": "main", "index": 0}]]},
-    "Instagram — Publicar feed story carousel": {"main": [[{"node": "Responder V5", "type": "main", "index": 0}]]}
+    "ZEUS Social V5 Gateway": {
+      "main": [
+        [
+          {
+            "node": "Extrair envelope GitHub",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extrair envelope GitHub": {
+      "main": [
+        [
+          {
+            "node": "GitHub — Verificar Run",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GitHub — Verificar Run": {
+      "main": [
+        [
+          {
+            "node": "Autorizar GitHub",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Autorizar GitHub": {
+      "main": [
+        [
+          {
+            "node": "Autorizado?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Autorizado?": {
+      "main": [
+        [
+          {
+            "node": "Status/Auth?",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Negar execução",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Status/Auth?": {
+      "main": [
+        [
+          {
+            "node": "Responder AUTH PASS",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Meta — Descobrir Páginas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Responder AUTH PASS": {
+      "main": [
+        [
+          {
+            "node": "Responder V5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Negar execução": {
+      "main": [
+        [
+          {
+            "node": "Responder V5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Meta — Descobrir Páginas": {
+      "main": [
+        [
+          {
+            "node": "Meta — Selecionar Página",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Meta — Selecionar Página": {
+      "main": [
+        [
+          {
+            "node": "Meta — Descobrir Instagram Business",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Meta — Descobrir Instagram Business": {
+      "main": [
+        [
+          {
+            "node": "Instagram — Preparar formato",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Instagram — Preparar formato": {
+      "main": [
+        [
+          {
+            "node": "Instagram — Publicar feed story carousel",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Instagram — Publicar feed story carousel": {
+      "main": [
+        [
+          {
+            "node": "Responder V5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
   },
-  "settings": {"executionOrder": "v1"},
+  "settings": {
+    "executionOrder": "v1"
+  },
   "active": false,
-  "meta": {"note": "STAGING_IMPORT_CANDIDATE. Authenticates GitHub Actions with ephemeral GITHUB_TOKEN by verifying the workflow run via GitHub API; no persistent GitHub Actions secret is required. Requires existing n8n credential meta_whatsapp_auth. Validate in staging before activating."}
+  "meta": {
+    "note": "STAGING_IMPORT_CANDIDATE. Authenticates GitHub Actions with ephemeral GITHUB_TOKEN by verifying the workflow run via GitHub API; no persistent GitHub Actions secret is required. Requires existing n8n credential meta_whatsapp_auth. Validate in staging before activating."
+  }
 }
