@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "docs/integrations/ZEUS_SOCIAL_EXECUTOR_GITHUB_AUTH_V5_*.json"
+      - "docs/integrations/ZEUS_FACEBOOK_CANONICAL_PUBLISHER_V1_FAIL_CLOSED_IMPORT.json"
       - "ops/social/ANG_FACEBOOK_DESTINATION_GOVERNANCE_2026-10-29.md"
       - "scripts/validate_social_facebook_guard.py"
       - ".github/workflows/validate-social-facebook-guard.yml"
@@ -11,6 +12,7 @@ on:
     branches: [staging]
     paths:
       - "docs/integrations/ZEUS_SOCIAL_EXECUTOR_GITHUB_AUTH_V5_*.json"
+      - "docs/integrations/ZEUS_FACEBOOK_CANONICAL_PUBLISHER_V1_FAIL_CLOSED_IMPORT.json"
       - "ops/social/ANG_FACEBOOK_DESTINATION_GOVERNANCE_2026-10-29.md"
       - "scripts/validate_social_facebook_guard.py"
       - ".github/workflows/validate-social-facebook-guard.yml"
