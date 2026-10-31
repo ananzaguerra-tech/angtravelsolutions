@@ -1,0 +1,242 @@
+{
+  "id": 81898,
+  "date": "2026-06-30T17:07:23",
+  "date_gmt": "2026-06-30T17:07:23",
+  "guid": {
+    "rendered": "https://angtravelsolutions.com.br/area-do-agente/"
+  },
+  "modified": "2026-09-13T10:05:08",
+  "modified_gmt": "2026-09-13T13:05:08",
+  "slug": "area-do-agente",
+  "status": "publish",
+  "type": "page",
+  "link": "https://angtravelsolutions.com.br/area-do-agente/",
+  "title": {
+    "rendered": "Área do Agente"
+  },
+  "content": {
+    "rendered": "<style>\n.ang-agent{--gold:#b88936;--gold2:#e0b85f;--ink:#070707;--cream:#f7f1e7;--navy:#080d3a;--muted:#b9b6af;background:linear-gradient(145deg,#070707,#080d3a 68%,#121212);color:var(--cream);min-height:100vh;padding:clamp(24px,4vw,56px)}.ang-agent *{box-sizing:border-box}.ang-agent a{text-decoration:none}.ang-agent-shell{max-width:1460px;margin:auto}.ang-agent-hero{display:grid;grid-template-columns:1.3fr .7fr;gap:24px;padding:clamp(30px,6vw,84px) 0 34px;border-bottom:1px solid rgba(224,184,95,.24)}.ang-agent-eyebrow{margin:0 0 12px;color:var(--gold2);font:700 .74rem Montserrat,Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase}.ang-agent h1{margin:0;color:#fff;font:600 clamp(2.8rem,6vw,6.2rem)/.95 'Playfair Display',Georgia,serif;letter-spacing:-.045em;max-width:11ch}.ang-agent-lead{max-width:70ch;color:#d3d0c9;font:400 1rem/1.8 Montserrat,Arial,sans-serif}.ang-agent-side{align-self:end;border:1px solid rgba(224,184,95,.28);padding:22px;background:rgba(255,255,255,.04)}.ang-agent-side strong{display:block;color:#fff;font:700 .82rem Montserrat,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase}.ang-agent-side p{margin:8px 0 0;color:var(--muted);font:400 .86rem/1.6 Montserrat,Arial,sans-serif}.ang-agent-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.ang-agent-btn{display:inline-block;padding:12px 16px;background:linear-gradient(90deg,var(--gold),var(--gold2));color:#111;font:800 .72rem Montserrat,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase}.ang-agent-btn.ghost{background:transparent;color:#fff;border:1px solid rgba(224,184,95,.35)}.ang-agent-section{padding:40px 0 0}.ang-agent-section h2{margin:0 0 8px;color:#fff;font:600 clamp(1.9rem,3.5vw,3.2rem)/1.05 'Playfair Display',Georgia,serif}.ang-agent-section>p{max-width:74ch;color:var(--muted);font:400 .9rem/1.7 Montserrat,Arial,sans-serif}.ang-agent-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:18px}.ang-agent-card{min-height:165px;padding:20px;border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.035);color:inherit;transition:.25s}.ang-agent-card:hover{transform:translateY(-3px);border-color:var(--gold2);background:rgba(184,137,54,.08)}.ang-agent-card span{display:block;color:var(--gold2);font:700 .67rem Montserrat,Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase}.ang-agent-card h3{margin:12px 0 8px;color:#fff;font:600 1rem/1.25 Montserrat,Arial,sans-serif}.ang-agent-card p{margin:0;color:#bbb7af;font:400 .8rem/1.55 Montserrat,Arial,sans-serif}.ang-agent-band{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}.ang-agent-kpi{padding:18px;border-top:1px solid var(--gold);background:#0b102d}.ang-agent-kpi strong{display:block;color:#fff;font:600 1rem Montserrat,Arial,sans-serif}.ang-agent-kpi small{display:block;margin-top:6px;color:#aaa69f;font:400 .75rem/1.5 Montserrat,Arial,sans-serif}.ang-agent-note{margin-top:30px;padding:22px;border:1px solid rgba(224,184,95,.28);background:linear-gradient(135deg,rgba(184,137,54,.09),rgba(255,255,255,.02))}.ang-agent-note h3{margin:0 0 8px;color:#fff;font:600 1.3rem 'Playfair Display',Georgia,serif}.ang-agent-note p{margin:0;color:#c6c2bb;font:400 .86rem/1.65 Montserrat,Arial,sans-serif}.ang-agent-footer{margin-top:46px;padding:22px 0;border-top:1px solid rgba(224,184,95,.2);color:#8f8b84;font:400 .76rem Montserrat,Arial,sans-serif}@media(max-width:1050px){.ang-agent-grid,.ang-agent-band{grid-template-columns:repeat(2,minmax(0,1fr))}.ang-agent-hero{grid-template-columns:1fr}}@media(max-width:560px){.ang-agent{padding:20px 14px}.ang-agent-grid,.ang-agent-band{grid-template-columns:1fr}.ang-agent h1{font-size:2.6rem}}\n</style>\n<div class=\"ang-agent\">\n<div class=\"ang-agent-shell\">\n<section class=\"ang-agent-hero\">\n<div>\n<p class=\"ang-agent-eyebrow\">ÁREA DO AGENTE · TREINAMENTOS &#038; CURADORIA</p>\n<h1>Seu ponto de partida para vender, operar e evoluir.</h1>\n<p class=\"ang-agent-lead\">Dashboard executivo para agências parceiras, franqueados e equipe autorizada. Reúne solicitações, novidades, campanhas, pendências, atalhos operacionais, capacitação e acesso à curadoria protegida.</p>\n<div class=\"ang-agent-actions\"><a class=\"ang-agent-btn\" href=\"/area-restrita/\">Abrir Área Restrita completa</a><a class=\"ang-agent-btn ghost\" href=\"/academy-ang/\">Ir para ANG Academy</a></div>\n</div>\n<aside class=\"ang-agent-side\"><strong>Acesso por perfil</strong></p>\n<p>Perfis aprovados: Super Admin, Admin interno, Comercial, Operacional, Franqueado, Agência parceira, Treinando e Fornecedor. A disponibilidade real de cada módulo depende das permissões e da homologação funcional.</p>\n</aside>\n</section>\n<section class=\"ang-agent-section\">\n<p class=\"ang-agent-eyebrow\">DASHBOARD EXECUTIVO</p>\n<h2>Visão rápida da operação.</h2>\n<p>Esta camada organiza os pontos de entrada do portal. Indicadores dinâmicos, notificações, progresso, favoritos e recomendações permanecem em homologação até que a camada de dados e RBAC esteja validada ponta a ponta.</p>\n<div class=\"ang-agent-band\">\n<div class=\"ang-agent-kpi\"><strong>Solicitações</strong><small>Acompanhe demandas, cotações e pendências operacionais.</small></div>\n<div class=\"ang-agent-kpi\"><strong>Novidades</strong><small>Atualizações de conteúdo, produtos, fornecedores e sistema.</small></div>\n<div class=\"ang-agent-kpi\"><strong>Campanhas</strong><small>Promoções, oportunidades e materiais comerciais.</small></div>\n<div class=\"ang-agent-kpi\"><strong>Aprendizado</strong><small>Treinamentos, trilhas, certificações e progresso.</small></div>\n</div>\n</section>\n<section class=\"ang-agent-section\">\n<p class=\"ang-agent-eyebrow\">ATALHOS PRINCIPAIS</p>\n<h2>Operação, conteúdo e negócio.</h2>\n<div class=\"ang-agent-grid\"><a class=\"ang-agent-card\" href=\"/wooba-white-label/\"><span>Operação</span></p>\n<h3>Wooba</h3>\n<p>Busca e referência operacional para aéreo e serviços.</p>\n<p></a><a class=\"ang-agent-card\" href=\"/hotelaria-restrita/\"><span>Curadoria</span></p>\n<h3>Hotelaria Restrita</h3>\n<p>Acervo premium de hotéis e inteligência comercial.</p>\n<p></a><a class=\"ang-agent-card\" href=\"/fornecedores/\"><span>Curadoria</span></p>\n<h3>Fornecedores</h3>\n<p>Diretório protegido de parceiros e referências operacionais.</p>\n<p></a><a class=\"ang-agent-card\" href=\"/biblioteca-premium/\"><span>Conteúdo</span></p>\n<h3>Biblioteca Premium</h3>\n<p>Guias, documentos, apresentações e materiais protegidos.</p>\n<p></a><a class=\"ang-agent-card\" href=\"/academy-ang/\"><span>Capacitação</span></p>\n<h3>ANG Academy</h3>\n<p>Trilhas, treinamentos, materiais e desenvolvimento profissional.</p>\n<p></a><a class=\"ang-agent-card\" href=\"/revista-ang/\"><span>Conteúdo</span></p>\n<h3>Revista ANG</h3>\n<p>Tendências, destinos, hotelaria e inteligência de mercado.</p>\n<p></a><a class=\"ang-agent-card\" href=\"/relatorios/\"><span>Gestão</span></p>\n<h3>Relatórios</h3>\n<p>Indicadores e acompanhamento operacional e comercial.</p>\n<p></a><a class=\"ang-agent-card\" href=\"/minhas-condicoes/\"><span>Conta</span></p>\n<h3>Minhas Condições</h3>\n<p>Condições comerciais específicas do perfil autenticado.</p>\n<p></a></div>\n</section>\n<section class=\"ang-agent-section\">\n<p class=\"ang-agent-eyebrow\">EXPERIÊNCIA APROVADA</p>\n<h2>Busca, filtros, progresso e continuidade.</h2>\n<p>A experiência final do portal contempla busca inteligente, filtros por categoria, cards premium com thumbnails, progresso visual, favoritos, retomada de onde o usuário parou, trilhas recomendadas, notificações e área de novidades. Esses recursos permanecem sinalizados como camada funcional a homologar, sem simular dados inexistentes.</p>\n<div class=\"ang-agent-note\">\n<h3>Mapa funcional completo</h3>\n<p>O dashboard detalhado com Onboarding, Sistemas &#038; Ferramentas, Infotravel/Orinter, Sabre, CRM, Emissores, Filas, Concierge, Consular, Quote Engine, Benefits/Regus, Financeiro, Promoções, Meu Perfil e RBAC está centralizado na Área Restrita principal.</p>\n</div>\n</section>\n<footer class=\"ang-agent-footer\">ANG Travel Solutions · Área do Agente · acesso condicionado ao perfil e às permissões vigentes.</footer>\n</div>\n</div>\n",
+    "protected": false
+  },
+  "excerpt": {
+    "rendered": "<p>Área do Agente ANG Travel Solutions: dashboard executivo para agências parceiras, franqueados e equipe autorizada, com atalhos de operação, curadoria premium, treinamentos, campanhas, solicitações e gestão.</p>\n",
+    "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+    "ang_source_url": "",
+    "ang_source_name": "",
+    "ang_source_updated_at": "",
+    "ang_external_id": "",
+    "ang_address": "",
+    "ang_phone": "",
+    "ang_email": "",
+    "ang_website": "",
+    "ang_opening_hours": "",
+    "ang_currency": "",
+    "ang_language": "",
+    "ang_voltage": "",
+    "ang_best_season": "",
+    "ang_certifications": "",
+    "ang_section": "",
+    "ang_seo_title": "",
+    "ang_meta_description": "",
+    "ang_tags": "",
+    "ang_image_url": "",
+    "ang_video_url": "",
+    "ang_cta_label": "",
+    "ang_cta_link": "",
+    "ang_access_role": "",
+    "ang_progress_required": "",
+    "ang_quiz_required": "",
+    "ang_content_status": "",
+    "footnotes": ""
+  },
+  "class_list": [
+    "post-81898",
+    "page",
+    "type-page",
+    "status-publish",
+    "hentry"
+  ],
+  "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.4 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Área do Agente - ANG TRAVEL SOLUTIONS</title>\n<!-- Aviso apenas para o administrador: esta página não mostra uma metadescrição porque não possui nenhuma. Ou escreva uma para esta página especificamente ou vá ao menu [Yoast SEO - Configurações] e configure um modelo. -->\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://angtravelsolutions.com.br/area-do-agente/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Área do Agente - ANG TRAVEL SOLUTIONS\" />\n<meta property=\"og:description\" content=\"Área do Agente ANG Travel Solutions: dashboard executivo para agências parceiras, franqueados e equipe autorizada, com atalhos de operação, curadoria premium, treinamentos, campanhas, solicitações e gestão.\" />\n<meta property=\"og:url\" content=\"https://angtravelsolutions.com.br/area-do-agente/\" />\n<meta property=\"og:site_name\" content=\"ANG TRAVEL SOLUTIONS\" />\n<meta property=\"article:modified_time\" content=\"2026-09-13T13:05:08+00:00\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:label1\" content=\"Est. tempo de leitura\" />\n\t<meta name=\"twitter:data1\" content=\"2 minutos\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/area-do-agente\\/\",\"url\":\"https:\\/\\/angtravelsolutions.com.br\\/area-do-agente\\/\",\"name\":\"Área do Agente - ANG TRAVEL SOLUTIONS\",\"isPartOf\":{\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/#website\"},\"datePublished\":\"2026-06-30T17:07:23+00:00\",\"dateModified\":\"2026-09-13T13:05:08+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/area-do-agente\\/#breadcrumb\"},\"inLanguage\":\"pt-BR\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/angtravelsolutions.com.br\\/area-do-agente\\/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/area-do-agente\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/angtravelsolutions.com.br\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Área do Agente\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/#website\",\"url\":\"https:\\/\\/angtravelsolutions.com.br\\/\",\"name\":\"ANG TRAVEL SOLUTIONS\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/angtravelsolutions.com.br\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/#organization\",\"name\":\"ANG TRAVEL SOLUTIONS\",\"url\":\"https:\\/\\/angtravelsolutions.com.br\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"pt-BR\",\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/angtravelsolutions.com.br\\/wp-content\\/uploads\\/2026\\/05\\/ChatBox_image.jpg\",\"contentUrl\":\"https:\\/\\/angtravelsolutions.com.br\\/wp-content\\/uploads\\/2026\\/05\\/ChatBox_image.jpg\",\"width\":1024,\"height\":1024,\"caption\":\"ANG TRAVEL SOLUTIONS\"},\"image\":{\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/#\\/schema\\/logo\\/image\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+  "yoast_head_json": {
+    "title": "Área do Agente - ANG TRAVEL SOLUTIONS",
+    "robots": {
+      "index": "index",
+      "follow": "follow",
+      "max-snippet": "max-snippet:-1",
+      "max-image-preview": "max-image-preview:large",
+      "max-video-preview": "max-video-preview:-1"
+    },
+    "canonical": "https://angtravelsolutions.com.br/area-do-agente/",
+    "og_locale": "pt_BR",
+    "og_type": "article",
+    "og_title": "Área do Agente - ANG TRAVEL SOLUTIONS",
+    "og_description": "Área do Agente ANG Travel Solutions: dashboard executivo para agências parceiras, franqueados e equipe autorizada, com atalhos de operação, curadoria premium, treinamentos, campanhas, solicitações e gestão.",
+    "og_url": "https://angtravelsolutions.com.br/area-do-agente/",
+    "og_site_name": "ANG TRAVEL SOLUTIONS",
+    "article_modified_time": "2026-09-13T13:05:08+00:00",
+    "twitter_card": "summary_large_image",
+    "twitter_misc": {
+      "Est. tempo de leitura": "2 minutos"
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://angtravelsolutions.com.br/area-do-agente/",
+          "url": "https://angtravelsolutions.com.br/area-do-agente/",
+          "name": "Área do Agente - ANG TRAVEL SOLUTIONS",
+          "isPartOf": {
+            "@id": "https://angtravelsolutions.com.br/#website"
+          },
+          "datePublished": "2026-06-30T17:07:23+00:00",
+          "dateModified": "2026-09-13T13:05:08+00:00",
+          "breadcrumb": {
+            "@id": "https://angtravelsolutions.com.br/area-do-agente/#breadcrumb"
+          },
+          "inLanguage": "pt-BR",
+          "potentialAction": [
+            {
+              "@type": "ReadAction",
+              "target": [
+                "https://angtravelsolutions.com.br/area-do-agente/"
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://angtravelsolutions.com.br/area-do-agente/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://angtravelsolutions.com.br/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Área do Agente"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://angtravelsolutions.com.br/#website",
+          "url": "https://angtravelsolutions.com.br/",
+          "name": "ANG TRAVEL SOLUTIONS",
+          "description": "",
+          "publisher": {
+            "@id": "https://angtravelsolutions.com.br/#organization"
+          },
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://angtravelsolutions.com.br/?s={search_term_string}"
+              },
+              "query-input": {
+                "@type": "PropertyValueSpecification",
+                "valueRequired": true,
+                "valueName": "search_term_string"
+              }
+            }
+          ],
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://angtravelsolutions.com.br/#organization",
+          "name": "ANG TRAVEL SOLUTIONS",
+          "url": "https://angtravelsolutions.com.br/",
+          "logo": {
+            "@type": "ImageObject",
+            "inLanguage": "pt-BR",
+            "@id": "https://angtravelsolutions.com.br/#/schema/logo/image/",
+            "url": "https://angtravelsolutions.com.br/wp-content/uploads/2026/05/ChatBox_image.jpg",
+            "contentUrl": "https://angtravelsolutions.com.br/wp-content/uploads/2026/05/ChatBox_image.jpg",
+            "width": 1024,
+            "height": 1024,
+            "caption": "ANG TRAVEL SOLUTIONS"
+          },
+          "image": {
+            "@id": "https://angtravelsolutions.com.br/#/schema/logo/image/"
+          }
+        }
+      ]
+    }
+  },
+  "_links": {
+    "self": [
+      {
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/pages/81898",
+        "targetHints": {
+          "allow": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH",
+            "DELETE"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/pages"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/types/page"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/users/1"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/comments?post=81898"
+      }
+    ],
+    "version-history": [
+      {
+        "count": 6,
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/pages/81898/revisions"
+      }
+    ],
+    "predecessor-version": [
+      {
+        "id": 153599,
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/pages/81898/revisions/153599"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/media?parent=81898"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
