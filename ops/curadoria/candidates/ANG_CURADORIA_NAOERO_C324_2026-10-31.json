@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0",
+  "cycle": "C324",
+  "generated_at": "2026-10-31T03:00:00-03:00",
+  "publication_state": "NO_PUBLISH",
+  "canonical_identity": {
+    "canonical_key": "naoero",
+    "display_name_pt_br": "Naoero (antiga Nauru)",
+    "official_short_name_en": "Naoero",
+    "official_long_name_en": "Republic of Naoero",
+    "aliases": [
+      "Nauru",
+      "Republic of Nauru",
+      "NR",
+      "NRU"
+    ],
+    "interoperability_note": "NR/NRU são preservados somente como aliases técnicos legados; este candidato não afirma alteração dos códigos ISO.",
+    "duplicate_identity_prohibited": true,
+    "identity_evidence": [
+      {
+        "url": "https://ronlaw.gov.nr/docs/any/naoero",
+        "checked_at": "2026-10-31T03:00:00-03:00",
+        "claim": "Constitution (Amendment) (No.2) Act 2026 substituiu referências a Nauru por Naoero."
+      },
+      {
+        "url": "https://www.un.org/en/about-us/member-states/naoero",
+        "checked_at": "2026-10-31T03:00:00-03:00",
+        "claim": "A ONU registra que a mudança para Republic of Naoero foi comunicada em 26/06/2026."
+      }
+    ]
+  },
+  "seo": {
+    "title": "Naoero (antiga Nauru): guia de viagem no Pacífico | ANG",
+    "meta_description": "Descubra Naoero, antiga Nauru, com contexto responsável, pontos de interesse e orientação para planejar uma viagem sob medida com a ANG.",
+    "slug_candidate": "naoero-antiga-nauru",
+    "canonical_url": null,
+    "indexation": "NOINDEX_UNTIL_PUBLISHED"
+  },
+  "editorial": {
+    "language": "pt-BR",
+    "h1": "Naoero: uma ilha singular no Pacífico",
+    "dek": "Um destino remoto da Micronésia para viajantes que valorizam contexto, planejamento cuidadoso e experiências de baixa escala.",
+    "modules": [
+      {
+        "name": "Visão geral",
+        "status": "SOURCE_VERIFIED",
+        "copy": "Naoero é um pequeno Estado insular da Micronésia. A ONU registra Yaren como capital de referência.",
+        "sources": [
+          "https://data.un.org/legacy/en/iso/nr.html"
+        ]
+      },
+      {
+        "name": "Anibare Bay",
+        "status": "SOURCE_VERIFIED_SECONDARY_OFFICIAL_NETWORK",
+        "copy": "Baía costeira citada pelo portal regional de turismo sustentável como uma das atrações naturais do destino.",
+        "sources": [
+          "https://southpacificislands.travel/sustainable/country-profiles/nauru/"
+        ]
+      },
+      {
+        "name": "Command Ridge",
+        "status": "SOURCE_VERIFIED_SECONDARY_OFFICIAL_NETWORK",
+        "copy": "Área associada a vestígios da Segunda Guerra Mundial, mencionada pelo portal regional de turismo sustentável.",
+        "sources": [
+          "https://southpacificislands.travel/sustainable/country-profiles/nauru/"
+        ]
+      },
+      {
+        "name": "Buada Lagoon",
+        "status": "SOURCE_VERIFIED_DESTINATION_PORTAL",
+        "copy": "Lagoa de água doce no interior da ilha; o texto final deve evitar promessas de acesso, infraestrutura ou atividades sem confirmação local.",
+        "sources": [
+          "https://visitnauru.org/discover/buada-lagoon"
+        ]
+      },
+      {
+        "name": "Yaren",
+        "status": "SOURCE_VERIFIED",
+        "copy": "Distrito usado pela ONU como capital de referência; não afirmar capital constitucional sem fonte específica.",
+        "sources": [
+          "https://data.un.org/legacy/en/iso/nr.html"
+        ]
+      }
+    ],
+    "cta": {
+      "label": "Planejar uma viagem sob medida",
+      "href_candidate": "/contato/",
+      "status": "LINK_REQUIRES_CMS_VALIDATION"
+    },
+    "copy_qa": "PASS_FOR_REVIEW_ONLY"
+  },
+  "dynamic_facts": {
+    "immigration": {
+      "status": "HOLD_NATIONALITY_ELIGIBILITY",
+      "checked_at": "2026-10-31T03:00:00-03:00",
+      "source": "https://justice.gov.nr/immigration-division/",
+      "visitor_fee_table_aud": [
+        {
+          "max_stay": "1 month",
+          "fee": 50
+        },
+        {
+          "max_stay": "2 months",
+          "fee": 150
+        },
+        {
+          "max_stay": "3 months",
+          "fee": 250
+        }
+      ],
+      "limitation": "A tabela geral não comprova elegibilidade, dispensa, prazo de processamento ou aprovação para passaporte brasileiro. Confirmar diretamente com a autoridade antes da venda/emissão."
+    }
+  },
+  "schema_candidate": {
+    "@context": "https://schema.org",
+    "@type": "TouristDestination",
+    "name": "Naoero (formerly Nauru)",
+    "alternateName": [
+      "Nauru",
+      "Republic of Nauru"
+    ],
+    "description": "Destino insular remoto da Micronésia; candidato editorial não publicado.",
+    "url": null
+  },
+  "media_manifest": {
+    "media_id": null,
+    "source": null,
+    "license_or_permission": null,
+    "brand_master_id": null,
+    "theme_key": "naoero-pacific-context",
+    "visual_hash": null,
+    "REAL_MEDIA_VERIFIED": false,
+    "MASTER_LOGO_VERIFIED": false,
+    "NO_DUPLICATE_PASS": false,
+    "COPY_QA_PASS": true,
+    "ai_generated_media_prohibited": true
+  },
+  "cms": {
+    "post_id": null,
+    "external_id": null,
+    "publication_id": null,
+    "permalink": null
+  },
+  "gates": {
+    "IDENTITY_PASS": true,
+    "OFFICIAL_SOURCES_PASS": true,
+    "IMMIGRATION_NATIONALITY_PASS": false,
+    "REAL_MEDIA_VERIFIED": false,
+    "MASTER_LOGO_VERIFIED": false,
+    "NO_DUPLICATE_PASS": false,
+    "CMS_STAGING_PASS": false,
+    "PUBLISHED": false
+  },
+  "rollback": "Excluir este arquivo candidato e reverter seu commit; nenhuma publicação ou mutação de CMS/social foi realizada."
+}
