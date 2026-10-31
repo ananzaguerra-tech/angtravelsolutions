@@ -1,0 +1,254 @@
+{
+  "id": 106242,
+  "date": "2026-07-07T18:29:58",
+  "date_gmt": "2026-07-07T18:29:58",
+  "guid": {
+    "rendered": "https://angtravelsolutions.com.br/ang-connect-academy/",
+    "raw": "https://angtravelsolutions.com.br/ang-connect-academy/"
+  },
+  "modified": "2026-07-07T18:29:58",
+  "modified_gmt": "2026-07-07T18:29:58",
+  "password": "",
+  "slug": "ang-connect-academy",
+  "status": "publish",
+  "type": "page",
+  "link": "https://angtravelsolutions.com.br/ang-connect-academy/",
+  "title": {
+    "raw": "ANG Academy",
+    "rendered": "ANG Academy"
+  },
+  "content": {
+    "raw": "[ang_connect_academy_full]",
+    "rendered": "<p>[ang_connect_academy_full]</p>\n",
+    "protected": false,
+    "block_version": 0
+  },
+  "excerpt": {
+    "raw": "",
+    "rendered": "<p>[ang_connect_academy_full]</p>\n",
+    "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+    "ang_source_url": "",
+    "ang_source_name": "",
+    "ang_source_updated_at": "",
+    "ang_external_id": "",
+    "ang_address": "",
+    "ang_phone": "",
+    "ang_email": "",
+    "ang_website": "",
+    "ang_opening_hours": "",
+    "ang_currency": "",
+    "ang_language": "",
+    "ang_voltage": "",
+    "ang_best_season": "",
+    "ang_certifications": "",
+    "ang_section": "",
+    "ang_seo_title": "",
+    "ang_meta_description": "",
+    "ang_tags": "",
+    "ang_image_url": "",
+    "ang_video_url": "",
+    "ang_cta_label": "",
+    "ang_cta_link": "",
+    "ang_access_role": "",
+    "ang_progress_required": "",
+    "ang_quiz_required": "",
+    "ang_content_status": "",
+    "footnotes": ""
+  },
+  "permalink_template": "https://angtravelsolutions.com.br/%pagename%/",
+  "generated_slug": "ang-academy",
+  "class_list": [
+    "post-106242",
+    "page",
+    "type-page",
+    "status-publish",
+    "hentry"
+  ],
+  "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.4 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>ANG Academy - ANG TRAVEL SOLUTIONS</title>\n<!-- Aviso apenas para o administrador: esta página não mostra uma metadescrição porque não possui nenhuma. Ou escreva uma para esta página especificamente ou vá ao menu [Yoast SEO - Configurações] e configure um modelo. -->\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://angtravelsolutions.com.br/ang-connect-academy/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"ANG Academy - ANG TRAVEL SOLUTIONS\" />\n<meta property=\"og:description\" content=\"[ang_connect_academy_full]\" />\n<meta property=\"og:url\" content=\"https://angtravelsolutions.com.br/ang-connect-academy/\" />\n<meta property=\"og:site_name\" content=\"ANG TRAVEL SOLUTIONS\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/ang-connect-academy\\/\",\"url\":\"https:\\/\\/angtravelsolutions.com.br\\/ang-connect-academy\\/\",\"name\":\"ANG Academy - ANG TRAVEL SOLUTIONS\",\"isPartOf\":{\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/#website\"},\"datePublished\":\"2026-07-07T18:29:58+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/ang-connect-academy\\/#breadcrumb\"},\"inLanguage\":\"pt-BR\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/angtravelsolutions.com.br\\/ang-connect-academy\\/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/ang-connect-academy\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/angtravelsolutions.com.br\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ANG Academy\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/#website\",\"url\":\"https:\\/\\/angtravelsolutions.com.br\\/\",\"name\":\"ANG TRAVEL SOLUTIONS\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/angtravelsolutions.com.br\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/#organization\",\"name\":\"ANG TRAVEL SOLUTIONS\",\"url\":\"https:\\/\\/angtravelsolutions.com.br\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"pt-BR\",\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/angtravelsolutions.com.br\\/wp-content\\/uploads\\/2026\\/05\\/ChatBox_image.jpg\",\"contentUrl\":\"https:\\/\\/angtravelsolutions.com.br\\/wp-content\\/uploads\\/2026\\/05\\/ChatBox_image.jpg\",\"width\":1024,\"height\":1024,\"caption\":\"ANG TRAVEL SOLUTIONS\"},\"image\":{\"@id\":\"https:\\/\\/angtravelsolutions.com.br\\/#\\/schema\\/logo\\/image\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+  "yoast_head_json": {
+    "title": "ANG Academy - ANG TRAVEL SOLUTIONS",
+    "robots": {
+      "index": "index",
+      "follow": "follow",
+      "max-snippet": "max-snippet:-1",
+      "max-image-preview": "max-image-preview:large",
+      "max-video-preview": "max-video-preview:-1"
+    },
+    "canonical": "https://angtravelsolutions.com.br/ang-connect-academy/",
+    "og_locale": "pt_BR",
+    "og_type": "article",
+    "og_title": "ANG Academy - ANG TRAVEL SOLUTIONS",
+    "og_description": "[ang_connect_academy_full]",
+    "og_url": "https://angtravelsolutions.com.br/ang-connect-academy/",
+    "og_site_name": "ANG TRAVEL SOLUTIONS",
+    "twitter_card": "summary_large_image",
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://angtravelsolutions.com.br/ang-connect-academy/",
+          "url": "https://angtravelsolutions.com.br/ang-connect-academy/",
+          "name": "ANG Academy - ANG TRAVEL SOLUTIONS",
+          "isPartOf": {
+            "@id": "https://angtravelsolutions.com.br/#website"
+          },
+          "datePublished": "2026-07-07T18:29:58+00:00",
+          "breadcrumb": {
+            "@id": "https://angtravelsolutions.com.br/ang-connect-academy/#breadcrumb"
+          },
+          "inLanguage": "pt-BR",
+          "potentialAction": [
+            {
+              "@type": "ReadAction",
+              "target": [
+                "https://angtravelsolutions.com.br/ang-connect-academy/"
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://angtravelsolutions.com.br/ang-connect-academy/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://angtravelsolutions.com.br/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "ANG Academy"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://angtravelsolutions.com.br/#website",
+          "url": "https://angtravelsolutions.com.br/",
+          "name": "ANG TRAVEL SOLUTIONS",
+          "description": "",
+          "publisher": {
+            "@id": "https://angtravelsolutions.com.br/#organization"
+          },
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://angtravelsolutions.com.br/?s={search_term_string}"
+              },
+              "query-input": {
+                "@type": "PropertyValueSpecification",
+                "valueRequired": true,
+                "valueName": "search_term_string"
+              }
+            }
+          ],
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://angtravelsolutions.com.br/#organization",
+          "name": "ANG TRAVEL SOLUTIONS",
+          "url": "https://angtravelsolutions.com.br/",
+          "logo": {
+            "@type": "ImageObject",
+            "inLanguage": "pt-BR",
+            "@id": "https://angtravelsolutions.com.br/#/schema/logo/image/",
+            "url": "https://angtravelsolutions.com.br/wp-content/uploads/2026/05/ChatBox_image.jpg",
+            "contentUrl": "https://angtravelsolutions.com.br/wp-content/uploads/2026/05/ChatBox_image.jpg",
+            "width": 1024,
+            "height": 1024,
+            "caption": "ANG TRAVEL SOLUTIONS"
+          },
+          "image": {
+            "@id": "https://angtravelsolutions.com.br/#/schema/logo/image/"
+          }
+        }
+      ]
+    }
+  },
+  "_links": {
+    "self": [
+      {
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/pages/106242",
+        "targetHints": {
+          "allow": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH",
+            "DELETE"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/pages"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/types/page"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/users/1"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/comments?post=106242"
+      }
+    ],
+    "version-history": [
+      {
+        "count": 0,
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/pages/106242/revisions"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/media?parent=106242"
+      }
+    ],
+    "wp:action-publish": [
+      {
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/pages/106242"
+      }
+    ],
+    "wp:action-unfiltered-html": [
+      {
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/pages/106242"
+      }
+    ],
+    "wp:action-assign-author": [
+      {
+        "href": "https://angtravelsolutions.com.br/wp-json/wp/v2/pages/106242"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
