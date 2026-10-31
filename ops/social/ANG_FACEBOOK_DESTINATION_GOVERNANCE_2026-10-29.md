@@ -122,3 +122,20 @@ The migration remains `REFERENCE_ONLY / NOT_APPLIED / NO_CREDENTIALS`; both soci
 publishers remain inactive. Human action is limited to provisioning or approving a
 dedicated staging PostgreSQL instance and entering the segregated runtime credential only
 through the official n8n credential vault.
+
+
+## Connected Facebook Organic capability audit — C322
+
+A live read-only connector inventory on 2026-10-31 confirmed that both Facebook Pages are connected to Windsor Facebook Organic:
+
+- canonical destination: ANG TRAVEL, Page ID `353450855530042`;
+- forbidden publication destination: ANG Travel Solutions, Page ID `1214700205067389`.
+
+The connector exposes only `create_photo_post`, `create_post` and `upload_photo`. It exposes no update, delete, hide or unpublish action. Therefore it cannot correct or remove the two known incorrect text posts:
+
+- `1214700205067389_122123660331441523`;
+- `353450855530042_1651151673688735`.
+
+The existence of `create_post` is a connector capability, not an ANG authorization. ANG policy forbids text-only and link-only publication, so `create_post` MUST NOT be used. `create_photo_post` remains blocked unless all provenance, master-logo, deduplication, copy, canonical-destination, durable-idempotency and post-publication-readback gates pass.
+
+A filtered live read of the two Post IDs was attempted but Windsor returned placeholder data because reads are paused: nine connected accounts exceed the Free plan allowance of one. Placeholder values are not post-state evidence and MUST NOT be treated as proof of publication, deletion, media presence or correction. The required corrective action remains a human/API gate through Meta Business Suite or another authenticated integration that explicitly supports update/delete with post-action readback. No page or post mutation occurred in C322.
