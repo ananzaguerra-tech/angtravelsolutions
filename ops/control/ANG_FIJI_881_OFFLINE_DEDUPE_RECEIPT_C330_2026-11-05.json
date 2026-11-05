@@ -1,0 +1,64 @@
+{
+  "cycle": "C330",
+  "checked_at": "2026-11-05T18:59:00-03:00",
+  "entity": {
+    "country": "Fiji",
+    "aliases": [
+      "Fiji",
+      "Republic of Fiji",
+      "FJI",
+      "Viti"
+    ]
+  },
+  "canonical_source": {
+    "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "spreadsheet_url": "https://docs.google.com/spreadsheets/d/1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg/edit",
+    "scans": [
+      {
+        "sheet": "Item Register",
+        "range": "A1:P900",
+        "queries": [
+          "Fiji",
+          "Republic of Fiji",
+          "FJI",
+          "Viti"
+        ],
+        "matched_rows": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "sheet": "WP Export Identity 24-07",
+        "range": "A1:H900",
+        "queries": [
+          "Fiji",
+          "Republic of Fiji",
+          "FJI",
+          "Viti"
+        ],
+        "matched_rows": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "status": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "limitations": [
+    "No live WordPress/CMS identity check: origin returned HTTP 502.",
+    "No visual_hash/media duplicate check.",
+    "No external-id derivation or nationality-specific immigration confirmation.",
+    "Not publication evidence and not a canonical PASS."
+  ],
+  "publication": {
+    "status": "NOT_PUBLISHED",
+    "permalink": null,
+    "publication_id": null
+  },
+  "next_action": "Repeat live CMS/external-id reconciliation after origin recovery; keep nationality, media, master-logo and publication gates closed."
+}
