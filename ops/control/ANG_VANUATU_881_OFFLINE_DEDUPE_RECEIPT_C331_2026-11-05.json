@@ -1,0 +1,64 @@
+{
+  "cycle": "C331",
+  "checked_at": "2026-11-05T19:58:00-03:00",
+  "entity": {
+    "country": "Vanuatu",
+    "aliases": [
+      "Vanuatu",
+      "Republic of Vanuatu",
+      "New Hebrides",
+      "VUT"
+    ]
+  },
+  "canonical_source": {
+    "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "spreadsheet_url": "https://docs.google.com/spreadsheets/d/1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg/edit",
+    "scans": [
+      {
+        "sheet": "Item Register",
+        "range": "A1:P900",
+        "queries": [
+          "Vanuatu",
+          "Republic of Vanuatu",
+          "New Hebrides",
+          "VUT"
+        ],
+        "matched_rows": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "sheet": "WP Export Identity 24-07",
+        "range": "A1:H900",
+        "queries": [
+          "Vanuatu",
+          "Republic of Vanuatu",
+          "New Hebrides",
+          "VUT"
+        ],
+        "matched_rows": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "status": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "limitations": [
+    "No live WordPress/CMS identity check: origin returned HTTP 502.",
+    "No visual_hash/media duplicate check.",
+    "No external-id derivation or nationality-specific immigration confirmation.",
+    "Not publication evidence and not a canonical PASS."
+  ],
+  "publication": {
+    "status": "NOT_PUBLISHED",
+    "permalink": null,
+    "publication_id": null
+  },
+  "next_action": "Repeat live CMS/external-id reconciliation after origin recovery; keep nationality, media, master-logo and publication gates closed."
+}
