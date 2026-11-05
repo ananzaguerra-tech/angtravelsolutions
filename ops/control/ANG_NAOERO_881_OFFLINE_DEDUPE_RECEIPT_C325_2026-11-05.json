@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "cycle": "C325",
+  "checked_at": "2026-11-05T14:03:32-03:00",
+  "status": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "publication_state": "NO_PUBLISH",
+  "candidate": {
+    "canonical_key": "naoero",
+    "aliases": [
+      "Naoero",
+      "Nauru",
+      "Republic of Nauru",
+      "NRU"
+    ],
+    "source_candidate": "ops/curadoria/candidates/ANG_CURADORIA_NAOERO_C324_2026-10-31.json",
+    "source_commit": "7343b4fc15a4eec2b26b90233094df3f5a8ed222"
+  },
+  "evidence": {
+    "spreadsheet": {
+      "id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+      "title": "ANG_CONTROLE_IMPORTACAO_AMPLIADA_881_2026-08-14",
+      "url": "https://docs.google.com/spreadsheets/d/1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg/edit",
+      "scans": [
+        {
+          "sheet": "Item Register",
+          "range": "A1:P900",
+          "queries": [
+            "Naoero",
+            "Nauru",
+            "Republic of Nauru",
+            "NRU"
+          ],
+          "matched_rows": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "sheet": "WP Export Identity 24-07",
+          "range": "A1:H900",
+          "queries": [
+            "Naoero",
+            "Nauru",
+            "Republic of Nauru",
+            "NRU"
+          ],
+          "matched_rows": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "wordpress_live": {
+      "public_home_http_status": 503,
+      "wpvibe": "UNREACHABLE",
+      "wpwriter": "DNS_NO_SUCH_HOST",
+      "post_id_2109_readback": false
+    }
+  },
+  "decision": {
+    "offline_881_zero_match": true,
+    "offline_wp_export_zero_match": true,
+    "live_cms_zero_match_proven": false,
+    "media_visual_hash_dedupe_proven": false,
+    "canonical_identity_dedupe_pass": false,
+    "classification": "NEW_CANONICAL_CANDIDATE_PENDING_LIVE_CMS_AND_MEDIA_DEDUPE"
+  },
+  "gates": {
+    "OFFLINE_881_DEDUPE_PASS": true,
+    "OFFLINE_WP_EXPORT_DEDUPE_PASS": true,
+    "LIVE_CMS_DEDUPE_PASS": false,
+    "EXTERNAL_ID_DERIVATION_PASS": false,
+    "VISUAL_HASH_DEDUPE_PASS": false,
+    "PUBLISHED": false
+  },
+  "next_action": [
+    "Restore or confirm WordPress origin/DNS reachability without disabling maintenance.",
+    "Search live ang_curated and ang_lounge by title, slug, aliases and external_id after connection recovery.",
+    "Keep all CMS IDs and permalinks null until live zero-match and external-id rules are proven.",
+    "Run media visual-hash dedupe only after a real licensed asset is selected."
+  ],
+  "rollback": "Delete this receipt and revert its commit; no external state was changed."
+}
