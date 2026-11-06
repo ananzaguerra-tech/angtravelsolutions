@@ -1,0 +1,86 @@
+{
+  "cycle": "C349",
+  "checked_at": "2026-11-06T14:06:16-03:00",
+  "territory": {
+    "name_pt": "Antígua e Barbuda",
+    "name_en": "Antigua and Barbuda",
+    "iso3": "ATG"
+  },
+  "baseline": {
+    "library_file_id": "libfile_c4491bdface08191a55e710d8993e046",
+    "version": 60,
+    "drive_status_live_matches": 0
+  },
+  "source_block": {
+    "drive_id": "19zN94t0ljnvtkOTw78dnBND-aWLkJCEVIOVr5rXis8I",
+    "section": "01 — Antígua e Barbuda",
+    "state": "REVIEW_REQUIRED",
+    "cms": "UPLOAD_PENDING_CHANNEL",
+    "media": "0/10",
+    "canonical_ids": "0/10"
+  },
+  "canonical_dedupe": {
+    "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "tabs": [
+      "Item Register",
+      "WP Export Identity 24-07"
+    ],
+    "aliases": [
+      "Antígua e Barbuda",
+      "Antigua and Barbuda",
+      "Antigua & Barbuda",
+      "ATG"
+    ],
+    "searches": 8,
+    "matches": 0,
+    "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+    "live_cms_pass": false,
+    "external_id_pass": false
+  },
+  "official_sources": {
+    "tourism": {
+      "url": "https://www.visitantiguabarbuda.com/",
+      "owner": "Antigua and Barbuda Tourism Authority",
+      "status": "REACHABLE",
+      "observed_scope": [
+        "Antigua",
+        "Barbuda",
+        "St. John's",
+        "English Harbour",
+        "sailing",
+        "culture"
+      ]
+    },
+    "entry": {
+      "url": "https://immigration.gov.ag/visa-services/countries-exempt-from-visa/",
+      "owner": "Department of Immigration, Government of Antigua and Barbuda",
+      "status": "PASS_DATED",
+      "fact": "Brazil appears on the official list of countries whose nationals do not require a visa to enter Antigua and Barbuda.",
+      "checked_at": "2026-11-06T14:06:16-03:00",
+      "publishable_without_recheck": false,
+      "note": "Admission remains subject to passport validity, return/onward travel, accommodation, means and officer decision; recheck before travel."
+    }
+  },
+  "wordpress": {
+    "public_home": "HTTP_502",
+    "restricted_area": "INACCESSIBLE",
+    "wpwriter_site_status": "Active metadata; posts/pages unavailable",
+    "publication": false,
+    "permalink": null,
+    "publication_id": null
+  },
+  "partnerships": {
+    "gmail_query_window": "newer_than:1d",
+    "qualified_responses": 0
+  },
+  "gates": {
+    "REAL_MEDIA_VERIFIED": false,
+    "MASTER_LOGO_VERIFIED": false,
+    "NO_DUPLICATE_PASS": false,
+    "COPY_QA_PASS": false,
+    "IMMIGRATION_NATIONALITY_PASS": "PASS_DATED",
+    "PUBLISHED": false
+  },
+  "outcome": "HOLD",
+  "rollback": "Delete/revert this receipt commit; no external publication or production mutation occurred."
+}
