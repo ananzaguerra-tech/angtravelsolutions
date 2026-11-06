@@ -1,0 +1,44 @@
+{
+  "cycle": "C338",
+  "checked_at": "2026-11-06T03:01:07-03:00",
+  "territory": "Niue",
+  "historical_context": {
+    "block": 13,
+    "status": "REVIEW_REQUIRED",
+    "canonical_ids_assigned": false,
+    "media_assigned": false
+  },
+  "canonical_sheet": {
+    "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "url": "https://docs.google.com/spreadsheets/d/1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg/edit",
+    "searches": [
+      {"alias":"Niue","sheet":"Item Register","range":"A1:P900","matches":0},
+      {"alias":"Niue","sheet":"WP Export Identity 24-07","range":"A1:H900","matches":0},
+      {"alias":"Savage Island","sheet":"Item Register","range":"A1:P900","matches":0},
+      {"alias":"Savage Island","sheet":"WP Export Identity 24-07","range":"A1:H900","matches":0},
+      {"alias":"Niue Island","sheet":"Item Register","range":"A1:P900","matches":0},
+      {"alias":"Niue Island","sheet":"WP Export Identity 24-07","range":"A1:H900","matches":0},
+      {"alias":"NIU","sheet":"Item Register","range":"A1:P900","matches":0},
+      {"alias":"NIU","sheet":"WP Export Identity 24-07","range":"A1:H900","matches":0}
+    ],
+    "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+    "live_cms_dedupe_pass": false
+  },
+  "wordpress": {
+    "public_home_http_status": 502,
+    "restricted_area_accessible": false,
+    "wpwriter_status": "active_connector_unable_to_fetch_posts_or_pages",
+    "write_attempted": false
+  },
+  "gates": {
+    "canonical_identity_dedupe_pass": false,
+    "external_id_derivation_pass": false,
+    "real_media_verified": false,
+    "master_logo_verified": false,
+    "visual_hash_dedupe_pass": false,
+    "immigration_nationality_pass": false,
+    "copy_qa_pass": false,
+    "published": false
+  },
+  "rollback": "delete_or_revert_this_receipt_commit_only; no external mutation occurred"
+}
