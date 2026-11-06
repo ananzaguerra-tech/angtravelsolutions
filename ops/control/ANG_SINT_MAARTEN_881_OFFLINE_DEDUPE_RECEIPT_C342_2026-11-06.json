@@ -1,0 +1,66 @@
+{
+  "cycle": "C342",
+  "checked_at": "2026-11-06T06:57:59-03:00",
+  "baseline": {
+    "master_library_file_id": "libfile_c4491bdface08191a55e710d8993e046",
+    "master_version": 53
+  },
+  "entity": {
+    "canonical_name": "Sint Maarten",
+    "identity_scope": "Constituent country of the Kingdom of the Netherlands (Dutch side)",
+    "explicitly_distinct_from": "Saint-Martin (French collectivity)"
+  },
+  "block_12": {
+    "drive_id": "1UG-jyMfT0PZUMyLgg18EMgoxF-_Mfe7sGHDv6Kg5FuU",
+    "source_section": "04 — Sint Maarten",
+    "source_checked_at": "2026-09-09",
+    "editorial_state": "REVIEW_REQUIRED",
+    "cms_state": "UPLOAD_PENDING_CHANNEL",
+    "historical_entry_state": "DEGRADED",
+    "media_verified": "0/10",
+    "canonical_ids": "0/10",
+    "note": "Historical dynamic facts were not promoted as current."
+  },
+  "canonical_spreadsheet": {
+    "id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "aliases": [
+      "Sint Maarten",
+      "Country of Sint Maarten",
+      "Dutch Saint Martin",
+      "SXM"
+    ],
+    "ranges": [
+      "Item Register!A1:P900",
+      "WP Export Identity 24-07!A1:H900"
+    ],
+    "searches": 8,
+    "matches": 0,
+    "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+    "interpretation": "Offline zero-match is not a canonical PASS and does not prove absence from live CMS."
+  },
+  "wordpress": {
+    "public_home": "HTTP_502",
+    "restricted_area": "INACCESSIBLE",
+    "wpwriter": "CONNECTED_BUT_POST_PAGE_FETCH_UNAVAILABLE",
+    "mutation": false
+  },
+  "partnerships": {
+    "gmail_query_window": "newer_than:1d",
+    "new_replies": 0
+  },
+  "drive_status_live": {
+    "query": "ANG STATUS LIVE C342",
+    "matches": 0
+  },
+  "gates": {
+    "live_cms_verified": false,
+    "external_id_verified": false,
+    "official_dynamic_facts_current": false,
+    "real_media_verified": false,
+    "visual_hash_verified": false,
+    "immigration_current": false,
+    "published": false
+  },
+  "outcome": "HOLD",
+  "rollback": "Revert only the GitHub commits created in C342; no external content mutation occurred."
+}
