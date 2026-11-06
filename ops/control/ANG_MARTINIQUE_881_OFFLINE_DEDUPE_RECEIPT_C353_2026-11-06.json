@@ -1,0 +1,66 @@
+{
+  "cycle": "C353",
+  "checked_at": "2026-11-06T18:02:51-03:00",
+  "territory": {
+    "name_pt": "Martinica",
+    "name_official": "Martinique",
+    "administrative_name": "Collectivité Territoriale de Martinique",
+    "iso_alpha3": "MTQ"
+  },
+  "canonical_sheet": {
+    "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "tabs": [
+      "Item Register",
+      "WP Export Identity 24-07"
+    ],
+    "range": "A1:Z1900"
+  },
+  "searches": [
+    {
+      "query": "Martinica",
+      "tab": "Item Register",
+      "matches": 0
+    },
+    {
+      "query": "Martinica",
+      "tab": "WP Export Identity 24-07",
+      "matches": 0
+    },
+    {
+      "query": "Martinique",
+      "tab": "Item Register",
+      "matches": 0
+    },
+    {
+      "query": "Martinique",
+      "tab": "WP Export Identity 24-07",
+      "matches": 0
+    },
+    {
+      "query": "Collectivité Territoriale de Martinique",
+      "tab": "Item Register",
+      "matches": 0
+    },
+    {
+      "query": "Collectivité Territoriale de Martinique",
+      "tab": "WP Export Identity 24-07",
+      "matches": 0
+    },
+    {
+      "query": "MTQ",
+      "tab": "Item Register",
+      "matches": 0
+    },
+    {
+      "query": "MTQ",
+      "tab": "WP Export Identity 24-07",
+      "matches": 0
+    }
+  ],
+  "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "live_cms_dedupe_pass": false,
+  "external_id_derivation_pass": false,
+  "media_status": "MEDIA_PENDING",
+  "publication_status": "HOLD",
+  "notes": "Offline canonical search is evidence of zero matches only in the two scanned sheet tabs. It is not a live CMS PASS and does not authorize external_id creation or publication."
+}
