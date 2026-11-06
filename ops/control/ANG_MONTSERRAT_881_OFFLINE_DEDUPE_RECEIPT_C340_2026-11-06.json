@@ -1,0 +1,49 @@
+{
+  "cycle": "C340",
+  "checked_at": "2026-11-06T04:59:58-03:00",
+  "territory": "Montserrat",
+  "historical_source": {
+    "drive_file_id": "1UG-jyMfT0PZUMyLgg18EMgoxF-_Mfe7sGHDv6Kg5FuU",
+    "title": "ANG_CURADORIA_BLOCO_12_PAISES_10_2026-09-09",
+    "historical_checked_at": "2026-09-09",
+    "status": "REVIEW_REQUIRED",
+    "cms": "UPLOAD_PENDING_CHANNEL",
+    "dynamic_facts_promoted": false,
+    "canonical_ids_assigned": false,
+    "media_assigned": false
+  },
+  "canonical_sheet": {
+    "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "url": "https://docs.google.com/spreadsheets/d/1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg/edit",
+    "searches": [
+      {"alias":"Montserrat","sheet":"Item Register","range":"A1:P900","matches":0},
+      {"alias":"Montserrat","sheet":"WP Export Identity 24-07","range":"A1:H900","matches":0},
+      {"alias":"British Montserrat","sheet":"Item Register","range":"A1:P900","matches":0},
+      {"alias":"British Montserrat","sheet":"WP Export Identity 24-07","range":"A1:H900","matches":0},
+      {"alias":"MSR","sheet":"Item Register","range":"A1:P900","matches":0},
+      {"alias":"MSR","sheet":"WP Export Identity 24-07","range":"A1:H900","matches":0},
+      {"alias":"Emerald Isle of the Caribbean","sheet":"Item Register","range":"A1:P900","matches":0},
+      {"alias":"Emerald Isle of the Caribbean","sheet":"WP Export Identity 24-07","range":"A1:H900","matches":0}
+    ],
+    "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+    "live_cms_dedupe_pass": false
+  },
+  "wordpress": {
+    "public_home_http_status": 502,
+    "restricted_area_accessible": false,
+    "wpwriter_status": "active_connector_unable_to_fetch_posts_or_pages",
+    "write_attempted": false
+  },
+  "gates": {
+    "canonical_identity_dedupe_pass": false,
+    "external_id_derivation_pass": false,
+    "official_dynamic_facts_rechecked": false,
+    "real_media_verified": false,
+    "master_logo_verified": false,
+    "visual_hash_dedupe_pass": false,
+    "immigration_nationality_pass": false,
+    "copy_qa_pass": false,
+    "published": false
+  },
+  "rollback": "delete_or_revert_this_receipt_commit_only; no external mutation occurred"
+}
