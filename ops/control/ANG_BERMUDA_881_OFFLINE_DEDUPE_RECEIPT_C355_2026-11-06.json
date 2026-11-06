@@ -1,0 +1,66 @@
+{
+  "cycle": "C355",
+  "checked_at": "2026-11-06T19:57:38-03:00",
+  "territory": {
+    "name_pt": "Bermudas",
+    "name_official": "Bermuda",
+    "administrative_name": "Islands of Bermuda",
+    "iso_alpha3": "BMU"
+  },
+  "canonical_sheet": {
+    "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "tabs": [
+      "Item Register",
+      "WP Export Identity 24-07"
+    ],
+    "range": "A1:Z1900"
+  },
+  "searches": [
+    {
+      "query": "Bermudas",
+      "tab": "Item Register",
+      "matches": 0
+    },
+    {
+      "query": "Bermudas",
+      "tab": "WP Export Identity 24-07",
+      "matches": 0
+    },
+    {
+      "query": "Bermuda",
+      "tab": "Item Register",
+      "matches": 0
+    },
+    {
+      "query": "Bermuda",
+      "tab": "WP Export Identity 24-07",
+      "matches": 0
+    },
+    {
+      "query": "Islands of Bermuda",
+      "tab": "Item Register",
+      "matches": 0
+    },
+    {
+      "query": "Islands of Bermuda",
+      "tab": "WP Export Identity 24-07",
+      "matches": 0
+    },
+    {
+      "query": "BMU",
+      "tab": "Item Register",
+      "matches": 0
+    },
+    {
+      "query": "BMU",
+      "tab": "WP Export Identity 24-07",
+      "matches": 0
+    }
+  ],
+  "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "live_cms_dedupe_pass": false,
+  "external_id_derivation_pass": false,
+  "media_status": "MEDIA_PENDING",
+  "publication_status": "HOLD",
+  "notes": "Zero matches applies only to the two bounded spreadsheet scans. It is not a live CMS PASS and does not authorize external_id creation or publication."
+}
