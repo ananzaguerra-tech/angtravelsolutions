@@ -1,0 +1,66 @@
+{
+  "cycle": "C354",
+  "checked_at": "2026-11-06T19:03:46-03:00",
+  "territory": {
+    "name_pt": "Guadalupe",
+    "name_official": "Guadeloupe",
+    "administrative_name": "Département de la Guadeloupe",
+    "iso_alpha3": "GLP"
+  },
+  "canonical_sheet": {
+    "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "tabs": [
+      "Item Register",
+      "WP Export Identity 24-07"
+    ],
+    "range": "A1:Z1900"
+  },
+  "searches": [
+    {
+      "query": "Guadeloupe",
+      "tab": "Item Register",
+      "matches": 0
+    },
+    {
+      "query": "Guadeloupe",
+      "tab": "WP Export Identity 24-07",
+      "matches": 0
+    },
+    {
+      "query": "Guadalupe",
+      "tab": "Item Register",
+      "matches": 0
+    },
+    {
+      "query": "Guadalupe",
+      "tab": "WP Export Identity 24-07",
+      "matches": 0
+    },
+    {
+      "query": "Département de la Guadeloupe",
+      "tab": "Item Register",
+      "matches": 0
+    },
+    {
+      "query": "Département de la Guadeloupe",
+      "tab": "WP Export Identity 24-07",
+      "matches": 0
+    },
+    {
+      "query": "GLP",
+      "tab": "Item Register",
+      "matches": 0
+    },
+    {
+      "query": "GLP",
+      "tab": "WP Export Identity 24-07",
+      "matches": 0
+    }
+  ],
+  "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "live_cms_dedupe_pass": false,
+  "external_id_derivation_pass": false,
+  "media_status": "MEDIA_PENDING",
+  "publication_status": "HOLD",
+  "notes": "Zero matches applies only to the two bounded spreadsheet scans. It is not a live CMS PASS, does not prove absence in other datasets, and does not authorize external_id creation or publication."
+}
