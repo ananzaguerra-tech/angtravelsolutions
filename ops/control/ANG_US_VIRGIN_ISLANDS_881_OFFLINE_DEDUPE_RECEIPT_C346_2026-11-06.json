@@ -1,0 +1,94 @@
+{
+  "cycle": "C346",
+  "checked_at": "2026-11-06T11:00:37-03:00",
+  "baseline": {
+    "master_library_file_id": "libfile_c4491bdface08191a55e710d8993e046",
+    "master_version": 57
+  },
+  "entity": {
+    "canonical_name": "United States Virgin Islands",
+    "display_name_pt": "Ilhas Virgens Americanas",
+    "aliases": [
+      "U.S. Virgin Islands",
+      "USVI"
+    ],
+    "identity_scope": "Unincorporated organized territory of the United States",
+    "explicitly_distinct_from": [
+      "British Virgin Islands",
+      "Virgin Islands generic label"
+    ]
+  },
+  "block_12": {
+    "drive_id": "1UG-jyMfT0PZUMyLgg18EMgoxF-_Mfe7sGHDv6Kg5FuU",
+    "source_section": "08 — Ilhas Virgens Americanas",
+    "source_checked_at": "2026-09-09",
+    "editorial_state": "REVIEW_REQUIRED",
+    "cms_state": "UPLOAD_PENDING_CHANNEL",
+    "historical_tourism_state": "PASS",
+    "historical_entry_state": "DEGRADED",
+    "media_status": "MEDIA_PENDING",
+    "canonical_ids": "0/10"
+  },
+  "official_source_recheck": {
+    "tourism": {
+      "url": "https://www.visitusvi.com/",
+      "status": "REACHABLE",
+      "checked_at": "2026-11-06T11:00:37-03:00",
+      "observed_scope": [
+        "St. Croix",
+        "St. John",
+        "St. Thomas"
+      ],
+      "publication_use": "HOLD_PENDING_FULL_GATES"
+    },
+    "admission": {
+      "url": "https://www.cbp.gov/travel/international-visitors",
+      "status": "HTTP_403_IN_CURRENT_CHANNEL",
+      "checked_at": "2026-11-06T11:00:37-03:00"
+    }
+  },
+  "canonical_spreadsheet": {
+    "id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "aliases": [
+      "U.S. Virgin Islands",
+      "United States Virgin Islands",
+      "Ilhas Virgens Americanas",
+      "USVI"
+    ],
+    "ranges": [
+      "Item Register!A1:P900",
+      "WP Export Identity 24-07!A1:H900"
+    ],
+    "searches": 8,
+    "matches": 0,
+    "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+    "interpretation": "Offline zero-match is not a canonical PASS and does not prove absence from live CMS."
+  },
+  "wordpress": {
+    "public_home": "HTTP_502",
+    "restricted_area": "INACCESSIBLE",
+    "wpwriter": "ACTIVE_CONNECTION_METADATA_BUT_POST_PAGE_FETCH_UNAVAILABLE",
+    "mutation": false
+  },
+  "partnerships": {
+    "gmail_query_window": "newer_than:1d",
+    "new_replies": 0
+  },
+  "drive_status_live": {
+    "query": "ANG STATUS LIVE C346",
+    "matches": 0
+  },
+  "gates": {
+    "live_cms_verified": false,
+    "external_id_verified": false,
+    "official_dynamic_facts_current": false,
+    "immigration_current": false,
+    "real_media_verified": false,
+    "master_logo_verified": false,
+    "visual_hash_verified": false,
+    "copy_qa_pass": false,
+    "published": false
+  },
+  "outcome": "HOLD",
+  "rollback": "Revert only the GitHub commits created in C346; no external content mutation occurred."
+}
