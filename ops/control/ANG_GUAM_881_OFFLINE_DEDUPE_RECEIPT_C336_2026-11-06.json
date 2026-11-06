@@ -1,0 +1,55 @@
+{
+  "cycle": "C336",
+  "checked_at": "2026-11-06T01:06:00-03:00",
+  "territory": {
+    "name_pt": "Guam",
+    "name_en": "Guam",
+    "iso3": "GUM",
+    "aliases": [
+      "Guam",
+      "Guåhan",
+      "Territory of Guam",
+      "GUM"
+    ]
+  },
+  "canonical_source": {
+    "title": "ANG_CONTROLE_IMPORTACAO_AMPLIADA_881_2026-08-14",
+    "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "url": "https://docs.google.com/spreadsheets/d/1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg/edit",
+    "ranges": [
+      "Item Register!A1:P900",
+      "WP Export Identity 24-07!A1:H900"
+    ]
+  },
+  "result": {
+    "status": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+    "queries": 8,
+    "matched_rows": 0,
+    "live_cms_verified": false,
+    "canonical_identity_dedupe_pass": false,
+    "published": false
+  },
+  "context": {
+    "prior_block_13_reference_detected": true,
+    "prior_status": "REVIEW_REQUIRED",
+    "prior_external_id_post_id_media": "0/10_or_unassigned"
+  },
+  "gates": {
+    "wordpress_origin": "HTTP_502",
+    "area_restrita": "INACCESSIBLE",
+    "wpwriter": "unable_to_fetch",
+    "live_cms_dedupe_pass": false,
+    "external_id_derivation_pass": false,
+    "visual_hash_dedupe_pass": false,
+    "immigration_nationality_pass": false
+  },
+  "limitations": [
+    "Zero-match comprovado apenas na planilha canônica offline; não equivale a PASS no CMS vivo.",
+    "A menção histórica do Bloco 13 permanece REVIEW_REQUIRED e não fornece external_id/post_id/mídia.",
+    "Nenhum external_id, post_id, publication_id ou permalink foi criado.",
+    "Nenhuma mídia foi selecionada; media_id, licença e visual_hash não foram avaliados.",
+    "Fatos migratórios específicos para brasileiros não foram verificados.",
+    "Nenhuma publicação ou alteração externa foi executada."
+  ],
+  "rollback": "Reverter apenas o commit deste recibo; não houve mutação em WordPress, Meta, Google Business ou Drive."
+}
