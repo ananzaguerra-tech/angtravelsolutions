@@ -1,0 +1,122 @@
+{
+  "cycle": "C352",
+  "checked_at": "2026-11-06T17:02:32-03:00",
+  "unit": {
+    "block": 11,
+    "ordinal": 4,
+    "name_pt": "São Vicente e Granadinas",
+    "name_official": "Saint Vincent and the Grenadines",
+    "iso3": "VCT"
+  },
+  "source_drive": {
+    "document_id": "19zN94t0ljnvtkOTw78dnBND-aWLkJCEVIOVr5rXis8I",
+    "state": "REVIEW_REQUIRED",
+    "cms": "UPLOAD_PENDING_CHANNEL",
+    "section": "04 — São Vicente e Granadinas",
+    "media_status": "MEDIA_PENDING"
+  },
+  "canonical_dedupe": {
+    "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "tabs": [
+      "Item Register",
+      "WP Export Identity 24-07"
+    ],
+    "aliases": [
+      "São Vicente e Granadinas",
+      "Saint Vincent and the Grenadines",
+      "St Vincent and the Grenadines",
+      "VCT"
+    ],
+    "searches": 8,
+    "matched_rows": 0,
+    "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+    "live_cms_dedupe_pass": false,
+    "external_id_derivation_pass": false
+  },
+  "editorial_scope": {
+    "priority_places": [
+      "Kingstown",
+      "Bequia",
+      "Mustique",
+      "Canouan",
+      "Tobago Cays",
+      "Union Island"
+    ],
+    "seo_title": "Viagem para São Vicente e Granadinas sob medida | ANG Travel Solutions",
+    "proposed_slug": "/destinos/sao-vicente-e-granadinas/",
+    "schema": [
+      "TravelAgency",
+      "TouristDestination",
+      "FAQPage"
+    ],
+    "cta_status": "DRAFT_ONLY"
+  },
+  "official_sources": {
+    "tourism": {
+      "url": "https://discoversvg.com/",
+      "travel_url": "https://discoversvg.com/travel/getting-to-svg/",
+      "status": "PASS_DATED",
+      "evidence": [
+        "St. Vincent",
+        "Kingstown",
+        "Bequia",
+        "Mustique",
+        "Canouan",
+        "Tobago Cays",
+        "Union Island",
+        "inter-island air and ferry logistics"
+      ]
+    },
+    "immigration": {
+      "government_url": "https://foreign.gov.vc/foreign/index.php/diplomatic-relations/3-foreign-affairs-section/visas",
+      "airport_url": "https://svg-airport.com/immigration",
+      "status": "PASS_DATED_RECHECK",
+      "brazil_pre_entry_visa_required": false,
+      "basis": "Brazil is absent from the current official pre-entry visa lists; official pages say most short-stay visitors do not need advance visa.",
+      "entry_requirements": [
+        "valid passport",
+        "return or onward ticket",
+        "local address/accommodation",
+        "sufficient funds"
+      ],
+      "expected_authorised_stay": "other international visitors up to 3 months, subject to Immigration Officer",
+      "yellow_fever": "profile-dependent certificate rule for arrivals from risk countries or transit over 12 hours; recheck Brazil origin and connections",
+      "caveat": "final admission and authorised stay are determined by Immigration; recheck nationality, document, origin, transit, purpose and duration before travel"
+    }
+  },
+  "wordpress": {
+    "public_home": "HTTP_502_BAD_GATEWAY",
+    "restricted_area": "INACCESSIBLE",
+    "wpwriter_site_status": "ACTIVE_BUT_UNABLE_TO_FETCH",
+    "wpwriter_pages": "CONNECTION_ERROR_NO_SUCH_HOST",
+    "wpwriter_posts": "CONNECTION_ERROR_NO_SUCH_HOST",
+    "published": false
+  },
+  "social_and_media": {
+    "real_media_verified": false,
+    "master_logo_verified": false,
+    "no_duplicate_pass": false,
+    "copy_qa_pass": false,
+    "facebook_target_page_id": "353450855530042",
+    "prohibited_page_id": "1214700205067389",
+    "publication": false
+  },
+  "partnerships": {
+    "gmail_checked": true,
+    "new_positive_reply": false,
+    "note": "No new qualifying positive response from Accor, Club Med, TTW/Guilherme Valle or Il Borro/Simone Pampaloni."
+  },
+  "gates": {
+    "canonical_identity": "HOLD",
+    "cms_live": "HOLD",
+    "immigration_brazil": "PASS_DATED_RECHECK",
+    "health_profile": "HOLD_RECHECK",
+    "media_license": "HOLD",
+    "brand_master": "HOLD",
+    "visual_hash": "HOLD",
+    "copy_qa": "HOLD",
+    "publication": "HOLD"
+  },
+  "next_unit": "Martinica",
+  "rollback": "Delete this receipt commit only; no production mutation occurred."
+}
