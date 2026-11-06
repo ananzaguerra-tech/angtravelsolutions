@@ -1,0 +1,91 @@
+{
+  "cycle": "C348",
+  "checked_at": "2026-11-06T13:05:36-03:00",
+  "territory": {
+    "name_pt": "Guiana Francesa",
+    "name_en": "French Guiana",
+    "name_fr": "Guyane",
+    "iso3": "GUF"
+  },
+  "baseline": {
+    "library_file_id": "libfile_c4491bdface08191a55e710d8993e046",
+    "version": 59,
+    "drive_status_live_matches": 0
+  },
+  "source_block": {
+    "drive_id": "1UG-jyMfT0PZUMyLgg18EMgoxF-_Mfe7sGHDv6Kg5FuU",
+    "section": "10 — Guiana Francesa",
+    "state": "REVIEW_REQUIRED",
+    "cms": "UPLOAD_PENDING_CHANNEL",
+    "media": "0/10",
+    "canonical_ids": "0/10"
+  },
+  "canonical_dedupe": {
+    "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "tabs": [
+      "Item Register",
+      "WP Export Identity 24-07"
+    ],
+    "aliases": [
+      "Guiana Francesa",
+      "French Guiana",
+      "Guyane",
+      "GUF"
+    ],
+    "searches": 8,
+    "matches": 0,
+    "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+    "live_cms_pass": false,
+    "external_id_pass": false
+  },
+  "official_sources": {
+    "tourism_primary": {
+      "url": "https://www.guyane-amazonie.fr/",
+      "status": "HTTP_403"
+    },
+    "tourism_fallback": {
+      "url": "https://www.france.fr/fr/destination/guyane-amazonie/",
+      "owner": "Atout France / France.fr",
+      "status": "REACHABLE",
+      "observed_scope": [
+        "Cayenne",
+        "Kourou",
+        "Îles du Salut",
+        "Saint-Laurent-du-Maroni",
+        "Amazon rainforest"
+      ]
+    },
+    "entry_law": {
+      "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000054594286/",
+      "owner": "Légifrance",
+      "status": "IN_FORCE_CHECKED",
+      "fact": "Brazilian ordinary-passport holders are temporarily visa-exempt for stays in French Guiana not exceeding 30 days in any 180-day period.",
+      "effective_from": "2026-08-02",
+      "temporary_window": "six months from 2026-07-31",
+      "publishable_without_recheck": false,
+      "note": "Temporary rule must be rechecked immediately before quoting or travel."
+    }
+  },
+  "wordpress": {
+    "public_home": "HTTP_502",
+    "restricted_area": "INACCESSIBLE",
+    "wpwriter_site_status": "Active metadata; posts/pages unavailable",
+    "publication": false,
+    "permalink": null,
+    "publication_id": null
+  },
+  "partnerships": {
+    "gmail_query_window": "newer_than:1d",
+    "qualified_responses": 0
+  },
+  "gates": {
+    "REAL_MEDIA_VERIFIED": false,
+    "MASTER_LOGO_VERIFIED": false,
+    "NO_DUPLICATE_PASS": false,
+    "COPY_QA_PASS": false,
+    "IMMIGRATION_NATIONALITY_PASS": true,
+    "PUBLISHED": false
+  },
+  "outcome": "HOLD",
+  "rollback": "Delete/revert this receipt commit; no external publication or production mutation occurred."
+}
