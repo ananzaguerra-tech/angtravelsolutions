@@ -1,0 +1,83 @@
+{
+  "cycle": "C344",
+  "checked_at": "2026-11-06T09:01:20-03:00",
+  "baseline": {
+    "master_library_file_id": "libfile_c4491bdface08191a55e710d8993e046",
+    "master_version": 55
+  },
+  "entity": {
+    "canonical_name": "Saba",
+    "identity_scope": "Special municipality/public body of the Netherlands in the Caribbean",
+    "explicitly_distinct_from": [
+      "Bonaire",
+      "Sint Eustatius",
+      "Bonaire, Sint Eustatius and Saba aggregate"
+    ]
+  },
+  "block_12": {
+    "drive_id": "1UG-jyMfT0PZUMyLgg18EMgoxF-_Mfe7sGHDv6Kg5FuU",
+    "source_section": "06 — Saba",
+    "source_checked_at": "2026-09-09",
+    "editorial_state": "REVIEW_REQUIRED",
+    "cms_state": "UPLOAD_PENDING_CHANNEL",
+    "historical_entry_state": "DEGRADED",
+    "media_status": "MEDIA_PENDING",
+    "canonical_ids": "0/10"
+  },
+  "official_source_recheck": {
+    "tourism": {
+      "url": "https://www.sabatourism.com/",
+      "status": "TIMEOUT",
+      "checked_at": "2026-11-06T09:01:20-03:00"
+    },
+    "immigration": {
+      "url": "https://english.rijksdienstcn.com/immigration-naturalisation-and-border-control",
+      "status": "UNREACHABLE_IN_CURRENT_CHANNEL",
+      "checked_at": "2026-11-06T09:01:20-03:00"
+    }
+  },
+  "canonical_spreadsheet": {
+    "id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "aliases": [
+      "Saba",
+      "Caribbean Netherlands Saba",
+      "Island Territory of Saba",
+      "SAB"
+    ],
+    "ranges": [
+      "Item Register!A1:P900",
+      "WP Export Identity 24-07!A1:H900"
+    ],
+    "searches": 8,
+    "matches": 0,
+    "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+    "interpretation": "Offline zero-match is not a canonical PASS and does not prove absence from live CMS."
+  },
+  "wordpress": {
+    "public_home": "HTTP_502",
+    "restricted_area": "INACCESSIBLE",
+    "wpwriter": "ACTIVE_CONNECTION_METADATA_BUT_POST_PAGE_FETCH_UNAVAILABLE",
+    "mutation": false
+  },
+  "partnerships": {
+    "gmail_query_window": "newer_than:1d",
+    "new_replies": 0
+  },
+  "drive_status_live": {
+    "query": "ANG STATUS LIVE C344",
+    "matches": 0
+  },
+  "gates": {
+    "live_cms_verified": false,
+    "external_id_verified": false,
+    "official_dynamic_facts_current": false,
+    "immigration_current": false,
+    "real_media_verified": false,
+    "master_logo_verified": false,
+    "visual_hash_verified": false,
+    "copy_qa_pass": false,
+    "published": false
+  },
+  "outcome": "HOLD",
+  "rollback": "Revert only the GitHub commits created in C344; no external content mutation occurred."
+}
