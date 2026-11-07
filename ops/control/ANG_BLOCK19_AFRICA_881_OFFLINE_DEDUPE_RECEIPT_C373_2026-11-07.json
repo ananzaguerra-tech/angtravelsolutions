@@ -1,0 +1,26 @@
+{
+  "cycle_id": "C373",
+  "checked_at": "2026-11-07",
+  "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+  "range": "A1:Z1900",
+  "tabs": ["Item Register", "WP Export Identity 24-07"],
+  "units": [
+    {"name_pt":"Gabão","aliases":["Gabão","Gabon","GAB"]},
+    {"name_pt":"Camarões","aliases":["Camarões","Cameroon","CMR"]},
+    {"name_pt":"República Centro-Africana","aliases":["República Centro-Africana","Central African Republic","CAF"]},
+    {"name_pt":"Chade","aliases":["Chade","Chad","TCD"]},
+    {"name_pt":"República Democrática do Congo","aliases":["República Democrática do Congo","Democratic Republic of the Congo","COD"]},
+    {"name_pt":"República do Congo","aliases":["República do Congo","Republic of the Congo","COG"]},
+    {"name_pt":"Guiné","aliases":["Guiné","Guinea","GIN"]},
+    {"name_pt":"Burkina Faso","aliases":["Burkina Faso","Burkina","BFA"]},
+    {"name_pt":"Mali","aliases":["Mali","Republic of Mali","MLI"]},
+    {"name_pt":"Níger","aliases":["Níger","Niger","NER"]}
+  ],
+  "query_count": 60,
+  "raw_match_count": 0,
+  "canonical_match_count": 0,
+  "unknown_count": 0,
+  "error_count": 0,
+  "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "limitations": ["Offline zero match is not live CMS proof","No CMS ID/external_id/permalink/publication ID created","Publishing and media gates remain closed"]
+}
