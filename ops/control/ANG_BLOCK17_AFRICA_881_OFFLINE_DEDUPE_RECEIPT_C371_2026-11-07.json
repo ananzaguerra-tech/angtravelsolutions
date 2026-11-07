@@ -1,0 +1,22 @@
+{
+  "cycle_id": "C371",
+  "checked_at": "2026-11-07T14:58:06Z",
+  "scope": "ANG Curadoria 881/WORLD Block 17 Africa",
+  "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+  "tabs": ["Item Register", "WP Export Identity 24-07"],
+  "units": ["Eswatini", "Lesoto", "Tanzânia", "Quênia", "África do Sul", "Comores", "São Tomé e Príncipe", "Gâmbia", "Serra Leoa", "Libéria"],
+  "query_count": 60,
+  "raw_match_count": 3,
+  "canonical_match_count": 0,
+  "unknown_count": 0,
+  "false_positives": [
+    {"query": "LSO", "sheet": "WP Export Identity 24-07", "rows": [2], "reason": "source metadata row, not destination record"},
+    {"query": "COM", "sheet": "WP Export Identity 24-07", "rows": [7, 19], "reason": "spreadsheet map metadata URLs, not Comoros records"}
+  ],
+  "transient_retry": {"error": "Google Sheets 429 RATE_LIMITED", "resolution": "waited for quota window and reran missing queries", "final_errors": 0},
+  "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "drive_document_id": "1z-9hsJWoDiVAqQPAo8rquJpGT8VqxdSG06RUmNSvrYc",
+  "drive_revision_id": "AHj4eMSwCarnCR2ZXRvuzRh8HZQsPhDcnX31uU6VXl9Luh6HNeqnPwhE447c6-CmMMipv2-ZzurPT0-T0fqqAqfZO5bMRF1TbXRqbQv67A",
+  "readback": {"unit_headings": 10, "axis_lines": 160, "status": "CONFIRMED"},
+  "publication_status": "NOT_PUBLISHED"
+}
