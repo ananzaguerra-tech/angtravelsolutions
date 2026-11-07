@@ -1,0 +1,22 @@
+{
+  "cycle":"C360",
+  "checked_at":"2026-11-07T01:02:12-03:00",
+  "unit":"Montserrat",
+  "block":12,
+  "spreadsheet_id":"1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+  "range":"A1:Z1900",
+  "queries":[
+    {"tab":"Item Register","alias":"Montserrat","matches":0},
+    {"tab":"Item Register","alias":"Monserrate","matches":0},
+    {"tab":"Item Register","alias":"MS","matches":0},
+    {"tab":"Item Register","alias":"MSR","matches":0},
+    {"tab":"WP Export Identity 24-07","alias":"Montserrat","matches":0},
+    {"tab":"WP Export Identity 24-07","alias":"Monserrate","matches":0},
+    {"tab":"WP Export Identity 24-07","alias":"MS","matches":0},
+    {"tab":"WP Export Identity 24-07","alias":"MSR","matches":0}
+  ],
+  "result":"CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "live_cms_dedupe_pass":false,
+  "external_id_derivation_pass":false,
+  "publication":false
+}
