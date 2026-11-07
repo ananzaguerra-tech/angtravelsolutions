@@ -1,0 +1,32 @@
+{
+  "cycle": "C367",
+  "checked_at": "2026-11-07T07:57:06-03:00",
+  "canonical_name": "Saint-Barthélemy",
+  "aliases_checked": [
+    "Saint-Barthélemy",
+    "Saint Barthelemy",
+    "St Barth",
+    "St. Barts"
+  ],
+  "source_sheet": {
+    "id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "tabs": [
+      "Item Register",
+      "WP Export Identity 24-07"
+    ],
+    "range": "A1:Z1900",
+    "searches": 8,
+    "matches": 0
+  },
+  "conclusion": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "live_cms_dedupe_pass": false,
+  "external_id_derivation_pass": false,
+  "publication_status": "HOLD",
+  "gates": {
+    "REAL_MEDIA_VERIFIED": false,
+    "MASTER_LOGO_VERIFIED": false,
+    "NO_DUPLICATE_PASS": false,
+    "COPY_QA_PASS": false
+  },
+  "note": "Zero match in the offline 881 snapshot is not proof of absence from the live CMS."
+}
