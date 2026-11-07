@@ -1,0 +1,87 @@
+{
+  "cycle": "C358",
+  "checked_at": "2026-11-06T23:06:03-03:00",
+  "unit": {
+    "block": 11,
+    "position": 10,
+    "name_pt": "Ilhas Virgens Britânicas",
+    "name_en": "British Virgin Islands",
+    "iso3": "VGB"
+  },
+  "sources": {
+    "master_report": {
+      "library_file_id": "libfile_c4491bdface08191a55e710d8993e046",
+      "version_read": 69
+    },
+    "block_11": {
+      "drive_id": "19zN94t0ljnvtkOTw78dnBND-aWLkJCEVIOVr5rXis8I",
+      "status": "REVIEW_REQUIRED",
+      "cms": "UPLOAD_PENDING_CHANNEL"
+    },
+    "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "sheets": [
+      "Item Register",
+      "WP Export Identity 24-07"
+    ],
+    "range": "A1:Z1900"
+  },
+  "aliases": [
+    "Ilhas Virgens Britânicas",
+    "British Virgin Islands",
+    "BVI",
+    "VGB"
+  ],
+  "searches": 8,
+  "matches": 0,
+  "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "live_cms_dedupe_pass": false,
+  "external_id_derivation_pass": false,
+  "canonical_status": "PENDING_CANONICAL_RECONCILIATION",
+  "official_facts": {
+    "tourism_scope": [
+      "Tortola",
+      "Virgin Gorda",
+      "Anegada",
+      "Jost Van Dyke",
+      "Norman Island",
+      "Scrub Island",
+      "Prickly Pear",
+      "Saba Rock",
+      "Great Camanoe"
+    ],
+    "passport": "Valid passport book required for non-BVIslanders and non-Belongers for duration of stay",
+    "brazil_visa": "Brazil absent from official visa-required list revised 2023-01-12",
+    "visa_classification": "PASS_CONDITIONAL_RECHECK",
+    "ed_card": "Mandatory digital ED Card for all travellers within 72 hours before travel; free"
+  },
+  "block_11_reconciliation": {
+    "units": 10,
+    "reconciled_units": 10,
+    "status": "OFFLINE_RECONCILIATION_COMPLETE_LIVE_GATES_PENDING"
+  },
+  "media_status": "MEDIA_PENDING",
+  "gates": {
+    "REAL_MEDIA_VERIFIED": false,
+    "MASTER_LOGO_VERIFIED": false,
+    "NO_DUPLICATE_PASS": false,
+    "COPY_QA_PASS": false
+  },
+  "wordpress": {
+    "home_http": 502,
+    "area_restrita": "INACCESSIBLE",
+    "wpwriter": "ACTIVE_CONNECTION_ERROR_NO_SUCH_HOST"
+  },
+  "publication": {
+    "PUBLISHED": false,
+    "post_id": null,
+    "external_id": null,
+    "publication_id": null,
+    "permalink": null
+  },
+  "next_block": {
+    "block": 12,
+    "drive_id": "1UG-jyMfT0PZUMyLgg18EMgoxF-_Mfe7sGHDv6Kg5FuU",
+    "first_unit": "Anguilla"
+  },
+  "rollback": "Revert evidence-only commit; no production mutation occurred."
+}
