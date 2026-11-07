@@ -1,0 +1,18 @@
+{
+  "cycle_id": "C374",
+  "checked_at": "2026-11-07",
+  "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+  "range": "A1:Z1900",
+  "sheets": ["Item Register", "WP Export Identity 24-07"],
+  "candidate_units": 10,
+  "queries_executed": 60,
+  "new_units": ["Egypt/EGY", "Morocco/MAR", "Mauritania/MRT", "Western Sahara/ESH", "Reunion/REU", "Mayotte/MYT", "Saint Helena Ascension and Tristan da Cunha/SHN", "British Indian Ocean Territory/IOT"],
+  "excluded_already_completed": ["Algeria/DZA — Block 15/C369", "Tunisia/TUN — Block 15/C369"],
+  "raw_matches": [{"query":"SHN","sheet":"WP Export Identity 24-07","row":19,"classification":"FALSE_POSITIVE_METADATA_URL","reason":"substring in metadata/source document URL; no territorial identity"}],
+  "canonical_matches": 0,
+  "unknowns": 0,
+  "errors": 0,
+  "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "limitations": ["Offline spreadsheet evidence is not a live CMS dedupe pass.", "No external_id, post_id, permalink or publication was created."],
+  "gates": {"LIVE_CMS_DEDUPE_PASS":false,"EXTERNAL_ID_DERIVATION_PASS":false,"PUBLISHED":false}
+}
