@@ -1,0 +1,143 @@
+{
+  "cycle": "C368",
+  "checked_at": "2026-11-07T09:02:10-03:00",
+  "scope": "ANG Curadoria Bloco 14 — Pacífico",
+  "source_sheet": {
+    "id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "tabs": [
+      "Item Register",
+      "WP Export Identity 24-07"
+    ],
+    "range": "A1:Z1900",
+    "total_searches": 60,
+    "total_matches": 0
+  },
+  "drive_block": {
+    "id": "1R9Y7Yd2sq-Dwkz06RuGDqD0iV_CvKOy3ddFY8qExvsA",
+    "url": "https://docs.google.com/document/d/1R9Y7Yd2sq-Dwkz06RuGDqD0iV_CvKOy3ddFY8qExvsA/edit",
+    "units": 10,
+    "structural_axes": 160
+  },
+  "units": [
+    {
+      "name": "Kiribati",
+      "aliases": [
+        "Kiribati",
+        "Republic of Kiribati",
+        "KIR"
+      ],
+      "searches": 6,
+      "matches": 0,
+      "conclusion": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH"
+    },
+    {
+      "name": "Nauru",
+      "aliases": [
+        "Nauru",
+        "Republic of Nauru",
+        "NRU"
+      ],
+      "searches": 6,
+      "matches": 0,
+      "conclusion": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH"
+    },
+    {
+      "name": "Tuvalu",
+      "aliases": [
+        "Tuvalu",
+        "Tuvalu Islands",
+        "TUV"
+      ],
+      "searches": 6,
+      "matches": 0,
+      "conclusion": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH"
+    },
+    {
+      "name": "Palau",
+      "aliases": [
+        "Palau",
+        "Republic of Palau",
+        "PLW"
+      ],
+      "searches": 6,
+      "matches": 0,
+      "conclusion": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH"
+    },
+    {
+      "name": "Micronésia",
+      "aliases": [
+        "Micronésia",
+        "Federated States of Micronesia",
+        "FSM"
+      ],
+      "searches": 6,
+      "matches": 0,
+      "conclusion": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH"
+    },
+    {
+      "name": "Ilhas Marshall",
+      "aliases": [
+        "Ilhas Marshall",
+        "Marshall Islands",
+        "MHL"
+      ],
+      "searches": 6,
+      "matches": 0,
+      "conclusion": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH"
+    },
+    {
+      "name": "Ilhas Marianas do Norte",
+      "aliases": [
+        "Ilhas Marianas do Norte",
+        "Northern Mariana Islands",
+        "MNP"
+      ],
+      "searches": 6,
+      "matches": 0,
+      "conclusion": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH"
+    },
+    {
+      "name": "Samoa Americana",
+      "aliases": [
+        "Samoa Americana",
+        "American Samoa",
+        "ASM"
+      ],
+      "searches": 6,
+      "matches": 0,
+      "conclusion": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH"
+    },
+    {
+      "name": "Tokelau",
+      "aliases": [
+        "Tokelau",
+        "Tokelau Islands",
+        "TKL"
+      ],
+      "searches": 6,
+      "matches": 0,
+      "conclusion": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH"
+    },
+    {
+      "name": "Wallis e Futuna",
+      "aliases": [
+        "Wallis e Futuna",
+        "Wallis and Futuna",
+        "WLF"
+      ],
+      "searches": 6,
+      "matches": 0,
+      "conclusion": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH"
+    }
+  ],
+  "live_cms_dedupe_pass": false,
+  "external_id_derivation_pass": false,
+  "publication_status": "NONE",
+  "gates": {
+    "REAL_MEDIA_VERIFIED": false,
+    "MASTER_LOGO_VERIFIED": false,
+    "NO_DUPLICATE_PASS": false,
+    "COPY_QA_PASS": false
+  },
+  "note": "A zero-match result in the offline 881 snapshot is not proof of absence from the live CMS."
+}
