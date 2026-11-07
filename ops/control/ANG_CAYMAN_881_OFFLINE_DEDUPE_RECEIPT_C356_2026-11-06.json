@@ -1,0 +1,66 @@
+{
+  "cycle": "C356",
+  "checked_at": "2026-11-06T21:00:33-03:00",
+  "unit": {
+    "block": 11,
+    "position": 8,
+    "name_pt": "Ilhas Cayman",
+    "name_en": "Cayman Islands",
+    "iso3": "CYM"
+  },
+  "sources": {
+    "master_report": {
+      "library_file_id": "libfile_c4491bdface08191a55e710d8993e046",
+      "version_read": 67
+    },
+    "block_11": {
+      "drive_id": "19zN94t0ljnvtkOTw78dnBND-aWLkJCEVIOVr5rXis8I",
+      "status": "REVIEW_REQUIRED",
+      "cms": "UPLOAD_PENDING_CHANNEL"
+    },
+    "spreadsheets": [
+      {
+        "id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+        "sheet": "Item Register",
+        "range": "A1:Z1900"
+      },
+      {
+        "id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+        "sheet": "WP Export Identity 24-07",
+        "range": "A1:Z1900"
+      }
+    ]
+  },
+  "aliases": [
+    "Ilhas Cayman",
+    "Cayman Islands",
+    "Cayman",
+    "CYM"
+  ],
+  "searches": 8,
+  "matches": 0,
+  "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "live_cms_dedupe_pass": false,
+  "external_id_derivation_pass": false,
+  "canonical_status": "PENDING_CANONICAL_RECONCILIATION",
+  "media_status": "MEDIA_PENDING",
+  "media_gates": {
+    "REAL_MEDIA_VERIFIED": false,
+    "MASTER_LOGO_VERIFIED": false,
+    "NO_DUPLICATE_PASS": false,
+    "COPY_QA_PASS": false
+  },
+  "publication": {
+    "PUBLISHED": false,
+    "post_id": null,
+    "external_id": null,
+    "publication_id": null,
+    "permalink": null
+  },
+  "wordpress": {
+    "home_http": 502,
+    "area_restrita": "INACCESSIBLE",
+    "wpwriter": "ACTIVE_CONNECTION_ERROR_NO_SUCH_HOST"
+  },
+  "rollback": "Delete or revert this evidence-only receipt; no production mutation occurred."
+}
