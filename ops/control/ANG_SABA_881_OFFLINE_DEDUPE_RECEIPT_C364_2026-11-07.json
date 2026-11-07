@@ -1,0 +1,37 @@
+{
+  "cycle": "C364",
+  "unit": "Saba",
+  "block": "Caribe Europeu — Batch 01 / Unit 06",
+  "checked_at": "2026-11-07T04:57:01-03:00",
+  "source_spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+  "scanned_range": "A1:Z1900",
+  "aliases": [
+    "Saba",
+    "Saba Island",
+    "The Unspoiled Queen",
+    "SAB"
+  ],
+  "tabs": {
+    "Item Register": {
+      "matched_rows": {
+        "Saba": 0,
+        "Saba Island": 0,
+        "The Unspoiled Queen": 0,
+        "SAB": 0
+      }
+    },
+    "WP Export Identity 24-07": {
+      "matched_rows": {
+        "Saba": 0,
+        "Saba Island": 0,
+        "The Unspoiled Queen": 0,
+        "SAB": 0
+      }
+    }
+  },
+  "conclusion": "NO_MATCH_OFFLINE_DEDUPE",
+  "publication_state": "HOLD",
+  "reason": "No canonical 881/WP identity match found; authoritative insertion channel and media/brand gates remain unavailable.",
+  "prohibited_payload_used": false,
+  "rollback": "Delete/revert this receipt commit only; no production or source spreadsheet mutation occurred."
+}
