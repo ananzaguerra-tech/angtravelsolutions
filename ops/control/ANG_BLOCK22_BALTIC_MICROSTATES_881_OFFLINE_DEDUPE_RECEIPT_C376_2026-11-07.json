@@ -1,0 +1,34 @@
+{
+  "cycle_id": "C376",
+  "checked_at": "2026-11-07",
+  "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+  "range": "A1:Z1900",
+  "tabs": ["Item Register", "WP Export Identity 24-07"],
+  "candidates": [
+    {"name_pt":"Estônia","name_en":"Estonia","alias":"EST"},
+    {"name_pt":"Letônia","name_en":"Latvia","alias":"LVA"},
+    {"name_pt":"Lituânia","name_en":"Lithuania","alias":"LTU"},
+    {"name_pt":"Moldávia","name_en":"Moldova","alias":"MDA"},
+    {"name_pt":"Kosovo","name_en":"Kosovo","alias":"XKX"},
+    {"name_pt":"San Marino","name_en":"san-marino","alias":"SMR"},
+    {"name_pt":"Vaticano","name_en":"Vatican City","alias":"VAT"},
+    {"name_pt":"Mônaco","name_en":"Monaco","alias":"MCO"},
+    {"name_pt":"Liechtenstein","name_en":"liechtenstein","alias":"LIE"},
+    {"name_pt":"Andorra","name_en":"andorra","alias":"AND"}
+  ],
+  "query_count": 60,
+  "matched_row_count": 0,
+  "canonical_match_count": 0,
+  "unknown_count": 0,
+  "error_count": 0,
+  "truncated": false,
+  "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "limitations": [
+    "Zero correspondência offline não prova ausência no CMS vivo.",
+    "LIVE_CMS_DEDUPE_PASS=false.",
+    "EXTERNAL_ID_DERIVATION_PASS=false.",
+    "Nenhuma linha da planilha ou registro do CMS foi alterado."
+  ],
+  "drive_document_id": "1V7P33eK8Fpk5Lf4Xw2F6k8pDTR6BbJ4LUdSlpWtKSVY",
+  "published": false
+}
