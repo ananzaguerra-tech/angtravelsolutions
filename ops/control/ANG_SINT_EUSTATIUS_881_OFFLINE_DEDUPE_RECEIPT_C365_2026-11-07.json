@@ -1,0 +1,37 @@
+{
+  "cycle": "C365",
+  "unit": "Sint Eustatius",
+  "aliases": [
+    "Sint Eustatius",
+    "Saint Eustatius",
+    "Statia",
+    "EUX"
+  ],
+  "block": "Caribe Europeu — Batch 01 / Unit 07",
+  "checked_at": "2026-11-07T06:01:55-03:00",
+  "source_spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+  "scanned_range": "A1:Z1900",
+  "tabs": {
+    "Item Register": {
+      "matched_rows": {
+        "Sint Eustatius": 0,
+        "Saint Eustatius": 0,
+        "Statia": 0,
+        "EUX": 0
+      }
+    },
+    "WP Export Identity 24-07": {
+      "matched_rows": {
+        "Sint Eustatius": 0,
+        "Saint Eustatius": 0,
+        "Statia": 0,
+        "EUX": 0
+      }
+    }
+  },
+  "conclusion": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "publication_state": "HOLD",
+  "reason": "No canonical 881/WP identity match found; live CMS identity, authoritative insertion channel and media/brand gates remain unavailable.",
+  "prohibited_payload_used": false,
+  "rollback": "Revert this receipt commit only; no production, WordPress or source spreadsheet mutation occurred."
+}
