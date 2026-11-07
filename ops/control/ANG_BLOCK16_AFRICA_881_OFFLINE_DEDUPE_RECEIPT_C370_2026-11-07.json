@@ -1,0 +1,33 @@
+{
+  "cycle_id": "C370",
+  "checked_at": "2026-11-07T14:00:14Z",
+  "scope": "ANG Curadoria 881/WORLD Block 16 Southern Africa and Indian Ocean",
+  "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+  "tabs": ["Item Register", "WP Export Identity 24-07"],
+  "units": ["Angola", "Moçambique", "Namíbia", "Botsuana", "Zimbábue", "Zâmbia", "Malawi", "Madagascar", "Seicheles", "Maurício"],
+  "aliases": {
+    "Angola": ["Angola", "Republic of Angola", "AGO"],
+    "Moçambique": ["Moçambique", "Mozambique", "MOZ"],
+    "Namíbia": ["Namíbia", "Namibia", "NAM"],
+    "Botsuana": ["Botsuana", "Botswana", "BWA"],
+    "Zimbábue": ["Zimbábue", "Zimbabwe", "ZWE"],
+    "Zâmbia": ["Zâmbia", "Zambia", "ZMB"],
+    "Malawi": ["Malawi", "Republic of Malawi", "MWI"],
+    "Madagascar": ["Madagascar", "Republic of Madagascar", "MDG"],
+    "Seicheles": ["Seicheles", "Seychelles", "SYC"],
+    "Maurício": ["Maurício", "Mauritius", "MUS"]
+  },
+  "query_count": 60,
+  "match_count": 0,
+  "unknown_count": 0,
+  "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "drive_document_id": "1kbQrGAvajngs9IEk6DLP1nP3I8YLi0pnJupGKilcxcw",
+  "drive_revision_id": "AHj4eMQOrO_qpj_0IwSJgrz9pOrVq86mg82plmqmKc9SFJycyNWpXJg00MZCSpA2eziHixpyDOMQluytBrY31P8QCSxEsLxgcLsIDeYWRA",
+  "readback": {"unit_headings": 10, "axis_lines": 160, "status": "CONFIRMED"},
+  "limitations": [
+    "Offline zero match does not prove absence from WordPress.",
+    "WordPress pages/posts failed with No such host is known; public homepage returned 502.",
+    "No external_id, CMS PASS, permalink, publication ID or go-live claim is authorized."
+  ],
+  "publication_status": "NOT_PUBLISHED"
+}
