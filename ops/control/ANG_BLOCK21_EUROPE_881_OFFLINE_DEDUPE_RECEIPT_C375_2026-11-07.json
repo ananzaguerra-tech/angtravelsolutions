@@ -1,0 +1,16 @@
+{
+  "cycle_id": "C375",
+  "checked_at": "2026-11-07",
+  "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+  "range": "A1:Z1900",
+  "sheets": ["Item Register", "WP Export Identity 24-07"],
+  "units": ["Cyprus/CYP", "Malta/MLT", "Romania/ROU", "Bulgaria/BGR", "Serbia/SRB", "Montenegro/MNE", "Albania/ALB", "Bosnia and Herzegovina/BIH", "North Macedonia/MKD", "Slovakia/SVK"],
+  "queries_executed": 60,
+  "raw_matches": 0,
+  "canonical_matches": 0,
+  "unknowns": 0,
+  "errors": 0,
+  "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "limitations": ["Offline spreadsheet evidence is not a live CMS dedupe pass.", "No external_id, post_id, permalink or publication was created."],
+  "gates": {"LIVE_CMS_DEDUPE_PASS":false,"EXTERNAL_ID_DERIVATION_PASS":false,"PUBLISHED":false}
+}
