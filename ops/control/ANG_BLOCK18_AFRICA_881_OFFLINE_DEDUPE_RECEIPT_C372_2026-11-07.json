@@ -1,0 +1,26 @@
+{
+  "cycle_id": "C372",
+  "checked_at": "2026-11-07",
+  "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+  "range": "A1:Z1900",
+  "tabs": ["Item Register", "WP Export Identity 24-07"],
+  "units": [
+    {"name_pt":"Burundi","aliases":["Burundi","Republic of Burundi","BDI"]},
+    {"name_pt":"Djibuti","aliases":["Djibuti","Djibouti","DJI"]},
+    {"name_pt":"Eritreia","aliases":["Eritreia","Eritrea","ERI"]},
+    {"name_pt":"Somália","aliases":["Somália","Somalia","SOM"]},
+    {"name_pt":"Sudão","aliases":["Sudão","Sudan","SDN"]},
+    {"name_pt":"Sudão do Sul","aliases":["Sudão do Sul","South Sudan","SSD"]},
+    {"name_pt":"Guiné-Bissau","aliases":["Guiné-Bissau","Guinea-Bissau","GNB"]},
+    {"name_pt":"Guiné Equatorial","aliases":["Guiné Equatorial","Equatorial Guinea","GNQ"]},
+    {"name_pt":"Togo","aliases":["Togo","Togolese Republic","TGO"]},
+    {"name_pt":"Benim","aliases":["Benim","Benin","BEN"]}
+  ],
+  "query_count": 60,
+  "raw_match_count": 0,
+  "canonical_match_count": 0,
+  "unknown_count": 0,
+  "error_count": 0,
+  "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "limitations": ["Offline zero match is not live CMS proof","No CMS ID/external_id/permalink/publication ID created","Publishing and media gates remain closed"]
+}
