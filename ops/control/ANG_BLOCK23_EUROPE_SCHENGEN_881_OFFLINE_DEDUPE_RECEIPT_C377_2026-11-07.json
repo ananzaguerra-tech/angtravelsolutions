@@ -1,0 +1,39 @@
+{
+  "cycle_id": "C377",
+  "checked_at": "2026-11-07",
+  "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+  "range": "A1:Z1900",
+  "tabs": ["Item Register", "WP Export Identity 24-07"],
+  "candidates": [
+    {"name_pt":"Polônia","name_en":"Poland","alias":"POL"},
+    {"name_pt":"Chéquia","name_en":"Czechia","alias":"CZE"},
+    {"name_pt":"Hungria","name_en":"Hungary","alias":"HUN"},
+    {"name_pt":"Eslovênia","name_en":"Slovenia","alias":"SVN"},
+    {"name_pt":"Croácia","name_en":"Croatia","alias":"HRV"},
+    {"name_pt":"Grécia","name_en":"Greece","alias":"GRC"},
+    {"name_pt":"Portugal","name_en":"Portugal","alias":"PRT"},
+    {"name_pt":"Espanha","name_en":"Spain","alias":"ESP"},
+    {"name_pt":"Alemanha","name_en":"Germany","alias":"DEU"},
+    {"name_pt":"Áustria","name_en":"Austria","alias":"AUT"}
+  ],
+  "query_count": 60,
+  "zero_hit_queries": 58,
+  "raw_hit_count": 8,
+  "canonical_match_count": 0,
+  "unknown_count": 0,
+  "error_count": 0,
+  "truncated": false,
+  "false_positives": [
+    {"query":"AUT","count":7,"reason":"substring em 'automaticamente'","note":"sete módulos de hotelaria de Lisboa a preservar e reconciliar"},
+    {"query":"ESP","count":1,"reason":"substring em 'esperado'"}
+  ],
+  "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "limitations": [
+    "Zero correspondência canônica offline não prova ausência no CMS vivo.",
+    "LIVE_CMS_DEDUPE_PASS=false.",
+    "EXTERNAL_ID_DERIVATION_PASS=false.",
+    "Nenhuma linha da planilha ou registro do CMS foi alterado."
+  ],
+  "drive_document_id": "1-6v0B_AnXGVyGo9Z_VOzmcbSDJJDvNp3OG-mRY0dU3E",
+  "published": false
+}
