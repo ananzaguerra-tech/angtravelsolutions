@@ -1,0 +1,27 @@
+{
+  "cycle_id": "C378",
+  "checked_at": "2026-11-07T21:55:00-03:00",
+  "scope": "ANG Curadoria 881/WORLD Block 24",
+  "countries": ["Belgium", "Netherlands", "Luxembourg", "France", "Switzerland", "Denmark", "Sweden", "Norway", "Finland", "Iceland"],
+  "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+  "tabs": ["Item Register", "WP Export Identity 24-07"],
+  "range": "A1:Z1900",
+  "queries": 60,
+  "aliases_per_country": 3,
+  "canonical_matches": 0,
+  "raw_hits": 79,
+  "false_positives": {
+    "BEL": {"count": 2, "tokens": ["Belmond"]},
+    "CHE": {"count": 23, "tokens": ["Courchevel"]},
+    "NOR": {"count": 23, "tokens": ["Fernando de Noronha"]},
+    "FIN": {"count": 31, "tokens": ["final", "Mapa final"]}
+  },
+  "zero_hit_codes": ["NLD", "LUX", "FRA", "DNK", "SWE", "ISL"],
+  "errors_after_retry": 0,
+  "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "live_cms_dedupe_pass": false,
+  "external_id_derivation_pass": false,
+  "published": false,
+  "drive_document_id": "1ftLgLQysbAPrl6VRi7LDnSZEcIJKHqL2etLxJYrB7pA",
+  "rollback": "Remove the C378 Drive document and revert only the C378 receipt/audit commits; preserve all earlier blocks."
+}
