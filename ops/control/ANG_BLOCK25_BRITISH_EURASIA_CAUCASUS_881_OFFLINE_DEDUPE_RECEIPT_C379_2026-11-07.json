@@ -1,0 +1,25 @@
+{
+  "cycle_id": "C379",
+  "checked_at": "2026-11-07T23:01:00-03:00",
+  "scope": "ANG Curadoria 881/WORLD Block 25",
+  "units": ["Ireland", "United Kingdom", "Türkiye", "Georgia", "Armenia", "Azerbaijan", "Ukraine", "Belarus", "Russia", "Gibraltar"],
+  "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+  "tabs": ["Item Register", "WP Export Identity 24-07"],
+  "range": "A1:Z1900",
+  "query_slots": 60,
+  "method": "read-only complete snapshots with local alias evaluation after transient 429 responses",
+  "canonical_matches": 0,
+  "raw_hits": 1,
+  "false_positives": {
+    "TUR": {"count": 1, "tab": "WP Export Identity 24-07", "row": 18, "context": "incidental substring in cobertura/reconciliation text"}
+  },
+  "item_register_hits": 0,
+  "errors_after_retry": 0,
+  "truncated": false,
+  "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "live_cms_dedupe_pass": false,
+  "external_id_derivation_pass": false,
+  "published": false,
+  "drive_document_id": "1QIjaA5W_kqG49vJuTJbTYLd5gkX0dgR1iH8-BJ7sYfE",
+  "rollback": "Remove only the C379 Drive document and revert only the C379 receipt/audit commits; preserve Blocks 12–24."
+}
