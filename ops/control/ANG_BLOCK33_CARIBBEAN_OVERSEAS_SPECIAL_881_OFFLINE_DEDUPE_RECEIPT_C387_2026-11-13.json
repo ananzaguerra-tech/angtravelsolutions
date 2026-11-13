@@ -1,0 +1,14 @@
+{
+  "cycle": "C387",
+  "block": 33,
+  "checked_at": "2026-11-13",
+  "source_scope": "local canonical blocks 14-32 plus master v99; live CMS unavailable",
+  "units": ["Puerto Rico", "Aruba", "Curaçao", "Saint-Pierre-et-Miquelon", "Pitcairn", "Guadeloupe", "Réunion", "Mayotte", "Western Sahara", "United States Minor Outlying Islands"],
+  "canonical_heading_matches": 0,
+  "incidental_text_mentions": {"Pitcairn": 1, "Mayotte": 1},
+  "classification": "incidental source/context mentions; not prior canonical modules",
+  "drive_document_id": "16PG6xksxoSx8S0XKLTAFPg340P1CFBJUMhElBjQwt9Q",
+  "drive_readback": {"units": 10, "axes": 160, "published_false": 12, "published_true": 0},
+  "publication": false,
+  "media": {"real_media_verified": false, "master_logo_verified": false, "no_duplicate_pass": false, "copy_qa_pass": false}
+}
