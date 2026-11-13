@@ -1,0 +1,43 @@
+{
+  "cycle_id": "C386",
+  "checked_at": "2026-11-13",
+  "scope": "ANG Curadoria 881/WORLD Block 32 — European Dependencies and North/South Atlantic",
+  "units": [
+    "Jersey",
+    "Guernsey",
+    "Ilha de Man",
+    "Ilhas Faroé",
+    "Ilhas Åland",
+    "Svalbard",
+    "Jan Mayen",
+    "Akrotiri e Dhekelia",
+    "Groenlândia",
+    "Ilhas Falkland/Malvinas"
+  ],
+  "spreadsheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+  "range": "A1:Z1900",
+  "sheets": {
+    "Item Register": 883,
+    "WP Export Identity 24-07": 20
+  },
+  "alias_slots_checked": 60,
+  "raw_hits": 33,
+  "canonical_matches": 0,
+  "false_positives": 33,
+  "false_positive_detail": "ALA: 31 Item Register + 2 WP Export, within words such as Salas/mapeada; full Åland names returned zero",
+  "errors": 0,
+  "classification": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+  "live_cms_dedupe_pass": false,
+  "external_id_derived": false,
+  "drive_document_id": "1R3LaW8xu74nCK8R1NHbdpRki2YwoZ8LnYL4Wfo3HTds",
+  "drive_url": "https://docs.google.com/document/d/1R3LaW8xu74nCK8R1NHbdpRki2YwoZ8LnYL4Wfo3HTds/edit",
+  "readback": {
+    "units": 10,
+    "axes": 160,
+    "published_false_markers": 11,
+    "published_true_markers": 0,
+    "confirmed": true
+  },
+  "publication_authorized": false,
+  "rollback": "Delete only the C386 Drive document and repository evidence commits if an integrity defect is proven; no CMS record was created or modified."
+}
