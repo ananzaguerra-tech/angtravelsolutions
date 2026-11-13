@@ -11,7 +11,7 @@ Publication: `false`
 - Reconciled entry facts against official government, immigration or tourism sources with `checked_at=2026-11-12`.
 - Applied commercial and CTA holds to Israel, Palestinian Territories and Lebanon because current official advisories show material regional risk.
 - Read 883 rows from `Item Register` and 20 rows from `WP Export Identity 24-07`; evaluated 60 alias slots. All 32 raw hits were substring false positives; canonical matches remained zero.
-- Imported the block as a native Google Doc and scheduled readback validation: `1b6cA2oslVNACnTkwK2QQpky4YxFruJNEY_PZBnlGZC8`.
+- Imported the block as a native Google Doc and completed readback validation: `1b6cA2oslVNACnTkwK2QQpky4YxFruJNEY_PZBnlGZC8`; confirmed `cycle_id=C383`, 10 units/160 axes, 11 `PUBLISHED=false` markers and zero `PUBLISHED=true`.
 
 ## Entry result
 
