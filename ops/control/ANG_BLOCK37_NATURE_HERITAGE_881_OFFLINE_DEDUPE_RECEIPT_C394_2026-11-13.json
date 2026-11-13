@@ -1,0 +1,54 @@
+{
+  "cycle_id": "C394",
+  "checked_at": "2026-11-13T23:03:36Z",
+  "artifact": "ANG Curadoria 881 WORLD — Bloco 37 — Regiões de Natureza e Patrimônio — C394 — 2026-11-13",
+  "drive_id": "1GwZ0RoHOzEqLcoHA5Z5wWAWmK4WI1PWmwdaPTiAaRX8",
+  "drive_url": "https://docs.google.com/document/d/1GwZ0RoHOzEqLcoHA5Z5wWAWmK4WI1PWmwdaPTiAaRX8/edit",
+  "units": 10,
+  "axes": 160,
+  "published_false_occurrences": 12,
+  "published_true_occurrences": 0,
+  "dedupe": {
+    "source_sheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "tabs": ["Item Register", "WP Export Identity 24-07"],
+    "checks": 40,
+    "raw_hits": 0,
+    "errors": 0,
+    "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+    "master_canonical_heading_matches": 0,
+    "rejected_candidate": "Açores — já presente no Bloco 33 v2",
+    "scope": "Dedupe offline; não constitui CMS PASS"
+  },
+  "regions": [
+    "Lapônia Finlandesa — Finlândia",
+    "Baviera — Alemanha",
+    "Andaluzia — Espanha",
+    "Provença — França",
+    "Puglia — Itália",
+    "Highlands Escocesas — Reino Unido",
+    "Yucatán — México",
+    "Alberta e Rochosas Canadenses — Canadá",
+    "Ilha Sul — Nova Zelândia",
+    "Transilvânia — Romênia"
+  ],
+  "wordpress": {
+    "public_home": "HTTP_503",
+    "access_routes": "INACCESSIBLE",
+    "settings": "HTTP_403_REST_FORBIDDEN",
+    "jetpack": "SITE_DISCONNECTED",
+    "backup": "UNAVAILABLE_NO_SITE_FOUND",
+    "monitor_active": false,
+    "mutation": false
+  },
+  "gmail": {
+    "partner_reply_delta": 0,
+    "public_comarketing_authorization_delta": 0,
+    "mutation": false
+  },
+  "publication": {
+    "status": "HOLD",
+    "published": false,
+    "reason": "Live CMS, media, master-logo, dedupe and copy gates remain unproven"
+  },
+  "rollback": "Delete the Drive document and revert the C394 evidence commits; no live CMS/social/GBP/n8n state was changed."
+}
