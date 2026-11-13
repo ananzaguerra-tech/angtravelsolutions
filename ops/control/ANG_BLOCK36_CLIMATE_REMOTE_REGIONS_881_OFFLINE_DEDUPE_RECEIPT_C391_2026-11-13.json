@@ -1,0 +1,58 @@
+{
+  "cycle_id": "C391",
+  "checked_at": "2026-11-13T18:07:28Z",
+  "artifact": "ANG Curadoria 881 WORLD — Bloco 36 — Regiões Climáticas e Remotas — C391 — 2026-11-13",
+  "drive_id": "1ZiMChr8hptHmD-QFupqFYt_dDhwe6K3GmYfrN4XQBiw",
+  "drive_url": "https://docs.google.com/document/d/1ZiMChr8hptHmD-QFupqFYt_dDhwe6K3GmYfrN4XQBiw/edit",
+  "units": 10,
+  "axes": 160,
+  "published_false_occurrences": 12,
+  "published_true_occurrences": 0,
+  "dedupe": {
+    "source_sheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "checks": 20,
+    "raw_hits": 0,
+    "canonical_matches": 0,
+    "errors": 0,
+    "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+    "scope": "10 nomes canônicos em duas abas; não constitui PASS no CMS"
+  },
+  "regions": [
+    "Atacama — Chile",
+    "Magallanes e Patagônia Chilena — Chile",
+    "Mendoza — Argentina",
+    "Salta — Argentina",
+    "Québec — Canadá",
+    "Newfoundland and Labrador — Canadá",
+    "Tasmania — Austrália",
+    "Western Australia e Kimberley — Austrália",
+    "Hokkaido — Japão",
+    "Okinawa — Japão"
+  ],
+  "publication": {
+    "status": "HOLD",
+    "published": false,
+    "reason": "CMS/live gates and media/brand/copy gates remain unproven"
+  },
+  "wordpress": {
+    "public_home": "HTTP_503",
+    "access_ang": "INACCESSIBLE",
+    "area_restrita": "INACCESSIBLE",
+    "wp_json": "INACCESSIBLE",
+    "wpwriter": "ACTIVE_READ_ONLY_EVIDENCE",
+    "jetpack": "SITE_DISCONNECTED",
+    "backup": "UNAVAILABLE_NO_SITE_FOUND",
+    "mutation": false
+  },
+  "gmail": {
+    "new_partner_replies": 0,
+    "public_comarketing_authorizations": 0,
+    "mutation": false
+  },
+  "n8n": {
+    "runtime": "CLOUD",
+    "patching": "AUTOMATIC",
+    "concierge_pass": false
+  },
+  "rollback": "Remove the Drive document and GitHub evidence files for C391; no live CMS/social/GBP/n8n state was changed."
+}
