@@ -1,0 +1,33 @@
+{
+  "cycle_id": "C396",
+  "checked_at": "2026-11-14T01:05:00Z",
+  "artifact": "ANG Curadoria 881 WORLD — Bloco 39 — Regiões Europeias de Patrimônio e Paisagem — C396 — 2026-11-13",
+  "drive_id": "1-ErEw8RwUPHlvd7T81UV3SLxjGEzoYTKcZYWxhnNR8E",
+  "drive_url": "https://docs.google.com/document/d/1-ErEw8RwUPHlvd7T81UV3SLxjGEzoYTKcZYWxhnNR8E/edit",
+  "units": 10,
+  "axes": 160,
+  "published_false_occurrences": 12,
+  "published_true_occurrences": 0,
+  "dedupe": {
+    "source_sheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "checks": 40,
+    "raw_hits": 0,
+    "errors": 0,
+    "master_exact_matches": 0,
+    "result": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+    "scope": "Offline only; not CMS PASS"
+  },
+  "regions": ["País Basco","Costa Brava","Ístria","Tirol Austríaco","Graubünden","Flandres","País de Gales","Cornualha","Jutlândia","Morávia do Sul"],
+  "wordpress": {
+    "public_home": "INTERMITTENT_CACHED_READ_THEN_HTTP_503",
+    "residual_area_do_cliente": true,
+    "access_routes": "INACCESSIBLE",
+    "settings": "HTTP_403",
+    "jetpack": "SITE_DISCONNECTED",
+    "backup": "NO_SITE_FOUND",
+    "mutation": false
+  },
+  "gmail": {"partner_reply_delta": 0, "authorization_delta": 0, "mutation": false},
+  "publication": {"status": "HOLD", "published": false},
+  "rollback": "Delete Drive document and revert C396 evidence commits; no live surface changed."
+}
