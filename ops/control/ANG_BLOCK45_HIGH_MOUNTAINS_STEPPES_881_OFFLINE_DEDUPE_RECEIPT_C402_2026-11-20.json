@@ -1,0 +1,12 @@
+{
+  "cycle":"C402","checked_at":"2026-11-20","block":45,
+  "title":"Altas montanhas, estepes e corredores transfronteiriços",
+  "modules":10,"axes":160,"official_source_urls":30,
+  "published_false_occurrences":12,"published_true_occurrences":0,
+  "library_master_version_read":114,
+  "dedupe":{"master_exact_patterns":10,"master_matches":0,"sheet_id":"1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg","sheet_tabs":["Item Register","WP Export Identity 24-07"],"sheet_queries":20,"sheet_matches":0,"classification":"CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH","live_cms_dedupe_pass":false},
+  "drive":{"document_id":"13min_mvqx-UVCLxa7zKPS93HouE2yiOb3u3kbgnsMLg","revision_id":"AHj4eMTczrfg1kp4b0UW_4OhJgBYPgFpZZY-GgXGStRIHkoEqqKoIVoyLwU-mYrzCKoldPZTjVUTv3N3G9N2NCaIspNEV1l6hBeEQ5dYXw","readback_paragraphs":238,"readback_axes":160,"readback_published_false":12,"readback_published_true":0},
+  "publication":{"PUBLISHED":false,"REAL_MEDIA_VERIFIED":false,"MASTER_LOGO_VERIFIED":false,"NO_DUPLICATE_PASS":false,"COPY_QA_PASS":false},
+  "rollback":"Delete only the C402 Drive document and revert C402 commits if integrity defects are found; no public surface was changed."
+}
+
