@@ -1,0 +1,18 @@
+{
+  "cycle": "C408",
+  "checked_at": "2026-11-20T12:00:00-03:00",
+  "block": 51,
+  "theme": "Paisagens culturais, montanhas sagradas e rotas de peregrinacao",
+  "status": "BLOCK51_OFFLINE_RECONCILED_LIVE_GATES_PENDING",
+  "published": false,
+  "drive": {
+    "document_id": "1n76aVeSd-JMbC8qywP1MxMl3m66tS_QYB_FVyaSxz-Q",
+    "revision_id": "AHj4eMR4fLLw3tA0DEavkFGy8CYrEdp9qBx_IYKEkguNu9pXBrQ-lfyW3YUz9LwaR5Nx4R2dzftLRae_FkhQKxJTRujTg5moaiXjWuELNg",
+    "readback": {"paragraphs":264,"modules":10,"axes":160,"official_urls":30,"published_false":12,"true_gates":0}
+  },
+  "dedupe": {"drive_collision":0,"library_exact":"10/10 zero","sheet_881_queries":"20/20 zero"},
+  "gmail": {"partner_replies":0,"technical_alerts":6,"github_run":"44750086432","summary":"2 WordPress REST Auth Probe Stable failures; 4 workflow runs with no jobs"},
+  "wordpress": {"site_id":"256300923","mcp_status":"site_disconnected","backup":"BACKUP_NO_SITE_FOUND","staging":"STAGING_UNAVAILABLE","p0_pass":false},
+  "social": {"media_attached":false,"real_media_verified":false,"master_logo_verified":false,"no_duplicate_pass":false,"copy_qa_pass":false},
+  "rollback": "Remove Drive artifact only if defective; revert C408 evidence commits; restore master to v120."
+}
