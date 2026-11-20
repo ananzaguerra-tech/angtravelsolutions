@@ -1,0 +1,48 @@
+{
+  "cycle": "C413",
+  "local_time": "2026-11-20 17:58 BRT",
+  "block": 56,
+  "theme": "Rotas de Cafe, Cha e Paisagens de Origem",
+  "status": "BLOCK56_OFFLINE_RECONCILED_LIVE_GATES_PENDING",
+  "published": false,
+  "drive": {
+    "document_id": "1_2IC1xNzMXxfbjePLE23I9vJaeFgznBR0IVRsKHji7w",
+    "revision_id": "1",
+    "readback": {"modules": 10, "axes": 160, "sources": 30, "published_true": 0}
+  },
+  "dedupe": {
+    "library_literal": "10/10 zero matches",
+    "item_register_literal": "10/10 zero matches",
+    "wp_export_literal": "10/10 zero matches",
+    "drive_preexisting": 0,
+    "live_cms_pass": false
+  },
+  "gmail": {
+    "cutoff": "2026-11-20 17:00 BRT",
+    "partner_replies": 0,
+    "github_alert_ids": [
+      "1a1fa9149e42c571",
+      "1a1fa913a4122861",
+      "1a1fa912d5d8f2b1",
+      "1a1fa9125839ed05",
+      "1a1fa91207a83422",
+      "1a1fa911d6bf0a46"
+    ]
+  },
+  "wordpress": {
+    "page_108_revision_ids": [153632, 153596, 153595, 153569, 153434, 153432, 153431, 152699, 152476, 143748],
+    "page_level_rollback_evidence": true,
+    "full_backup_proven": false,
+    "staging_proven": false,
+    "mutation_applied": false,
+    "wordpress_p0_pass": false
+  },
+  "social": {
+    "real_media_verified": false,
+    "master_logo_verified": false,
+    "no_duplicate_pass": false,
+    "copy_qa_pass": false,
+    "publication_ids": []
+  },
+  "rollback": "Delete the Drive document only if defective; revert C413 commits; restore master to v125."
+}
