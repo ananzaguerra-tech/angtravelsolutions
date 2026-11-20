@@ -1,0 +1,61 @@
+{
+  "cycle": "C415",
+  "timestamp_brt": "2026-11-20 20:00 BRT",
+  "block": 58,
+  "theme": "Jardins Botânicos, Herbários e Paisagens Científicas",
+  "curadoria": {
+    "modules": 10,
+    "axes": 160,
+    "sources": 30,
+    "countries_or_territories": 10,
+    "checked_at": "2026-11-20",
+    "published": false,
+    "drive_id": "1QdnPGCJMb-bInPGT2FPxEvpvT3r0RJupeDlDlFl0kM8",
+    "drive_revision": "1",
+    "sha256": "211a2c472381fca1426128fe959688dda59120b2a00ef8df0256ae00980fa378"
+  },
+  "dedupe": {
+    "master_version": 129,
+    "master_exact_label_matches": 0,
+    "item_register_exact_label_matches": 0,
+    "wp_export_exact_label_matches": 0,
+    "live_cms_dedupe_pass": false
+  },
+  "wordpress": {
+    "page_id": 108,
+    "baseline_revision_id": 153632,
+    "changed_live": false,
+    "payload_drive_id": "1R9AysHB7TeNh09lPPUpGYUwcwPiTn0d4",
+    "payload_sha256": "b95ba048eba4997cf90826357697cb47d0d343514e4c433050d5bcc56f82b0cf",
+    "forbidden_occurrences_after_sanitization": 0,
+    "labels_preserved": 14,
+    "header_draft_label": "Área Restrita",
+    "public_residual_label": "Área do Cliente",
+    "status": "OFFLINE_STAGING_ONLY"
+  },
+  "gmail": {
+    "partner_replies": 0,
+    "other_new_messages": 3,
+    "publication_authorization_found": false
+  },
+  "publications": {
+    "wordpress": 0,
+    "facebook": 0,
+    "instagram": 0,
+    "google_business": 0
+  },
+  "gates": [
+    "FULL_SITE_BACKUP_MISSING",
+    "STAGING_UNAVAILABLE",
+    "JETPACK_SITE_DISCONNECTED",
+    "LIVE_CMS_DEDUPE_PENDING",
+    "COPY_QA_PENDING",
+    "MEDIA_RIGHTS_UNPROVEN"
+  ],
+  "rollback": [
+    "Delete Drive doc 1QdnPGCJMb-bInPGT2FPxEvpvT3r0RJupeDlDlFl0kM8 if defective",
+    "Delete Drive JSON 1R9AysHB7TeNh09lPPUpGYUwcwPiTn0d4 if defective",
+    "Revert C415 GitHub commits",
+    "No WordPress rollback needed because live content was not changed"
+  ]
+}
