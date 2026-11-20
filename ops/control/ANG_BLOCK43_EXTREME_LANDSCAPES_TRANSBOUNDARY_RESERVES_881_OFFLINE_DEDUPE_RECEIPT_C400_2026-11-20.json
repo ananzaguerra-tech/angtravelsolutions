@@ -1,0 +1,39 @@
+{
+  "cycle": "C400",
+  "checked_at": "2026-11-20",
+  "block": 43,
+  "title": "Paisagens extremas, reservas remotas e patrimônio natural",
+  "modules": 10,
+  "axes": 160,
+  "official_source_urls": 30,
+  "published_false_occurrences": 12,
+  "published_true_occurrences": 0,
+  "library_master_version_read": 112,
+  "dedupe": {
+    "master_exact_patterns": 10,
+    "master_matches": 0,
+    "sheet_id": "1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg",
+    "sheet_tabs": ["Item Register", "WP Export Identity 24-07"],
+    "sheet_queries": 20,
+    "sheet_matches": 0,
+    "classification": "CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH",
+    "live_cms_dedupe_pass": false
+  },
+  "drive": {
+    "document_id": "1Uo3ugqVArvJDxLLyXrjJWSeGoo7cxXgDLdjvkErkWBQ",
+    "revision_id": "AHj4eMSoWJZ4qNVLXAvxWnMVw_4c4hf2GS__590wcvNiGkdhJyJv0A-TiaqqnfK7X4ZiWHQNinu1fCO23jjX8a-hV15wZEC3vMWztuuw-w",
+    "readback_paragraphs": 238,
+    "readback_axes": 160,
+    "readback_published_false": 12,
+    "readback_published_true": 0
+  },
+  "publication": {
+    "PUBLISHED": false,
+    "REAL_MEDIA_VERIFIED": false,
+    "MASTER_LOGO_VERIFIED": false,
+    "NO_DUPLICATE_PASS": false,
+    "COPY_QA_PASS": false
+  },
+  "rollback": "Delete only the C400 Drive document and revert the C400 repository commits if integrity defects are found; no public surface was changed."
+}
+
