@@ -1,0 +1,60 @@
+{
+  "cycle": "C415",
+  "created_at": "2026-11-20T20:00:00-03:00",
+  "mode": "OFFLINE_STAGING_ONLY",
+  "publication_authorized": false,
+  "page_id": 108,
+  "baseline_revision_id": 153632,
+  "baseline_modified_gmt": "2026-10-29T21:35:37",
+  "purpose": "Remove full street addresses, map data attributes, embedded Google Maps iframe and address-driving script while preserving city/country service labels.",
+  "preserved_labels": [
+    "Campinas · Brasil",
+    "Americana · Brasil",
+    "São Paulo · Brasil",
+    "Rio de Janeiro · Brasil",
+    "Florianópolis · Brasil",
+    "Fortaleza · Brasil",
+    "New York · United States",
+    "Miami · United States",
+    "Lisboa · Portugal",
+    "Luxembourg · Luxembourg",
+    "Dubai · United Arab Emirates",
+    "Johannesburg · South Africa",
+    "Shanghai · China",
+    "Brisbane · Australia"
+  ],
+  "transformation": {
+    "start_marker": "<section id=\"onde-estamos\"",
+    "end_marker": "<section id=\"atendimento-global\"",
+    "replacement_strategy": "replace bounded section only"
+  },
+  "validation": {
+    "baseline_raw_length": 10169,
+    "sanitized_raw_length": 3177,
+    "forbidden_occurrences": {
+      "data-map-address": 0,
+      "ang-address-map": 0,
+      "google.com/maps?q=": 0,
+      "<iframe": 0,
+      "Avenida Doutor José Bonifácio": 0,
+      "Rua Peru, 636": 0,
+      "Avenida Paulista": 0,
+      "Olegário Maciel": 0
+    },
+    "all_forbidden_zero": true,
+    "labels_preserved": true,
+    "label_count": 14
+  },
+  "rollback": {
+    "source": "WordPress revision 153632",
+    "instruction": "Restore page 108 revision 153632 if a staging comparison fails."
+  },
+  "gates": [
+    "DO_NOT_APPLY_TO_PRODUCTION",
+    "REQUIRE_FULL_SITE_BACKUP",
+    "REQUIRE_STAGING_PREVIEW",
+    "REQUIRE_VISUAL_DIFF",
+    "REQUIRE_OWNER_APPROVAL"
+  ],
+  "sanitized_content": "<section class=\"ang-editorial-hero\"><p class=\"eyebrow\">ANG GROUP · CONTATO E PRESENÇA GLOBAL</p><h1>Estamos próximos, onde quer que sua jornada comece.</h1><p>Atendimento consultivo para viajantes, empresas, agências e parceiros, com direcionamento para a unidade especializada do ecossistema ANG.</p></section><nav class=\"ang-page-index\" aria-label=\"Índice da página\"><a href=\"#contato\">Fale conosco</a><a href=\"#canais\">Canais oficiais</a><a href=\"#onde-estamos\">Onde estamos</a><a href=\"#atendimento-global\">Atendimento global</a></nav><section id=\"contato\"><span id=\"concierge-ang\"></span><p class=\"eyebrow\">CONCIERGE ANG</p><h2>Uma entrada, todo o ecossistema conectado.</h2><p>Compartilhe o objetivo da viagem, da empresa ou da agência pelo Concierge ANG. Cada solicitação é triada, registrada no CRM e recebe protocolo para acompanhamento pelo perfil responsável.</p>[ang_contact subject=\"Contato pelo site\"]</section><section id=\"canais\" class=\"ang-contact-channels\" aria-labelledby=\"canais-title\"><div><p class=\"eyebrow\">CANAIS OFICIAIS</p><h2 id=\"canais-title\">Atendimento claro, seguro e humano.</h2><p>O Concierge centraliza o atendimento digital e direciona cada caso à equipe adequada. Para sua segurança, nunca envie senhas, códigos de autenticação, dados completos de cartão ou documentos pessoais em mensagens abertas.</p></div><div class=\"ang-contact-channel-grid\"><article><h3>Concierge ANG</h3><p>Abra o Concierge no canto da tela para iniciar uma solicitação e receber seu protocolo.</p><a class=\"button gold\" href=\"#concierge-ang\">Iniciar atendimento</a></article><article><h3>Atendimento por e-mail</h3><p>Envie um resumo da solicitação para registro e direcionamento.</p><a class=\"button ghost\" href=\"mailto:contato@angtravelsolutions.com.br\">Enviar e-mail</a></article></div></section><section id=\"onde-estamos\" aria-labelledby=\"onde-estamos-title\">\n  <p class=\"eyebrow\">ONDE ATENDEMOS</p>\n  <h2 id=\"onde-estamos-title\">Cidades de atendimento</h2>\n  <div class=\"ang-city-list\" role=\"list\">\n    <span role=\"listitem\">Campinas · Brasil</span>\n    <span role=\"listitem\">Americana · Brasil</span>\n    <span role=\"listitem\">São Paulo · Brasil</span>\n    <span role=\"listitem\">Rio de Janeiro · Brasil</span>\n    <span role=\"listitem\">Florianópolis · Brasil</span>\n    <span role=\"listitem\">Fortaleza · Brasil</span>\n    <span role=\"listitem\">New York · United States</span>\n    <span role=\"listitem\">Miami · United States</span>\n    <span role=\"listitem\">Lisboa · Portugal</span>\n    <span role=\"listitem\">Luxembourg · Luxembourg</span>\n    <span role=\"listitem\">Dubai · United Arab Emirates</span>\n    <span role=\"listitem\">Johannesburg · South Africa</span>\n    <span role=\"listitem\">Shanghai · China</span>\n    <span role=\"listitem\">Brisbane · Australia</span>\n  </div>\n  <p>Atendimento consultivo com coordenação central e alcance global.</p>\n</section>\n\n<section id=\"atendimento-global\"><h2>Atendimento global, coordenação única.</h2><p>O primeiro contato pode ser realizado de qualquer lugar. A equipe confirma idioma, fuso horário, perfil, empresa responsável e formato do atendimento antes de organizar uma reunião presencial ou remota.</p></section>"
+}
