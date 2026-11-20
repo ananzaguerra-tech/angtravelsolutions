@@ -1,0 +1,10 @@
+{
+  "cycle":"C411","checked_at":"2026-11-20T16:00:00-03:00","block":54,
+  "status":"BLOCK54_OFFLINE_RECONCILED_LIVE_GATES_PENDING","published":false,
+  "drive":{"document_id":"1ujNcqEPEchIpasD0m6mPT3USR2n0RuRMTDJrw7Cshsc","revision_id":"AHj4eMRiHLwFxUhdnFgXiP_C1Bswva5s74AuMhDk7Fr85S16p3ZIm-6qrVE0f6xbOCq4JBy-95HgxXbU8xKOQf7Bu67wrFWDmW7b03pp5g","readback":{"paragraphs":264,"modules":10,"axes":160,"official_urls":30,"published_false":12,"true_gates":0}},
+  "dedupe":{"drive_collision":0,"library_exact":"10/10 zero","sheet_881_queries":"20/20 zero"},
+  "gmail":{"partner_replies":0,"technical_alerts":6,"message_ids":["1a1fa245559b0886","1a1fa24489bc0cdd","1a1fa2439a74e6b6","1a1fa242d002cba1","1a1fa242ce7347d5","1a1fa242766786bf"]},
+  "wordpress":{"site_id":"256300923","wpvibe_state":"limited_authenticated_read","wpvibe_checked_at":"2026-11-20T19:04:33.751Z","manage_options":false,"canonical_pages":{"acesso_ang":153423,"area_restrita":2109},"legacy_slug_matches":0,"post_content_residual_matches":0,"p0_pass":false},
+  "social":{"media_attached":false,"real_media_verified":false,"master_logo_verified":false,"no_duplicate_pass":false,"copy_qa_pass":false},
+  "rollback":"Remove Drive artifact only if defective; revert C411 evidence commits; restore master to v123."
+}
