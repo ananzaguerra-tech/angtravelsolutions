@@ -1,0 +1,12 @@
+{
+  "cycle":"C404","checked_at":"2026-11-20","block":47,
+  "title":"Recifes, atóis e grandes paisagens marinhas protegidas",
+  "modules":10,"axes":160,"official_source_urls":30,
+  "published_false_occurrences":12,"published_true_occurrences":0,
+  "library_master_version_read":116,
+  "dedupe":{"master_exact_patterns":10,"master_matches":0,"sheet_id":"1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg","sheet_tabs":["Item Register","WP Export Identity 24-07"],"sheet_queries":20,"sheet_matches":0,"classification":"CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH","live_cms_dedupe_pass":false},
+  "gmail":{"partner_new_replies":0,"technical_new_failure_messages":6,"technical_message_ids":["1a1f8673183e16b0","1a1f8672c941b9d6","1a1f86715d1923ef","1a1f867110e57162","1a1f86710e104a19","1a1f8670f7a3b1b1"]},
+  "drive":{"document_id":"1nZohXEA6monaluAe9y1XgSkLcH4NAufVOEfFQmEVebo","revision_id":"AHj4eMRk7Afwp7yzTzkFXN4K_gqIJ_5JuFsxM4wrF4UNgS4txYtSC3gbXvYgalg0gNGuMawslcGuF1O8lf8l9EJmpcigIqba2hpyk_xk4A","readback_paragraphs":235,"readback_axes":160,"readback_published_false":12,"readback_published_true":0},
+  "publication":{"PUBLISHED":false,"REAL_MEDIA_VERIFIED":false,"MASTER_LOGO_VERIFIED":false,"NO_DUPLICATE_PASS":false,"COPY_QA_PASS":false},
+  "rollback":"Delete only the C404 Drive document and revert C404 commits if integrity defects are found; no public surface was changed."
+}
