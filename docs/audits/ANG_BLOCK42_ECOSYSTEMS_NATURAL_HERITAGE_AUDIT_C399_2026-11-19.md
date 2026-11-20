@@ -22,7 +22,8 @@
 - Planilha 881: `1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg`
 - Il Borro folder `1Jap3qhHA1EnzYLHnVaJ9vcdDk-VnNkur`; vídeos `1H1TnajWrbsulWYxcPJEXEnf8UrbIcGFK` e `1uKEziBzy_wG4PMKRQKQbIq5Kanxszw3u`.
 - Gmail Stable failures: `1dc009d` run `44650672144` mensagem `1a1f67b01a7ddfc6`; `09e2176` run `44650619255` mensagem `1a1f67aa59689fb4`; `17f296f` run `44650620904` mensagem `1a1f67a9c3043da5`.
-- Commits C399: pendentes até confirmação do conector GitHub.
+- GitHub receipt: `bc8a0e8ffacad957e906235fac485c1ae61c67ac`.
+- GitHub audit inicial: `ab72c0edec6399df43dc35a7cf824e8198b90a58`; reconciliação final registrada no histórico do arquivo.
 
 ## NÃO FEITO / MOTIVO
 
