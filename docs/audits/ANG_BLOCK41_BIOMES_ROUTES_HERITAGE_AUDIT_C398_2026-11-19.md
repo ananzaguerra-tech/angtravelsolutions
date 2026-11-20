@@ -19,7 +19,8 @@
 - Revisão Drive: `AHj4eMT1k0mYr_cN2eWPwyUQjjVaFXOtJuA8zZpdoykdhtMRY7cMNlVg5s8GbNM41DolhL_4kdagz17cOfMTyvUZ0Qg3tuDWYqn42bkpwA`
 - Planilha 881: `1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg`
 - Gmail REST probes: mensagens `1a1f5342a1713e9f` / run `44594790505` / commit `d6d6a4e` e `1a1f533caff447d6` / run `44594713898` / commit `f9518fe`; ambas Stable falharam. Avisos sem job: `1a1f5340cf9b2d4d`, `1a1f53408429baed`, `1a1f533a92e6ae64`, `1a1f533a22b89504`.
-- Commits C398: pendentes até confirmação do conector GitHub.
+- GitHub receipt: `09e2176685fa37ea6e23a7d21a25d4859b2382b1`.
+- GitHub audit: `17f296f0483411f8f64dac9bc8a11c428e424591` (versão inicial; atualização de conciliação subsequente registrada no histórico do arquivo).
 
 ## NÃO FEITO / MOTIVO
 
