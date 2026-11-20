@@ -1,0 +1,10 @@
+{
+  "cycle":"C410","checked_at":"2026-11-20T15:00:00-03:00","block":53,
+  "status":"BLOCK53_OFFLINE_RECONCILED_LIVE_GATES_PENDING","published":false,
+  "drive":{"document_id":"1Z6jsSYkjayf9Fb66wKZf970jMpv76ZG543YV6CA_D5c","revision_id":"AHj4eMRxeENYnBNGCAeRZGK9qIRHi9Fn_ySFYSs_SRCdmQf5NlT64qIhEYRjauH-qZYc5pb5cE7JN0PJE0Vf5zUtk-hMBJGSss4Nn6_TSg","readback":{"paragraphs":264,"modules":10,"axes":160,"official_urls":30,"published_false":12,"true_gates":0}},
+  "dedupe":{"drive_collision":0,"library_exact":"10/10 zero","sheet_881_queries":"20/20 zero"},
+  "gmail":{"partner_replies":0,"technical_alerts":6,"false_positives_excluded":1,"message_ids":["1a1f9ea90c6115ad","1a1f9ea74aee8214","1a1f9ea5c51c7459","1a1f9ea57531580e","1a1f9ea53a811847","1a1f9ea534cb46df"]},
+  "wordpress":{"site_id":"256300923","mcp_status":"site_disconnected","p0_pass":false},
+  "social":{"media_attached":false,"real_media_verified":false,"master_logo_verified":false,"no_duplicate_pass":false,"copy_qa_pass":false},
+  "rollback":"Remove Drive artifact only if defective; revert C410 evidence commits; restore master to v122."
+}
