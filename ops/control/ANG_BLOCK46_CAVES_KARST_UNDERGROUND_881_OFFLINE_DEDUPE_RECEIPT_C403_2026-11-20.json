@@ -1,0 +1,12 @@
+{
+  "cycle":"C403","checked_at":"2026-11-20","block":46,
+  "title":"Cavernas, karst e paisagens subterrâneas",
+  "modules":10,"axes":160,"official_source_urls":30,
+  "published_false_occurrences":12,"published_true_occurrences":0,
+  "library_master_version_read":115,
+  "dedupe":{"master_exact_patterns":10,"master_matches":0,"sheet_id":"1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg","sheet_tabs":["Item Register","WP Export Identity 24-07"],"sheet_queries":20,"sheet_matches":0,"classification":"CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH","live_cms_dedupe_pass":false},
+  "gmail":{"partner_new_replies":0,"technical_new_failure_messages":6,"technical_message_ids":["1a1f8325cc0f1a8a","1a1f8325c32289d0","1a1f83243e32be13","1a1f83242ea795fc","1a1f8323f0866d54","1a1f8323822b3d4d"]},
+  "drive":{"document_id":"14exZHtZZz1cJA7Ybm9YfS3pcel2KieH_bGfv6AtpKPQ","revision_id":"AHj4eMT1HYzyGMfc_pejdQU5J0LZcvlj1T4GeWp3l-sPkJs20oirjD0cDROi-PDMhlaMoyZBzBgYDADFXGrahz13LI9ggFfAFDary6lNTw","readback_paragraphs":238,"readback_axes":160,"readback_published_false":12,"readback_published_true":0},
+  "publication":{"PUBLISHED":false,"REAL_MEDIA_VERIFIED":false,"MASTER_LOGO_VERIFIED":false,"NO_DUPLICATE_PASS":false,"COPY_QA_PASS":false},
+  "rollback":"Delete only the C403 Drive document and revert C403 commits if integrity defects are found; no public surface was changed."
+}
