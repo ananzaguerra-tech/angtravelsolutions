@@ -1,0 +1,44 @@
+{
+  "cycle": "C414",
+  "local_time": "2026-11-20 18:58 BRT",
+  "block": 57,
+  "theme": "Arquitetura, Design e Distritos Criativos",
+  "status": "BLOCK57_OFFLINE_RECONCILED_LIVE_GATES_PENDING",
+  "published": false,
+  "drive": {
+    "curadoria_document_id": "1Lc-9CUt3rAriVo38nWcjYz0hAx7HX317af5rgSpiLq8",
+    "curadoria_revision_id": "1",
+    "wp_plan_document_id": "1o81d_TrX7h7xB79ko3Oi_r7jo6JyohqUQi5v4Oor-xc",
+    "wp_plan_revision_id": "1",
+    "readback": {"modules": 10, "axes": 160, "sources": 30, "published_true": 0}
+  },
+  "dedupe": {
+    "helsinki_collision_detected": true,
+    "replacement": "Tallinn: Telliskivi Creative City",
+    "library_final": "10/10 zero matches",
+    "item_register_final": "10/10 zero matches",
+    "wp_export_final": "10/10 zero matches",
+    "drive_preexisting": 0,
+    "live_cms_pass": false
+  },
+  "gmail": {
+    "cutoff": "2026-11-20 18:00 BRT",
+    "partner_replies": 0,
+    "new_non_partner_ids": ["1a1fadb685470758", "1a1facc10c7111eb"]
+  },
+  "wordpress": {
+    "wpcom_blog_id": 256300923,
+    "platform": "jetpack",
+    "mcp_status": "site_disconnected",
+    "staging_status": "hosting_features_inactive",
+    "page_108_revision_current": 153632,
+    "page_108_revision_previous": 153596,
+    "data_map_address_count": 16,
+    "hidden_address_span_count": 14,
+    "map_iframe_count": 1,
+    "address_script_count": 1,
+    "mutation_applied": false,
+    "wordpress_p0_pass": false
+  },
+  "rollback": "Delete the two Drive documents only if defective; revert C414 commits; restore master to v127."
+}
