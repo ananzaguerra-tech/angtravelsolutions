@@ -1,0 +1,12 @@
+{
+  "cycle":"C405","checked_at":"2026-11-20","block":48,
+  "title":"Geleiras, fiordes e paisagens de gelo",
+  "modules":10,"axes":160,"official_source_urls":30,
+  "published_false_occurrences":12,"published_true_occurrences":0,
+  "library_master_version_read":117,
+  "dedupe":{"master_exact_patterns":10,"master_matches":0,"sheet_id":"1iaRnqWwCM8brKLYMYW66whdbN8TfR2i6CttEYz0yLZg","sheet_tabs":["Item Register","WP Export Identity 24-07"],"sheet_queries":20,"sheet_matches":0,"classification":"CANONICAL_DEDUPE_OFFLINE_ZERO_MATCH","live_cms_dedupe_pass":false},
+  "gmail":{"partner_new_replies":0,"technical_new_failure_messages":6,"technical_message_ids":["1a1f89f38634bcaa","1a1f89f2f7ef5a43","1a1f89f1b74115c6","1a1f89f16d5fa445","1a1f89f15f696a33","1a1f89f14f440c32"]},
+  "drive":{"document_id":"16KCHLrH8QjETXg825YoHoXlL5wMUnYL3DbKfEgfiUGA","revision_id":"AHj4eMRaiazxS9frQWL4Kes3Rl2d9PpanN9l-ztmcyw2QMQb_TK1ctPcbVND4_3YK2_iiVqYATOu18lHIRa3wK32dg31fCIJ6wggAYRjuw","readback_paragraphs":235,"readback_axes":160,"readback_published_false":12,"readback_published_true":0},
+  "publication":{"PUBLISHED":false,"REAL_MEDIA_VERIFIED":false,"MASTER_LOGO_VERIFIED":false,"NO_DUPLICATE_PASS":false,"COPY_QA_PASS":false},
+  "rollback":"Delete only the C405 Drive document and revert C405 commits if integrity defects are found; no public surface was changed."
+}
