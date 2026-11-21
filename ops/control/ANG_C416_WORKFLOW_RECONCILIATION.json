@@ -1,0 +1,25 @@
+{
+  "cycle": "C416",
+  "timestamp_brt": "2026-11-20 21:14 BRT",
+  "supersedes_workflow_section_of": "ops/control/ANG_C416_BLOCO59_RECEIPT.json",
+  "legacy_workflow": {
+    "path": ".github/workflows/wordpress-rest-auth-probe.yml",
+    "status": "REMOVED_AFTER_POST_COMMIT_VALIDATION",
+    "reason": "continued to create push-event failure with zero jobs after syntactic repair; duplicate of V2/Stable",
+    "delete_commit": "f59d35c97077f04bbd23c12bf2675b7ab0e72172",
+    "readback": "404_NOT_FOUND",
+    "rollback": "revert f59d35c97077f04bbd23c12bf2675b7ab0e72172"
+  },
+  "retained_v2": {
+    "path": ".github/workflows/wordpress-rest-auth-probe-v2.yml",
+    "blob_sha": "c0ef9854791f01402c15722e521cd44a1fb6e98b",
+    "trigger": "workflow_dispatch_only",
+    "authenticated_run_performed": false,
+    "pass": false
+  },
+  "retained_stable": {
+    "status": "FAIL_CLOSED_MISSING_SECRETS",
+    "pass": false
+  },
+  "wordpress_live_changed": false
+}
