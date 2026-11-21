@@ -1,0 +1,36 @@
+{
+  "cycle": "C417",
+  "block": 60,
+  "title": "Vulcões, Geoparques e Paisagens Geológicas",
+  "checked_at": "2026-11-21T00:56:00-03:00",
+  "modules": 10,
+  "countries": 9,
+  "editorial_axes": 160,
+  "official_sources": 30,
+  "local_sha256": "901c655ccc2f5fc52981be29bfcabba235bba18a67a1616cae28ecb7a0038aaa",
+  "drive": {
+    "file_id": "1sAKsdnGyLmlPkT34QZOT94CVpHBdg-se3eowBglxQ_0",
+    "revision_id": "1",
+    "readback": true
+  },
+  "page108_validator": {
+    "script_commit": "1af90530c2df4e7e484a69827dbd521fc3c33663",
+    "workflow_commit": "df66144407eaecf9e3fb8e04488725f8c0becb9e",
+    "workflow_run_id": 44863780656,
+    "conclusion": "success",
+    "payload_sha256": "b95ba048eba4997cf90826357697cb47d0d343514e4c433050d5bcc56f82b0cf"
+  },
+  "publication": {
+    "authorized": false,
+    "published": false
+  },
+  "wordpress_live_changed": false,
+  "gates": [
+    "LIVE_CMS_DEDUPE_PENDING",
+    "MEDIA_NOT_ATTACHED",
+    "RIGHTS_NOT_GRANTED",
+    "WORDPRESS_P0_PENDING",
+    "CONSOLE_E2E_PENDING",
+    "CONCIERGE_E2E_PENDING"
+  ]
+}
