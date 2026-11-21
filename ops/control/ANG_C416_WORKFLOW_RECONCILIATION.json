@@ -1,6 +1,6 @@
 {
   "cycle": "C416",
-  "timestamp_brt": "2026-11-20 21:14 BRT",
+  "timestamp_brt": "2026-11-20 21:18 BRT",
   "supersedes_workflow_section_of": "ops/control/ANG_C416_BLOCO59_RECEIPT.json",
   "legacy_workflow": {
     "path": ".github/workflows/wordpress-rest-auth-probe.yml",
@@ -18,8 +18,15 @@
     "pass": false
   },
   "retained_stable": {
-    "status": "FAIL_CLOSED_MISSING_SECRETS",
-    "pass": false
+    "path": ".github/workflows/wordpress-actions-sanity-v1.yml",
+    "status": "MANUAL_FAIL_CLOSED_PENDING_SECRETS",
+    "trigger": "workflow_dispatch_only",
+    "update_commit": "ca57d09ec34d735269d49d8161e418b3b234a3a4",
+    "blob_sha": "69e3e0796d252cdcb6d9251ebafb2b79cf62a4d6",
+    "post_commit_runs": 0,
+    "pass": false,
+    "rollback": "revert ca57d09ec34d735269d49d8161e418b3b234a3a4"
   },
-  "wordpress_live_changed": false
+  "wordpress_live_changed": false,
+  "final_state": "LEGACY_REMOVED_V2_AND_STABLE_MANUAL_NO_AUTOMATIC_WORDPRESS_PROBE_FAILURES"
 }
