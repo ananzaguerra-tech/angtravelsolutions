@@ -1,0 +1,74 @@
+{
+  "cycle": "C416",
+  "timestamp_brt": "2026-11-20 21:00 BRT",
+  "block": 59,
+  "theme": "Observatórios, Planetários e Céus Escuros",
+  "curadoria": {
+    "modules": 10,
+    "axes": 160,
+    "sources": 30,
+    "countries_or_territories": 10,
+    "checked_at": "2026-11-20",
+    "published": false,
+    "drive_id": "1DChN5duvPXAhPyPNPzP61RI6GmRM2K-hn5JCiUsUkyw",
+    "drive_revision": "1",
+    "sha256": "149c762ff62ea49b511bd11c9e59923ef008eeb37edae4cd3c64adcaf694b59c"
+  },
+  "dedupe": {
+    "master_version": 131,
+    "master_exact_label_matches": 0,
+    "item_register_exact_label_matches": 0,
+    "wp_export_exact_label_matches": 0,
+    "live_cms_dedupe_pass": false
+  },
+  "wordpress_workflows": {
+    "live_site_changed": false,
+    "fixes": [
+      {
+        "path": ".github/workflows/wordpress-rest-auth-probe.yml",
+        "commit": "125fb5319729d21a8cbd53a35d1b2c97e344e5cf",
+        "readback_sha": "1a3abc190eb28e4d53c7489a4bafdaa02542e42f"
+      },
+      {
+        "path": ".github/workflows/wordpress-rest-auth-probe-v2.yml",
+        "commit": "b60a2789765e0ae74710225eaf64cb3d3392be3b",
+        "readback_sha": "c0ef9854791f01402c15722e521cd44a1fb6e98b"
+      }
+    ],
+    "validation": {
+      "manual_dispatch_only": true,
+      "invalid_python_heredoc_removed": true,
+      "secrets_added": false,
+      "probe_pass": false
+    },
+    "rationale": "Correct invalid YAML indentation and stop automatic failure noise until credentials exist, while preserving a manual fail-closed read-only probe."
+  },
+  "gmail": {
+    "partner_replies": 0,
+    "positive_authorizations": 0
+  },
+  "publications": {
+    "wordpress": 0,
+    "facebook": 0,
+    "instagram": 0,
+    "google_business": 0
+  },
+  "special_holds": [
+    "ALMA_PUBLIC_VISIT_PROGRAM_SUSPENDED",
+    "MEDIA_RIGHTS_UNPROVEN",
+    "MASTER_LOGO_UNVERIFIED"
+  ],
+  "gates": [
+    "WP_ACTIONS_SECRETS_MISSING",
+    "BACKUP_NO_SITE_FOUND",
+    "STAGING_UNAVAILABLE",
+    "JETPACK_SITE_DISCONNECTED",
+    "LIVE_CMS_DEDUPE_PENDING",
+    "COPY_QA_PENDING"
+  ],
+  "rollback": [
+    "Revert commits 125fb5319729d21a8cbd53a35d1b2c97e344e5cf and b60a2789765e0ae74710225eaf64cb3d3392be3b",
+    "Delete Drive doc 1DChN5duvPXAhPyPNPzP61RI6GmRM2K-hn5JCiUsUkyw if defective",
+    "No WordPress live rollback required"
+  ]
+}
