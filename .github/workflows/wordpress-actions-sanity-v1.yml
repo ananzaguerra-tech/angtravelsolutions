@@ -1,8 +1,7 @@
 name: WordPress REST Auth Probe Stable
 
 on:
-  push:
-    branches: [staging]
+  workflow_dispatch:
 
 permissions:
   contents: read
